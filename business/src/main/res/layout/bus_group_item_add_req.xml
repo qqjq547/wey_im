@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/common_holder_one_user"
+        fresco:roundAsCircle="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_view_button_status"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/a2a4a7"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/image_view_button_agree"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:background="@drawable/common_corners_trans_178aff_6_0"
+            android:scaleType="center"
+            android:src="@drawable/bus_contacts_icon_agree" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toLeftOf="@+id/layout_tools"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/linear_layout_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="0dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <framework.telegram.ui.text.AppTextView
+                android:id="@+id/app_text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:maxLength="10"
+                tools:text="我是我是我是我是我是我是我是我是我是我是我是我是" />
+
+            <TextView
+                android:layout_toRightOf="@+id/app_text_view_name"
+                android:id="@+id/text_view_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/a2a4a7"
+                android:layout_centerVertical="true"
+                android:textSize="12sp"
+                tools:text="2019.05.12" />
+
+        </RelativeLayout>
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/text_view_req_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/c178aff"
+            android:textSize="13sp"
+            tools:text="sfsdsf" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/text_view_introduce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp"
+            tools:text="sfsdsf222" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/text_view_operate_admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp"
+            tools:text="sfsdsf222" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:background="@color/eaeaea" />
+
+</RelativeLayout>

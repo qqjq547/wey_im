@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_verification_for_add_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_verification_for_invitation_me"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_verification_show_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_last_online_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/me_item_view_close_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_input_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_read_receipt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/you_also_cannot_see_the_read_status_of_others"
+                android:textColor="@color/a2a4a7"
+                android:textSize="12dp" />
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="40dp"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <framework.telegram.ui.videoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/download_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+    <framework.telegram.ui.widget.CommonLoadindView
+        android:id="@+id/normal_background_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="12dp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/image_view_fail"
+        android:layout_width="80dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/icon_fail_video"
+        android:visibility="gone"
+        android:layout_height="80dp" />
+
+    <framework.ideas.common.widget.PointerCountDownView
+        android:id="@+id/pointer_count_down"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+

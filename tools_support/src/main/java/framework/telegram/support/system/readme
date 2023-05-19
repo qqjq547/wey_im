@@ -1,0 +1,8 @@
+RxCache             基于Rxjava实现的缓存系统
+OKDownload          下载管理器
+EventBus            基于Rxjava实现的事件总线系统
+GSON                json解析
+FastJson            json解析
+FastPinyin          对TinyPinyin的二次封装
+Luban               高质量图片压缩器
+AppLogcat           全局Log管理器

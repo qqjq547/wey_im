@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="160dp"
+    android:layout_height="144dp"
+    app:ignore="NamespaceTypo">
+
+    <framework.telegram.ui.roundview.RoundAngleFrameLayout
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="12dp"
+        app:bottomLeftRadius="12dp"
+        app:bottomRightRadius="12dp"
+        app:isShowBorder="true"
+        app:topLeftRadius="12dp"
+        app:topRightRadius="12dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+</RelativeLayout>

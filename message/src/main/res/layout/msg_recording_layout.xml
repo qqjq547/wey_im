@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <FrameLayout
+        android:id="@+id/layoutLock"
+        android:layout_width="56dp"
+        android:layout_height="200dp"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/common_corners_trans_ffffff_28_0_left_top_right_top"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewLock"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:padding="18dp"
+                    android:src="@drawable/msg_icon_lock" />
+
+                <ImageView
+                    android:id="@+id/imageViewLockBlue"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:padding="18dp"
+                    android:src="@drawable/msg_icon_lock_blue" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageViewLockArrow"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="-8dp"
+                android:src="@drawable/arrow" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/recording"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/f8fafd"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/eaeaea" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="44dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageViewAttachment"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="bottom"
+                    android:scaleType="center"
+                    android:src="@drawable/msg_chat_ic_tools" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <framework.telegram.ui.widget.MentionEditText
+                        android:id="@+id/editTextMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:background="@drawable/msg_corners_trans_edeff2_6_0"
+                        android:inputType="textNoSuggestions|textMultiLine"
+                        android:maxLines="5"
+                        android:minHeight="36dp"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="46dp"
+                        android:textCursorDrawable="@drawable/common_drawable_cursor" />
+
+                    <ImageView
+                        android:id="@+id/imageViewFace"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_alignBottom="@+id/editTextMessage"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="-4dp"
+                        android:scaleType="center"
+                        android:src="@drawable/msg_chat_ic_emoji" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewFire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginBottom="6dp"
+                        android:drawableTop="@drawable/msg_icon_fire"
+                        android:text="@string/one_minute"
+                        android:textColor="@color/c178aff"
+                        android:textSize="12sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/layoutMessageMask"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:clickable="false"
+                android:visibility="gone" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/imageViewMic"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_gravity="center_vertical"
+                android:scaleType="centerInside"
+                android:visibility="gone"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="false" />
+
+            <ProgressBar
+                android:id="@+id/progressBarVolumn"
+                style="@style/Widget.ProgressBar.Vertical"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="26dp"
+                android:layout_marginLeft="36dp"
+                android:clipOrientation="vertical"
+                android:max="100"
+                android:progress="10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="38dp"
+                android:layout_marginLeft="48dp"
+                android:text="00:00"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/imageViewAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/imageAudio"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="center"
+            android:src="@drawable/msg_chat_ic_record_voice" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/imageViewStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/imageStop"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/imageViewSend"
+        style="@style/CardViewTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageSend"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="center"
+            android:src="@drawable/msg_chat_ic_send" />
+
+    </FrameLayout>
+
+
+    <framework.telegram.ui.shimmerlayout.ShimmerLayout
+        android:id="@+id/layoutSlideCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:visibility="gone"
+        app:shimmer_animation_duration="1500"
+        app:shimmer_color="@android:color/white"
+        app:shimmer_reverse_animation="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/slide_to_cancel"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginLeft="8dp"
+                android:rotation="-90"
+                android:src="@drawable/arrow" />
+
+        </LinearLayout>
+
+    </framework.telegram.ui.shimmerlayout.ShimmerLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutDraft"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="44dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageViewDeleteDraft"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_delete" />
+
+        <framework.telegram.ui.roundview.RoundAngleFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            app:bottomLeftRadius="12dp"
+            app:bottomRightRadius="12dp"
+            app:topLeftRadius="12dp"
+            app:topRightRadius="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/c2e2ff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgPlay"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/msg_chat_ic_play_voice_someone" />
+
+                <ImageView
+                    android:id="@+id/imgPause"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/msg_chat_ic_pause_voice_someone"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/imgFail"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="12dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:scaleType="center"
+                    android:src="@drawable/msg_icon_fail"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="12dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="8dp"
+                    android:orientation="vertical">
+
+                    <com.caesar.musicspectrumbarlibrary.MusicSpectrumBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
+                        app:gapMultiple="0.5"
+                        app:poseType="1"
+                        app:unSelectColor="@color/c1e3982f4" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtCurrentTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00:00"
+                            android:textColor="@color/c3982f4"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/"
+                            android:textColor="@color/c57595c"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/txtAllTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:text="00:00:00"
+                            android:textColor="@color/c57595c"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTip"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom|right"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/common_corners_trans_000000_6_0"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/let_go_to_send"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</FrameLayout>

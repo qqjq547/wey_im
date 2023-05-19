@@ -1,0 +1,90 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <framework.telegram.ui.widget.scale.SubsamplingScaleImageView
+        android:id="@+id/scale_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <framework.ideas.common.widget.PointerCountDownView
+        android:id="@+id/pointer_count_down"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <framework.telegram.ui.widget.CommonLoadindView
+        android:id="@+id/normal_background_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+         />
+
+    <ImageView
+        android:id="@+id/image_view_fail"
+        android:layout_width="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_fail_picture"
+        android:visibility="gone"
+        android:layout_height="80dp" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:background="@drawable/common_gradient_tran_4a4a4a">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/image_download"
+                android:layout_width="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/icon_picture_download"
+                android:layout_gravity="bottom|right"
+                android:layout_height="28dp" />
+
+            <ImageView
+                android:id="@+id/image_go"
+                android:layout_width="28dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="4dp"
+                android:src="@drawable/icon_picture_history"
+                android:layout_gravity="bottom|right"
+                android:layout_height="28dp" />
+
+            <ImageView
+                android:id="@+id/image_more"
+                android:layout_width="28dp"
+                android:layout_margin="16dp"
+                android:src="@drawable/icon_picture_more"
+                android:layout_gravity="bottom|right"
+                android:layout_height="28dp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

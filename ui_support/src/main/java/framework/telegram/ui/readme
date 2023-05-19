@@ -1,0 +1,10 @@
+AppDialog               应用唯一使用Dialog的入口
+AppImageView            用于异步图片显示
+ImagePicker             用于选择图片/MP4/MPEG
+AppRecyclerView         用于加载列表
+StickyItemDecoration    用于显示一个StickyItem到RecyclerView
+SimplifySpanBuild       用于在TextView中显示各种Span
+AppSwipeMenuLayout      用于显示一个可侧滑组件
+
+StatusView              用于多状态页面切换 https://github.com/SheHuan/StatusView
+

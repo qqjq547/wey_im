@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/app_lock_setting_tip_1"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/app_lock_setting_tip_2"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_applock_on_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_applock_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_applock_disable_accout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:id="@+id/switch_button_applock_disable_accout_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/disable_account_tip"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_applock_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_applock_update_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_applock_forget_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+</LinearLayout>

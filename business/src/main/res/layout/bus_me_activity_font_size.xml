@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="25dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/f8fafd"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="19dp"
+            android:src="@drawable/common_icon_black_back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/font_size"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="5dp"
+            android:text="@string/done"
+            android:textColor="@color/c178aff"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <include layout="@layout/common_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingTop="20dp">
+
+                <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="80dp"
+                    app:borderColor="@color/d4d6d9"
+                    app:bottomLeftRadius="8dp"
+                    app:bottomRightRadius="8dp"
+                    app:isShowBorder="true"
+                    app:topLeftRadius="0dp"
+                    app:topRightRadius="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_font_size2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/msg_color_other"
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/drag_the_slider_below"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/msg_text_size" />
+                </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+                <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="16dp"
+                    app:borderColor="@color/a8ceeb"
+                    app:bottomLeftRadius="8dp"
+                    app:bottomRightRadius="8dp"
+                    app:isShowBorder="true"
+                    app:topLeftRadius="8dp"
+                    app:topRightRadius="0dp">
+
+                    <TextView
+                        android:id="@+id/tv_font_size1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/msg_color_myself"
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/tl_textsize_dimension"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/msg_text_size" />
+                </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+
+                <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="80dp"
+                    app:borderColor="@color/d4d6d9"
+                    app:bottomLeftRadius="8dp"
+                    app:bottomRightRadius="8dp"
+                    app:isShowBorder="true"
+                    app:topLeftRadius="0dp"
+                    app:topRightRadius="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_font_size3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/msg_color_other"
+                        android:paddingStart="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/will_change_font_size"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/msg_text_size" />
+                </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <framework.telegram.ui.FontSizeView
+            android:id="@+id/fsv_font_size"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@color/f8fafd"
+            app:circleColor="@color/c178aff"
+            app:circleRadius_2="12dp"
+            app:lineColor="#7f7f7f"
+            app:standerSize="16" />
+
+    </LinearLayout>
+</LinearLayout>

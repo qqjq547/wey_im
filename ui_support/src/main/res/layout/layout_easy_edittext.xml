@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <EditText
+        android:id="@+id/et"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="start|center_vertical"
+        android:layout_marginEnd="16dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textCursorDrawable="@drawable/common_drawable_cursor"
+        tools:text="123"/>
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="28dp"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/common_icon_edit_delete" />
+
+    <ImageView
+        android:id="@+id/iv_see"
+        android:layout_width="28dp"
+        android:layout_height="match_parent"
+        android:scaleType="center"
+        android:src="@drawable/common_password_invisible"/>
+
+    <framework.telegram.ui.text.CountdownButton
+        android:id="@+id/btn_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:scaleType="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="@string/get_code"/>
+
+</merge>

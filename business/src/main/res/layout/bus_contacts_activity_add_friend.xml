@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+    <RelativeLayout
+        android:layout_marginTop="16dp"
+        android:id="@+id/relative_layout_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_view_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/bus_contacts_icon_search_friend"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp" />
+
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_view_icon"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/search_friends" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/image_view_icon"
+            android:layout_toRightOf="@+id/image_view_icon"
+            android:background="@color/eaeaea" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_view_icon1"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/bus_contacts_icon_add_link"/>
+
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_view_icon1"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/mobile_phone_contacts" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/image_view_icon1"
+            android:layout_toRightOf="@+id/image_view_icon1"
+            android:background="@color/eaeaea" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/image_view_icon3"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/bus_contacts_icon_scan" />
+
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_view_icon3"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/scan_qr_code" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/image_view_icon3"
+            android:layout_toRightOf="@+id/image_view_icon3"
+            android:background="@color/eaeaea" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative_layout_add_friend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/image_view_icon2"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@drawable/me_icon_add_friend"/>
+
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/image_view_icon2"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="@string/invite_friends_to_join_app" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/image_view_icon2"
+            android:layout_toRightOf="@+id/image_view_icon2"
+            android:background="@color/eaeaea" />
+
+    </RelativeLayout>
+</LinearLayout>

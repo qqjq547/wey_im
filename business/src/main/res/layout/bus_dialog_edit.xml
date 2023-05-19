@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/app_text_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:textColor="@color/a2a4a7"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/app_edit_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:textCursorDrawable="@drawable/common_drawable_cursor"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/common_corners_trans_edeff2_6_0"
+        android:layout_height="44dp" />
+
+</LinearLayout>

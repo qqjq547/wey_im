@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="slideToCancelTextColor">#cccccc</color>
+    <color name="transparentBlack">#FF000000</color>
+    <color name="micRed">#e12626</color>
+
+    <color name="c999999">#999999</color>
+    <color name="c8c8c8c">#8c8c8c</color>
+    <color name="chat_message_notice">#FFF4B2</color>
+    <color name="ffeef0f4">#ffeef0f4</color>
+</resources>

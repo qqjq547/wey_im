@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_applock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_verification_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/just_pwd_login"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12dp" />
+
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_clear_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+</LinearLayout>

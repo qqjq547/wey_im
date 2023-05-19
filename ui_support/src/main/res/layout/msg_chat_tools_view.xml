@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/f8fafd"
+    android:rowCount="2"
+    android:columnCount="4">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_picture"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_chat_tools_choice_media" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/picture"
+            android:textColor="@color/c57595c"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_camera"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_chat_tools_camera" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/shoot"
+            android:textColor="@color/c57595c"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_namecard"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_chat_tools_name_card" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/business_card"
+            android:textColor="@color/c57595c"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_location"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_chat_tools_file" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/file"
+            android:textColor="@color/c57595c"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/linear_layout_file"-->
+    <!--        android:layout_columnWeight="1"-->
+    <!--        android:layout_rowWeight="1"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:scaleType="center"-->
+    <!--            android:src="@drawable/msg_icon_chat_tools_file" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="8dp"-->
+    <!--            android:gravity="center"-->
+    <!--            android:text="@string/file"-->
+    <!--            android:textColor="@color/c57595c"-->
+    <!--            android:textSize="12sp" />-->
+
+    <!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:orientation="vertical" />
+
+</GridLayout>

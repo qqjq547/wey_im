@@ -1,0 +1,79 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+ext {
+    configuration = [
+            package                       : getAppID(),
+            version_code                  : getVersionCode(),
+            version_name                  : getVersionName(),
+
+            //公共配置
+            buildToolsVersion             : "31.0.0",
+            compileVersion                : 31,
+            minSdk                        : 19,
+            targetSdk                     : 27,
+            renderscriptTargetApi         : 27,
+            renderscriptSupportModeEnabled: true,
+            multiDexEnabled               : true
+    ]
+}
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven { url 'https://maven.aliyun.com/repository/releases/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven {  url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        classpath "io.realm:realm-gradle-plugin:6.0.0"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+        // 添加emas-services插件
+        classpath 'com.aliyun.ams:emas-services:1.0.4'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url 'https://oss.jfrog.org/artifactory/oss-snapshot-local' }
+        maven { url 'https://maven.aliyun.com/repository/releases/' }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven {  url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+def getAppID() {
+    def path = JENKINS_TINKER_APK_ID
+    if (path.find("\"")) {
+        path = path.replace("\"", "")
+    }
+    return path
+}
+
+def getVersionCode() {
+    def path = JENKINS_VERSION_CODE
+    return path.toInteger()
+}
+
+def getVersionName() {
+    def path = JENKINS_VERSION_NAME
+    if (path.find("\"")) {
+        path = path.replace("\"", "")
+    }
+    return path
+}

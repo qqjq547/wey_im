@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear_layout_group_tip"
+        android:background="@color/edeff2"
+        android:paddingLeft="16dp"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingRight="16dp"
+            android:text="@string/group_manager_audit_is_required"
+            android:textColor="@color/c4a4a4a"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/image_view_close"
+            android:layout_width="52dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/bus_group_member_close" />
+
+    </LinearLayout>
+
+    <framework.ideas.common.CustomSearchBar3
+        android:id="@+id/custom_search_bar"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <framework.telegram.ui.recyclerview.AppRecyclerView
+        android:id="@+id/common_recycler_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout_add_and_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:srlFixedFooterViewId="@+id/nail_footer_layout"
+    app:srlFixedHeaderViewId="@+id/nail_header_layout">
+
+    <com.scwang.smartrefresh.layout.header.ClassicsHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlTextPulling="@string/the_drop_down_can_refresh"
+        app:srlTextRefreshing="@string/onr_refresh"
+        app:srlTextLoading="@string/loading2"
+        app:srlTextRelease="@string/release_instant_refresh"
+        app:srlTextFinish="@string/refresh_to_complete"
+        app:srlTextFailed="@string/refresh_the_failure"
+        app:srlTextUpdate="@string/last_update"
+        app:srlTextSecondary="@string/release_into_the_second_floor" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/nail_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/nail_footer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srlClassicsSpinnerStyle="FixedBehind"
+        app:srlTextSizeTitle="12sp"/>
+
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,0 +1,21 @@
+代码来源：https://github.com/ethanhua/BriefPreference
+
+使用示例：
+interface UserService {
+
+    fun putName(value: String)
+
+    fun getName(): String
+
+}
+
+object UserRepository {
+
+    private val localService: UserService by lazy {
+        SharePreferencesStorage().createStorageInstance(UserService::class.java)
+    }
+
+    fun putUserName(name: String) = localService.putName(name)
+
+    fun getUserName() = localService.getName()
+}

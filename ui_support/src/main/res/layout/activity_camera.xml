@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera -->
+    <framework.telegram.ui.cameraview.CameraView
+        android:id="@+id/camera_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:keepScreenOn="true"
+        app:cameraAudio="on"
+        app:cameraExperimental="true"
+        app:cameraFlash="off"
+        app:cameraGestureLongTap="none"
+        app:cameraGesturePinch="zoom"
+        app:cameraGestureScrollHorizontal="exposureCorrection"
+        app:cameraGestureScrollVertical="none"
+        app:cameraGestureTap="focusWithMarker"
+        app:cameraGrid="off"
+        app:cameraMode="video"
+        app:cameraPictureSizeBiggest="true"
+        app:cameraPlaySounds="false"
+        app:cameraVideoBitRate="1000000"
+        app:cameraVideoCodec="h264"
+        app:cameraVideoSizeMaxHeight="960"
+        app:cameraVideoSizeMaxWidth="640"
+        app:cameraVideoSizeMinHeight="480"
+        app:cameraVideoSizeMinWidth="320"
+        app:cameraVideoSizeSmallest="true" />
+
+    <ImageButton
+        android:id="@+id/image_button_toggle_camera"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginBottom="56dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_switch_camera" />
+
+    <ImageButton
+        android:id="@+id/image_button_toggle_flash"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_camera_flash_auto" />
+
+    <ImageButton
+        android:id="@+id/image_button_controller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:background="@color/transparent"
+        android:src="@drawable/layer_camera_button_unpress" />
+
+    <com.qmuiteam.qmui.widget.QMUIProgressBar
+        android:id="@+id/normal_background_progress"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:indeterminate="false"
+        android:max="100"
+        android:maxWidth="4dp"
+        android:maxHeight="4dp"
+        android:minWidth="4dp"
+        android:minHeight="4dp"
+        android:progress="60"
+        android:visibility="visible"
+        app:qmui_type="type_circle"
+        app:qmui_progress_color="@color/c178aff"
+        app:qmui_stroke_width="4dp"
+        app:qmui_background_color="@color/transparent"/>
+
+    <ImageButton
+        android:id="@+id/image_button_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_close_white" />
+
+    <TextView
+        android:id="@+id/text_view_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:background="@color/transparent"
+        android:text="0S"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@color/transparent"
+        android:text="@string/long_press_the_video"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <View
+        android:id="@+id/view_white_broad"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/camera_view"
+        android:layout_marginBottom="0dp" />
+
+</RelativeLayout>

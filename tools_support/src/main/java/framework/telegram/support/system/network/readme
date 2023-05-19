@@ -1,0 +1,12 @@
+val userHttpProtocol = HttpProtocolCreater.create(App.HTTP_HOST, UserHttpProtocol::class.java)
+userHttpProtocol.login(LoginReqCreater.create(this, "18588709202", "123456", 1))
+        .compose(RxLifecycle.bindUntilEvent(lifecycle(), ActivityEvent.DESTROY))
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .applyCache("custom_key", framework.telegram.support.system.cache.stategy.CacheStrategy.cacheAndRemote())
+        .httpLoad {
+            if (it.data.loginResp?.commonResult?.errCode == 200) {
+                val resultString = it.data.loginResp?.result?.toStringUtf8()
+            } else {
+            }
+        }

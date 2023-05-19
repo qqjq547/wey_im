@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:backgroundImage="@color/edeff2"
+        fresco:placeholderImage="@drawable/common_holder_one_user"
+        fresco:roundAsCircle="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:orientation="vertical">
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="asdfasdfad111111111112f" />
+
+        <LinearLayout
+            android:id="@+id/layout_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/app_head_name"
+                android:layout_width="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/a2a4a7"
+                tools:text="ssss1"
+                android:layout_marginRight="5dp"
+                android:layout_height="wrap_content" />
+
+            <framework.telegram.ui.text.AppTextView
+                android:id="@+id/app_text_view_name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textSize="12sp"
+                android:textColor="@color/a2a4a7"
+                tools:text="asdfasdfad111111111112f" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/image_view_icon"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:background="@color/eaeaea" />
+
+</RelativeLayout>

@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "729261282932",
+    "firebase_url": "https://chat-88771.firebaseio.com",
+    "project_id": "chat-88771",
+    "storage_bucket": "chat-88771.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729261282932:android:15e0e6d4914a10d4af6321",
+        "android_client_info": {
+          "package_name": "liuba.client.android.telephone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729261282932-lqlnsqgkc9pvd79a5gvtn48an5j31tb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCav-LIwekZFOJET0a2DGxxvMPp122tiHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729261282932-lqlnsqgkc9pvd79a5gvtn48an5j31tb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:729261282932:android:2d2ce0b978c02a37af6321",
+        "android_client_info": {
+          "package_name": "liuba.client.android.telephone.international"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "729261282932-jo5b8ej3bsbuh8mrok04bnsh3jnj8dpl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "liuba.client.android.telephone.international",
+            "certificate_hash": "b60ea593ef32338ac90654a7847521ef2efbc609"
+          }
+        },
+        {
+          "client_id": "729261282932-lqlnsqgkc9pvd79a5gvtn48an5j31tb3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCav-LIwekZFOJET0a2DGxxvMPp122tiHc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "729261282932-lqlnsqgkc9pvd79a5gvtn48an5j31tb3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

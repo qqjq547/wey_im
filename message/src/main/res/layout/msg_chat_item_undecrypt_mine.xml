@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/msg_chat_item_time_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal">
+
+        <include layout="@layout/msg_chat_item_tools" />
+
+        <framework.telegram.ui.roundview.RoundAngleFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/a8ceeb"
+            app:bottomLeftRadius="8dp"
+            app:bottomRightRadius="8dp"
+            app:isShowBorder="true"
+            app:topLeftRadius="8dp"
+            app:topRightRadius="0dp">
+
+            <TextView
+                android:id="@+id/text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/edeff2"
+                android:drawablePadding="8dp"
+                android:drawableLeft="@drawable/msg_icon_encrypt_fail"
+                android:gravity="center_vertical"
+                android:maxWidth="280dp"
+                android:minHeight="32dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="6dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="6dp"
+                android:text="@string/message_cannot_be_decrypted"
+                android:textColor="@color/a2a4a7"
+                android:textSize="15sp" />
+
+        </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

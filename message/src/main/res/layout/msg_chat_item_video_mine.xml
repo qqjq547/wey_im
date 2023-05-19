@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/msg_chat_item_time_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_box_msg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/common_checkbox"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <include layout="@layout/msg_chat_item_tools" />
+
+            <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:bottomLeftRadius="8dp"
+                app:bottomRightRadius="8dp"
+                app:topLeftRadius="8dp"
+                app:borderColor="@color/d4d6d9"
+                app:isShowBorder="true"
+                app:topRightRadius="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/warp_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/layout_ref_msg"
+                        layout="@layout/msg_chat_item_ref_mine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/layout_msg_content"
+                        android:layout_alignRight="@+id/layout_msg_content" />
+
+                    <FrameLayout
+                        android:id="@+id/layout_msg_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_ref_msg">
+
+                        <ImageView
+                            android:id="@+id/app_image_view"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:background="@color/edeff2"
+                            android:gravity="center_vertical"
+                            android:maxWidth="160dp"
+                            android:maxHeight="160dp"
+                            android:minWidth="64dp"
+                            android:minHeight="64dp"
+                            android:scaleType="centerCrop" />
+
+                        <ImageView
+                            android:id="@+id/image_view_play"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/msg_chat_ic_play_video" />
+
+                        <ImageView
+                            android:id="@+id/image_view_pause"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:scaleType="center"
+                            android:background="@drawable/common_shape_32000000"
+                            android:src="@drawable/msg_icon_pause"
+                            android:visibility="gone" />
+
+                        <com.qmuiteam.qmui.widget.QMUIProgressBar
+                            android:id="@+id/progress_bar"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:indeterminate="false"
+                            app:qmui_progress_color="@color/white"
+                            app:qmui_max_value="100"
+                            app:qmui_value="0"
+                            app:qmui_type="type_circle"
+                            app:qmui_stroke_width="1dp"
+                            app:qmui_background_color="@color/transparent"
+                            android:visibility="gone" />
+
+                    </FrameLayout>
+                    <framework.ideas.common.widget.PointerCountDownView
+                        android:id="@+id/pointer_count_down"
+                        android:layout_width="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/layout_msg_content"
+                        android:layout_alignLeft="@id/layout_msg_content"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginBottom="6dp"
+                        app:qmui_type="type_circle"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+
+                <framework.telegram.ui.flashview.FlashRelativeLayout
+                    android:id="@+id/flash_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

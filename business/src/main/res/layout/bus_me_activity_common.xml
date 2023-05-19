@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/item_font_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/item_language"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="gone"
+        />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/item_68_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="gone" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/item_use_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:visibility="gone" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground" />
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/text_view_logout"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:text="@string/log_out"
+        android:textColor="@color/f50d2e"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

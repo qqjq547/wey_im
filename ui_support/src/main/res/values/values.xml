@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ucrop_progress_loading_anim_time">1500</integer>
+
+    <!-- materialdialogs 的配置，还有些在 styles -->
+    <dimen name="md_dialog_title_layout_margin_bottom">8dp</dimen>
+    <dimen name="md_title_textsize">17sp</dimen>
+    <dimen name="md_message_textsize">14sp</dimen>
+    <dimen name="md_dialog_frame_margin_vertical">16dp</dimen>
+
+
+</resources>

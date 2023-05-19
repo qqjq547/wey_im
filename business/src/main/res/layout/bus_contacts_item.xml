@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/all_relative_layout"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/common_holder_one_user"
+        fresco:placeholderImageScaleType="focusCrop"
+        fresco:roundAsCircle="true" />
+
+    <LinearLayout
+        android:id="@+id/layout_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="asdfasdfad1111fsda1112f" />
+
+        <TextView
+            android:id="@+id/text_view_online_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/a2a4a7"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_view_msg_count"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-2dp"
+        android:layout_toRightOf="@+id/layout_name"
+        android:background="@drawable/common_corners_trans_f50d2e_16_0"
+        android:gravity="center"
+        android:minWidth="16dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:text="5"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/text_view_online_status_point"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignRight="@+id/image_view_icon"
+        android:layout_alignBottom="@+id/image_view_icon"
+        android:background="@drawable/common_oval_ffffff_19e400_10"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/image_view_icon"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:background="@color/eaeaea" />
+
+</RelativeLayout>

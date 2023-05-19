@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- 以下是未整理-->
+    <color name="preview_bottom_toolbar_bg">#CC000000</color>
+    <color name="preview_bottom_size">#61FFFFFF</color>
+
+    <!--loading-->
+    <color name="loading_tint">#178aff</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="red">#ff0000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <color name="b2000000">#b2ffffff</color><!-- 70% -->
+    <color name="c27000000">#27000000</color><!-- 17% -->
+    <color name="c7f000000">#7f000000</color><!-- 50% -->
+
+    <color name="c303030">#303030</color>
+    <color name="eeeeee">#eeeeee</color>
+    <color name="c4a4a4a">#4a4a4a</color>
+
+    <color name="ededed">#ededed</color>
+    <color name="c0071eb">#0071eb</color>
+
+    <color name="c007afe">#007afe</color>
+    <color name="b1daff">#b1daff</color>
+
+    <color name="eaeaea">#eaeaea</color><!--旧的分割线-->
+    <color name="f50d2e">#f50d2e</color>
+
+    <color name="c19e400">#19e400</color>
+    <color name="style_color">#005fff</color><!--主题色-->
+    <color name="bottom_container_bg">#99000000</color><!--主题色-->
+
+    <color name="dddddd">#dddddd</color>
+    <color name="c707070">#707070</color>
+
+    <color name="c686868">#686868</color>
+    <color name="ffe9e9">#FFE9E9</color>
+    <color name="fff4b2">#FFF4B2</color>
+    <!-- 以上是未整理-->
+
+    <!-- v2.0.0 新规范颜色 -->
+    <color name="c178aff">#178aff</color><!-- 大按钮底色、文字按钮、界面一级功能按钮，一级文字按钮、强调突出文字、开关按钮等-->
+    <color name="f8fafd">#f8fafd</color><!--导航栏、标签栏、输入栏等底色  -->
+    <color name="d4d6d9">#d4d6d9</color><!-- 导航栏、标签栏、输入栏等分隔边线色  不可点击的颜色-->
+    <color name="edeff2">#edeff2</color><!-- 界面底色、聊天界面底色 输入框底色、搜索框底色 -->
+    <color name="a2a4a7">#a2a4a7</color><!--信息类目名称、时间、注释说明文字、选项赋值、消息列表对话内容、在线状态、输入框提示类文字、索引文字、辅助类图标及文字等 -->
+    <color name="c2e2ff">#c2e2ff</color><!--对方对话气泡底色，导航栏文字按钮不可点色值 -->
+
+    <color name="f8f8f8">#f8f8f8</color><!--StatusBar 颜色 --><!--这个颜色还有待整理-->
+    <color name="main_background">@color/edeff2</color>
+
+    <!-- 特殊，只有一两个的-->
+    <color name="bg_color">@color/edeff2</color>
+    <color name="c259fff">#259fff</color><!--进度条颜色 -->
+    <color name="c7085b0">#7085b0</color><!--main bar 未选中 颜色 -->
+    <color name="c3E4043">#3E4043</color><!--二维码 -->
+    <color name="a8ceeb">#a8ceeb</color><!--聊天气泡边框 -->
+    <color name="msg_color_myself">#c2e2ff</color><!--聊天气泡背景 -->
+    <color name="msg_color_other">#ffffff</color><!--聊天气泡背景 -->
+    <color name="c57595c">#57595c</color>
+    <color name="c9b9b9b">#9b9b9b</color>
+    <color name="c3982f4">#3982f4</color>
+    <color name="c1e3982f4">#1e3982f4</color>
+
+    <color name="c020419">#020419</color><!--首页的弹出框-->
+    <color name="c40446a">#40446A</color><!--首页的弹出框 的线-->
+    <color name="c8da7d3">#8DA7D3</color><!--首页的弹出框 的字-->
+    <color name="f3f5f7">#f3f5f7</color>
+    <color name="fbdd98">#fbdd98</color>
+    <color name="ff9000">#ff9000</color>
+    <!-- v2.0.0 新规范颜色 -->
+
+    <!-- 以下是第三方UI的规范，不用整理-->
+    <color name="shimmer_color">#a2878787</color>
+
+    <!--emoji start-->
+    <color name="emoji_background">@color/emoji_white</color>
+    <color name="emoji_icons">@color/emoji_black</color>
+    <color name="emoji_divider">@color/emoji_gray20</color>
+
+    <color name="emoji_white">#ffffffff</color>
+    <color name="emoji_black">#ff000000</color>
+    <color name="emoji_gray20">#ffcccccc</color>
+    <color name="emoji_gray70">#ff4d4d4d</color>
+    <color name="emoji_grey_900">#212121</color>
+    <!--emoji end-->
+
+    <!--uCrop start-->
+    <color name="ucrop_color_toolbar">#fff</color>
+    <color name="ucrop_color_statusbar">@color/edeff2</color>
+    <color name="ucrop_color_toolbar_widget">#000000</color>
+    <color name="ucrop_color_widget">#000</color>
+    <color name="ucrop_color_widget_active">#FFFFFF</color>
+    <color name="ucrop_color_active_controls_color">#FFFFFF</color>
+    <color name="ucrop_color_widget_rotate_mid_line">#178aff</color>
+    <color name="ucrop_color_widget_background">#178aff</color>
+    <color name="ucrop_color_widget_text">#000</color>
+    <color name="ucrop_color_progress_wheel_line">#000000</color>
+    <color name="ucrop_color_crop_background">#000</color>
+    <color name="ucrop_color_default_crop_grid">#80ffffff</color>
+    <color name="ucrop_color_default_crop_frame">#ffffff</color>
+    <color name="ucrop_color_default_dimmed">#8c000000</color>
+    <color name="ucrop_color_default_logo">#4f212121</color>
+    <!--uCrop end-->
+
+    <!--ViewfinderView start-->
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <!--ViewfinderView end-->
+
+    <!-- filePicker start -->
+    <color name="rail_color_primary">#434150</color>
+    <color name="rail_color_primary_dark">#27262f</color>
+    <color name="rail_color_accent">#00c381</color>
+    <color name="rail_button_focus">#01714b</color>
+    <color name="rail_text_color">#fff</color>
+    <color name="rail_textColor_Primary">#fff</color>
+    <color name="rail_swl_color_1">#9900C381</color>
+    <color name="rail_swl_color_2">#BF00C381</color>
+    <color name="rail_swl_color_3">#CC00C381</color>
+    <color name="rail_swl_color_4">#E600C381</color>
+    <color name="rail_swl_color_5">#00c381</color>
+    <integer-array name="rail_swl_colors">
+        <item>@color/rail_swl_color_1</item>
+        <item>@color/rail_swl_color_2</item>
+        <item>@color/rail_swl_color_3</item>
+        <item>@color/rail_swl_color_4</item>
+        <item>@color/rail_swl_color_5</item>
+    </integer-array>
+
+    <color name="reply_swl_color_1">#99ffa900</color>
+    <color name="reply_swl_color_2">#BFffa900</color>
+    <color name="reply_swl_color_3">#CCffa900</color>
+    <color name="reply_swl_color_4">#E6ffa900</color>
+    <color name="reply_swl_color_5">#ffa900</color>
+    <integer-array name="reply_swl_colors">
+        <item>@color/reply_swl_color_1</item>
+        <item>@color/reply_swl_color_2</item>
+        <item>@color/reply_swl_color_3</item>
+        <item>@color/reply_swl_color_4</item>
+        <item>@color/reply_swl_color_5</item>
+    </integer-array>
+
+    <color name="shrine_text_color">#48282c</color>
+    <!-- filePicker end -->
+</resources>

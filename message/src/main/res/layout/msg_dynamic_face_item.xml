@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/reletive_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        fresco:actualImageScaleType="fitCenter"
+        fresco:fadeDuration="100" />
+
+    <CheckBox
+        android:id="@+id/check_box_msg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:button="@drawable/common_checkbox"
+        android:visibility="gone" />
+
+</RelativeLayout>

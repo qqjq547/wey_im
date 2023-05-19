@@ -1,0 +1,5 @@
+
+
+原项目 https://github.com/youth5201314/banner
+把代码下下来，改了部分东西
+1. displayImage 不在初始化的时候 调用，而是到当前页面显示的时候调用

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="taskTargetId" type="id"/>
+    <item name="doubleCheckId" type="id"/>
+    <item name="doubleClickMessageId" type="id"/>
+</resources>

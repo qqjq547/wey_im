@@ -1,0 +1,8 @@
+本目录下为应用基础组件
+Application必须继承BaseApp
+所有Activity必须继承BaseActivity
+所有Fragment必须继承BaseFragment
+
+
+account目录中有高度可自定义的账户资料系统
+mvp目录中为基础MVP架构文件

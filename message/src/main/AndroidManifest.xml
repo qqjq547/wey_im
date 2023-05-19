@@ -1,0 +1,122 @@
+ <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="framework.telegram.message">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- The Agora SDK requires Bluetooth permissions in case users are using Bluetooth devices.-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- 访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <application>
+
+        <activity android:name=".ui.telephone.TelephoneActivity"
+            android:theme="@style/AnimationTheme"/>
+
+        <activity android:name=".ui.forward.ForwardToChatsActivity" />
+
+        <activity android:name=".ui.forward.ForwardToContactsActivity" />
+
+        <activity android:name=".ui.forward.ForwardToGroupsActivity" />
+
+        <activity android:name=".ui.card.CardToChatsActivity" />
+
+        <activity android:name=".ui.card.CardToContactsActivity" />
+
+        <activity android:name=".ui.card.CardToGroupActivity" />
+
+        <activity android:name=".ui.telephone.StreamCallContactsActivity" />
+
+        <activity android:name=".ui.chat.SelectContactsCardActivity" />
+
+        <activity android:name=".ui.preview.PreviewBridgeActivity" />
+
+        <activity android:name=".ui.preview.PreviewPrivateBridgeActivity" />
+
+        <activity android:name=".ui.preview.PreviewActivity"
+            android:theme="@style/translucent"
+            android:screenOrientation="sensor"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
+
+        <activity android:name=".ui.preview.PreviewPrivateActivity"
+            android:theme="@style/translucent"
+            android:screenOrientation="sensor"
+            android:configChanges="keyboardHidden|orientation|screenSize">
+            <meta-data android:name="android.notch_support" android:value="true"/>
+        </activity>
+
+        <activity android:name=".ui.preview.FilePreviewActivity"/>
+
+        <activity android:name=".ui.preview.PreviewGifActivity" />
+
+        <activity
+            android:name=".ui.pvt.PrivateChatActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".ui.pvt.GroupSendChatActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.group.GroupChatActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity android:name=".ui.group.MessageDetailActivity" />
+        <activity android:name=".ui.preview.AvatarPreviewActivity"
+            android:theme="@style/AnimationTheme">
+            <meta-data
+                android:name="android.notch_support"
+                android:value="true" />
+        </activity>
+
+        <activity android:name=".ui.location.ChoiceLocationActivity"/>
+        <activity android:name=".ui.location.SearchLocationActivity"/>
+        <activity android:name=".ui.location.ShowLocationActivity"/>
+        <activity android:name=".ui.face.DynamicFaceManagerActivity"/>
+
+        <activity android:name=".ui.share.ShareToChatsActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.share.ShareToContactsActivity"/>
+        <activity android:name=".ui.share.ShareToGroupsActivity"/>
+        <activity android:name=".ui.media.MediaManagerActivity"/>
+        <activity android:name=".ui.telephone.StreamCallDetailActivity"/>
+        <activity android:name=".ui.preview.TextPreviewActivity"
+            android:theme="@style/AnimationTheme"/>
+
+
+
+        <service
+            android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+            android:enabled="true" />
+    </application>
+</manifest>

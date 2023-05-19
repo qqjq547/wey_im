@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_background"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/layout_group_info"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <framework.telegram.ui.text.AppTextView
+                    android:id="@+id/app_text_view_group_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="24dp" />
+
+                <framework.telegram.ui.image.AppImageView
+                    android:id="@+id/app_image_view_group_icon"
+                    android:layout_width="58dp"
+                    android:layout_height="58dp"
+                    android:layout_marginRight="16dp"
+                    fresco:actualImageScaleType="focusCrop"
+                    fresco:backgroundImage="@color/edeff2"
+                    fresco:fadeDuration="300"
+                    fresco:placeholderImage="@drawable/common_holder_one_group"
+                    fresco:placeholderImageScaleType="focusCrop"
+                    fresco:roundAsCircle="true" />
+
+                <ImageView
+                    android:id="@+id/image_view_info_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/common_icon_friend_arrow" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/ll_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingTop="15dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/group_of_announcement"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tv_notice_none"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/not_set"
+                            android:textColor="#9B9B9B"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_notice_part"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:maxLines="3"
+                        android:textColor="@color/a2a4a7"
+                        android:textSize="12sp"
+                        android:ellipsize="end"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/common_icon_friend_arrow" />
+            </LinearLayout>
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <framework.telegram.business.ui.widget.SwitchButtonView
+                android:id="@+id/switch_button_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+
+            <framework.telegram.business.ui.widget.GroupSettingItemView
+                android:id="@+id/setting_item_view_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

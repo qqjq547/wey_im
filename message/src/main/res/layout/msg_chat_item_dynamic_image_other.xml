@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/msg_chat_item_time_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_box_msg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/common_checkbox"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <framework.telegram.ui.image.AppImageView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_image_view_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:layout_marginRight="8dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:placeholderImage="@drawable/common_holder_one_user"
+                fresco:fadeDuration="300"
+                fresco:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <framework.telegram.ui.emoji.EmojiTextView
+                    android:id="@+id/text_view_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/c4a4a4a"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/warp_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include
+                                android:id="@+id/layout_ref_msg"
+                                layout="@layout/msg_chat_item_ref_other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/app_image_view"
+                                android:layout_alignRight="@+id/app_image_view" />
+
+                            <ImageView
+                                android:id="@+id/app_image_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_ref_msg"
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical"
+                                android:minWidth="40dp"
+                                android:minHeight="40dp"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/image_view_pause"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/common_shape_32000000"
+                                android:scaleType="center"
+                                android:src="@drawable/msg_icon_pause"
+                                android:visibility="gone" />
+
+                            <FrameLayout
+                                android:id="@+id/image_view_gif"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:layout_centerInParent="true"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:id="@+id/image_view_gif_1"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/common_shape_32000000"
+                                    android:scaleType="center"
+                                    android:src="@drawable/msg_icon_download_gif" />
+
+                                <ImageView
+                                    android:id="@+id/image_view_gif_2"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_margin="20dp"
+                                    android:scaleType="center"
+                                    android:src="@drawable/msg_icon_download_button" />
+
+                                <TextView
+                                    android:id="@+id/text_progress"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom|center_horizontal"
+                                    android:textColor="@color/c707070"
+                                    android:textSize="10sp" />
+
+                            </FrameLayout>
+
+
+                            <com.qmuiteam.qmui.widget.QMUIProgressBar
+                                android:id="@+id/progress_bar"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_centerInParent="true"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:indeterminate="false"
+                                android:visibility="gone"
+                                app:qmui_background_color="@color/transparent"
+                                app:qmui_max_value="100"
+                                app:qmui_progress_color="@color/white"
+                                app:qmui_stroke_width="1dp"
+                                app:qmui_type="type_circle"
+                                app:qmui_value="0" />
+                        </RelativeLayout>
+
+                        <framework.telegram.ui.flashview.FlashRelativeLayout
+                            android:id="@+id/flash_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </FrameLayout>
+
+                    <include layout="@layout/msg_chat_item_tools" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

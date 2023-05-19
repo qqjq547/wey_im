@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/msg_chat_item_time_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_box_msg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/common_checkbox"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingStart="28dp">
+
+            <include layout="@layout/msg_chat_item_tools" />
+
+            <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:borderColor="@color/fbdd98"
+                app:bottomLeftRadius="8dp"
+                app:bottomRightRadius="8dp"
+                app:isShowBorder="true"
+                app:topLeftRadius="8dp"
+                app:topRightRadius="0dp">
+
+                <RelativeLayout
+                    android:id="@+id/warp_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/layout_msg_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/fff4b2"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_view_tips"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@id/emoji_text_view"
+                            android:layout_alignRight="@id/emoji_text_view"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:drawableLeft="@drawable/msg_icon_notice"
+                            android:drawableRight="@drawable/msg_icon_arrow"
+                            android:drawablePadding="8dp"
+                            android:text="@string/group_of_announcement"
+                            android:textColor="@color/c178aff"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <framework.telegram.ui.emoji.EmojiTextView
+                            android:id="@+id/emoji_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text_view_tips"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center_vertical"
+                            android:minWidth="120dp"
+                            android:minHeight="32dp"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="6dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            app:emojiSize="@dimen/emoji_size_default" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <framework.telegram.ui.flashview.FlashRelativeLayout
+                    android:id="@+id/flash_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

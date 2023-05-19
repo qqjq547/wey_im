@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <framework.telegram.ui.text.AppTextView
+        android:id="@+id/app_text_view_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/image_view_icon1"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            fresco:actualImageScaleType="focusCrop"
+            android:layout_gravity="center_vertical"
+            fresco:fadeDuration="100"
+            fresco:placeholderImage="@drawable/common_holder_one_user"
+            fresco:roundAsCircle="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            android:src="@drawable/common_icon_share_card" />
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/image_view_icon2"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:fadeDuration="100"
+            fresco:placeholderImage="@drawable/common_holder_one_user"
+            fresco:roundAsCircle="true" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

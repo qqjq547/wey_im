@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/common_holder_one_user"
+        fresco:roundAsCircle="true" />
+
+
+    <FrameLayout
+        android:id="@+id/frame_layout_button"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="16dp">
+
+        <TextView
+            android:id="@+id/text_view_button"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:maxWidth="120dp"
+            android:minWidth="52dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:singleLine="true" />
+
+        <ImageView
+            android:id="@+id/text_view_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/bus_contacts_icon_agree"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_layout_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/frame_layout_button"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:orientation="horizontal">
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="色发的发萨芬阿道夫按到" />
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="8dp"
+            android:gravity="center"
+            android:textColor="@color/a2a4a7"
+            android:textSize="12sp"
+            tools:text="sfsdsf" />
+
+    </LinearLayout>
+
+    <framework.telegram.ui.text.AppTextView
+        android:id="@+id/text_view_introduce"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_layout_center"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/frame_layout_button"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/a2a4a7"
+        android:textSize="13sp"
+        tools:text="sfsdsf" />
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/image_view_icon"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:background="@color/eaeaea" />
+
+</RelativeLayout>

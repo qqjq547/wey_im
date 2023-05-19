@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<item type="id" name="nail_header">false</item>-->
+
+    <item name="full_id" type="id" />
+    <item name="small_id" type="id" />
+    <item name="ad_full_id" type="id" />
+    <item name="ad_small_id" type="id" />
+
+    <item name="auto_focus" type="id" />
+    <item name="decode" type="id" />
+    <item name="decode_failed" type="id" />
+    <item name="decode_succeeded" type="id" />
+    <item name="encode_failed" type="id" />
+    <item name="encode_succeeded" type="id" />
+    <item name="launch_product_query" type="id" />
+    <item name="quit" type="id" />
+    <item name="restart_preview" type="id" />
+    <item name="return_scan_result" type="id" />
+
+    <item name="long_click" type="id" />
+
+    <item name="icon_image_path" type="id" />
+</resources>

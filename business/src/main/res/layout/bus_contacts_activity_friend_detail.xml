@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <framework.ideas.common.toolsbar.CustomToolbar
+            android:id="@+id/custom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/custom_toolbar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/text_view_online_status_point"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:background="@drawable/common_oval_ffffff_19e400_10"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/text_view_user_online_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:textColor="@color/a2a4a7"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/common_line"
+        android:id="@+id/line"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/bus_contacts_item_friend_head1" />
+
+                <include layout="@layout/bus_contacts_item_friend_head2" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_group_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_group_ban_work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/view_1"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_mark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_describe"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.SwitchButtonView
+                    android:id="@+id/friend_item_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_same_group_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <framework.telegram.business.ui.widget.FriendDetailItem
+                    android:id="@+id/friend_item_share"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:id="@+id/frame_layout_add"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/common_corners_trans_178aff_6_0"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="8dp"
+                        android:text="@string/add"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+                </FrameLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="50dp" />
+
+
+            </LinearLayout>
+
+            <framework.telegram.ui.widget.CommonLoadindView
+                android:id="@+id/normal_background_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp" />
+
+
+        </FrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

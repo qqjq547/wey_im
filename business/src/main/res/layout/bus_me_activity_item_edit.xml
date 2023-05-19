@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/all_layout"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/common_corners_trans_edeff2_6_0"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/common_corners_trans_edeff2_6_0"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_text_context"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:paddingLeft="8dp"
+                android:textCursorDrawable="@drawable/common_drawable_cursor"
+                android:paddingTop="11dp"
+                android:gravity="top"
+                android:paddingRight="8dp"
+                android:paddingBottom="11dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:text="321111111111111111111111113" />
+
+            <ImageView
+                android:id="@+id/image_view_delete"
+                android:layout_width="28dp"
+                android:layout_height="44dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="16dp"
+                android:scaleType="center"
+                android:src="@drawable/common_icon_edit_delete"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_view_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:textSize="12sp"
+            android:textColor="@color/a2a4a7"
+            android:layout_margin="16dp"
+            android:text=""
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_layout_op"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/common_corners_trans_178aff_6_0">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="@string/accomplish" />
+    </FrameLayout>
+
+
+</LinearLayout>

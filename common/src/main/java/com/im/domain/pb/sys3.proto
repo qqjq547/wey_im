@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+option java_package = "com.im.domain.pb";
+option java_outer_classname = "UplodProto";
+
+import "common.proto";
+
+
+// 获取上传文件路径req[loginUrl/sys/getUploadUrl] v1.2.0
+message GetUploadUrlReq {
+    ClientInfo          clientInfo             = 1; // 客户端信息
+    AttachWorkSpaceType attachWorkspaceType   = 2; // 附件存储空间类型
+    AttachType          attachType             = 3; // 附件类型
+    int64               type                  =4; //2:aws-s3, 0:ali-oss, 1:im
+}
+
+// 获取上传文件路径resp
+message GetUploadUrlResp {
+    CommonResult       commonResult = 1; // 结果信息
+    string             fileId       = 2; // 文件相对路径
+    string             url          = 3; // 文件完整路径
+}
+
+
+// aws 文件上传
+message GetAwsUploadReq {
+    ClientInfo clientInfo = 1; // 客户端信息
+}
+
+// aws 文件上传
+message GetAwsUploadResp {
+    CommonResult commonResult = 1; // 结果信息
+    string accessKey = 2; // accessKey
+    string accessKeySecret = 3; // accessKeySecret
+    string bucketName = 4; // bucketName
+    string region = 5; // region
+}

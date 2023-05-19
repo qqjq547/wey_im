@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/edeff2"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/notification_toggle"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_notice_new_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_notice_new_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_hide_sender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+
+        android:id="@+id/relative_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/text_view_setting1"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/systematic_notification"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_view_setting2"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view_setting1"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center|left"
+            android:text="@string/do_not_disturb_when_remind"
+            android:textColor="@color/a2a4a7"
+            android:textSize="14sp" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/common_icon_friend_arrow" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@id/text_view_setting2"
+            android:background="@color/eaeaea"
+            android:paddingLeft="16dp" />
+
+    </RelativeLayout>
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_notice_sender_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/text_view_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/edeff2"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp"
+        android:text="@string/in_app_notification"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_notice_voice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_notice_shock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <RelativeLayout
+        android:id="@+id/text_view_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/open_self_start"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/text_view2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_view"
+            android:gravity="center"
+            android:text="@string/achieved_accuracy"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/a2a4a7"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/common_icon_friend_arrow" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+https://github.com/Curzibn/Luban/tree/turbo
+
+Flowable.just(photos)
+    .observeOn(Schedulers.io())
+    .map(new Function<List<String>, List<File>>() {
+      @Override public List<File> apply(@NonNull List<String> list) throws Exception {
+        return Luban.with(MainActivity.this).load(list).get();
+      }
+    })
+    .observeOn(AndroidSchedulers.mainThread())
+    .subscribe();

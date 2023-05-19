@@ -1,0 +1,67 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
+
+def cfg = rootProject.ext.configuration // 配置
+
+android {
+    compileSdkVersion cfg.compileVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    repositories {
+        //app 模块使用arr的时候，要加上所在模块arr的路径
+        flatDir {
+            dirs new File(rootDir, '/ui_support/libs'), 'libs'
+        }
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/slf4j-api-1.7.26.jar')
+    api files('libs/agora-rtc-sdk.jar')
+    api project(path: ':common')
+    api project(path: ':message_bridge')
+    api project(path: ':business_bridge')
+    api project(path: ':business')
+    // kotlin支持
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+    // netty网络库
+    api 'io.netty:netty-all:4.0.36.Final'
+    // arouter支持
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.alibaba:arouter-register:1.0.2"
+    }
+}

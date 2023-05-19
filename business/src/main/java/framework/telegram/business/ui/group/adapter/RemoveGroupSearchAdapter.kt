@@ -1,0 +1,124 @@
+package framework.telegram.business.ui.group.adapter
+
+
+import android.view.View
+import android.widget.CheckBox
+import android.widget.CompoundButton
+import com.chad.library.adapter.base.BaseViewHolder
+import com.chad.library.adapter.base.entity.MultiItemEntity
+import com.im.domain.pb.CommonProto
+import framework.ideas.common.model.group.GroupMemberModel
+import framework.ideas.common.model.group.GroupMemberModel.GROUP_MEMBER_TYPE
+import framework.telegram.business.R
+import framework.telegram.business.bridge.bean.AccountInfo
+import framework.telegram.business.bridge.search.StringUtil
+import framework.telegram.business.event.RemoveSelectMemberEvent
+import framework.telegram.support.account.AccountManager
+import framework.telegram.support.system.event.EventBus
+import framework.telegram.support.tools.framework.telegram.support.UriUtils
+import framework.telegram.ui.doubleclick.recycler.AppBaseMultiItemQuickAdapter
+import framework.telegram.ui.image.AppImageView
+import java.util.*
+
+class RemoveGroupSearchAdapter(var mKeyword: String) : AppBaseMultiItemQuickAdapter<MultiItemEntity, BaseViewHolder>(null), CompoundButton.OnCheckedChangeListener {
+
+    init {
+        addItemType(GROUP_MEMBER_TYPE, R.layout.bus_contacts_selectable_item)
+    }
+
+    private val mSelectedUids by lazy { ArrayList<Long>() }
+
+    private val mMineUid by lazy { AccountManager.getLoginAccount(AccountInfo::class.java).getUserId() }
+    private var mGroupType = 2 // 普通成员
+
+    fun addSelectedUid(uid: Long) {
+        if (!mSelectedUids.contains(uid))
+            mSelectedUids.add(uid)
+    }
+
+    fun removeSelectedUid(uid: Long) {
+        if (mSelectedUids.contains(uid))
+            mSelectedUids.remove(uid)
+    }
+
+    fun setSelectedUid(list: ArrayList<Long>) {
+        mSelectedUids.clear()
+        mSelectedUids.addAll(list)
+    }
+
+    fun setGroupType(type :Int){
+        mGroupType = type
+    }
+
+    override fun convert(helper: BaseViewHolder, item: MultiItemEntity?) {
+        item?.let {
+            if (item.itemType == GROUP_MEMBER_TYPE && item is GroupMemberModel) {
+                helper?.setText(R.id.app_text_view_name, StringUtil.setHitTextColor(mKeyword, item.displayName))
+                helper?.getView<AppImageView>(R.id.image_view_icon)?.setImageURI(UriUtils.parseUri(item.icon))
+                helper?.getView<View>(R.id.view_mask)?.setOnClickListener {
+                    //这是个遮罩，为了拦截点击事件
+                }
+
+                val checkBottom =  helper?.getView<CheckBox>(R.id.check_box_selected)
+
+                if (item.type == CommonProto.GroupMemberType.HOST.number) {
+                    helper?.setGone(R.id.text_view_flag, true)
+                    helper?.setGone(R.id.tv_admin, false)
+                } else if(item.type == CommonProto.GroupMemberType.MANAGE.number){
+                    helper?.setGone(R.id.text_view_flag, false)
+                    helper?.setGone(R.id.tv_admin, true)
+                } else {
+                    helper?.setGone(R.id.text_view_flag, false)
+                    helper?.setGone(R.id.tv_admin, false)
+                }
+
+                if (item.uid == mMineUid//自己不可选
+                        || item.type == CommonProto.GroupMemberType.HOST.number//群主不可选
+                        || ((mGroupType == CommonProto.GroupMemberType.MANAGE.number)  //自己是群管理 或者是普通成员，但对方是管理员
+                                && item.type == CommonProto.GroupMemberType.MANAGE.number)) {
+                    //不可选且默认未选
+                    checkBottom?.setOnCheckedChangeListener(null)
+                    checkBottom?.isChecked = false
+                    checkBottom?.isEnabled = false
+                    helper?.getView<View>(R.id.view_mask)?.visibility = View.VISIBLE
+                } else {
+                    //可选
+                    checkBottom?.isEnabled = true
+                    checkBottom?.setOnCheckedChangeListener(null)
+                    checkBottom?.isChecked = mSelectedUids.contains(item.uid)
+                    helper?.getView<View>(R.id.view_mask)?.visibility = View.GONE
+                    checkBottom?.setOnCheckedChangeListener(this@RemoveGroupSearchAdapter)
+                    checkBottom?.tag = item
+                    helper?.itemView?.setOnClickListener{
+                        checkBottom?.setOnCheckedChangeListener(null)
+                        val check = !(checkBottom?.isChecked ?:false)
+                        checkBottom?.isChecked = check
+                        setCheckChanged(item,check)
+                        checkBottom?.setOnCheckedChangeListener(this@RemoveGroupSearchAdapter)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun setCheckChanged(itemData:GroupMemberModel,isChecked:Boolean){
+        if (isChecked) {
+            mSelectedUids.add(itemData.uid)
+            EventBus.publishEvent(RemoveSelectMemberEvent(itemData.uid, itemData.icon, 1,2))
+        } else {
+            mSelectedUids.remove(itemData.uid)
+            EventBus.publishEvent(RemoveSelectMemberEvent(itemData.uid, itemData.icon, 2,2))
+        }
+    }
+
+    override fun onCheckedChanged(buttonView: CompoundButton?, isChecked: Boolean) {
+        if (buttonView?.tag is GroupMemberModel) {
+            val itemData = buttonView.tag as GroupMemberModel
+            setCheckChanged(itemData,isChecked)
+        }
+    }
+
+    fun setKeyword(keyword: String) {
+        mKeyword = keyword
+    }
+}

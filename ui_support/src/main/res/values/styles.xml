@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    //====================================== Theme Ordinary
+    ===========================================
+
+    <style name="ImagePicker.Ordinary" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/ordinary_primary</item>
+        <item name="colorPrimaryDark">@color/ordinary_primary_dark</item>
+        <item name="toolbar">@style/Toolbar.Ordinary</item>
+        <item name="album.dropdown.title.color">@color/ordinary_album_dropdown_title_text</item>
+        <item name="album.dropdown.count.color">@color/ordinary_album_dropdown_count_text</item>
+        <item name="album.element.color">@android:color/white</item>
+        <item name="album.thumbnail.placeholder">
+            @color/ordinary_album_dropdown_thumbnail_placeholder
+        </item>
+        <item name="album.emptyView">@drawable/ic_empty_ordinary</item>
+        <item name="album.emptyView.textColor">@color/ordinary_album_empty_view</item>
+        <item name="item.placeholder">@color/ordinary_item_placeholder</item>
+        <item name="item.checkCircle.backgroundColor">
+            @color/ordinary_item_checkCircle_backgroundColor
+        </item>
+        <item name="item.checkCircle.borderColor">@color/ordinary_item_checkCircle_borderColor
+        </item>
+        <item name="page.bg">@color/ordinary_page_bg</item>
+        <item name="bottomToolbar.bg">@color/ordinary_bottom_toolbar_bg</item>
+        <item name="bottomToolbar.preview.textColor">@color/ordinary_bottom_toolbar_preview</item>
+        <item name="bottomToolbar.apply.textColor">@color/ordinary_bottom_toolbar_apply</item>
+        <item name="preview.bottomToolbar.back.textColor">
+            @color/ordinary_preview_bottom_toolbar_back_text
+        </item>
+        <item name="preview.bottomToolbar.apply.textColor">
+            @color/ordinary_preview_bottom_toolbar_apply
+        </item>
+        <item name="listPopupWindowStyle">@style/Popup.Ordinary</item>
+        <item name="capture.textColor">@color/ordinary_capture</item>
+    </style>
+
+
+    <style name="Popup.Ordinary" parent="Widget.AppCompat.Light.ListPopupWindow">
+        <item name="android:popupBackground">@color/ordinary_album_popup_bg</item>
+    </style>
+
+    //===================================== Theme Night ==========================================
+
+    <style name="ImagePicker.Night" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/night_primary</item>
+        <item name="colorPrimaryDark">@color/night_primary_dark</item>
+        <item name="toolbar">@style/Toolbar.Night</item>
+        <item name="album.dropdown.title.color">@color/night_album_dropdown_title_text</item>
+        <item name="album.dropdown.count.color">@color/night_album_dropdown_count_text</item>
+        <item name="album.element.color">@android:color/white</item>
+        <item name="album.thumbnail.placeholder">@color/night_album_dropdown_thumbnail_placeholder
+        </item>
+        <item name="album.emptyView">@drawable/ic_empty_night</item>
+        <item name="album.emptyView.textColor">@color/night_album_empty_view</item>
+        <item name="item.placeholder">@color/night_item_placeholder</item>
+        <item name="item.checkCircle.backgroundColor">
+            @color/night_item_checkCircle_backgroundColor
+        </item>
+        <item name="item.checkCircle.borderColor">@color/night_item_checkCircle_borderColor</item>
+        <item name="page.bg">@color/night_page_bg</item>
+        <item name="bottomToolbar.bg">@color/night_bottom_toolbar_bg</item>
+        <item name="bottomToolbar.preview.textColor">@color/night_bottom_toolbar_preview</item>
+        <item name="bottomToolbar.apply.textColor">@color/night_bottom_toolbar_apply</item>
+        <item name="preview.bottomToolbar.back.textColor">
+            @color/night_preview_bottom_toolbar_back_text
+        </item>
+        <item name="preview.bottomToolbar.apply.textColor">
+            @color/night_preview_bottom_toolbar_apply
+        </item>
+        <item name="android:listPopupWindowStyle">@style/Popup.Night</item>
+        <item name="listPopupWindowStyle">@style/Popup.Night</item>
+        <item name="capture.textColor">@color/night_capture</item>
+    </style>
+
+    <style name="Toolbar.Ordinary" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/f8f8f8</item>
+        <item name="colorPrimaryDark">@color/f8f8f8</item>
+        <item name="colorAccent">@color/c178aff</item>
+        <!-- 修改toolbar图标的颜色-->
+        <item name="android:textColorSecondary">@color/black</item>
+        <!--修改toolbar文字颜色-->
+        <item name="android:textColorPrimary">@color/black</item>
+
+    </style>
+
+    <style name="Toolbar.Night" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/c178aff</item>
+        <!-- 修改toolbar图标的颜色-->
+        <item name="android:textColorSecondary">@color/white</item>
+        <!--修改toolbar文字颜色-->
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="NoSpaceActionBarTheme" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetEnd">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="Popup.Night" parent="Widget.AppCompat.ListPopupWindow">
+        <item name="android:popupBackground">@color/night_album_popup_bg</item>
+    </style>
+
+
+    <!-- Base application theme. -->
+    <style name="CustomAppTheme" mce_bogus="1" parent="QMUI.Compat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item><!-- TODO 统一背景色 -->
+
+        <!--md 主题设置-->
+        <!--<item name="md_background_color">@color/c0071eb</item>-->
+        <!--<item name="md_title_color">@color/black</item>-->
+        <!--<item name="md_content_color">@color/c464646</item>-->
+        <!--<item name="md_positive_color">@color/c0084FF</item>-->
+        <!--<item name="md_neutral_color">@color/c999999</item>-->
+        <!--<item name="md_negative_color">@color/cccccc</item>-->
+        <!--<item name="md_widget_color">@color/vi</item>-->
+        <!--<item name="actionSheetStyle">@style/ActionSheetStyle</item>-->
+    </style>
+
+    <style name="Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="CustomPageTheme" mce_bogus="1" parent="CustomAppTheme">
+        <!--<item name="android:windowTranslucentStatus" tools:targetApi="19">true</item>-->
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="md_color_title">@color/black</item>
+        <item name="md_color_content">@color/black</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="md_color_button_text">@color/c178aff</item>
+    </style>
+
+    <style name="AnimationTheme" parent="CustomPageTheme">
+        <!-- 设置进场动画黑背景的问题 -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="CustomWhitePageTheme" mce_bogus="1" parent="CustomPageTheme">
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <style name="video_style_dialog_progress" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/video_popup_toast_anim</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="video_popup_toast_anim" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="video_vertical_progressBar">
+        <item name="android:maxWidth">12dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/video_volume_progress_bg</item>
+        <item name="android:indeterminateDuration">3500</item>
+        <item name="android:indeterminateBehavior">repeat</item>
+        <item name="android:minWidth">1dp</item>
+    </style>
+
+
+    <style name="permission_PermissionActivity" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+    </style>
+
+
+    <style name="ucrop_ImageViewWidgetIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:duplicateParentState">true</item>
+    </style>
+
+    <style name="ucrop_WrapperIconState">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="ucrop_WrapperRotateButton">
+        <item name="android:layout_width">@dimen/ucrop_size_wrapper_rotate_button</item>
+        <item name="android:layout_height">@dimen/ucrop_size_wrapper_rotate_button</item>
+        <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ucrop_TextViewCropAspectRatio">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/ucrop_height_crop_aspect_ratio_text</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:duplicateParentState">true</item>
+        <item name="android:textColor">@color/ucrop_scale_text_view_selector</item>
+    </style>
+
+    <style name="ucrop_TextViewWidgetText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/ucrop_color_widget_background</item>
+        <item name="android:layout_marginTop">@dimen/ucrop_margit_top_widget_text</item>
+        <item name="android:textSize">@dimen/ucrop_text_size_widget_text</item>
+    </style>
+
+    <style name="ucrop_TextViewWidget">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_marginTop">@dimen/ucrop_margit_top_widget_text</item>
+        <item name="android:textColor">@color/ucrop_color_widget_active</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/ucrop_text_size_widget_text</item>
+    </style>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="onDrawable" format="reference" />
+        <attr name="offDrawable" format="reference" />
+        <attr name="thumbDrawable" format="reference" />
+        <attr name="thumb_margin" format="dimension|reference" />
+        <attr name="thumb_marginTop" format="dimension|reference" />
+        <attr name="thumb_marginBottom" format="dimension|reference" />
+        <attr name="thumb_marginLeft" format="dimension|reference" />
+        <attr name="thumb_marginRight" format="dimension|reference" />
+        <attr name="thumb_width" format="dimension|reference" />
+        <attr name="thumb_height" format="dimension|reference" />
+        <attr name="onColor" format="color|reference" />
+        <attr name="offColor" format="color|reference" />
+        <attr name="thumbColor" format="color|reference" />
+        <attr name="thumbPressedColor" format="color|reference" />
+        <attr name="animationVelocity" format="integer" />
+        <attr name="buttonRadius" format="integer" />
+        <attr name="measureFactor" format="float" />
+        <attr name="insetLeft" format="dimension|reference" />
+        <attr name="insetRight" format="dimension|reference" />
+        <attr name="insetTop" format="dimension|reference" />
+        <attr name="insetBottom" format="dimension|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="MenuItem">
+        <attr name="menu_title" format="string" />
+        <attr name="icon" format="reference" />
+    </declare-styleable>
+
+    <style name="Animation_top_left">
+        <item name="android:windowEnterAnimation">@anim/open_top_left</item>
+        <item name="android:windowExitAnimation">@anim/close_top_left</item>
+    </style>
+
+    <style name="Animation_bottom_left">
+        <item name="android:windowEnterAnimation">@anim/open_bottom_left</item>
+        <item name="android:windowExitAnimation">@anim/close_bottom_left</item>
+    </style>
+
+    <style name="Animation_bottom_right">
+        <item name="android:windowEnterAnimation">@anim/open_bottom_right</item>
+        <item name="android:windowExitAnimation">@anim/close_bottom_right</item>
+    </style>
+
+    <style name="Animation_top_right">
+        <item name="android:windowEnterAnimation">@anim/open_top_right</item>
+        <item name="android:windowExitAnimation">@anim/close_top_right</item>
+    </style>
+
+    <style name="Animation_bottom">
+        <item name="android:windowEnterAnimation">@anim/open_bottom</item>
+        <item name="android:windowExitAnimation">@anim/close_bottom</item>
+    </style>
+
+    <declare-styleable name="SubsamplingScaleImageView">
+        <attr name="src" format="reference" />
+        <attr name="assetName" format="string" />
+        <attr name="panEnabled" format="boolean" />
+        <attr name="zoomEnabled" format="boolean" />
+        <attr name="quickScaleEnabled" format="boolean" />
+        <attr name="tileBackgroundColor" format="color" />
+    </declare-styleable>
+
+
+    <!-- FilePicker -->
+    <style name="FilePickerThemeRail" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/main_background</item>
+        <item name="colorPrimaryDark">@color/rail_color_primary_dark</item>
+        <item name="colorAccent">@color/rail_color_accent</item>
+        <item name="android:textColor">@color/rail_color_primary</item>
+        <item name="android:textColorPrimary">@color/rail_textColor_Primary</item>
+        <!--<item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="custom_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/select_filepicker_check_box</item>
+    </style>
+    <!-- -->
+
+    <!-- ProgressButton -->
+    <declare-styleable name="ProgressButton">
+        <attr name="progress_bar_color" format="color|reference" />
+        <attr name="progress_bar_bg_color" format="color|reference" />
+        <attr name="button_corner_radius" format="dimension|reference" />
+        <attr name="text_color" format="color|reference" />
+    </declare-styleable>
+
+    <!-- SelectableTextHelper -->
+    <style name="OperateTextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <declare-styleable name="Banner">
+        <attr name="delay_time" format="integer" />
+        <attr name="scroll_time" format="integer" />
+        <attr name="is_auto_play" format="boolean" />
+        <attr name="title_background" format="color|reference" />
+        <attr name="title_textcolor" format="color" />
+        <attr name="title_textsize" format="dimension" />
+        <attr name="title_height" format="dimension" />
+        <attr name="indicator_width" format="dimension" />
+        <attr name="indicator_height" format="dimension" />
+        <attr name="indicator_margin" format="dimension" />
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="banner_layout" format="reference" />
+        <attr name="banner_default_image" format="reference" />
+        <attr name="image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <item name="bannerContainer" type="id" />
+    <item name="bannerDefaultImage" type="id" />
+    <item name="bannerTitle" type="id" />
+    <item name="bannerViewPager" type="id" />
+    <item name="circleIndicator" type="id" />
+    <item name="indicatorInside" type="id" />
+    <item name="numIndicator" type="id" />
+    <item name="numIndicatorInside" type="id" />
+    <item name="titleView" type="id" />
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/remote_video_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp" />
+
+    <LinearLayout
+        android:id="@+id/waiting_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/waiting_app_image_view_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="12dp"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:backgroundImage="@color/edeff2"
+            fresco:fadeDuration="300"
+            fresco:roundAsCircle="true"
+            fresco:roundingBorderColor="@color/c303030"
+            fresco:roundingBorderWidth="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:drawableTop="@drawable/msg_icon_new_stream_call_video"
+            android:drawablePadding="8dp"
+            android:text="@string/to_answer_the"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

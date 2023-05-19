@@ -1,0 +1,7 @@
+代码来源：https://github.com/afollestad/material-dialogs
+
+使用示例：
+var dialog =  AppDialog.show(this@TestActivity) {
+            title("This is a title!")
+}
+dialog.dismiss()

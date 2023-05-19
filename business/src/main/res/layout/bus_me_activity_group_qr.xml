@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f8fafd"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relative_layout"
+        android:background="@color/f8fafd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="32dp">
+
+        <LinearLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/app_compat_image_view"
+                android:layout_marginTop="74dp"
+                android:layout_width="190dp"
+                android:layout_height="190dp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/c3E4043"
+                android:textSize="12sp"
+                android:text="@string/scan_the_code_to_add_me_as_a_friend" />
+
+            <framework.telegram.ui.text.AppTextView
+                android:id="@+id/app_text_view_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="44dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="64dp"
+                android:layout_marginRight="44dp"
+                android:text="sdfasdfasf"
+                android:ellipsize="end"
+                android:minLines="1"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <include layout="@layout/common_line"/>
+
+        </LinearLayout>
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/image_view_icon"
+            android:layout_width="69dp"
+            android:layout_below="@+id/layout1"
+            android:layout_height="69dp"
+            android:layout_marginTop="-46dp"
+            android:layout_centerHorizontal="true"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:backgroundImage="@color/edeff2"
+            fresco:fadeDuration="300"
+            fresco:placeholderImage="@drawable/common_holder_one_user"
+            fresco:placeholderImageScaleType="focusCrop"
+            fresco:roundAsCircle="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/textview_1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:background="@drawable/common_corners_d4d6d9_ffffff_6_0"
+            android:layout_marginLeft="16dp"
+            android:gravity="center"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/update_qr_code"
+                android:drawableLeft="@drawable/icon_update_qr_code"
+                android:layout_height="44dp" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/textview_2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/common_corners_d4d6d9_ffffff_6_0"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:layout_height="44dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:text="@string/save_the_image"
+                android:drawablePadding="6dp"
+                android:drawableLeft="@drawable/common_icon_save_image"
+                android:layout_height="44dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/me_icon_my_qr_code_backgroud" />
+
+
+</LinearLayout>

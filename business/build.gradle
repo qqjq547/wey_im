@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
+
+def cfg = rootProject.ext.configuration // 配置
+
+android {
+    compileSdkVersion cfg.compileVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+
+        vectorDrawables.useSupportLibrary = true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+        buildConfigField 'String', 'versionDateTime', '\"' + releaseTime() + '\"'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    repositories {
+        //app 模块使用arr的时候，要加上所在模块arr的路径
+        flatDir {
+            dirs new File(rootDir, '/ui_support/libs'), 'libs'
+        }
+    }
+
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    api fileTree(dir: 'libs', include: ['*.jar'])
+
+    api project(path: ':common')
+    api project(path: ':message_bridge')
+    api project(path: ':business_bridge')
+
+    // kotlin支持
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+    // arouter支持
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+
+    api 'com.amazonaws:aws-android-sdk-core:2.6.19'
+    api 'com.amazonaws:aws-android-sdk-s3:2.6.19'
+    api 'com.amazonaws:aws-android-sdk-ddb:2.6.19'
+
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.alibaba:arouter-register:1.0.2"
+    }
+}
+
+def static releaseTime() {
+    return new Date().format("yyyyMMdd-HHmm", TimeZone.getTimeZone("GMT+8"))
+}

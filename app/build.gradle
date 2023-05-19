@@ -1,0 +1,150 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'com.aliyun.ams.emas-services'
+
+def cfg = rootProject.ext.configuration // 配置
+
+android {
+    compileSdkVersion cfg.compileVersion
+
+    defaultConfig {
+        applicationId cfg.package
+        versionCode cfg.version_code
+        versionName cfg.version_name
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+        renderscriptTargetApi cfg.renderscriptTargetApi
+        renderscriptSupportModeEnabled cfg.renderscriptSupportModeEnabled
+        multiDexEnabled cfg.multiDexEnabled
+
+        vectorDrawables.useSupportLibrary = true
+
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName(), AROUTER_GENERATE_DOC: "enable"]
+            }
+        }
+
+        manifestPlaceholders = [APP_NAME: "${getAppName()}",APP_ID: "${getAppID()}", AMAP_KEY_VALUE: "${getAmapValue()}"]
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("deshi.jks")
+            storePassword "deshi123456"
+            keyAlias "deshi"
+            keyPassword "deshi123456"
+            v2SigningEnabled true
+        }
+
+        release {
+            storeFile file("deshi.jks")
+            storePassword "deshi123456"
+            keyAlias "deshi"
+            keyPassword "deshi123456"
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            buildConfigField "boolean", "LOG_DEBUG", "true"// 显示Log
+            minifyEnabled false //是否开启混淆
+            debuggable true
+        }
+        release {
+            signingConfig signingConfigs.release
+            buildConfigField "boolean", "LOG_DEBUG", "true"// 不显示Log
+            minifyEnabled false //是否开启混淆
+            debuggable false
+        }
+    }
+
+    // 移除lint检查的error
+    lintOptions {
+        abortOnError false
+        disable 'InvalidPackage'
+    }
+
+    // 注释冲突
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+
+    repositories {
+        //app 模块使用arr的时候，要加上所在模块arr的路径
+        flatDir {
+            dirs new File(rootDir, '/ui_support/libs'), 'libs'
+        }
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+
+    api project(path: ':message')
+    api project(path: ':business')
+
+    // kotlin支持
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+
+    // 推送支持
+    api 'com.aliyun.ams:alicloud-android-push:3.7.5'
+
+    kapt 'com.alibaba:arouter-compiler:1.2.2'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "com.alibaba:arouter-register:1.0.2"
+    }
+}
+
+def getAppName() {
+    if (getAppID().endsWith(".international")) {
+        return "@string/app_name_international"
+    } else {
+        return "@string/app_name"
+    }
+}
+
+def getAmapValue() {
+    if (getAppID().endsWith(".international")) {
+        return "11001100110011001100110011001100"
+    } else {
+        return "11001100110011001100110011001100"
+    }
+}
+
+
+def getAppID() {
+    return rootProject.ext.configuration.package
+}

@@ -1,0 +1,18 @@
+代码来源：https://github.com/promeG/TinyPinyin
+
+使用示例：
+汉字转拼音API
+/**
+ * 如果c为汉字，则返回大写拼音；如果c不是汉字，则返回String.valueOf(c)
+ */
+String Pinyin.toPinyin(char c)
+
+/**
+ * c为汉字，则返回true，否则返回false
+ */
+boolean Pinyin.isChinese(char c)
+
+/**
+ * 将输入字符串转为拼音，转换过程中会使用之前设置的用户词典，以字符为单位插入分隔符
+ */
+String toPinyin(String str, String separator)

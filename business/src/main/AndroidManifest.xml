@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="framework.telegram.business">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <application>
+        <activity android:name=".ui.me.FontSizeActivity" />
+        <activity android:name=".ui.me.ConfigLanguageActivity" />
+        <activity android:name=".ui.group.CreateGroupNoticeActivity" />
+        <activity android:name=".ui.group.GroupNoticeActivity" />
+        <activity android:name=".ui.group.AdminPermissionActivity" />
+        <activity android:name=".ui.login.LoginFirstActivity" />
+        <activity android:name=".ui.login.LoginSecondActivity" />
+        <activity android:name=".ui.login.PerfectInfoActivity" />
+        <activity android:name=".ui.login.RegisterActivity" />
+        <activity android:name=".ui.login.SelectCountryActivity" />
+        <activity android:name=".ui.contacts.ContactReqListActivity" />
+        <activity android:name=".ui.contacts.JoinContactActivity" />
+        <activity android:name=".ui.contacts.SearchContactActivity" />
+        <activity android:name=".ui.contacts.ContactDetailActivity" />
+        <activity android:name=".ui.contacts.UnAuditContactDetailActivity" />
+        <activity android:name=".ui.me.MeDetailActivity" />
+        <activity android:name=".ui.me.MeEditActivity" />
+        <activity android:name=".ui.me.NoticeActivity" />
+        <activity android:name=".ui.me.PrivacyActivity" />
+        <activity android:name=".ui.me.PrivacyAddWayActivity" />
+        <activity android:name=".ui.me.SaveActivity" />
+        <activity android:name=".ui.me.BlackListActivity" />
+        <activity android:name=".ui.me.PrivacyDisShowOnlineActivity" />
+        <activity android:name=".ui.me.UnViewOnlineListActivity" />
+        <activity android:name=".ui.me.CommonInfoActivity" />
+        <activity android:name=".ui.me.AppLockSettingActivity" />
+        <activity android:name=".ui.me.ForgetAppLockActivity" />
+        <activity android:name=".ui.contacts.OperateContactActivity" />
+        <activity android:name=".ui.group.OperateGroupMemberActivity" />
+        <activity android:name=".ui.qr.MyQrActivity">
+            <intent-filter>
+                <action android:name="framework.telegram.business.ui.qr" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.qr.GroupQrActivity" />
+        <activity android:name=".ui.qr.ScanQrActivity" />
+        <activity android:name=".ui.group.MyGroupChatsActivity" />
+        <activity android:name=".ui.group.GroupSettingActivity" />
+        <activity android:name=".ui.me.PhoneChangeFirstActivity" />
+        <activity android:name=".ui.me.PhoneChangeSecondActivity" />
+        <activity android:name=".ui.me.PasswordChangeActivity" />
+        <activity android:name=".ui.me.PasswordSetFirstActivity" />
+        <activity android:name=".ui.me.PasswordSetSecondActivity" />
+        <activity android:name=".ui.me.AboutActivity" />
+        <activity android:name=".ui.me.FeedbackActivity" />
+        <activity android:name=".ui.me.MeContactsActivity" />
+        <activity android:name=".ui.group.UnAuditMemberDetailActivity" />
+        <activity android:name=".ui.group.UnAuditInviteMemberDetailActivity" />
+        <activity android:name=".ui.group.JoinGroupActivity" />
+        <activity android:name=".ui.group.GroupManageActivity" />
+        <activity android:name=".ui.group.GroupInfoActivity" />
+        <activity android:name=".ui.group.GroupNameEditActivity" />
+        <activity android:name=".ui.group.GroupReqListActivity" />
+        <activity android:name=".ui.contacts.ContactSettingActivity" />
+        <activity android:name=".ui.search.SearchActivity" />
+        <activity android:name=".ui.search.expand.expand.SearchExpandActivity" />
+        <activity android:name=".ui.search.expand.chatExpand.SearchChatExpandActivity" />
+        <activity android:name=".ui.search.expand.multipleSearch.SearchMultChatExpandActivity" />
+        <activity android:name=".ui.contacts.PhoneContactsActivity" />
+        <activity android:name=".ui.contacts.ContactEditActivity" />
+        <activity android:name=".ui.contacts.VerifyContactActivity" />
+        <activity android:name=".ui.group.RemoveGroupMemberActivity" />
+        <activity android:name=".ui.contacts.ComplaintActivity" />
+        <activity android:name=".ui.contacts.ComplaintEditActivity" />
+        <activity android:name=".ui.contacts.SearchContactListActivity" />
+        <activity android:name=".ui.group.AdministratorActivity" />
+        <activity android:name=".ui.group.SameGroupChatsActivity" />
+        <activity android:name=".ui.group.CreateGroupActivity" />
+        <activity android:name=".ui.login.GetSmsCodeActivity" />
+        <activity
+            android:name=".ui.login.WebAlreadyLoginActivity"
+            android:theme="@style/AnimationTheme" />
+        <activity
+            android:name=".ui.login.WebConfirmLoginActivity"
+            android:theme="@style/AnimationTheme" />
+        <activity android:name=".ui.contacts.TransmissionAssistantSettingActivity" />
+        <activity android:name=".ui.me.ClearAccountActivity" />
+        <activity android:name=".ui.login.FindPasswordFirstActivity" />
+        <activity android:name=".ui.login.FindPasswordSecondActivity" />
+
+        <activity android:name=".ui.common.LinkEditActivity" />
+
+        <activity android:name=".ui.me.ChatInfoActivity" />
+        <activity android:name=".ui.other.AppRLogActivity" />
+
+        <activity android:name=".ui.other.ClearAccountActivity" />
+        <activity android:name=".ui.other.ClearStorageActivity" />
+
+        <activity
+            android:name=".ui.other.AppGestureUnlockActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.other.AppFingerprintIdentifyActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.other.AppConfirmPinUnlockActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.other.AppSetPinUnlockActivity"
+            android:launchMode="singleTask" />
+
+        <activity android:name=".ui.qr.ScanTextActivity" />
+
+        <activity android:name=".ui.qr.QrAnalyzeActivity"
+            android:theme="@style/translucent"/>
+
+
+
+    </application>
+
+</manifest>

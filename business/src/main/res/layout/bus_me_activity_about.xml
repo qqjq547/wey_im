@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="130dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@color/white"
+            android:src="@drawable/bus_about_icon_logo" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/a2a4a7"
+            android:textSize="14sp" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_host"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_session"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp" />
+
+        <framework.telegram.business.ui.widget.SettingItemView
+            android:id="@+id/me_item_view_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+        <framework.telegram.business.ui.widget.SettingItemView
+            android:id="@+id/me_item_view_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:foreground="?android:attr/selectableItemBackground" />
+
+    </LinearLayout>
+
+    <framework.telegram.ui.text.AppTextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:text="Copyright © 2023"
+        android:textColor="@color/a2a4a7"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <include layout="@layout/msg_chat_item_time_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/check_box_msg"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="16dp"
+            android:button="@drawable/common_checkbox"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <framework.telegram.ui.image.AppImageView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/app_image_view_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="top"
+                android:layout_marginRight="8dp"
+                fresco:actualImageScaleType="focusCrop"
+                fresco:fadeDuration="100"
+                fresco:placeholderImage="@drawable/common_holder_one_user"
+                fresco:roundAsCircle="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <framework.telegram.ui.emoji.EmojiTextView
+                    android:id="@+id/text_view_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/c4a4a4a"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <framework.telegram.ui.roundview.RoundAngleFrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:bottomLeftRadius="8dp"
+                        app:bottomRightRadius="8dp"
+                        app:borderColor="@color/d4d6d9"
+                        app:isShowBorder="true"
+                        app:topLeftRadius="0dp"
+                        app:topRightRadius="8dp">
+
+                        <RelativeLayout
+                            android:id="@+id/warp_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <include
+                                android:id="@+id/layout_ref_msg"
+                                layout="@layout/msg_chat_item_ref_other"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignLeft="@+id/layout_msg_content"
+                                android:layout_alignRight="@+id/layout_msg_content" />
+
+                            <RelativeLayout
+                                android:id="@+id/layout_msg_content"
+                                android:layout_width="260dp"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/layout_ref_msg"
+                                android:background="@color/msg_color_other">
+
+                                <framework.telegram.ui.image.AppImageView
+                                    android:id="@+id/image_view_card_icon"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginLeft="12dp"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="12dp"
+                                    fresco:actualImageScaleType="focusCrop"
+                                    fresco:fadeDuration="300"
+                                    fresco:placeholderImage="@drawable/common_holder_one_user"
+                                    fresco:roundAsCircle="true" />
+
+                                <framework.telegram.ui.emoji.EmojiTextView
+                                    android:id="@+id/emoji_text_view_card_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_toLeftOf="@+id/text_view_tips"
+                                    android:layout_toRightOf="@+id/image_view_card_icon"
+                                    android:ellipsize="end"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    app:emojiSize="@dimen/emoji_size_default" />
+
+                                <TextView
+                                    android:id="@+id/text_view_tips"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="12dp"
+                                    android:background="@drawable/common_corners_trans_178aff_6_0"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="6dp"
+                                    android:paddingTop="2dp"
+                                    android:paddingRight="6dp"
+                                    android:paddingBottom="2dp"
+                                    android:text="@string/business_card"
+                                    android:textColor="@color/white"
+                                    android:textSize="10sp" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <framework.telegram.ui.flashview.FlashRelativeLayout
+                            android:id="@+id/flash_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                    </framework.telegram.ui.roundview.RoundAngleFrameLayout>
+
+                    <include layout="@layout/msg_chat_item_tools" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

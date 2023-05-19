@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+    <include layout="@layout/msg_search_white" />
+
+    <framework.telegram.ui.recyclerview.AppRecyclerView
+        android:id="@+id/index_fast_scroll_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <framework.telegram.ui.recyclerview.sticky.StickyHeadContainer
+        android:id="@+id/sticky_head_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include layout="@layout/msg_contacts_item_head2" />
+
+    </framework.telegram.ui.recyclerview.sticky.StickyHeadContainer>
+
+</LinearLayout>

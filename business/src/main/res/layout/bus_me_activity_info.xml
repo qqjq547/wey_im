@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linear_layout_all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <include layout="@layout/common_line"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <framework.telegram.business.ui.widget.AvatarSettingItemView
+                android:id="@+id/me_item_view_icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_nick_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_mark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_sex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_qr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+
+            <framework.telegram.business.ui.widget.SettingItemView
+                android:id="@+id/me_item_view_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="?android:attr/selectableItemBackground"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

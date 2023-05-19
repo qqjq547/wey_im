@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <framework.telegram.message.ui.widget.ratioview.RatioRelativeLayout xmlns:ratio="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/map_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ratio:datumRatio="datumWidth"
+            ratio:heightRatio="7.0"
+            ratio:widthRatio="10.0">
+
+            <com.amap.api.maps.MapView
+                android:id="@+id/mapview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="50dp"
+                android:src="@drawable/choice_location_marker" />
+        </framework.telegram.message.ui.widget.ratioview.RatioRelativeLayout>
+
+        <ImageView
+            android:id="@+id/request_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:src="@drawable/location_gps_request" />
+
+    </FrameLayout>
+
+    <framework.telegram.ui.recyclerview.AppRecyclerView
+        android:id="@+id/common_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

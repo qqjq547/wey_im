@@ -1,0 +1,403 @@
+syntax = "proto3";
+option java_package="com.im.domain.pb";
+option java_outer_classname="CommonProto";
+// protoc.exe  -I=. --java_out=../src common.proto
+
+// 客户端详情
+message ClientInfo {
+    string     sessionId      = 1; // session
+    int32      appVer         = 2; // 应用版本号
+    int32      packageCode    = 3; // 包ID
+    Platform   plat            = 4; // 登陆平台
+    int32      language        = 5; // 系统语言
+}
+
+// 公共的返回结果
+message CommonResult {
+    int32 	errCode       = 1; // 错误码
+    string  errMsg        = 2; // 错误内容
+    string  flag          = 3; // 扩展字段
+}
+
+//  ********************************** Common Enum **********************************
+
+// 账号类型
+enum AccountType {
+    MOBILE  = 0; // 手机
+    EMAIL   = 1; // 邮箱
+}
+
+// 获取验证码类型
+enum GetValidateCodeType {
+    REG             = 0; // 注册，新版本废弃，统一使用登录
+    LOGIN           = 1; // 登录
+    FIND_PASSWORD   = 2; // 找回密码
+    UPDATE_PASSWORD = 3; // 更改密码
+    UPDATE_PHONE    = 4; // 更换手机
+    VALIDATE_PHONE  = 5; // 验证手机
+    VALIDATE_PASSWORD       = 6; // 验证密码
+    FIND_GESTURE_PASSWORD   = 7; // 找回手势密码 v1.6.0
+    TRADE_PASSWORD          = 8; // 设置交易密码
+    UPDATE_TRADE_PASSWORD   = 9; // 修改交易密码
+    BIND_PHONE              = 10; // 绑定手机号
+    BIND_EMAIL              = 11; // 绑定邮箱
+    UPDATE_EMAIL            = 12; // 更换邮箱
+    VALIDATE_GOOGLE_AUTH    = 13; // 绑定或者解绑谷歌验证器
+    UPDATE_SECURE           = 14; // 更改安全验证
+    CASH_OUT                = 15; // 提币
+    QUICK_ORDER             = 16; // 急速出售
+    PENDING_ORDER           = 17; // 挂单出售
+    PAY_COIN                = 18; // 放币
+}
+
+// 登录方式
+enum LoginMode {
+    HAND        = 0; // 手动登录
+    SYS_AUTO    = 1; // 系统自动登录
+}
+
+// 登录类型
+enum LoginType {
+    SMS_CODE     = 0; // 短信验证码
+    PASSWORD     = 1; // 用户密码
+}
+
+// 性别
+enum Gender {
+    SECRECY = 0; // 保密
+    MALE    = 1; // 男
+    FEMALE  = 2; // 女
+}
+
+// 平台
+enum Platform {
+    ANDROID     = 0;
+    IPHONE      = 1;
+    UNKOWN      = 2; // 未知
+    MAC      = 3; // 苹果
+    WIN      = 4; //win
+}
+
+// 最后上线时间设置type
+enum  LastOnlineTimeViewType{
+    ALL_SHOW    = 0;//所有人
+    ONLY_FRIEND = 1;//仅联系人
+    NOT_SHOW    = 2;//不显示
+}
+
+// 群成员类型
+enum GroupMemberType {
+    HOST    = 0; // 群主
+    MANAGE  = 1; // 管理员
+    MEMBER  = 2; // 成员
+}
+
+// 附件存储空间类型
+enum AttachWorkSpaceType {
+    COMMON      = 0; // 通用
+    CHAT        = 1; // 聊天
+}
+
+// 附件类型
+enum AttachType {
+    PIC         = 0; // 图片
+    AUDIO       = 1; // 音频
+    VIDEO       = 2; // 视频
+    FILE        = 3; // 文件 add V1.1.0c
+    LOG         = 4; // 日志 v1.3.0
+    EMOTICON    = 5; // 表情图 v1.5.0
+}
+
+// 二维码类型
+enum QrCodeType {
+    QR_USER     = 0; // 用户
+    QR_GROUP    = 1; // 群组
+    WEB_LOGIN   = 2; // web扫码登录
+}
+// 意见反馈类型
+enum FeedbackType {
+    SUGGEST     = 0; // 建议
+    MISTAKE     = 1; // 错误
+    OTHER       = 2; // 其他
+}
+
+//web端二维码状态类型
+enum WebLoginStatus{
+    NOT_SCAN       = 0; // 待扫码
+    SCANNED        = 1; // 已扫码
+    ALREADY_LOGIN  = 2; // 确认登录
+    CANCEL_LOGIN   = 3; // 取消登录
+}
+
+// 群申请处理状态
+enum GroupReqStatus {
+    CHECKING        = 0; // 待审
+    AGREE           = 1; // 同意
+    REFUSE          = 2; // 拒绝
+}
+
+// 群消息来源类型
+enum GroupReqType {
+    GROUP_TRANSFER      = 0; // 转让群
+    GROUP_INVITE  = 1; // 来自邀请入群
+    GROUP_QR_CODE       = 2; // 来自扫二维码入群
+    GROUP_OWNER_CHECK_INVITE = 3; // 来自群主或管理员审核邀请
+    GROUP_OWNER_CHECK_QR_CODE = 4; // 来自群主或管理员审核二维码
+    GROUP_MEMBER_CHECK = 5; // 来自群成员审核
+    GROUP_OWNER_REMOVE_MEMBER = 6; // 来自群主把成员移出群(不会有群通知)
+    GROUP_MEMBER_EXIT = 7; // 来自群成员主动退出群(不会有群通知)
+    GROUP_SET_ADMIN = 8; // 设置为管理员
+    GROUP_CANCLE_ADMIN = 9; // 移除管理员
+    GROUP_ADMIN_UPDATE = 10; // 管理员信息更新(不会有群通知)
+    GROUP_IS_BANNED = 11; // 群被限制使用 v1.4.0
+    GROUP_MEMBER_SHUTUP = 12; // 群成员禁言 v1.4.0
+    GROUP_IS_DISABLE = 13; // 群解散 v1.6.0
+    GROUP_LINK = 14; // 来自群链接 v1.7.0
+}
+
+// 群处理消息类型
+enum GroupHandleType {
+    GROUP_REQ       = 0; // 群请求处理
+    GROUP_NAME      = 1; // 群名称
+    GROUP_PIC       = 2; // 群图标
+    GROUP_MEMBER_NICKNAME = 3; // 群成员名称
+    GROUP_NOTICE    = 4; // 群公告
+    GROUP_SHUTUP    = 5; // 群禁言
+    GROUP_READ_CANCEL    = 6; // 群阅后即焚 v1.3.0
+}
+
+// 消息回执状态
+enum MsgReceiptStatus {
+    DELIVERED       = 0; // 已送达
+    VIEWED          = 1; // 已查看
+    PLAYED          = 2; // 已播放(仅语音)
+}
+
+// 版本检测标识
+enum CheckVersionFlag {
+    NOT_UP      = 0; // 无须升级
+    CAN_UP      = 1; // 可升级
+    MUST_UP     = 2; // 强制升级
+}
+
+// 密钥对类型
+enum KeyPairType {
+    KEY_USER     = 0; // 用户
+    KEY_GROUP    = 1; // 群组
+    KEY_USER_WEB = 2; // web_User
+}
+
+//群管理员权限类型
+enum AdminRightType {
+    ALL_RIGHT   = 0; // 所有
+    UPDATE_DATA = 1; // 修改群资料
+    CHECK_APPLY = 2; // 审核入群申请
+    PUSH_NOTICE = 3; // 发布群公告
+    SET_ADMIN   = 4; // 设置管理员
+}
+
+// 搜索使用地图类型
+enum SearchMapType {
+    GAODE   = 0; // 高德
+    GOOGLE  = 1; // Foursquare（版本强更替换）（原谷歌变更为Foursquare）
+    BAIDU   = 2; // 百度
+}
+
+// 账号清除时间类型 v1.3.0
+enum ClearTimeType {
+    SIX_MONTH   = 0; // 6个月(默认)
+    ONE_MONTH  = 1; // 1个月
+    THIRD_MONTH   = 2; // 3个月
+    TWELVE_MONTH   = 3; // 12个月
+}
+
+// 邀请链接类型 add v1.4.0
+enum InviteLinkType {
+    LINK_USER     = 0; // 用户
+    LINK_GROUP    = 1; // 群组
+}
+
+// 群成员搜索过滤类型 add v1.8.0
+enum FilterType {
+    BE_DEFAULT         = 0; // 全部
+    BE_MEMBER          = 1; // 仅群成员
+    BE_ADMIN           = 2; // 仅管理员
+    NOT_ONESELF        = 3; // 除当前用户
+    NOT_HOST           = 4; // 除当前群主
+    NOT_ADMIN          = 5; // 除管理员
+}
+
+
+//  ********************************** Common Base **********************************
+
+// 用户基本信息
+message UserBase {
+    int64      uid             = 1; // 用户ID
+    string     nickName       = 2; // 昵称
+    string     icon            = 3; // 头像
+    Gender     gender          = 4; // 性别
+    FriendRelation  friendRelation  = 5; // 好友关系
+    UserOnOrOffLine userOnOrOffline = 6; // 用户上下线
+    string signature = 7; //个性签名(web)
+    string depict    = 8;  //描述(web)
+    bool    bfCancel    = 9;  //是否已注销 v1.3.0
+    bool    bfBanned    = 10;  //是否已限制 v1.4.0
+    string    identify    = 11;  //68号 v1.4.0
+}
+
+// 好友关系信息
+message FriendRelation {
+    bool    bfFriend        = 1; // 是否好友[此用户是否是当前登录用户的好友]
+    string  remarkName      = 2; // 好友备注名OR群昵称
+}
+
+// 群成员基本信息
+message GroupMemberBase {
+    UserBase        user        = 1; // 用户基本信息
+    int64           groupId    = 2; // 群ID
+    GroupMemberType type        = 3; // 成员类型
+    string          groupNickName   = 4; // 用户群昵称
+    int64           score   = 5; // 排序权重值
+    AdminRightBase  right  = 6; // 管理员权限
+    bool        bfMyBlack       = 7;  //我的黑名单用户（AddForWeb）
+}
+
+//联系人基本信息
+message ContactsDetailBase {
+    UserBase    userInfo        = 1;  //用户基本信息
+    string      depict          = 2;  //描述
+    bool        bfStar          = 3;  //星标
+    bool        bfDisturb       = 4;  //免打扰
+    bool        bfMyBlack       = 5;  //我的黑名单用户
+    string      letter          = 6;  //昵称首字母
+    bool        bfTop           = 7;  //置顶
+    bool        bfVerify        = 8;  //是否需要申请验证(非联系人)
+    string      signature       = 9;  //个性签名
+    string      groupNickName   = 10; //群昵称（由群查看时下发） add v1.0.5
+    string      phone           = 11; //手机号 add v1.0.5
+    bool        bfReadCancel    = 12; //阅后即焚 add v1.1.0
+    int32       msgCancelTime   = 13; //消息销毁时间[秒]· add v1.1.0
+    bool        bfScreenshot    = 14; //截屏通知 add v1.1.0
+    int32       commonGroupNum  = 15; //共同群聊数量 add v1.2.0
+    bool        bfReadReceipt   = 16; //好友已读回执开关 v1.2.0
+    int32       groupShutupTime  = 17; //群成员禁言时间[秒]，关闭-1，永久-2，默认值0为不显示（由群查看时下发） v1.4.0 如：1小时：3600
+    int32       searchType      = 18; // 好友搜索来源（由查找联系人时下发）  ContactsAddType v1.4.0
+    string      addToken        = 19; //搜索陌生人时下发的令牌，添加好友时需要
+}
+
+// 消息回执状态基础base
+message MsgReceiptStatusBase {
+    MsgReceiptStatus status = 1; // 消息状态
+    int64     time          = 2; // 时间戳
+}
+
+//消息回执base
+message MsgReceiptBase {
+    UserBase    targetUser    = 1; // 已读用户
+    repeated    MsgReceiptStatusBase statusList = 2; //消息回执状态列表
+}
+
+// 用户上下线
+message UserOnOrOffLine {
+    int64   uid     = 1; // 上下线用户ID
+    bool    online  = 2; // 上下线：true-上线，false-下线
+    int64   createTime  = 3; // 上下线时间
+    bool    bfShow  = 4; // 是否显示
+}
+
+// 密钥对base
+message KeyPairBase {
+    string    publicKey   = 1; // 公钥
+    string    privateKey  = 2; // 私钥
+    string    msgKey      = 3; // 消息密钥(群组下发)
+    int32     keyVersion  = 4; // 密钥对版本号
+}
+
+//群管理员权限Base
+message AdminRightBase {
+    bool bfUpdateData = 1; // 修改群资料
+    bool bfJoinCheck  = 2; // 审核入群申请
+    bool bfPushNotice = 3; // 发布群公告
+    bool bfSetAdmin   = 4; // 设置其他管理员
+}
+
+//群公告base
+message GroupNoticeBase {
+    GroupMemberBase  editUser  = 1; //编辑用户
+    string notice  = 2 ; // 群公告内容
+    int64  releaseTime = 3; //发布时间
+    int64  noticeId = 4;//群公告id
+    bool   bfRemind = 5;//是否通知所有人
+}
+
+//表情包base
+message EmoticonBase {
+    int64   emoticonId      = 1;//id
+    string  emoticonUrl     = 2;//链接
+    int32   height          = 3;//高
+    int32   width           = 4;//宽
+}
+
+// 币-链网络
+message CoinLinkBase {
+    int32           coinId      = 1;
+    string          linkName   = 2;
+    string          minCash        = 3; // 最小提现
+    string          maxCash        = 4; // 最大提现
+    bool            isOpenCash     = 5; // 是否开放提现
+    bool            isOpenRecharge  = 6; // 是否开放充值
+    string          minRecharge     = 7; // 最小充值
+    int32           tagType         = 8; // 标签类型 1.无标签，2.可填标签，3.必填标签
+    string          tagName         = 9; // 标签名称
+    string          blockConfirm    = 10; // 区块确认
+    string          cashTotal       = 11; // 提现额度
+    string          feeCoin         = 12; // 手续费
+    int32           showDecimal     = 13; // 显示精度，小数点位数
+}
+
+// 虚拟币信息
+message CoinTypeBase {
+    int32       id          = 1; // id
+    string      name        = 2; // 简称
+    string      desc        = 3; // 具体名称
+    string      icon        = 4; // 图标url
+    string      letter      = 5; // 字母
+    repeated CoinLinkBase link = 6; // 链网络
+    string          minCash        = 7; // 最小提现
+    string          maxCash        = 8; // 最大提现
+    bool            isOpenCash     = 9; // 是否开放提现
+    bool            isOpenRecharge  = 10; // 是否开放充值
+    string          minRecharge     = 11; // 最小充值
+    int32           tagType         = 12; // 标签类型 1.无标签，2.可填标签，3.必填标签
+    string          tagName         = 13; // 标签名称
+    string          blockConfirm    = 14; // 区块确认
+    string          cashTotal       = 15; // 提现额度
+    string          feeCoin         = 16; // 手续费
+    int32           showDecimal     = 17; // 显示精度，小数点位数
+}
+
+// 咨询分类信息
+message NewsCategoryBase {
+    int32       categoryId  = 1; // id
+    string      name        = 2; // 名称
+    int32       sort        = 3; // 排序值
+}
+
+// 咨询详情信息
+message NewsBase {
+    int64       newsId          = 1; // id
+    string      title       = 2; // 标题
+    string      pic         = 3; // 封面
+    int64       time        = 4; // 发布时间
+    string      detailLink  = 5; // 详情link
+}
+
+// 付款方式信息
+message PaymentBase {
+    int32           paymentId       = 1; // 自增id
+    int32           paymentType     = 2; // 1.银行卡，2.微信，3.支付宝
+    string          accountName     = 3; // 户名
+    string          cardNo          = 4; // 卡号
+    string          bankName        = 5; // 银行
+    string          subBankName     = 6; // 支行
+}

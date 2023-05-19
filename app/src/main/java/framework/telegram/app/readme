@@ -1,0 +1,7 @@
+reaml 使用
+1：copyToRealm与copyToRealmOrUpdate：前者是给未指明主键的model使用的，后者则是给指明主键的model使用。
+
+2：copyToRealm对应无主键参数的createObject，区别是copyToRealm会复用Realm缓存的model示例，不会每次都创建新的model实例。
+
+3：copyToRealmOrUpdate对应有主键参数的createObject，区别是copyToRealmOrUpdate会复用Realm缓存的model示例，没有缓存实例就要去表中查询是否有匹配这个主键存在的记录，来决定是新建对象还是更新model实例。
+

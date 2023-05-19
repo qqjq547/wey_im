@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="24dp"
+    android:background="@color/edeff2"
+    android:id="@+id/relative_layout_item">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/a2a4a7"
+        android:id="@+id/text_view_letter"
+        android:text="AAA"
+        android:layout_centerVertical="true"
+        android:textSize="12sp"
+        android:layout_marginLeft="16dp" />
+</RelativeLayout>

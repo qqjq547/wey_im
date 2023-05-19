@@ -1,0 +1,111 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+def cfg = rootProject.ext.configuration // 配置
+
+android {
+    compileSdkVersion cfg.compileVersion
+
+    defaultConfig {
+        minSdkVersion cfg.minSdk
+        targetSdkVersion cfg.targetSdk
+
+        buildConfigField "boolean", "JENKINS_IS_TEST_SERVER", JENKINS_IS_TEST_SERVER
+// Jenkins 是否使用测试服
+        buildConfigField "String", "JENKINS_TINKER_APK_ID", JENKINS_TINKER_APK_ID// Jenkins 控制的包名
+        buildConfigField "int", "JENKINS_VERSION_CODE", JENKINS_VERSION_CODE// Jenkins version_code
+        buildConfigField "String", "JENKINS_VERSION_NAME", JENKINS_VERSION_NAME
+// Jenkins version_name
+        buildConfigField "boolean", "IS_JENKINS", IS_JENKINS// Jenkins 是否使用Jenkins打包
+
+        buildConfigField "boolean", "IS_LAB_MODEL", IS_LAB_MODEL// Jenkins 是否使用Jenkins打包
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/zip4j_1.3.2.jar')
+    api files('libs/protobuf-java-3.0.0.jar')
+    api files('libs/OpenInstall_v2.3.0.jar')
+    api 'androidx.appcompat:appcompat:1.4.1'
+    //multidex
+    api 'androidx.multidex:multidex:2.0.1'
+    // kotlin支持
+    api 'org.jetbrains.kotlin:kotlin-stdlib:1.6.10'
+    // rxjava支持
+    api 'io.reactivex.rxjava2:rxjava:2.2.6'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    // rxlifecycle支持
+    api 'com.trello.rxlifecycle3:rxlifecycle:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-android:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-android-lifecycle:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-kotlin:3.0.0'
+    api 'com.trello.rxlifecycle3:rxlifecycle-android-lifecycle-kotlin:3.0.0'
+    // retrofit/okhttp/okio
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api "com.squareup.retrofit2:converter-gson:2.3.0"
+    api 'com.squareup.okhttp3:okhttp:3.12.1'
+    api 'com.squareup.okhttp3:logging-interceptor:3.5.0'
+    api 'com.squareup.okio:okio:2.2.0'
+    // okdownload
+    api 'com.liulishuo.okdownload:okdownload:1.0.7'
+    api 'com.liulishuo.okdownload:sqlite:1.0.7'
+    api 'com.liulishuo.okdownload:okhttp:1.0.7'
+    // gson
+    api 'com.google.code.gson:gson:2.8.9'
+    // disklrucache
+    api 'com.jakewharton:disklrucache:2.0.2'
+    // luban
+    api 'top.zibin:Luban-turbo:1.0.0'
+    // umeng
+    api 'com.umeng.umsdk:common:9.4.7'// 必选
+    api 'com.umeng.umsdk:asms:1.4.1'// 必选
+    api 'com.umeng.umsdk:apm:1.5.2'
+    // aliyun oss
+    api 'com.aliyun.dpa:oss-android-sdk:2.9.5'
+    // arouter
+    api 'com.alibaba:arouter-api:1.5.0'
+    // 工具库
+    api 'de.greenrobot:java-common:2.3.1'
+    // walle
+    api 'com.meituan.android.walle:library:1.1.6'
+    // TinyPinyin
+    api 'com.github.promeg:tinypinyin:2.0.3'
+    api 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
+    // x5内核
+    api files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
+
+    //高德地图
+    api files('libs/AMap3DMap_4.1.3_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
+
+    //谷歌地图
+    api "com.google.android.gms:play-services-maps:17.0.1"
+
+    //DH
+    api 'org.whispersystems:curve25519-android:0.2.5'
+
+
+    api 'com.squareup.leakcanary:leakcanary-android:1.6.2'
+    api 'com.squareup.leakcanary:leakcanary-support-fragment:1.6.2'
+
+    //https://github.com/Bigkoo/Android-PickerView
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+
+    //ScaleViewPager
+    api 'com.nineoldandroids:library:2.4.0'
+
+    api 'com.qiniu:android-netdiag:0.1.1'
+
+}

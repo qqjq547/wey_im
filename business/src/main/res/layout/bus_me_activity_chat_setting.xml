@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <framework.ideas.common.toolsbar.CustomToolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white" />
+
+    <include layout="@layout/common_line"/>
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <framework.telegram.business.ui.widget.SwitchButtonView
+        android:id="@+id/switch_button_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <framework.telegram.business.ui.widget.SettingItemView
+        android:id="@+id/me_item_view_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+
+</LinearLayout>

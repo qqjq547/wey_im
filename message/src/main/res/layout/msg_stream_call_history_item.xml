@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="68dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <CheckBox
+        android:id="@+id/check_box_msg"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="16dp"
+        android:button="@drawable/common_checkbox"
+        android:visibility="gone" />
+
+    <framework.telegram.ui.image.AppImageView
+        android:id="@+id/image_view_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@+id/check_box_msg"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:backgroundImage="@color/edeff2"
+        fresco:fadeDuration="300"
+        fresco:placeholderImage="@drawable/common_holder_one_user"
+        fresco:roundAsCircle="true" />
+
+    <framework.telegram.ui.text.AppTextView
+        android:id="@+id/app_text_view_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/image_view_icon"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/layout_detail"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="@string/name" />
+
+    <LinearLayout
+        android:id="@+id/layout_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/image_view_icon"
+        android:layout_marginBottom="2dp"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/image_view_stream_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/msg_icon_stream_type_audio_grey" />
+
+        <framework.telegram.ui.text.AppTextView
+            android:id="@+id/app_text_view_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp"
+            tools:text="@string/face_sign" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text_view_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/app_text_view_name"
+            android:maxLines="1"
+            android:textColor="@color/a2a4a7"
+            android:textSize="13sp"
+            tools:text="@string/just_now" />
+
+        <ImageView
+            android:id="@+id/image_view_is_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_status"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/msg_icon_stream_call_import_grey" />
+
+        <ImageView
+            android:id="@+id/image_view_stream_call_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/layout_status"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/stream_call_detail" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/image_view_icon"
+        android:background="@color/eaeaea" />
+
+</RelativeLayout>

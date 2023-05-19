@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout_friend_head2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    >
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/eaeaea" />
+
+    <LinearLayout
+        android:layout_below="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp">
+            <framework.telegram.ui.text.AppTextView
+                android:id="@+id/app_text_view_username2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textStyle="bold"
+                tools:text="ssssssss" />
+
+            <TextView
+                android:id="@+id/app_text_view_user_phone2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/a2a4a7"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textSize="16sp"
+                tools:text="ssss" />
+        </LinearLayout>
+
+        <framework.telegram.ui.image.AppImageView
+            android:id="@+id/app_image_view_icon2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="16dp"
+            fresco:placeholderImage="@drawable/common_holder_one_user"
+            fresco:roundAsCircle="true" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

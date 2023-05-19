@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <framework.telegram.ui.voice.VoicePlayerView
+        android:id="@+id/voice_player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:pauseIcon="@drawable/msg_chat_ic_pause_voice_myself"
+        app:playIcon="@drawable/msg_chat_ic_play_voice_myself"
+        app:seekBarProgressColor="#ffffff"
+        app:seekBarThumbColor="#ffffff"
+        app:timeColor="#ffffff" />
+</merge>
