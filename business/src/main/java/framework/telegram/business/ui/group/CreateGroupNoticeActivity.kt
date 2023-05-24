@@ -44,7 +44,7 @@ class CreateGroupNoticeActivity : BaseActivity() {
         }
         custom_toolbar.showCenterTitle(getString(R.string.issue_new_announcements))
 
-        tv_num.text = "0/500"
+        tv_num.text = "0/1000"
         et_content.addTextChangedListener(MyTextWatcher(et_content, tv_num, btn_confirm))
         switch_button.isChecked = false
 
@@ -151,7 +151,7 @@ class CreateGroupNoticeActivity : BaseActivity() {
 
     class MyTextWatcher(val et: EditText, val tv: TextView, val btn: Button) : TextWatcher {
 
-        private val charMaxNum = 500 // 允许输入的字数
+        private val charMaxNum = 1000 // 允许输入的字数
         private var temp: CharSequence? = null // 监听前的文本
         private var editStart: Int = 0 // 光标开始位置
         private var editEnd: Int = 0 // 光标结束位置
