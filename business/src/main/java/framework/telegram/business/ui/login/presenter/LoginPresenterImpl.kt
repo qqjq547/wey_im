@@ -57,61 +57,61 @@ class LoginPresenterImpl : LoginContract.Presenter {
         mView.showLoading()
         val realPassword = if (TextUtils.isEmpty(password)) "" else getPassword(password)
         HttpManager.getStore(LoginHttpProtocol::class.java)
-                .login(object : HttpReq<LoginProto.LoginReq>() {
-                    override fun getData(): LoginProto.LoginReq {
-                        return LoginHttpReqCreator.createLoginByPasswordReq(phone, realPassword, countryCode)
-                    }
-                })
-                .getResult(mViewObservalbe, {
-                    SharePreferencesStorage.createStorageInstance(CommonPref::class.java, AccountManager.getLoginAccountUUid()).putLastManualLoginTime(it.disableTime)
-                    BusinessApplication.saveAccountInfoByLogin(1, it.user.uid, phone, realPassword, password, countryCode, it)
-                    mView.loginSuccess(mContext.getString(R.string.bus_login_login_success))
-                }, {
-                    //请求失败
-                    if (it is HttpException) {
-                        when {
-                            it.errCode == Constant.Result.ACCOUNT_IS_CANCEL -> {
-                                ArouterServiceManager.messageService.deleteAccountData(it.flag.toLong())
-                                BaseApp.app.onUserLogout(BaseApp.app.getString(R.string.account_unregistration))
-                            }
-                            it.errCode == ACCOUNT_IS_BANNED -> mView.showErrMsg(it.message, true)
-                            else -> mView.showErrMsg(it.message, false)
+            .login(object : HttpReq<LoginProto.LoginReq>() {
+                override fun getData(): LoginProto.LoginReq {
+                    return LoginHttpReqCreator.createLoginByPasswordReq(phone, realPassword, countryCode)
+                }
+            })
+            .getResult(mViewObservalbe, {
+                SharePreferencesStorage.createStorageInstance(CommonPref::class.java, AccountManager.getLoginAccountUUid()).putLastManualLoginTime(it.disableTime)
+                BusinessApplication.saveAccountInfoByLogin(1, it.user.uid, phone, realPassword, password, countryCode, it)
+                mView.loginSuccess(mContext.getString(R.string.bus_login_login_success))
+            }, {
+                //请求失败
+                if (it is HttpException) {
+                    when {
+                        it.errCode == Constant.Result.ACCOUNT_IS_CANCEL -> {
+                            ArouterServiceManager.messageService.deleteAccountData(it.flag.toLong())
+                            BaseApp.app.onUserLogout(BaseApp.app.getString(R.string.account_unregistration))
                         }
-                    } else {
-                        mView.showErrMsg(it.message, false)
+                        it.errCode == ACCOUNT_IS_BANNED -> mView.showErrMsg(it.message, true)
+                        else -> mView.showErrMsg(it.message, false)
                     }
-                })
+                } else {
+                    mView.showErrMsg(it.message, false)
+                }
+            })
     }
 
     override fun loginBySmsCode(phone: String, smsCode: String, countryCode: String) {
         mView.showLoading()
         HttpManager.getStore(LoginHttpProtocol::class.java)
-                .login(object : HttpReq<LoginProto.LoginReq>() {
-                    override fun getData(): LoginProto.LoginReq {
-                        return LoginHttpReqCreator.createLoginBySmdCodeReq(phone, smsCode, countryCode)
-                    }
-                })
-                .getResult(mViewObservalbe, {
-                    SharePreferencesStorage.createStorageInstance(CommonPref::class.java, AccountManager.getLoginAccountUUid()).putLastManualLoginTime(it.disableTime)
-                    BusinessApplication.saveAccountInfoByLogin(0, it.user.uid, phone, "", "", countryCode, it)
-                    mView.loginSuccess(mContext.getString(R.string.bus_login_login_success))
-                }, {
-                    //请求失败
-                    if (it is HttpException) {
-                        when {
-                            it.errCode == MOBILE_NO_REGISTER -> register(phone, smsCode, countryCode)
-                            it.errCode == Constant.Result.ACCOUNT_IS_CANCEL -> {
-                                ArouterServiceManager.messageService.deleteAccountData(it.flag.toLong())
-                                BaseApp.app.onUserLogout("")
-                                register(phone, smsCode, countryCode)
-                            }
-                            it.errCode == ACCOUNT_IS_BANNED -> mView.showErrMsg(it.message, true)
-                            else -> mView.showErrMsg(it.message, false)
+            .login(object : HttpReq<LoginProto.LoginReq>() {
+                override fun getData(): LoginProto.LoginReq {
+                    return LoginHttpReqCreator.createLoginBySmdCodeReq(phone, smsCode, countryCode)
+                }
+            })
+            .getResult(mViewObservalbe, {
+                SharePreferencesStorage.createStorageInstance(CommonPref::class.java, AccountManager.getLoginAccountUUid()).putLastManualLoginTime(it.disableTime)
+                BusinessApplication.saveAccountInfoByLogin(0, it.user.uid, phone, "", "", countryCode, it)
+                mView.loginSuccess(mContext.getString(R.string.bus_login_login_success))
+            }, {
+                //请求失败
+                if (it is HttpException) {
+                    when {
+                        it.errCode == MOBILE_NO_REGISTER -> register(phone, smsCode, countryCode)
+                        it.errCode == Constant.Result.ACCOUNT_IS_CANCEL -> {
+                            ArouterServiceManager.messageService.deleteAccountData(it.flag.toLong())
+                            BaseApp.app.onUserLogout("")
+                            register(phone, smsCode, countryCode)
                         }
-                    } else {
-                        mView.showErrMsg(it.message, false)
+                        it.errCode == ACCOUNT_IS_BANNED -> mView.showErrMsg(it.message, true)
+                        else -> mView.showErrMsg(it.message, false)
                     }
-                })
+                } else {
+                    mView.showErrMsg(it.message, false)
+                }
+            })
     }
 
     override fun sendCode(phone: String, countryCode: String) {
@@ -121,19 +121,19 @@ class LoginPresenterImpl : LoginContract.Presenter {
             mView.sendCodeSuccess("",60- ((curTime- mCodeCountTime)/1000).toInt())
         }else{
             HttpManager.getStore(LoginHttpProtocol::class.java)
-                    .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
-                        override fun getData(): SysProto.GetSmsCodeReq {
-                            return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.LOGIN, countryCode, mSendSmsIndex)
-                        }
-                    })
-                    .getResult(mViewObservalbe, {
-                        //请求成功
-                        mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send),60)
-                        mSendSmsIndex++
-                    }, {
-                        //请求失败
-                        mView.showErrMsg(it.message, false)
-                    })
+                .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
+                    override fun getData(): SysProto.GetSmsCodeReq {
+                        return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.LOGIN, countryCode, mSendSmsIndex)
+                    }
+                })
+                .getResult(mViewObservalbe, {
+                    //请求成功
+                    mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send),60)
+                    mSendSmsIndex++
+                }, {
+                    //请求失败
+                    mView.showErrMsg(it.message, false)
+                })
         }
         mLastPhone = phone
         mLastCountryCode = countryCode
@@ -144,30 +144,32 @@ class LoginPresenterImpl : LoginContract.Presenter {
         try {
             val keyPair = UserDHKeysHelper.newKeyPair()
             HttpManager.getStore(LoginHttpProtocol::class.java)
-                    .register(object : HttpReq<LoginProto.RegReq>() {
-                        override fun getData(): LoginProto.RegReq {
-                            return LoginHttpReqCreator.createRegisterReq(
-                                    phone,
-                                    smsCode,
-                                    countryCode,
-                                    HexString.bufferToHex(keyPair.publicKey))
-                        }
-                    })
-                    .getResult(mViewObservalbe, {
-                        BusinessApplication.saveAccountInfoByRegister(0, it.user.uid, phone, "", countryCode, it)
+                .register(object : HttpReq<LoginProto.RegReq>() {
+                    override fun getData(): LoginProto.RegReq {
+                        return LoginHttpReqCreator.createRegisterReq(
+                            0,
+                            "",
+                            phone,
+                            smsCode,
+                            countryCode,
+                            HexString.bufferToHex(keyPair.publicKey))
+                    }
+                })
+                .getResult(mViewObservalbe, {
+                    BusinessApplication.saveAccountInfoByRegister(0, it.user.uid, phone, "", countryCode, it)
 
-                        try {
-                            if (UserDHKeysHelper.saveUserKeyPair(it.user.uid.toString(), keyPair, it.keyVersion)) {
-                                mView.registerSuccess(mContext.getString(R.string.bus_login_register_success))
-                            }
-                        } catch (e: Exception) {
-                            mView.showErrMsg(e.message, false)
-                            MobclickAgent.reportError(BaseApp.app, "LoginPresenterImpl--->register->saveUserKeyPair失败   error->>>${e.localizedMessage}")
+                    try {
+                        if (UserDHKeysHelper.saveUserKeyPair(it.user.uid.toString(), keyPair, it.keyVersion)) {
+                            mView.registerSuccess(mContext.getString(R.string.bus_login_register_success))
                         }
-                    }, {
-                        //请求失败
-                        mView.showErrMsg(it.message, false)
-                    })
+                    } catch (e: Exception) {
+                        mView.showErrMsg(e.message, false)
+                        MobclickAgent.reportError(BaseApp.app, "LoginPresenterImpl--->register->saveUserKeyPair失败   error->>>${e.localizedMessage}")
+                    }
+                }, {
+                    //请求失败
+                    mView.showErrMsg(it.message, false)
+                })
         } catch (e: Exception) {
             MobclickAgent.reportError(BaseApp.app, "LoginPresenterImpl--->register->newKeyPair失败   error->>>${e.localizedMessage}")
         }

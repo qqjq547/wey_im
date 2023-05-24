@@ -2,6 +2,7 @@ package framework.telegram.business.ui.login
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.net.Uri
@@ -10,6 +11,8 @@ import android.text.Editable
 import android.text.InputFilter
 import android.text.TextUtils
 import android.text.TextWatcher
+import android.util.Log
+import android.view.View
 import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.trello.rxlifecycle3.android.lifecycle.kotlin.bindToLifecycle
@@ -22,7 +25,9 @@ import framework.telegram.business.ui.login.GetSmsCodeActivity.Companion.GET_SMS
 import framework.telegram.business.ui.login.GetSmsCodeActivity.Companion.GET_SMSCODE_RESULT
 import framework.telegram.business.ui.login.presenter.RegisterContract
 import framework.telegram.business.ui.login.presenter.RegisterPresenterImpl
+
 import framework.telegram.business.utils.UserInfoCheckUtil
+import framework.telegram.business.utils.ValidationUtils
 import framework.telegram.support.mvp.BasePresenter
 import framework.telegram.support.system.event.EventBus
 import framework.telegram.support.tools.ActivitiesHelper
@@ -39,11 +44,14 @@ import framework.telegram.ui.utils.KeyboardktUtils
 import framework.telegram.ui.utils.NavBarUtils
 import io.reactivex.android.schedulers.AndroidSchedulers
 import kotlinx.android.synthetic.main.bus_login_activity_first.*
+import kotlinx.android.synthetic.main.bus_login_activity_first.view.*
 import kotlinx.android.synthetic.main.bus_login_activity_register.*
 import kotlinx.android.synthetic.main.bus_login_activity_register.custom_toolbar
 import kotlinx.android.synthetic.main.bus_login_activity_register.edit_text_phone
 import kotlinx.android.synthetic.main.bus_login_activity_register.linear_layout_all
 import kotlinx.android.synthetic.main.bus_login_activity_register.text_view_country_code
+import kotlinx.android.synthetic.main.bus_me_activity_password_change.*
+
 
 /**
  * Created by lzh on 19-5-16.
@@ -51,6 +59,15 @@ import kotlinx.android.synthetic.main.bus_login_activity_register.text_view_coun
  */
 @Route(path = Constant.ARouter.ROUNTE_BUS_LOGIN_REGISTER)
 class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), RegisterContract.View {
+
+
+    //注册模式, 0:短信（默认）， 1:密码
+    private val REGISTER_TYPE_SMS_CODE = 0
+    private val REGISTER_TYPE_PWD = 1
+
+
+
+    private val registerType = 1
 
     private var mCountyStr: String = "+55"
     private var mPasswordOK = false
@@ -66,19 +83,45 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
     override fun getLayoutId() = R.layout.bus_login_activity_register
 
     override fun initView() {
-        text_view_register.isEnabled = false
+
+        if(registerType == REGISTER_TYPE_PWD){
+            tv_send_sms_code.visibility = View.GONE
+            set_pwd_layout.visibility = View.VISIBLE
+        }
+
+        if(registerType == REGISTER_TYPE_SMS_CODE){
+            tv_send_sms_code.visibility = View.VISIBLE
+            set_pwd_layout.visibility = View.GONE
+        }
+
+        tv_send_sms_code.isEnabled = false
 
         edit_text_phone.setSelection(edit_text_phone.text.toString().length)
 
         custom_toolbar?.setBackIcon(R.drawable.common_icon_black_back) {
             finish()
         }
-        mCountyStr = if (mDefaultAreaCode == null) "+84" else mDefaultAreaCode
+        mCountyStr = if (mDefaultAreaCode == null) "+55" else mDefaultAreaCode
         setTextContent()
 
         custom_toolbar.setToolbarColor(R.color.white)
 
         requestBasicPermission()
+
+
+        //密码
+        edit_pwd1.initEasyEditText(true, true, false,null) {
+
+            setRegisterByPwdBtn()
+        }
+        edit_pwd1.et.hint = getString(R.string.bus_login_password_input_error_2)
+
+        //再次输入新密码
+        edit_pwd2.initEasyEditText(true, true, false,null) {
+            setRegisterByPwdBtn()
+        }
+        edit_pwd2.et.hint = getString(R.string.confirm_password)
+
     }
 
     /******************权限*****************/
@@ -147,7 +190,7 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
             KeyboardktUtils.hideKeyboard(linear_layout_all)
         }
 
-        text_view_register.setOnClickListener {
+        tv_send_sms_code.setOnClickListener {
             val phone = edit_text_phone.text.trim().toString()
             if (!UserInfoCheckUtil.checkMobile(this, phone, mCountyStr))
                 return@setOnClickListener
@@ -164,6 +207,8 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
             override fun afterTextChanged(str: Editable?) {
                 mPasswordOK = !TextUtils.isEmpty(str)
                 setRegisterBtn()
+
+                setRegisterByPwdBtn()
             }
         })
 
@@ -192,51 +237,88 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
             }
         }
         edit_text_phone.setText(mDefaultPhone)
+
+
+
+
+        //--------------------
+
+        tv_register_by_pwd.setOnClickListener {
+
+            mPresenter?.registerByPwd(mCountyStr, edit_text_phone.text.trim().toString(), edit_pwd1.et.text.toString().trim())
+
+            /*if (!UserInfoCheckUtil.checkMobile(this, edit_text_phone.text.toString().trim(), mCountyStr)){
+
+                return@setOnClickListener
+
+            }
+
+            val pwd1 = edit_pwd1.et.text.toString().trim()
+            val pwd2 = edit_pwd2.et.text.toString().trim()
+
+            if(checkPassword(pwd1) && checkPassword(pwd2) && doubleCheckPassword(pwd1,pwd2)){
+                mPresenter?.registerByPwd(mCountyStr, edit_text_phone.text.trim().toString(), pwd1)
+            }*/
+        }
     }
 
-    private fun getUrl(): String {
-        val url = when (LocalManageUtil.getCurLanguaue()) {
-            LocalManageUtil.SIMPLIFIED_CHINESE -> {
-                Uri.parse(
-                    if (!TextUtils.isEmpty(Constant.Common.DOWNLOAD_HTTP_HOST)) {
-                        Constant.Common.DOWNLOAD_HTTP_HOST
-                    } else {
-                        "https://www.bufa.chat"
-                    } + WebUrlConfig.userProtocolUrl_cn
-                )
-            }
-            LocalManageUtil.TRADITIONAL_CHINESE -> {
-                Uri.parse(
-                    if (!TextUtils.isEmpty(Constant.Common.DOWNLOAD_HTTP_HOST)) {
-                        Constant.Common.DOWNLOAD_HTTP_HOST
-                    } else {
-                        "https://www.bufa.chat"
-                    } + WebUrlConfig.userProtocolUrl_tc
-                )
-            }
-            LocalManageUtil.VI -> {
-                Uri.parse(
-                    if (!TextUtils.isEmpty(Constant.Common.DOWNLOAD_HTTP_HOST)) {
-                        Constant.Common.DOWNLOAD_HTTP_HOST
-                    } else {
-                        "https://www.bufa.chat"
-                    } + WebUrlConfig.userProtocolUrl_vi
-                )
-            }
-            else -> {
-                Uri.parse(
-                    if (!TextUtils.isEmpty(Constant.Common.DOWNLOAD_HTTP_HOST)) {
-                        Constant.Common.DOWNLOAD_HTTP_HOST
-                    } else {
-                        "https://www.bufa.chat"
-                    } + WebUrlConfig.userProtocolUrl_en
-                )
-            }
+    private fun setRegisterByPwdBtn(){
+
+        val pwd1 = edit_pwd1.et.text.toString().trim()
+        val pwd2 = edit_pwd2.et.text.toString().trim()
+
+        if (UserInfoCheckUtil.checkMobile2(this, edit_text_phone.text.toString().trim(), mCountyStr) && checkPassword(pwd1) && checkPassword(pwd2) && doubleCheckPassword(pwd1,pwd2)){
+
+            tv_register_by_pwd.isEnabled = true
+            tv_register_by_pwd.background = getSimpleDrawable(R.drawable.common_corners_trans_178aff_6_0)
+
+        }else{
+            tv_register_by_pwd.isEnabled = false
+            tv_register_by_pwd.background = getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
         }
+    }
+
+
+    fun checkPassword(password: String): Boolean {
+        if (ValidationUtils.isEmpty(password)) {
+            //toast(getString(R.string.bus_login_password_input_error_1))
+            return false
+        }
+        if (password.length < 6 || password.length > 24) {
+            //toast(getString(R.string.bus_login_password_input_error_2))
+            return false
+        }
+        return true
+    }
+
+
+    /**
+     * 检查密码
+     * @param context
+     * @return
+     */
+    fun doubleCheckPassword(pwd1: String, pwd2: String): Boolean {
+        if (pwd1 != pwd2) {
+            // toast(getString(R.string.bus_login_password_input_error_3))
+            return false
+        }
+        return true
+    }
+
+
+    private fun getUrl(): String {
+        val url = Uri.parse(
+            if (!TextUtils.isEmpty(Constant.Common.DOWNLOAD_HTTP_HOST)) {
+                Constant.Common.DOWNLOAD_HTTP_HOST
+            } else {
+                "https://www.bufa.chat"
+            } + WebUrlConfig.userProtocolUrl_en
+        )
         return url.toString()
     }
 
     override fun initData() {
+        setRegisterByPwdBtn()
         RegisterPresenterImpl(this, this, lifecycle()).start()
     }
 
@@ -292,12 +374,12 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
 
         if(isDuringCountDown.not()){
             if (mPasswordOK) {
-                text_view_register.isEnabled = true
-                text_view_register.background =
+                tv_send_sms_code.isEnabled = true
+                tv_send_sms_code.background =
                     getSimpleDrawable(R.drawable.common_corners_trans_178aff_6_0)
             } else {
-                text_view_register.isEnabled = false
-                text_view_register.background =
+                tv_send_sms_code.isEnabled = false
+                tv_send_sms_code.background =
                     getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
             }
         }
@@ -323,22 +405,22 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
 
         isDuringCountDown = true
 
-        text_view_register.isEnabled = false
-        text_view_register.background =
+        tv_send_sms_code.isEnabled = false
+        tv_send_sms_code.background =
             getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
-        text_view_register.text = "contagem regressiva:" + totalTimeSecond + "s"
+        tv_send_sms_code.text = "contagem regressiva:" + totalTimeSecond + "s"
 
 
         countDownTimer = object : CountDownTimer(totalTimeSecond * 1000L, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
 
-                text_view_register.text = "contagem regressiva:"+ millisUntilFinished / 1000 % 60 + "s"
+                tv_send_sms_code.text = "contagem regressiva:"+ millisUntilFinished / 1000 % 60 + "s"
             }
 
             override fun onFinish() {
 
-                text_view_register.text = getString(R.string.bus_get_sms_code)
+                tv_send_sms_code.text = getString(R.string.bus_get_sms_code)
 
                 setRegisterBtn()
 

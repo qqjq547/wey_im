@@ -89,15 +89,17 @@ class LoginHttpReqCreator {
         /**
          * 注册
          */
-        fun createRegisterReq(phone: String, smsCode: String, countryCode: String, publicKeyHex: String): LoginProto.RegReq {
+        fun createRegisterReq(registerType: Int, pwd: String, phone: String, smsCode: String, countryCode: String, publicKeyHex: String): LoginProto.RegReq {
             val clientInfo = getClientInfoWithOutSessionId()
             val sysVer = "Android " + AndroidUtils.getPlatformVersion()
             val sysMac = InstallIdUtil.getInstallationId()
             val sysModel = DeviceUtils.getDeviceModel()
 
             return LoginProto.RegReq.newBuilder().setClientInfo(clientInfo)
-                    .setCountryCode(countryCode).setPhone(phone).setSmsCode(smsCode)
-                    .setSysVersion(sysVer).setSysMac(sysMac).setSysModel(sysModel).setPublicKey(publicKeyHex).build()
+                .setPhoneRegMode(registerType)
+                .setPassword(pwd)
+                .setCountryCode(countryCode).setPhone(phone).setSmsCode(smsCode)
+                .setSysVersion(sysVer).setSysMac(sysMac).setSysModel(sysModel).setPublicKey(publicKeyHex).build()
         }
 
         fun createWebLoginByQrCodeReq(qrCode: String, status: CommonProto.WebLoginStatus): LoginProto.WebLoginByQrCodeReq {

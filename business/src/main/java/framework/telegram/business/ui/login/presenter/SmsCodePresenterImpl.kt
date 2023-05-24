@@ -118,29 +118,31 @@ class SmsCodePresenterImpl : SmsCodeContract.Presenter {
         try {
             val keyPair = UserDHKeysHelper.newKeyPair()
             HttpManager.getStore(LoginHttpProtocol::class.java)
-                    .register(object : HttpReq<LoginProto.RegReq>() {
-                        override fun getData(): LoginProto.RegReq {
-                            return LoginHttpReqCreator.createRegisterReq(
-                                    phone,
-                                    smsCode,
-                                    countryCode,
-                                    HexString.bufferToHex(keyPair.publicKey))
+                .register(object : HttpReq<LoginProto.RegReq>() {
+                    override fun getData(): LoginProto.RegReq {
+                        return LoginHttpReqCreator.createRegisterReq(
+                            0 ,
+                            "",
+                            phone,
+                            smsCode,
+                            countryCode,
+                            HexString.bufferToHex(keyPair.publicKey))
+                    }
+                })
+                .getResult(mViewObservalbe, {
+                    BusinessApplication.saveAccountInfoByRegister(0, it.user.uid, phone, "", countryCode, it)
+                    try {
+                        if (UserDHKeysHelper.saveUserKeyPair(it.user.uid.toString(), keyPair, it.keyVersion)) {
+                            mView.registerSuccess(mContext.getString(R.string.bus_login_register_success))
                         }
-                    })
-                    .getResult(mViewObservalbe, {
-                        BusinessApplication.saveAccountInfoByRegister(0, it.user.uid, phone, "", countryCode, it)
-                        try {
-                            if (UserDHKeysHelper.saveUserKeyPair(it.user.uid.toString(), keyPair, it.keyVersion)) {
-                                mView.registerSuccess(mContext.getString(R.string.bus_login_register_success))
-                            }
-                        } catch (e: Exception) {
-                            mView.showErrMsg(e.message)
-                            MobclickAgent.reportError(BaseApp.app, "SmsCodePresenterImpl--->register->saveUserKeyPair失败   error->>>${e.localizedMessage}")
-                        }
-                    }, {
-                        //请求失败
-                        mView.showErrMsg(it.message)
-                    })
+                    } catch (e: Exception) {
+                        mView.showErrMsg(e.message)
+                        MobclickAgent.reportError(BaseApp.app, "SmsCodePresenterImpl--->register->saveUserKeyPair失败   error->>>${e.localizedMessage}")
+                    }
+                }, {
+                    //请求失败
+                    mView.showErrMsg(it.message)
+                })
         } catch (e: Exception) {
             MobclickAgent.reportError(BaseApp.app, "SmsCodePresenterImpl--->register->newKeyPair失败   error->>>${e.localizedMessage}")
         }

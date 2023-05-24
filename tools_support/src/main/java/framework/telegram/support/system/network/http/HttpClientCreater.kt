@@ -1,5 +1,6 @@
 package framework.telegram.support.system.network.http
 
+import framework.telegram.support.tools.SSLSocketClient
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import java.util.concurrent.TimeUnit
@@ -14,6 +15,8 @@ object HttpClientCreater {
 
     val uploadOkHttpClient: OkHttpClient by lazy {
         OkHttpClient.Builder()
+            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())//配置
+            .hostnameVerifier(SSLSocketClient.getHostnameVerifier())//配置
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
@@ -22,6 +25,8 @@ object HttpClientCreater {
 
     val imageLoaderOkHttpClient: OkHttpClient by lazy {
         OkHttpClient.Builder()
+            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())//配置
+            .hostnameVerifier(SSLSocketClient.getHostnameVerifier())//配置
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)
@@ -30,6 +35,8 @@ object HttpClientCreater {
 
     fun newOkHttpClient(interceptor: Interceptor, loggingInterceptor: Interceptor): OkHttpClient {
         return OkHttpClient.Builder()
+            .sslSocketFactory(SSLSocketClient.getSSLSocketFactory())//配置
+            .hostnameVerifier(SSLSocketClient.getHostnameVerifier())//配置
                 .connectTimeout(15, TimeUnit.SECONDS)
                 .writeTimeout(15, TimeUnit.SECONDS)
                 .readTimeout(15, TimeUnit.SECONDS)

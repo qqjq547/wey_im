@@ -12,6 +12,8 @@ interface RegisterContract {
     interface Presenter : BasePresenter {
         fun register(phone: String, smsCode: String, countryCode: String)
 
+        fun registerByPwd(countryCode: String,phone: String, pwd:String)
+
         fun sendCode(phone: String,countryCode:String)
 
         fun setCountDown(downTime:Long)

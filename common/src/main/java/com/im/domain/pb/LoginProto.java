@@ -25,7 +25,7 @@ public final class LoginProto {
      *
      * <code>optional string biz = 1;</code>
      */
-    java.lang.String getBiz();
+    String getBiz();
     /**
      * <pre>
      * 业务
@@ -43,7 +43,7 @@ public final class LoginProto {
      *
      * <code>optional string session = 2;</code>
      */
-    java.lang.String getSession();
+    String getSession();
     /**
      * <pre>
      * 聊天
@@ -61,7 +61,7 @@ public final class LoginProto {
      *
      * <code>optional string friend = 3;</code>
      */
-    java.lang.String getFriend();
+    String getFriend();
     /**
      * <pre>
      * 好友
@@ -79,7 +79,7 @@ public final class LoginProto {
      *
      * <code>optional string group = 4;</code>
      */
-    java.lang.String getGroup();
+    String getGroup();
     /**
      * <pre>
      * 群组
@@ -97,7 +97,7 @@ public final class LoginProto {
      *
      * <code>optional string staticMap = 5;</code>
      */
-    java.lang.String getStaticMap();
+    String getStaticMap();
     /**
      * <pre>
      * 静态地图
@@ -115,7 +115,7 @@ public final class LoginProto {
      *
      * <code>optional string download = 6;</code>
      */
-    java.lang.String getDownload();
+    String getDownload();
     /**
      * <pre>
      * 下载链接
@@ -133,7 +133,7 @@ public final class LoginProto {
      *
      * <code>optional string login = 7;</code>
      */
-    java.lang.String getLogin();
+    String getLogin();
     /**
      * <pre>
      * 最新可用的登录主域名 add v1.1.0
@@ -151,7 +151,7 @@ public final class LoginProto {
      *
      * <code>optional string config = 8;</code>
      */
-    java.lang.String getConfig();
+    String getConfig();
     /**
      * <pre>
      * 域名配置文件下载地址 add v1.1.0
@@ -169,7 +169,7 @@ public final class LoginProto {
      *
      * <code>optional string wss = 9;</code>
      */
-    java.lang.String getWss();
+    String getWss();
     /**
      * <pre>
      * session wss url add v1.6.0
@@ -200,15 +200,15 @@ public final class LoginProto {
 
     /**
      * <pre>
-     * 上传服务器地址 v1.7
+     * IM上传服务器地址 v1.7
      * </pre>
      *
      * <code>optional string uploadUrl = 12;</code>
      */
-    java.lang.String getUploadUrl();
+    String getUploadUrl();
     /**
      * <pre>
-     * 上传服务器地址 v1.7
+     * IM上传服务器地址 v1.7
      * </pre>
      *
      * <code>optional string uploadUrl = 12;</code>
@@ -246,7 +246,7 @@ public final class LoginProto {
       uploadUrl_ = "";
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -272,55 +272,55 @@ public final class LoginProto {
               break;
             }
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               biz_ = s;
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               session_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               friend_ = s;
               break;
             }
             case 34: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               group_ = s;
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               staticMap_ = s;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               download_ = s;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               login_ = s;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               config_ = s;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               wss_ = s;
               break;
@@ -336,7 +336,7 @@ public final class LoginProto {
               break;
             }
             case 98: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               uploadUrl_ = s;
               break;
@@ -354,18 +354,18 @@ public final class LoginProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.im.domain.pb.LoginProto.internal_static_UrlInfo_descriptor;
+      return LoginProto.internal_static_UrlInfo_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.im.domain.pb.LoginProto.internal_static_UrlInfo_fieldAccessorTable
+      return LoginProto.internal_static_UrlInfo_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.im.domain.pb.LoginProto.UrlInfo.class, com.im.domain.pb.LoginProto.UrlInfo.Builder.class);
+              UrlInfo.class, Builder.class);
     }
 
     public static final int BIZ_FIELD_NUMBER = 1;
-    private volatile java.lang.Object biz_;
+    private volatile Object biz_;
     /**
      * <pre>
      * 业务
@@ -373,14 +373,14 @@ public final class LoginProto {
      *
      * <code>optional string biz = 1;</code>
      */
-    public java.lang.String getBiz() {
-      java.lang.Object ref = biz_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getBiz() {
+      Object ref = biz_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         biz_ = s;
         return s;
       }
@@ -394,11 +394,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getBizBytes() {
-      java.lang.Object ref = biz_;
-      if (ref instanceof java.lang.String) {
+      Object ref = biz_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         biz_ = b;
         return b;
       } else {
@@ -407,7 +407,7 @@ public final class LoginProto {
     }
 
     public static final int SESSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object session_;
+    private volatile Object session_;
     /**
      * <pre>
      * 聊天
@@ -415,14 +415,14 @@ public final class LoginProto {
      *
      * <code>optional string session = 2;</code>
      */
-    public java.lang.String getSession() {
-      java.lang.Object ref = session_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSession() {
+      Object ref = session_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         session_ = s;
         return s;
       }
@@ -436,11 +436,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getSessionBytes() {
-      java.lang.Object ref = session_;
-      if (ref instanceof java.lang.String) {
+      Object ref = session_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         session_ = b;
         return b;
       } else {
@@ -449,7 +449,7 @@ public final class LoginProto {
     }
 
     public static final int FRIEND_FIELD_NUMBER = 3;
-    private volatile java.lang.Object friend_;
+    private volatile Object friend_;
     /**
      * <pre>
      * 好友
@@ -457,14 +457,14 @@ public final class LoginProto {
      *
      * <code>optional string friend = 3;</code>
      */
-    public java.lang.String getFriend() {
-      java.lang.Object ref = friend_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getFriend() {
+      Object ref = friend_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         friend_ = s;
         return s;
       }
@@ -478,11 +478,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getFriendBytes() {
-      java.lang.Object ref = friend_;
-      if (ref instanceof java.lang.String) {
+      Object ref = friend_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         friend_ = b;
         return b;
       } else {
@@ -491,7 +491,7 @@ public final class LoginProto {
     }
 
     public static final int GROUP_FIELD_NUMBER = 4;
-    private volatile java.lang.Object group_;
+    private volatile Object group_;
     /**
      * <pre>
      * 群组
@@ -499,14 +499,14 @@ public final class LoginProto {
      *
      * <code>optional string group = 4;</code>
      */
-    public java.lang.String getGroup() {
-      java.lang.Object ref = group_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getGroup() {
+      Object ref = group_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         group_ = s;
         return s;
       }
@@ -520,11 +520,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getGroupBytes() {
-      java.lang.Object ref = group_;
-      if (ref instanceof java.lang.String) {
+      Object ref = group_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         group_ = b;
         return b;
       } else {
@@ -533,7 +533,7 @@ public final class LoginProto {
     }
 
     public static final int STATICMAP_FIELD_NUMBER = 5;
-    private volatile java.lang.Object staticMap_;
+    private volatile Object staticMap_;
     /**
      * <pre>
      * 静态地图
@@ -541,14 +541,14 @@ public final class LoginProto {
      *
      * <code>optional string staticMap = 5;</code>
      */
-    public java.lang.String getStaticMap() {
-      java.lang.Object ref = staticMap_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getStaticMap() {
+      Object ref = staticMap_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         staticMap_ = s;
         return s;
       }
@@ -562,11 +562,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getStaticMapBytes() {
-      java.lang.Object ref = staticMap_;
-      if (ref instanceof java.lang.String) {
+      Object ref = staticMap_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         staticMap_ = b;
         return b;
       } else {
@@ -575,7 +575,7 @@ public final class LoginProto {
     }
 
     public static final int DOWNLOAD_FIELD_NUMBER = 6;
-    private volatile java.lang.Object download_;
+    private volatile Object download_;
     /**
      * <pre>
      * 下载链接
@@ -583,14 +583,14 @@ public final class LoginProto {
      *
      * <code>optional string download = 6;</code>
      */
-    public java.lang.String getDownload() {
-      java.lang.Object ref = download_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getDownload() {
+      Object ref = download_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         download_ = s;
         return s;
       }
@@ -604,11 +604,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getDownloadBytes() {
-      java.lang.Object ref = download_;
-      if (ref instanceof java.lang.String) {
+      Object ref = download_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         download_ = b;
         return b;
       } else {
@@ -617,7 +617,7 @@ public final class LoginProto {
     }
 
     public static final int LOGIN_FIELD_NUMBER = 7;
-    private volatile java.lang.Object login_;
+    private volatile Object login_;
     /**
      * <pre>
      * 最新可用的登录主域名 add v1.1.0
@@ -625,14 +625,14 @@ public final class LoginProto {
      *
      * <code>optional string login = 7;</code>
      */
-    public java.lang.String getLogin() {
-      java.lang.Object ref = login_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getLogin() {
+      Object ref = login_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         login_ = s;
         return s;
       }
@@ -646,11 +646,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getLoginBytes() {
-      java.lang.Object ref = login_;
-      if (ref instanceof java.lang.String) {
+      Object ref = login_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         login_ = b;
         return b;
       } else {
@@ -659,7 +659,7 @@ public final class LoginProto {
     }
 
     public static final int CONFIG_FIELD_NUMBER = 8;
-    private volatile java.lang.Object config_;
+    private volatile Object config_;
     /**
      * <pre>
      * 域名配置文件下载地址 add v1.1.0
@@ -667,14 +667,14 @@ public final class LoginProto {
      *
      * <code>optional string config = 8;</code>
      */
-    public java.lang.String getConfig() {
-      java.lang.Object ref = config_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getConfig() {
+      Object ref = config_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         config_ = s;
         return s;
       }
@@ -688,11 +688,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getConfigBytes() {
-      java.lang.Object ref = config_;
-      if (ref instanceof java.lang.String) {
+      Object ref = config_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         config_ = b;
         return b;
       } else {
@@ -701,7 +701,7 @@ public final class LoginProto {
     }
 
     public static final int WSS_FIELD_NUMBER = 9;
-    private volatile java.lang.Object wss_;
+    private volatile Object wss_;
     /**
      * <pre>
      * session wss url add v1.6.0
@@ -709,14 +709,14 @@ public final class LoginProto {
      *
      * <code>optional string wss = 9;</code>
      */
-    public java.lang.String getWss() {
-      java.lang.Object ref = wss_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getWss() {
+      Object ref = wss_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         wss_ = s;
         return s;
       }
@@ -730,11 +730,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getWssBytes() {
-      java.lang.Object ref = wss_;
-      if (ref instanceof java.lang.String) {
+      Object ref = wss_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         wss_ = b;
         return b;
       } else {
@@ -769,40 +769,40 @@ public final class LoginProto {
     }
 
     public static final int UPLOADURL_FIELD_NUMBER = 12;
-    private volatile java.lang.Object uploadUrl_;
+    private volatile Object uploadUrl_;
     /**
      * <pre>
-     * 上传服务器地址 v1.7
+     * IM上传服务器地址 v1.7
      * </pre>
      *
      * <code>optional string uploadUrl = 12;</code>
      */
-    public java.lang.String getUploadUrl() {
-      java.lang.Object ref = uploadUrl_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getUploadUrl() {
+      Object ref = uploadUrl_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         uploadUrl_ = s;
         return s;
       }
     }
     /**
      * <pre>
-     * 上传服务器地址 v1.7
+     * IM上传服务器地址 v1.7
      * </pre>
      *
      * <code>optional string uploadUrl = 12;</code>
      */
     public com.google.protobuf.ByteString
         getUploadUrlBytes() {
-      java.lang.Object ref = uploadUrl_;
-      if (ref instanceof java.lang.String) {
+      Object ref = uploadUrl_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         uploadUrl_ = b;
         return b;
       } else {
@@ -908,15 +908,15 @@ public final class LoginProto {
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
+    @Override
+    public boolean equals(final Object obj) {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof com.im.domain.pb.LoginProto.UrlInfo)) {
+      if (!(obj instanceof UrlInfo)) {
         return super.equals(obj);
       }
-      com.im.domain.pb.LoginProto.UrlInfo other = (com.im.domain.pb.LoginProto.UrlInfo) obj;
+      UrlInfo other = (UrlInfo) obj;
 
       boolean result = true;
       result = result && getBiz()
@@ -946,7 +946,7 @@ public final class LoginProto {
       return result;
     }
 
-    @java.lang.Override
+    @Override
     public int hashCode() {
       if (memoizedHashCode != 0) {
         return memoizedHashCode;
@@ -982,58 +982,58 @@ public final class LoginProto {
       return hash;
     }
 
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(byte[] data)
+    public static UrlInfo parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(java.io.InputStream input)
+    public static UrlInfo parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseDelimitedFrom(java.io.InputStream input)
+    public static UrlInfo parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseDelimitedFrom(
+    public static UrlInfo parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static com.im.domain.pb.LoginProto.UrlInfo parseFrom(
+    public static UrlInfo parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1045,7 +1045,7 @@ public final class LoginProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(com.im.domain.pb.LoginProto.UrlInfo prototype) {
+    public static Builder newBuilder(UrlInfo prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1053,9 +1053,9 @@ public final class LoginProto {
           ? new Builder() : new Builder().mergeFrom(this);
     }
 
-    @java.lang.Override
+    @Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
@@ -1069,17 +1069,17 @@ public final class LoginProto {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:UrlInfo)
-        com.im.domain.pb.LoginProto.UrlInfoOrBuilder {
+        UrlInfoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.im.domain.pb.LoginProto.internal_static_UrlInfo_descriptor;
+        return LoginProto.internal_static_UrlInfo_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      protected FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.im.domain.pb.LoginProto.internal_static_UrlInfo_fieldAccessorTable
+        return LoginProto.internal_static_UrlInfo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                com.im.domain.pb.LoginProto.UrlInfo.class, com.im.domain.pb.LoginProto.UrlInfo.Builder.class);
+                UrlInfo.class, Builder.class);
       }
 
       // Construct using com.im.domain.pb.LoginProto.UrlInfo.newBuilder()
@@ -1088,7 +1088,7 @@ public final class LoginProto {
       }
 
       private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+          BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
@@ -1128,23 +1128,23 @@ public final class LoginProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.im.domain.pb.LoginProto.internal_static_UrlInfo_descriptor;
+        return LoginProto.internal_static_UrlInfo_descriptor;
       }
 
-      public com.im.domain.pb.LoginProto.UrlInfo getDefaultInstanceForType() {
-        return com.im.domain.pb.LoginProto.UrlInfo.getDefaultInstance();
+      public UrlInfo getDefaultInstanceForType() {
+        return UrlInfo.getDefaultInstance();
       }
 
-      public com.im.domain.pb.LoginProto.UrlInfo build() {
-        com.im.domain.pb.LoginProto.UrlInfo result = buildPartial();
+      public UrlInfo build() {
+        UrlInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public com.im.domain.pb.LoginProto.UrlInfo buildPartial() {
-        com.im.domain.pb.LoginProto.UrlInfo result = new com.im.domain.pb.LoginProto.UrlInfo(this);
+      public UrlInfo buildPartial() {
+        UrlInfo result = new UrlInfo(this);
         result.biz_ = biz_;
         result.session_ = session_;
         result.friend_ = friend_;
@@ -1188,16 +1188,16 @@ public final class LoginProto {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.im.domain.pb.LoginProto.UrlInfo) {
-          return mergeFrom((com.im.domain.pb.LoginProto.UrlInfo)other);
+        if (other instanceof UrlInfo) {
+          return mergeFrom((UrlInfo)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(com.im.domain.pb.LoginProto.UrlInfo other) {
-        if (other == com.im.domain.pb.LoginProto.UrlInfo.getDefaultInstance()) return this;
+      public Builder mergeFrom(UrlInfo other) {
+        if (other == UrlInfo.getDefaultInstance()) return this;
         if (!other.getBiz().isEmpty()) {
           biz_ = other.biz_;
           onChanged();
@@ -1256,11 +1256,11 @@ public final class LoginProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.im.domain.pb.LoginProto.UrlInfo parsedMessage = null;
+        UrlInfo parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.im.domain.pb.LoginProto.UrlInfo) e.getUnfinishedMessage();
+          parsedMessage = (UrlInfo) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1270,7 +1270,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object biz_ = "";
+      private Object biz_ = "";
       /**
        * <pre>
        * 业务
@@ -1278,16 +1278,16 @@ public final class LoginProto {
        *
        * <code>optional string biz = 1;</code>
        */
-      public java.lang.String getBiz() {
-        java.lang.Object ref = biz_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getBiz() {
+        Object ref = biz_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           biz_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1299,11 +1299,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getBizBytes() {
-        java.lang.Object ref = biz_;
+        Object ref = biz_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           biz_ = b;
           return b;
         } else {
@@ -1318,7 +1318,7 @@ public final class LoginProto {
        * <code>optional string biz = 1;</code>
        */
       public Builder setBiz(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1359,7 +1359,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object session_ = "";
+      private Object session_ = "";
       /**
        * <pre>
        * 聊天
@@ -1367,16 +1367,16 @@ public final class LoginProto {
        *
        * <code>optional string session = 2;</code>
        */
-      public java.lang.String getSession() {
-        java.lang.Object ref = session_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getSession() {
+        Object ref = session_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           session_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1388,11 +1388,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getSessionBytes() {
-        java.lang.Object ref = session_;
+        Object ref = session_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           session_ = b;
           return b;
         } else {
@@ -1407,7 +1407,7 @@ public final class LoginProto {
        * <code>optional string session = 2;</code>
        */
       public Builder setSession(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1448,7 +1448,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object friend_ = "";
+      private Object friend_ = "";
       /**
        * <pre>
        * 好友
@@ -1456,16 +1456,16 @@ public final class LoginProto {
        *
        * <code>optional string friend = 3;</code>
        */
-      public java.lang.String getFriend() {
-        java.lang.Object ref = friend_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getFriend() {
+        Object ref = friend_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           friend_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1477,11 +1477,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getFriendBytes() {
-        java.lang.Object ref = friend_;
+        Object ref = friend_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           friend_ = b;
           return b;
         } else {
@@ -1496,7 +1496,7 @@ public final class LoginProto {
        * <code>optional string friend = 3;</code>
        */
       public Builder setFriend(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1537,7 +1537,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object group_ = "";
+      private Object group_ = "";
       /**
        * <pre>
        * 群组
@@ -1545,16 +1545,16 @@ public final class LoginProto {
        *
        * <code>optional string group = 4;</code>
        */
-      public java.lang.String getGroup() {
-        java.lang.Object ref = group_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getGroup() {
+        Object ref = group_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           group_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1566,11 +1566,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getGroupBytes() {
-        java.lang.Object ref = group_;
+        Object ref = group_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           group_ = b;
           return b;
         } else {
@@ -1585,7 +1585,7 @@ public final class LoginProto {
        * <code>optional string group = 4;</code>
        */
       public Builder setGroup(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1626,7 +1626,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object staticMap_ = "";
+      private Object staticMap_ = "";
       /**
        * <pre>
        * 静态地图
@@ -1634,16 +1634,16 @@ public final class LoginProto {
        *
        * <code>optional string staticMap = 5;</code>
        */
-      public java.lang.String getStaticMap() {
-        java.lang.Object ref = staticMap_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getStaticMap() {
+        Object ref = staticMap_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           staticMap_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1655,11 +1655,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getStaticMapBytes() {
-        java.lang.Object ref = staticMap_;
+        Object ref = staticMap_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           staticMap_ = b;
           return b;
         } else {
@@ -1674,7 +1674,7 @@ public final class LoginProto {
        * <code>optional string staticMap = 5;</code>
        */
       public Builder setStaticMap(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1715,7 +1715,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object download_ = "";
+      private Object download_ = "";
       /**
        * <pre>
        * 下载链接
@@ -1723,16 +1723,16 @@ public final class LoginProto {
        *
        * <code>optional string download = 6;</code>
        */
-      public java.lang.String getDownload() {
-        java.lang.Object ref = download_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getDownload() {
+        Object ref = download_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           download_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1744,11 +1744,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getDownloadBytes() {
-        java.lang.Object ref = download_;
+        Object ref = download_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           download_ = b;
           return b;
         } else {
@@ -1763,7 +1763,7 @@ public final class LoginProto {
        * <code>optional string download = 6;</code>
        */
       public Builder setDownload(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1804,7 +1804,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object login_ = "";
+      private Object login_ = "";
       /**
        * <pre>
        * 最新可用的登录主域名 add v1.1.0
@@ -1812,16 +1812,16 @@ public final class LoginProto {
        *
        * <code>optional string login = 7;</code>
        */
-      public java.lang.String getLogin() {
-        java.lang.Object ref = login_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getLogin() {
+        Object ref = login_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           login_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1833,11 +1833,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getLoginBytes() {
-        java.lang.Object ref = login_;
+        Object ref = login_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           login_ = b;
           return b;
         } else {
@@ -1852,7 +1852,7 @@ public final class LoginProto {
        * <code>optional string login = 7;</code>
        */
       public Builder setLogin(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1893,7 +1893,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object config_ = "";
+      private Object config_ = "";
       /**
        * <pre>
        * 域名配置文件下载地址 add v1.1.0
@@ -1901,16 +1901,16 @@ public final class LoginProto {
        *
        * <code>optional string config = 8;</code>
        */
-      public java.lang.String getConfig() {
-        java.lang.Object ref = config_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getConfig() {
+        Object ref = config_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           config_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -1922,11 +1922,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getConfigBytes() {
-        java.lang.Object ref = config_;
+        Object ref = config_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           config_ = b;
           return b;
         } else {
@@ -1941,7 +1941,7 @@ public final class LoginProto {
        * <code>optional string config = 8;</code>
        */
       public Builder setConfig(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -1982,7 +1982,7 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object wss_ = "";
+      private Object wss_ = "";
       /**
        * <pre>
        * session wss url add v1.6.0
@@ -1990,16 +1990,16 @@ public final class LoginProto {
        *
        * <code>optional string wss = 9;</code>
        */
-      public java.lang.String getWss() {
-        java.lang.Object ref = wss_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getWss() {
+        Object ref = wss_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           wss_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
@@ -2011,11 +2011,11 @@ public final class LoginProto {
        */
       public com.google.protobuf.ByteString
           getWssBytes() {
-        java.lang.Object ref = wss_;
+        Object ref = wss_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           wss_ = b;
           return b;
         } else {
@@ -2030,7 +2030,7 @@ public final class LoginProto {
        * <code>optional string wss = 9;</code>
        */
       public Builder setWss(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2147,40 +2147,40 @@ public final class LoginProto {
         return this;
       }
 
-      private java.lang.Object uploadUrl_ = "";
+      private Object uploadUrl_ = "";
       /**
        * <pre>
-       * 上传服务器地址 v1.7
+       * IM上传服务器地址 v1.7
        * </pre>
        *
        * <code>optional string uploadUrl = 12;</code>
        */
-      public java.lang.String getUploadUrl() {
-        java.lang.Object ref = uploadUrl_;
-        if (!(ref instanceof java.lang.String)) {
+      public String getUploadUrl() {
+        Object ref = uploadUrl_;
+        if (!(ref instanceof String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
+          String s = bs.toStringUtf8();
           uploadUrl_ = s;
           return s;
         } else {
-          return (java.lang.String) ref;
+          return (String) ref;
         }
       }
       /**
        * <pre>
-       * 上传服务器地址 v1.7
+       * IM上传服务器地址 v1.7
        * </pre>
        *
        * <code>optional string uploadUrl = 12;</code>
        */
       public com.google.protobuf.ByteString
           getUploadUrlBytes() {
-        java.lang.Object ref = uploadUrl_;
+        Object ref = uploadUrl_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
+                  (String) ref);
           uploadUrl_ = b;
           return b;
         } else {
@@ -2189,13 +2189,13 @@ public final class LoginProto {
       }
       /**
        * <pre>
-       * 上传服务器地址 v1.7
+       * IM上传服务器地址 v1.7
        * </pre>
        *
        * <code>optional string uploadUrl = 12;</code>
        */
       public Builder setUploadUrl(
-          java.lang.String value) {
+          String value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2206,7 +2206,7 @@ public final class LoginProto {
       }
       /**
        * <pre>
-       * 上传服务器地址 v1.7
+       * IM上传服务器地址 v1.7
        * </pre>
        *
        * <code>optional string uploadUrl = 12;</code>
@@ -2219,7 +2219,7 @@ public final class LoginProto {
       }
       /**
        * <pre>
-       * 上传服务器地址 v1.7
+       * IM上传服务器地址 v1.7
        * </pre>
        *
        * <code>optional string uploadUrl = 12;</code>
@@ -2250,12 +2250,12 @@ public final class LoginProto {
     }
 
     // @@protoc_insertion_point(class_scope:UrlInfo)
-    private static final com.im.domain.pb.LoginProto.UrlInfo DEFAULT_INSTANCE;
+    private static final UrlInfo DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new com.im.domain.pb.LoginProto.UrlInfo();
+      DEFAULT_INSTANCE = new UrlInfo();
     }
 
-    public static com.im.domain.pb.LoginProto.UrlInfo getDefaultInstance() {
+    public static UrlInfo getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2273,12 +2273,12 @@ public final class LoginProto {
       return PARSER;
     }
 
-    @java.lang.Override
+    @Override
     public com.google.protobuf.Parser<UrlInfo> getParserForType() {
       return PARSER;
     }
 
-    public com.im.domain.pb.LoginProto.UrlInfo getDefaultInstanceForType() {
+    public UrlInfo getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -2303,7 +2303,7 @@ public final class LoginProto {
      *
      * <code>optional .ClientInfo clientInfo = 1;</code>
      */
-    com.im.domain.pb.CommonProto.ClientInfo getClientInfo();
+    CommonProto.ClientInfo getClientInfo();
     /**
      * <pre>
      * 客户端信息
@@ -2311,7 +2311,7 @@ public final class LoginProto {
      *
      * <code>optional .ClientInfo clientInfo = 1;</code>
      */
-    com.im.domain.pb.CommonProto.ClientInfoOrBuilder getClientInfoOrBuilder();
+    CommonProto.ClientInfoOrBuilder getClientInfoOrBuilder();
 
     /**
      * <pre>
@@ -2320,7 +2320,7 @@ public final class LoginProto {
      *
      * <code>optional string countryCode = 2;</code>
      */
-    java.lang.String getCountryCode();
+    String getCountryCode();
     /**
      * <pre>
      * 国家码
@@ -2338,7 +2338,7 @@ public final class LoginProto {
      *
      * <code>optional string phone = 3;</code>
      */
-    java.lang.String getPhone();
+    String getPhone();
     /**
      * <pre>
      * 手机号
@@ -2364,7 +2364,7 @@ public final class LoginProto {
      *
      * <code>optional .GetSmsCodeType type = 4;</code>
      */
-    com.im.domain.pb.CommonProto.GetSmsCodeType getType();
+    CommonProto.GetSmsCodeType getType();
 
     /**
      * <pre>
@@ -2373,7 +2373,7 @@ public final class LoginProto {
      *
      * <code>optional string smsCode = 5;</code>
      */
-    java.lang.String getSmsCode();
+    String getSmsCode();
     /**
      * <pre>
      * 手机验证码
@@ -2391,7 +2391,7 @@ public final class LoginProto {
      *
      * <code>optional string sysVersion = 6;</code>
      */
-    java.lang.String getSysVersion();
+    String getSysVersion();
     /**
      * <pre>
      * 手机系统版本
@@ -2409,7 +2409,7 @@ public final class LoginProto {
      *
      * <code>optional string sysModel = 7;</code>
      */
-    java.lang.String getSysModel();
+    String getSysModel();
     /**
      * <pre>
      * 手机型号
@@ -2427,7 +2427,7 @@ public final class LoginProto {
      *
      * <code>optional string sysMac = 8;</code>
      */
-    java.lang.String getSysMac();
+    String getSysMac();
     /**
      * <pre>
      * mac地址
@@ -2445,7 +2445,7 @@ public final class LoginProto {
      *
      * <code>optional string deviceToken = 9;</code>
      */
-    java.lang.String getDeviceToken();
+    String getDeviceToken();
     /**
      * <pre>
      * IOS deviceToken
@@ -2463,7 +2463,7 @@ public final class LoginProto {
      *
      * <code>optional string publicKey = 10;</code>
      */
-    java.lang.String getPublicKey();
+    String getPublicKey();
     /**
      * <pre>
      * 公钥
@@ -2481,7 +2481,7 @@ public final class LoginProto {
      *
      * <code>optional string deviceInfo = 11;</code>
      */
-    java.lang.String getDeviceInfo();
+    String getDeviceInfo();
     /**
      * <pre>
      * ios 设备信息json v1.6.0
@@ -2491,6 +2491,33 @@ public final class LoginProto {
      */
     com.google.protobuf.ByteString
         getDeviceInfoBytes();
+
+    /**
+     * <pre>
+     * 手机号注册模式, 0:短信（默认）， 1:密码
+     * </pre>
+     *
+     * <code>optional int32 phoneRegMode = 12;</code>
+     */
+    int getPhoneRegMode();
+
+    /**
+     * <pre>
+     *密码
+     * </pre>
+     *
+     * <code>optional string password = 13;</code>
+     */
+    String getPassword();
+    /**
+     * <pre>
+     *密码
+     * </pre>
+     *
+     * <code>optional string password = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getPasswordBytes();
   }
   /**
    * <pre>
@@ -2518,9 +2545,11 @@ public final class LoginProto {
       deviceToken_ = "";
       publicKey_ = "";
       deviceInfo_ = "";
+      phoneRegMode_ = 0;
+      password_ = "";
     }
 
-    @java.lang.Override
+    @Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -2546,11 +2575,11 @@ public final class LoginProto {
               break;
             }
             case 10: {
-              com.im.domain.pb.CommonProto.ClientInfo.Builder subBuilder = null;
+              CommonProto.ClientInfo.Builder subBuilder = null;
               if (clientInfo_ != null) {
                 subBuilder = clientInfo_.toBuilder();
               }
-              clientInfo_ = input.readMessage(com.im.domain.pb.CommonProto.ClientInfo.parser(), extensionRegistry);
+              clientInfo_ = input.readMessage(CommonProto.ClientInfo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(clientInfo_);
                 clientInfo_ = subBuilder.buildPartial();
@@ -2559,13 +2588,13 @@ public final class LoginProto {
               break;
             }
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               countryCode_ = s;
               break;
             }
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               phone_ = s;
               break;
@@ -2577,45 +2606,56 @@ public final class LoginProto {
               break;
             }
             case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               smsCode_ = s;
               break;
             }
             case 50: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sysVersion_ = s;
               break;
             }
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sysModel_ = s;
               break;
             }
             case 66: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               sysMac_ = s;
               break;
             }
             case 74: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               deviceToken_ = s;
               break;
             }
             case 82: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               publicKey_ = s;
               break;
             }
             case 90: {
-              java.lang.String s = input.readStringRequireUtf8();
+              String s = input.readStringRequireUtf8();
 
               deviceInfo_ = s;
+              break;
+            }
+            case 96: {
+
+              phoneRegMode_ = input.readInt32();
+              break;
+            }
+            case 106: {
+              String s = input.readStringRequireUtf8();
+
+              password_ = s;
               break;
             }
           }
@@ -2631,18 +2671,18 @@ public final class LoginProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.im.domain.pb.LoginProto.internal_static_RegReq_descriptor;
+      return LoginProto.internal_static_RegReq_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+    protected FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.im.domain.pb.LoginProto.internal_static_RegReq_fieldAccessorTable
+      return LoginProto.internal_static_RegReq_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.im.domain.pb.LoginProto.RegReq.class, com.im.domain.pb.LoginProto.RegReq.Builder.class);
+              RegReq.class, Builder.class);
     }
 
     public static final int CLIENTINFO_FIELD_NUMBER = 1;
-    private com.im.domain.pb.CommonProto.ClientInfo clientInfo_;
+    private CommonProto.ClientInfo clientInfo_;
     /**
      * <pre>
      * 客户端信息
@@ -2660,8 +2700,8 @@ public final class LoginProto {
      *
      * <code>optional .ClientInfo clientInfo = 1;</code>
      */
-    public com.im.domain.pb.CommonProto.ClientInfo getClientInfo() {
-      return clientInfo_ == null ? com.im.domain.pb.CommonProto.ClientInfo.getDefaultInstance() : clientInfo_;
+    public CommonProto.ClientInfo getClientInfo() {
+      return clientInfo_ == null ? CommonProto.ClientInfo.getDefaultInstance() : clientInfo_;
     }
     /**
      * <pre>
@@ -2670,12 +2710,12 @@ public final class LoginProto {
      *
      * <code>optional .ClientInfo clientInfo = 1;</code>
      */
-    public com.im.domain.pb.CommonProto.ClientInfoOrBuilder getClientInfoOrBuilder() {
+    public CommonProto.ClientInfoOrBuilder getClientInfoOrBuilder() {
       return getClientInfo();
     }
 
     public static final int COUNTRYCODE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object countryCode_;
+    private volatile Object countryCode_;
     /**
      * <pre>
      * 国家码
@@ -2683,14 +2723,14 @@ public final class LoginProto {
      *
      * <code>optional string countryCode = 2;</code>
      */
-    public java.lang.String getCountryCode() {
-      java.lang.Object ref = countryCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getCountryCode() {
+      Object ref = countryCode_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         countryCode_ = s;
         return s;
       }
@@ -2704,11 +2744,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getCountryCodeBytes() {
-      java.lang.Object ref = countryCode_;
-      if (ref instanceof java.lang.String) {
+      Object ref = countryCode_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         countryCode_ = b;
         return b;
       } else {
@@ -2717,7 +2757,7 @@ public final class LoginProto {
     }
 
     public static final int PHONE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object phone_;
+    private volatile Object phone_;
     /**
      * <pre>
      * 手机号
@@ -2725,14 +2765,14 @@ public final class LoginProto {
      *
      * <code>optional string phone = 3;</code>
      */
-    public java.lang.String getPhone() {
-      java.lang.Object ref = phone_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPhone() {
+      Object ref = phone_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         phone_ = s;
         return s;
       }
@@ -2746,11 +2786,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getPhoneBytes() {
-      java.lang.Object ref = phone_;
-      if (ref instanceof java.lang.String) {
+      Object ref = phone_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         phone_ = b;
         return b;
       } else {
@@ -2777,13 +2817,13 @@ public final class LoginProto {
      *
      * <code>optional .GetSmsCodeType type = 4;</code>
      */
-    public com.im.domain.pb.CommonProto.GetSmsCodeType getType() {
-      com.im.domain.pb.CommonProto.GetSmsCodeType result = com.im.domain.pb.CommonProto.GetSmsCodeType.valueOf(type_);
-      return result == null ? com.im.domain.pb.CommonProto.GetSmsCodeType.UNRECOGNIZED : result;
+    public CommonProto.GetSmsCodeType getType() {
+      CommonProto.GetSmsCodeType result = CommonProto.GetSmsCodeType.valueOf(type_);
+      return result == null ? CommonProto.GetSmsCodeType.UNRECOGNIZED : result;
     }
 
     public static final int SMSCODE_FIELD_NUMBER = 5;
-    private volatile java.lang.Object smsCode_;
+    private volatile Object smsCode_;
     /**
      * <pre>
      * 手机验证码
@@ -2791,14 +2831,14 @@ public final class LoginProto {
      *
      * <code>optional string smsCode = 5;</code>
      */
-    public java.lang.String getSmsCode() {
-      java.lang.Object ref = smsCode_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSmsCode() {
+      Object ref = smsCode_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         smsCode_ = s;
         return s;
       }
@@ -2812,11 +2852,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getSmsCodeBytes() {
-      java.lang.Object ref = smsCode_;
-      if (ref instanceof java.lang.String) {
+      Object ref = smsCode_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         smsCode_ = b;
         return b;
       } else {
@@ -2825,7 +2865,7 @@ public final class LoginProto {
     }
 
     public static final int SYSVERSION_FIELD_NUMBER = 6;
-    private volatile java.lang.Object sysVersion_;
+    private volatile Object sysVersion_;
     /**
      * <pre>
      * 手机系统版本
@@ -2833,14 +2873,14 @@ public final class LoginProto {
      *
      * <code>optional string sysVersion = 6;</code>
      */
-    public java.lang.String getSysVersion() {
-      java.lang.Object ref = sysVersion_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSysVersion() {
+      Object ref = sysVersion_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sysVersion_ = s;
         return s;
       }
@@ -2854,11 +2894,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getSysVersionBytes() {
-      java.lang.Object ref = sysVersion_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sysVersion_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         sysVersion_ = b;
         return b;
       } else {
@@ -2867,7 +2907,7 @@ public final class LoginProto {
     }
 
     public static final int SYSMODEL_FIELD_NUMBER = 7;
-    private volatile java.lang.Object sysModel_;
+    private volatile Object sysModel_;
     /**
      * <pre>
      * 手机型号
@@ -2875,14 +2915,14 @@ public final class LoginProto {
      *
      * <code>optional string sysModel = 7;</code>
      */
-    public java.lang.String getSysModel() {
-      java.lang.Object ref = sysModel_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSysModel() {
+      Object ref = sysModel_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sysModel_ = s;
         return s;
       }
@@ -2896,11 +2936,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getSysModelBytes() {
-      java.lang.Object ref = sysModel_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sysModel_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         sysModel_ = b;
         return b;
       } else {
@@ -2909,7 +2949,7 @@ public final class LoginProto {
     }
 
     public static final int SYSMAC_FIELD_NUMBER = 8;
-    private volatile java.lang.Object sysMac_;
+    private volatile Object sysMac_;
     /**
      * <pre>
      * mac地址
@@ -2917,14 +2957,14 @@ public final class LoginProto {
      *
      * <code>optional string sysMac = 8;</code>
      */
-    public java.lang.String getSysMac() {
-      java.lang.Object ref = sysMac_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getSysMac() {
+      Object ref = sysMac_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         sysMac_ = s;
         return s;
       }
@@ -2938,11 +2978,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getSysMacBytes() {
-      java.lang.Object ref = sysMac_;
-      if (ref instanceof java.lang.String) {
+      Object ref = sysMac_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         sysMac_ = b;
         return b;
       } else {
@@ -2951,7 +2991,7 @@ public final class LoginProto {
     }
 
     public static final int DEVICETOKEN_FIELD_NUMBER = 9;
-    private volatile java.lang.Object deviceToken_;
+    private volatile Object deviceToken_;
     /**
      * <pre>
      * IOS deviceToken
@@ -2959,14 +2999,14 @@ public final class LoginProto {
      *
      * <code>optional string deviceToken = 9;</code>
      */
-    public java.lang.String getDeviceToken() {
-      java.lang.Object ref = deviceToken_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getDeviceToken() {
+      Object ref = deviceToken_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         deviceToken_ = s;
         return s;
       }
@@ -2980,11 +3020,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getDeviceTokenBytes() {
-      java.lang.Object ref = deviceToken_;
-      if (ref instanceof java.lang.String) {
+      Object ref = deviceToken_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         deviceToken_ = b;
         return b;
       } else {
@@ -2993,7 +3033,7 @@ public final class LoginProto {
     }
 
     public static final int PUBLICKEY_FIELD_NUMBER = 10;
-    private volatile java.lang.Object publicKey_;
+    private volatile Object publicKey_;
     /**
      * <pre>
      * 公钥
@@ -3001,14 +3041,14 @@ public final class LoginProto {
      *
      * <code>optional string publicKey = 10;</code>
      */
-    public java.lang.String getPublicKey() {
-      java.lang.Object ref = publicKey_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getPublicKey() {
+      Object ref = publicKey_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         publicKey_ = s;
         return s;
       }
@@ -3022,11 +3062,11 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getPublicKeyBytes() {
-      java.lang.Object ref = publicKey_;
-      if (ref instanceof java.lang.String) {
+      Object ref = publicKey_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         publicKey_ = b;
         return b;
       } else {
@@ -3035,7 +3075,7 @@ public final class LoginProto {
     }
 
     public static final int DEVICEINFO_FIELD_NUMBER = 11;
-    private volatile java.lang.Object deviceInfo_;
+    private volatile Object deviceInfo_;
     /**
      * <pre>
      * ios 设备信息json v1.6.0
@@ -3043,14 +3083,14 @@ public final class LoginProto {
      *
      * <code>optional string deviceInfo = 11;</code>
      */
-    public java.lang.String getDeviceInfo() {
-      java.lang.Object ref = deviceInfo_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
+    public String getDeviceInfo() {
+      Object ref = deviceInfo_;
+      if (ref instanceof String) {
+        return (String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
+        String s = bs.toStringUtf8();
         deviceInfo_ = s;
         return s;
       }
@@ -3064,12 +3104,67 @@ public final class LoginProto {
      */
     public com.google.protobuf.ByteString
         getDeviceInfoBytes() {
-      java.lang.Object ref = deviceInfo_;
-      if (ref instanceof java.lang.String) {
+      Object ref = deviceInfo_;
+      if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
+                (String) ref);
         deviceInfo_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PHONEREGMODE_FIELD_NUMBER = 12;
+    private int phoneRegMode_;
+    /**
+     * <pre>
+     * 手机号注册模式, 0:短信（默认）， 1:密码
+     * </pre>
+     *
+     * <code>optional int32 phoneRegMode = 12;</code>
+     */
+    public int getPhoneRegMode() {
+      return phoneRegMode_;
+    }
+
+    public static final int PASSWORD_FIELD_NUMBER = 13;
+    private volatile Object password_;
+    /**
+     * <pre>
+     *密码
+     * </pre>
+     *
+     * <code>optional string password = 13;</code>
+     */
+    public String getPassword() {
+      Object ref = password_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        password_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     *密码
+     * </pre>
+     *
+     * <code>optional string password = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getPasswordBytes() {
+      Object ref = password_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (String) ref);
+        password_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -3097,7 +3192,7 @@ public final class LoginProto {
       if (!getPhoneBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 3, phone_);
       }
-      if (type_ != com.im.domain.pb.CommonProto.GetSmsCodeType.REG.getNumber()) {
+      if (type_ != CommonProto.GetSmsCodeType.REG.getNumber()) {
         output.writeEnum(4, type_);
       }
       if (!getSmsCodeBytes().isEmpty()) {
@@ -3121,6 +3216,12 @@ public final class LoginProto {
       if (!getDeviceInfoBytes().isEmpty()) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 11, deviceInfo_);
       }
+      if (phoneRegMode_ != 0) {
+        output.writeInt32(12, phoneRegMode_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, password_);
+      }
     }
 
     public int getSerializedSize() {
@@ -3138,7 +3239,7 @@ public final class LoginProto {
       if (!getPhoneBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, phone_);
       }
-      if (type_ != com.im.domain.pb.CommonProto.GetSmsCodeType.REG.getNumber()) {
+      if (type_ != CommonProto.GetSmsCodeType.REG.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(4, type_);
       }
@@ -3163,12 +3264,19 @@ public final class LoginProto {
       if (!getDeviceInfoBytes().isEmpty()) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, deviceInfo_);
       }
+      if (phoneRegMode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(12, phoneRegMode_);
+      }
+      if (!getPasswordBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, password_);
+      }
       memoizedSize = size;
       return size;
     }
 
     private static final long serialVersionUID = 0L;
-    @java.lang.Override
+    @Override
     public boolean equals(final java.lang.Object obj) {
       if (obj == this) {
        return true;
@@ -3203,6 +3311,10 @@ public final class LoginProto {
           .equals(other.getPublicKey());
       result = result && getDeviceInfo()
           .equals(other.getDeviceInfo());
+      result = result && (getPhoneRegMode()
+          == other.getPhoneRegMode());
+      result = result && getPassword()
+          .equals(other.getPassword());
       return result;
     }
 
@@ -3237,6 +3349,10 @@ public final class LoginProto {
       hash = (53 * hash) + getPublicKey().hashCode();
       hash = (37 * hash) + DEVICEINFO_FIELD_NUMBER;
       hash = (53 * hash) + getDeviceInfo().hashCode();
+      hash = (37 * hash) + PHONEREGMODE_FIELD_NUMBER;
+      hash = (53 * hash) + getPhoneRegMode();
+      hash = (37 * hash) + PASSWORD_FIELD_NUMBER;
+      hash = (53 * hash) + getPassword().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -3385,6 +3501,10 @@ public final class LoginProto {
 
         deviceInfo_ = "";
 
+        phoneRegMode_ = 0;
+
+        password_ = "";
+
         return this;
       }
 
@@ -3422,6 +3542,8 @@ public final class LoginProto {
         result.deviceToken_ = deviceToken_;
         result.publicKey_ = publicKey_;
         result.deviceInfo_ = deviceInfo_;
+        result.phoneRegMode_ = phoneRegMode_;
+        result.password_ = password_;
         onBuilt();
         return result;
       }
@@ -3503,6 +3625,13 @@ public final class LoginProto {
         }
         if (!other.getDeviceInfo().isEmpty()) {
           deviceInfo_ = other.deviceInfo_;
+          onChanged();
+        }
+        if (other.getPhoneRegMode() != 0) {
+          setPhoneRegMode(other.getPhoneRegMode());
+        }
+        if (!other.getPassword().isEmpty()) {
+          password_ = other.password_;
           onChanged();
         }
         onChanged();
@@ -4545,6 +4674,133 @@ public final class LoginProto {
   checkByteStringIsUtf8(value);
         
         deviceInfo_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int phoneRegMode_ ;
+      /**
+       * <pre>
+       * 手机号注册模式, 0:短信（默认）， 1:密码
+       * </pre>
+       *
+       * <code>optional int32 phoneRegMode = 12;</code>
+       */
+      public int getPhoneRegMode() {
+        return phoneRegMode_;
+      }
+      /**
+       * <pre>
+       * 手机号注册模式, 0:短信（默认）， 1:密码
+       * </pre>
+       *
+       * <code>optional int32 phoneRegMode = 12;</code>
+       */
+      public Builder setPhoneRegMode(int value) {
+        
+        phoneRegMode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * 手机号注册模式, 0:短信（默认）， 1:密码
+       * </pre>
+       *
+       * <code>optional int32 phoneRegMode = 12;</code>
+       */
+      public Builder clearPhoneRegMode() {
+        
+        phoneRegMode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object password_ = "";
+      /**
+       * <pre>
+       *密码
+       * </pre>
+       *
+       * <code>optional string password = 13;</code>
+       */
+      public java.lang.String getPassword() {
+        java.lang.Object ref = password_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          password_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       *密码
+       * </pre>
+       *
+       * <code>optional string password = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getPasswordBytes() {
+        java.lang.Object ref = password_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          password_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       *密码
+       * </pre>
+       *
+       * <code>optional string password = 13;</code>
+       */
+      public Builder setPassword(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        password_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *密码
+       * </pre>
+       *
+       * <code>optional string password = 13;</code>
+       */
+      public Builder clearPassword() {
+        
+        password_ = getDefaultInstance().getPassword();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       *密码
+       * </pre>
+       *
+       * <code>optional string password = 13;</code>
+       */
+      public Builder setPasswordBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        password_ = value;
         onChanged();
         return this;
       }
@@ -21742,20 +21998,21 @@ public final class LoginProto {
       "\020\n\010download\030\006 \001(\t\022\r\n\005login\030\007 \001(\t\022\016\n\006conf" +
       "ig\030\010 \001(\t\022\013\n\003wss\030\t \001(\t\022\026\n\016socketProtocol\030" +
       "\n \001(\005\022\024\n\014uploadServer\030\013 \001(\005\022\021\n\tuploadUrl" +
-      "\030\014 \001(\t\"\357\001\n\006RegReq\022\037\n\nclientInfo\030\001 \001(\0132\013." +
+      "\030\014 \001(\t\"\227\002\n\006RegReq\022\037\n\nclientInfo\030\001 \001(\0132\013." +
       "ClientInfo\022\023\n\013countryCode\030\002 \001(\t\022\r\n\005phone" +
       "\030\003 \001(\t\022\035\n\004type\030\004 \001(\0162\017.GetSmsCodeType\022\017\n" +
       "\007smsCode\030\005 \001(\t\022\022\n\nsysVersion\030\006 \001(\t\022\020\n\010sy",
       "sModel\030\007 \001(\t\022\016\n\006sysMac\030\010 \001(\t\022\023\n\013deviceTo" +
       "ken\030\t \001(\t\022\021\n\tpublicKey\030\n \001(\t\022\022\n\ndeviceIn" +
-      "fo\030\013 \001(\t\"\214\002\n\007RegResp\022#\n\014commonResult\030\001 \001" +
+      "fo\030\013 \001(\t\022\024\n\014phoneRegMode\030\014 \001(\005\022\020\n\010passwo" +
+      "rd\030\r \001(\t\"\214\002\n\007RegResp\022#\n\014commonResult\030\001 \001" +
       "(\0132\r.CommonResult\022\027\n\004user\030\002 \001(\0132\t.UserBa" +
       "se\022\021\n\tsessionId\030\003 \001(\t\022\023\n\013reviewModel\030\004 \001" +
       "(\005\022\026\n\004urls\030\005 \001(\0132\010.UrlInfo\022\022\n\nserverTime" +
       "\030\006 \001(\003\022\r\n\005token\030\007 \001(\t\022\022\n\ninviteCode\030\010 \001(" +
       "\t\022\017\n\007privacy\030\t \001(\005\022\022\n\nkeyVersion\030\n \001(\005\022\023" +
-      "\n\013disableTime\030\013 \001(\003\022\022\n\nagoraAppId\030\014 \001(\t\"" +
-      "\275\002\n\010LoginReq\022\037\n\nclientInfo\030\001 \001(\0132\013.Clien",
+      "\n\013disableTime\030\013 \001(\003\022\022\n\nagoraAppId\030\014 \001(\t\"",
+      "\275\002\n\010LoginReq\022\037\n\nclientInfo\030\001 \001(\0132\013.Clien" +
       "tInfo\022\023\n\013countryCode\030\002 \001(\t\022\r\n\005phone\030\003 \001(" +
       "\t\022\035\n\tloginMode\030\004 \001(\0162\n.LoginMode\022\035\n\tlogi" +
       "nType\030\005 \001(\0162\n.LoginType\022\035\n\004type\030\006 \001(\0162\017." +
@@ -21764,8 +22021,8 @@ public final class LoginProto {
       "l\030\n \001(\t\022\016\n\006sysMac\030\013 \001(\t\022\r\n\005token\030\014 \001(\t\022\023" +
       "\n\013deviceToken\030\r \001(\t\022\022\n\ndeviceInfo\030\016 \001(\t\"" +
       "\214\002\n\tLoginResp\022#\n\014commonResult\030\001 \001(\0132\r.Co" +
-      "mmonResult\022\027\n\004user\030\002 \001(\0132\t.UserBase\022\021\n\ts" +
-      "essionId\030\003 \001(\t\022\023\n\013reviewModel\030\004 \001(\005\022\026\n\004u",
+      "mmonResult\022\027\n\004user\030\002 \001(\0132\t.UserBase\022\021\n\ts",
+      "essionId\030\003 \001(\t\022\023\n\013reviewModel\030\004 \001(\005\022\026\n\004u" +
       "rls\030\005 \001(\0132\010.UrlInfo\022\020\n\010loginReg\030\006 \001(\010\022\022\n" +
       "\nserverTime\030\007 \001(\003\022\r\n\005token\030\010 \001(\t\022\022\n\ninvi" +
       "teCode\030\t \001(\t\022\017\n\007privacy\030\n \001(\005\022\023\n\013disable" +
@@ -21774,8 +22031,8 @@ public final class LoginProto {
       "LogoutResp\022#\n\014commonResult\030\001 \001(\0132\r.Commo" +
       "nResult\"f\n\rGuestLoginReq\022\037\n\nclientInfo\030\001" +
       " \001(\0132\013.ClientInfo\022\022\n\nsysVersion\030\002 \001(\t\022\020\n" +
-      "\010sysModel\030\003 \001(\t\022\016\n\006sysMac\030\004 \001(\t\"u\n\016Guest" +
-      "LoginResp\022#\n\014commonResult\030\001 \001(\0132\r.Common",
+      "\010sysModel\030\003 \001(\t\022\016\n\006sysMac\030\004 \001(\t\"u\n\016Guest",
+      "LoginResp\022#\n\014commonResult\030\001 \001(\0132\r.Common" +
       "Result\022\021\n\tsessionId\030\002 \001(\t\022\023\n\013reviewModel" +
       "\030\003 \001(\005\022\026\n\004urls\030\004 \001(\0132\010.UrlInfo\"g\n\023WebLog" +
       "inByQrCodeReq\022\037\n\nclientInfo\030\001 \001(\0132\013.Clie" +
@@ -21784,8 +22041,8 @@ public final class LoginProto {
       "#\n\014commonResult\030\001 \001(\0132\r.CommonResult\"/\n\014" +
       "WebLogoutReq\022\037\n\nclientInfo\030\001 \001(\0132\013.Clien" +
       "tInfo\"4\n\rWebLogoutResp\022#\n\014commonResult\030\001" +
-      " \001(\0132\r.CommonResult\"{\n\021ForgetPasswordReq" +
-      "\022\037\n\nclientInfo\030\001 \001(\0132\013.ClientInfo\022\023\n\013cou",
+      " \001(\0132\r.CommonResult\"{\n\021ForgetPasswordReq",
+      "\022\037\n\nclientInfo\030\001 \001(\0132\013.ClientInfo\022\023\n\013cou" +
       "ntryCode\030\002 \001(\t\022\r\n\005phone\030\003 \001(\t\022\017\n\007smsCode" +
       "\030\004 \001(\t\022\020\n\010password\030\005 \001(\t\"9\n\022ForgetPasswo" +
       "rdResp\022#\n\014commonResult\030\001 \001(\0132\r.CommonRes" +
@@ -21819,7 +22076,7 @@ public final class LoginProto {
     internal_static_RegReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_RegReq_descriptor,
-        new java.lang.String[] { "ClientInfo", "CountryCode", "Phone", "Type", "SmsCode", "SysVersion", "SysModel", "SysMac", "DeviceToken", "PublicKey", "DeviceInfo", });
+        new java.lang.String[] { "ClientInfo", "CountryCode", "Phone", "Type", "SmsCode", "SysVersion", "SysModel", "SysMac", "DeviceToken", "PublicKey", "DeviceInfo", "PhoneRegMode", "Password", });
     internal_static_RegResp_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_RegResp_fieldAccessorTable = new
