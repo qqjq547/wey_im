@@ -1,0 +1,61 @@
+<resources>
+    <!--已翻譯-->
+    <string name="notification_of_new_information">新訊息通知</string>
+    <string name="just_online">剛剛線上</string>
+    <string name="min_online">%s分鐘前線上</string>
+    <string name="hou_online">%s小時前線上</string>
+    <string name="day_online">%s天前線上</string>
+    <string name="week_online">%s周前線上</string>
+    <string name="online">線上</string>
+    <string name="online_time">線上 %s</string>
+    <string name="sec_mat">%s秒</string>
+    <string name="min_mat">%s分鐘</string>
+    <string name="hou_mat">%s小時</string>
+    <string name="day_mat">%s天</string>
+    <string name="just_now">剛剛</string>
+    <string name="yesterday">昨天</string>
+    <string name="the_day_before_yesterday">前天</string>
+    <string name="confirm">確定</string>
+    <string name="cancel">取消</string>
+    <string name="close">關閉</string>
+    <!--未翻譯-->
+    <string name="the_task_has_been_downloaded">任務已經下載完畢</string>
+    <string name="push_message_notification">推送消息通知</string>
+    <string name="day">天</string>
+    <string name="mon">月</string>
+    <string name="week_mat">%s週</string>
+    <string name="am_mat">上午%s</string>
+    <string name="pm_mat">下午%s</string>
+    <string name="yesterday_mat">昨天 %s:%s</string>
+    <string name="the_day_before_yesterday_mat">前天 %s:%s</string>
+    <string name="sun">週日</string>
+    <string name="monday">週一</string>
+    <string name="tue">週二</string>
+    <string name="wed">週三</string>
+    <string name="thurs">週四</string>
+    <string name="fri">週五</string>
+    <string name="Sat">週六</string>
+    <string name="seconds_5">5秒</string>
+    <string name="seconds_10">10秒</string>
+    <string name="seconds_30">30秒</string>
+    <string name="minute_1">1分鐘</string>
+    <string name="hour_1">1小時</string>
+    <string name="hour_6">6小時</string>
+    <string name="hour_12">12小時</string>
+    <string name="day_1">1天</string>
+    <string name="day_3">3天</string>
+    <string name="day_7">7天</string>
+    <string name="start_activity_error">打開失敗,可能不相容當前系統</string>
+    <string name="forward">轉發</string>
+    <string name="all">全選</string>
+    <string name="copy">複製</string>
+
+    <string name="forever">永远</string>
+    <string name="shut_up">禁言中</string>
+
+
+    <string name="minute_5">5分鐘</string>
+    <string name="minute_10">10分鐘</string>
+    <string name="minute_15">15分鐘</string>
+    <string name="hour_5">5小時</string>
+</resources>

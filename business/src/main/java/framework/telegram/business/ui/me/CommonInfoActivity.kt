@@ -54,12 +54,19 @@ class CommonInfoActivity : BaseBusinessActivity<InfoContract.Presenter>(), InfoC
             LocalManageUtil.ENGLISH -> {
                 selectLanguage = "English"
             }
-            LocalManageUtil.THAI -> {
-                selectLanguage = "ภาษาไทย"
-            }
+
             LocalManageUtil.VI -> {
                 selectLanguage = "Tiếng Việt"
             }
+
+            LocalManageUtil.BR -> {
+                selectLanguage = "Português"
+            }
+
+            LocalManageUtil.MX -> {
+                selectLanguage = "Español"
+            }
+
         }
         item_language.setData(getString(R.string.language), selectLanguage) {
             ARouter.getInstance().build(Constant.ARouter.ROUNTE_BUS_ME_CONFIG_LANGUAGE).navigation()

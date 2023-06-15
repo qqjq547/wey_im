@@ -1,69 +1,83 @@
 <resources>
+    <!--已翻译-->
+    <string name="notification_of_new_information">Message Notifications</string>
+    <string name="just_online">just online</string>
+    <string name="min_online">Last seen %s minute ago</string>
+    <string name="hou_online">Last seen %s hour ago</string>
+    <string name="day_online">Last seen %s day ago</string>
+    <string name="week_online">Last seen %s week ago</string>
+    <string name="online">Online</string>
+    <string name="online_time">Online %s</string>
+    <string name="sec_mat">%ss</string>
+    <string name="min_mat">%sm</string>
+    <string name="hou_mat">%sh</string>
+    <string name="day_mat">%sd</string>
+    <string name="just_now">Now</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="the_day_before_yesterday">Before yesterday</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">Cancel</string>
+    <!--模糊匹配-->
 
-    <string name="the_task_has_been_downloaded">tarefa baixada com sucesso</string>
-    <string name="notification_of_new_information">nova mensagem</string>
-    <string name="push_message_notification">notificação de mensagem do sistema</string>
-    <string name="just_online">visto por último há pouco</string>
-    <string name="min_online">visto por último há %s min</string>
-
-    <string name="hou_online">visto por último há %s h</string>
-
-    <string name="day_online">visto por último há %s d</string>
-
-    <string name="week_online">visto por último há %s sem</string>
-
-    <string name="online">online</string>
-    <string name="online_time">%s online</string>
     <string name="day">d</string>
-    <string name="mon">mês</string>
-    <string name="sec_mat">%s s</string>
 
-    <string name="min_mat">%s min</string>
 
-    <string name="hou_mat">%s h</string>
+    <string name="mon">m</string>
 
-    <string name="day_mat">%s d</string>
 
-    <string name="week_mat">%s sem</string>
 
-    <string name="am_mat">durante a manhã %s</string>
-    <string name="pm_mat">a tarde %s</string>
-    <string name="just_now">agora</string>
-    <string name="yesterday">ontem</string>
-    <string name="the_day_before_yesterday">anteontem</string>
-    <string name="yesterday_mat">ontem %s:%s</string>
-    <string name="the_day_before_yesterday_mat">anteontem %s:%s</string>
-    <string name="sun">domingo</string>
-    <string name="monday">segunda-feira</string>
-    <string name="tue">terça-feira</string>
-    <string name="wed">quarta-feira</string>
-    <string name="thurs">quinta-feira</string>
-    <string name="fri">sexta-feira</string>
-    <string name="Sat">sábado</string>
-    <string name="confirm">confirmar</string>
-    <string name="cancel">cancelar</string>
-    <string name="seconds_5">5 s</string>
-    <string name="seconds_10">10 s</string>
-    <string name="seconds_30">30 s</string>
-    <string name="minute_1">1 min</string>
-    <string name="hour_1">1 h</string>
-    <string name="hour_6">6 h</string>
-    <string name="hour_12">12 h</string>
-    <string name="day_1">1 d</string>
-    <string name="day_3">3 d</string>
-    <string name="day_7">7 d</string>
-    <string name="forever">definitivamente</string>
-    <string name="shut_up">em modo silencioso</string>
-    <!--2019-10-11-adicionado-->
-    <string name="start_activity_error">falha ao abrir, arquivo incompatível com o sistema</string>
-    <string name="close">fechar</string>
-    <string name="forward">encaminhar</string>
-    <string name="all">selecionar tudo</string>
-    <string name="copy">copiar</string>
-    <!--2020-2-20-adicionado-->
-    <string name="minute_5">5 min</string>
-    <string name="minute_10">10 min</string>
-    <string name="minute_15">15 min</string>
-    <string name="hour_5">5 h</string>
+    <string name="yesterday_mat">Yesterday %s:%s</string>
 
+
+    <string name="the_day_before_yesterday_mat">Before yesterday %s:%s</string>
+
+
+    <string name="seconds_5">5s</string>
+
+    <string name="minute_1">1m</string>
+
+    <string name="hour_1">1h</string>
+
+
+    <string name="hour_6">6h</string>
+
+    <string name="day_1">1d</string>
+
+    <string name="day_3">3d</string>
+    <string name="day_7">7d</string>
+
+    <!--未翻译-->
+    <string name="the_task_has_been_downloaded">Task has been downloaded</string>
+    <string name="push_message_notification">New message reminder</string>
+    <string name="week_mat">%s week</string>
+
+
+    <string name="am_mat">AM %s</string>
+    <string name="pm_mat">PM %s</string>
+    <string name="sun">Sunday</string>
+    <string name="monday">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thurs">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="Sat">Saturday</string>
+    <string name="seconds_10">10s</string>
+    <string name="seconds_30">30s</string>
+    <string name="hour_12">12h</string>
+    <string name="start_activity_error">Open failed, may not be compatible with current system</string>
+
+    <string name="close">Close</string>
+
+    <string name="forward">Forward</string>
+    <string name="all">Select all</string>
+    <string name="copy">Copy</string>
+
+    <string name="forever">Forever</string>
+    <string name="shut_up">Banned</string>
+
+
+    <string name="minute_5">5 minutes </string>
+    <string name="minute_10">10 minutes </string>
+    <string name="minute_15">15 minutes </string>
+    <string name="hour_5">5 hours </string>
 </resources>

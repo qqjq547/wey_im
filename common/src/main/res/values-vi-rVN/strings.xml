@@ -1,0 +1,946 @@
+<resources>
+
+    <!--common-->
+    <string name="common_cancel">Hủy bỏ</string>
+    <string name="common_search">Tìm kiếm</string>
+
+    <string name="common_user_name_input_error_1">Tên người dùng không được để trống</string>
+    <string name="common_user_name_input_error_2">Vui lòng điền vào tên người dùng từ 1-10 ký tự</string>
+    <string name="common_save">Lưu</string>
+    <string name="common_fail">Đã xảy ra lỗi ~</string>
+
+    <string name="common_contacts_make_friend">Thêm bạn bè</string>
+    <string name="common_contacts_create_ground_chat">Tạo cuộc nhóm chat</string>
+    <string name="common_contacts_qr_code">Quét mã</string>
+
+    <string name="string_star">★</string>
+    <string name="string_star_sign">Ghim liên hệ</string>
+
+    <string name="string_sms_title">Xin chào, tôi đang sử dụng chat Wey, hãy tham gia và trò chuyện cùng tôi! Nhấp vào liên kết để tải xuống APP:%1$s</string>
+    <string name="picture_sign">[Hình ảnh]</string>
+    <string name="voice_sign">[Gọi thoại]</string>
+    <string name="video_sign">[Video]</string>
+    <string name="voice_communication_sign">[Cuộc gọi thoại]</string>
+    <string name="video_call_sign">[Video call]</string>
+    <string name="location_sign">[Vị trí địa lý]</string>
+    <string name="file_sign">[Tài liệu]</string>
+    <string name="file_sign_mat">[Tập tin]%s</string>
+    <string name="business_card_sign">[Danh thiếp]</string>
+    <string name="group_of_announcement_sign">[Thông báo nhóm]</string>
+    <string name="unkown_message_sign">[Tin nhắn không xác định]</string>
+    <string name="video">[Video]</string>
+    <string name="geographic_position_sign">[Vị trí địa lý]</string>
+
+    <!--app-->
+    <string name="app_name">Wey</string>
+
+    <string name="notification_of_new_information">Thông báo tin nhắn mới</string>
+    <string name="send_a_massage_for_you">%s đã gửi một tin nhắn mới</string>
+    <string name="invite_you_for_a_voice_call">%s đã mời bạn tham gia cuộc gọi thoại</string>
+
+    <string name="group_of_announcement_sign2">Thông báo nhóm:%s</string>
+    <string name="received_a_new_add_request">Nhận được một lời mời kết bạn mới</string>
+    <string name="message">Thông tin</string>
+    <string name="contacts">Danh bạ</string>
+    <string name="call">Cuộc gọi</string>
+    <string name="me">Tôi</string>
+
+    <!--business-->
+    <string name="bus_login_login">Đăng nhập</string>
+    <string name="bus_login_login_success">Đăng nhập thành công</string>
+    <string name="bus_login_login_fail">Đăng nhập thất bại</string>
+    <string name="bus_login_code_login">Mã xác minh đăng nhập</string>
+
+    <string name="count_down">Thời gian còn lại:</string>
+    <string name="emulator_forbidden_get_SMS_verification_code">Trình giả lập bị cấm lấy mã xác minh SMS</string>
+
+    <string name="bus_login_password_login">Mật khẩu đăng nhập</string>
+    <string name="bus_login_more">Lựa chọn khác</string>
+    <string name="bus_login_password">Mật khẩu</string>
+    <string name="bus_login_code">Mã xác nhận</string>
+    <string name="bus_login_get_code">Nhận mã xác minh</string>
+    <string name="bus_login_phone">Số điện thoại</string>
+    <string name="bus_login_register">Đăng ký</string>
+    <string name="bus_login_change_account">Chuyển tài khoản</string>
+    <string name="bus_login_user_agreement">Sự thỏa thuận của người dùng</string>
+    <string name="bus_login_upload_user">Tải lên ảnh đại diện</string>
+    <string name="bus_login_upload_username">Biệt hiệu (bắt buộc)</string>
+    <string name="bus_login_user_agreement_register">Đồng ý chính sách và đăng ký</string>
+    <string name="bus_login_mobile_input_error_1">Vui lòng điền số điện thoại di động</string>
+    <string name="bus_login_mobile_input_error_2">Nhập số điện thoại 9 số</string>
+    <string name="bus_login_sms_code_input_error_1">Vui lòng điền mã xác minh</string>
+    <string name="bus_login_sms_code_input_error_2">Lỗi mã xác minh</string>
+    <string name="bus_login_password_input_error_1">Vui lòng điền mật khẩu</string>
+    <string name="bus_login_password_input_error_2">Vui lòng nhập mật khẩu gồm 6-24 chữ số</string>
+    <string name="bus_login_password_input_error_3">2 lần nhập mật khẩu không thống nhất</string>
+    <string name="bus_login_sms_code_send">Mã xác minh đã được gửi</string>
+    <string name="bus_login_register_success">Đăng ký thành công</string>
+    <string name="bus_login_register_fail">Đăng ký thất bại</string>
+
+
+    <string name="bus_contacts_contacts">Danh bạ</string>
+    <string name="bus_contacts_start">Đặt dấu sao</string>
+    <string name="bus_contacts_start_cancel">Bỏ ghim</string>
+    <string name="bus_contacts_remarks">Ghi chú</string>
+    <string name="bus_contacts_new_friend">Thêm bạn bè</string>
+    <string name="bus_contacts_ground_chat">Nhóm trò chuyện</string>
+    <string name="bus_contacts_search_friend">Tìm bạn</string>
+
+
+    <string name="bus_me_sign_out">Đăng xuất</string>
+    <string name="bus_me_message">Thiết lập thông báo</string>
+    <string name="bus_me_secret">Riêng tư</string>
+    <string name="bus_me_safe">Tính an toàn</string>
+    <string name="bus_me_common">Cài đặt chung </string>
+    <string name="bus_me_profile">Thông tin của tôi</string>
+    <string name="bus_me_head">Ảnh đại diện</string>
+    <string name="bus_me_camera">Chụp ảnh</string>
+    <string name="bus_me_galley">Chọn từ album điện thoại</string>
+    <string name="bus_me_nickname">Biệt danh</string>
+    <string name="bus_me_phone">Số điện thoại</string>
+    <string name="bus_me_signature">Tiểu sử</string>
+    <string name="bus_me_sex">Giới tính</string>
+    <string name="bus_me_male">Nam</string>
+    <string name="bus_me_female">Nữ</string>
+    <string name="bus_me_secrecy">Bảo mật</string>
+    <string name="bus_me_my_qr_code">Mã QR của tôi</string>
+    <string name="bus_me_permission_req_error">Không nhận được các quyền liên quan</string>
+    <string name="bus_me_nickname_error">Nickname khôngđược để trống</string>
+    <string name="bus_me_update_success">cài đặt thành công</string>
+    <string name="bus_me_update_change">Đã sửa đổi thành công</string>
+
+    <string name="bus_group_same_chat">Nhóm chat chung</string>
+
+
+    <string name="language_follow_system">Theo hệ thống</string>
+    <string name="re_login_and_token_past_due">Vui lòng đăng nhập lại (mã thông báo đã hết hạn)</string>
+    <string name="please_re_login">Vui lòng đăng nhập lại</string>
+    <string name="failed_to_parse_qr_code">Không phân tích được mã QR</string>
+    <string name="please_select_the_qr_code">Vui lòng chọn mã QR của %s</string>
+    <string name="no_chat_record_was_found">Không tìm thấy lịch sử trò chuyện liên quan</string>
+    <string name="open_68_add_me">Mở APP Wey, quét mã để thêm tớ làm bạn</string>
+    <string name="my_qr_code">Mã QR của tôi</string>
+    <string name="save_to_local">Lưu vào tập tin cục bộ</string>
+    <string name="save_success">Lưu thành công</string>
+    <string name="save_fail">Lưu thất bại</string>
+    <string name="no_permissions_were_obtained">Không nhận được các quyền liên quan</string>
+    <string name="no_new_version_available">Không có phiên bản mới</string>
+    <string name="update">Thay mới</string>
+    <string name="downloading_installation_package">Tải xuống gói cài đặt</string>
+    <string name="version_updating">Cập nhật phiên bản mới</string>
+    <string name="update_qr_code">Cập nhật mã QR</string>
+    <string name="group_code">Mã QR nhóm</string>
+    <string name="qr_code_on_not_valid_before">Mã QR có hiệu lực trước %s</string>
+    <string name="change_password">Sửa đổi mật khẩu</string>
+    <string name="input_old_password">Nhập mật khẩu cũ</string>
+    <string name="enter_new_password">Nhập mật khẩu mới</string>
+    <string name="retype_new_password">Nhập lại mật khẩu mới</string>
+    <string name="confirm">Chọn</string>
+    <string name="confirm_match">Chọn (%s)</string>
+    <string name="forward_content_to">Chuyển tiếp nội dung tới</string>
+    <string name="share_content_to">Chia sẻ nội dung đến</string>
+    <string name="send_a_card">Gửi danh thiếp</string>
+    <string name="invite_to_join_68">Xin chào, tôi đang sử dụng ứng dụng chat Wey, hãy tham gia và trò chuyện cùng tôi! Nhấp vào liên kết  tải xuống APP:</string>
+    <string name="verification_of_mobile_phone">Xác minh điện thoại</string>
+    <string name="password_authentification">Xác minh mật khẩu</string>
+    <string name="change_to_mobile_phone">Thay đổi số điện thoại</string>
+    <string name="binding_success">Đã thành công</string>
+    <string name="recommend">Đề xuất</string>
+    <string name="recommend_mat">Đề xuất %s cho %s</string>
+    <string name="delete">Xóa</string>
+    <string name="deletion_not_visible_failed_sign">Không xóa được ẩn danh</string>
+    <string name="deletion_not_visible_failed">Xóa ẩn thất bại</string>
+    <string name="copy">Sao chép</string>
+    <string name="copy_success">Sao chép thành công</string>
+    <string name="man">Nam</string>
+    <string name="woman">Nữ</string>
+    <string name="confidentiality">Bảo mật</string>
+    <string name="the_locale_information_failed_to_load">Không tải được thông tin quốc gia / khu vực</string>
+    <string name="failed_to_get_the_never_visible_list">Lỗi lấy danh sách không hiện thị</string>
+    <string name="administrator">Quản trị viên</string>
+    <string name="admin_match">Quản trị viên (%s/%s)</string>
+    <string name="add">Thêm</string>
+    <string name="remove">Xóa bỏ</string>
+    <string name="edit">Chỉnh sửa</string>
+    <string name="administrator_removed_successfully">Đã xóa người quản lý thành công</string>
+    <string name="failed_to_remove_administrator">Xoóa quản trị viên thất bại</string>
+    <string name="the_number_of_administrators_has_reached_the_limit">Số lượng quản trị viên đã đạt giới hạn</string>
+    <string name="contacts_man">Người liên hệ</string>
+    <string name="lastactive">Lần online cuối cùng</string>
+    <string name="invisible_list">Danh sách ẩn</string>
+    <string name="group_owner">Chủ nhóm</string>
+    <string name="failed_to_get_administrator_list">Cập nhật danh sách quản trị viên thất bại</string>
+    <string name="transfer_the_group_to_you">%s đã chuyển nhóm cho bạn</string>
+    <string name="set_you_as_administrator">%s đặt bạn làm quản trị viên</string>
+    <string name="your_administrator_status_has_been_removed">Trạng thái quản trị viên của bạn đã bị xóa</string>
+    <string name="apply_to_join">Yêu cầu gia nhập</string>
+    <string name="apply_to_join_mat2">%s xin gia nhập %s</string>
+    <string name="apply_to_join_mat">Yêu cầu tham gia %s</string>
+    <string name="processing_manager_sign">Quản trị viên xử lý:%s</string>
+    <string name="agreed">Đã duyệt</string>
+    <string name="denied">Đã từ chối</string>
+    <string name="invite_you_to_join_a_group_chat">%s đã mời bạn tham gia nhóm chat</string>
+    <string name="invite_you_to_join_a_group_chat2">Mời bạn tham gia nhóm chat</string>
+    <string name="invite">Mời</string>
+    <string name="join_the_group_chat">Tham gia nhóm chat</string>
+    <string name="join_the_group_chat_mat">%s mời %s tham gia nhóm chat</string>
+    <string name="refused_to_join">Từ chối tham gia</string>
+    <string name="refused_to_join_mat">Đã từ chối lời mời tham gia %s</string>
+    <string name="refused_to_join_mat2">%s đã từ chối lời mời tham gia %s</string>
+    <string name="rejected_your_application_to_join_the_group">Quản trị viên %s đã từ chối yêu cầu tham gia nhóm của bạn</string>
+    <string name="address_book">Danh bạ</string>
+    <string name="group_of_announcement">Thông báo nhóm</string>
+    <string name="empty">Xóa</string>
+    <string name="empty_the_failure">Không thể làm trống</string>
+    <string name="make_sure_to_empty_the_group_announcement">Bạn có chắc chắn xóa thông báo nhóm không?</string>
+    <string name="failed_to_get_group_announcement">Không nhận được thông báo nhóm</string>
+    <string name="on_line">Online</string>
+    <string name="recently_crossed_the_line">Online gần đây</string>
+    <string name="common">Cài đặt chung </string>
+    <string name="cluster_member">Thành viên nhóm</string>
+    <string name="general_mat">Tổng số có %s người</string>
+    <string name="find_chat_content">Tìm nội dung trò chuyện</string>
+    <string name="my_nickname_in_this_group">Biệt danh của tôi trong nhóm này</string>
+    <string name="edit_group_nickname">Chỉnh sửa tên nhóm</string>
+    <string name="top_chat">Ghim</string>
+    <string name="message_do_not_disturb">Im lặng</string>
+    <string name="save_to_address_book">Lưu vào danh dạ</string>
+    <string name="delete_chat_records_of_this_group_sign">Không thể khôi phục sau khi xóa lịch sử trò chuyện của nhóm</string>
+    <string name="delete_and_exit">Xóa và thoát</string>
+    <string name="transfer_the_possession_of">Chuyển nhường</string>
+    <string name="transfer_group_chat">Thay đổi quyền quản lý nhóm</string>
+    <string name="group_chat_needs_to_be_transferred_first">Bạn là chủ sở hữu của nhóm, bạn cần chuyển cuộc trò chuyện nhóm trước khi thoát khỏi trò chuyện nhóm và xóa lịch sử trò chuyện của nhóm này</string>
+    <string name="exit_the_group_chat">Rời nhóm</string>
+    <string name="the_chat_records_of_this_group_will_be_deleted">Xác nhận rời khỏi nhóm chat, lịch sử trò chuyện của nhóm này sẽ bị xóa</string>
+    <string name="encryption">Mã hóa</string>
+    <string name="encryption_message">Thông tin và cuộc gọi trong danh sách phát này đã được mã hóa đầu cuối , chỉ bạn và đối tác trò chuyện của bạn mới có thể nghe và xem nội dung của cuộc trò chuyện</string>
+    <string name="fine">Vâng</string>
+    <string name="group_membership">Quản lý nhóm</string>
+    <string name="modified_group_nickname_successfully">Sửa đổi thành công tên nhóm</string>
+    <string name="failed_to_modify_group_nickname">Sửa tên nhóm thất bại</string>
+    <string name="group_of_qr_code">Mã QR nhóm</string>
+    <string name="failed_to_get_blacklist">Cập nhật danh sách đen thất bại</string>
+    <string name="use_the_handset_to_play_voice_messages">Sử dụng tai nghe để phát tin nhắn thoại</string>
+    <string name="no_friends_added">Không có bạn bè nào được thêm vào</string>
+    <string name="friends_added">Đã thêm bạn bè</string>
+    <string name="font_size">Cỡ chữ</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="clear_chat_records">Xóa lịch sử chat</string>
+    <string name="please_operate_with_caution">Tất cả hồ sơ trò chuyện cá nhân và nhóm sẽ bị xóa,vui lòng thao tác cẩn thận Tất cả hồ sơ trò chuyện của các cá nhân và nhóm sẽ bị xóa. Vui lòng thận trọng</string>
+    <string name="feedback">Đóng góp ý kiến</string>
+    <string name="about">Liên quan về</string>
+    <string name="Share_68">Chia sẻ Wey</string>
+    <string name="make_sure_to_log_out">Sau khi đăng xuất thiết bị sẽ không nhận được lời nhắc tin nhắn mới, Bạn có chắc chắn muốn đăng xuất không?</string>
+    <string name="log_out">Đăng xuất</string>
+    <string name="successfully_set">Cài đặt thành công</string>
+    <string name="set_a_password">đặt mật khẩu</string>
+    <string name="enter_password">Nhập mật khẩu</string>
+    <string name="confirm_password">Nhập lại mật khẩu</string>
+    <string name="safety">Tính an toàn</string>
+    <string name="disable_captcha_login">Chặn đăng nhập bằng mã xác minh </string>
+    <string name="verify_your_password_first">Đăng nhập mã xác minh bị cấm, trước tiên bạn cần xác minh mật khẩu của mình</string>
+    <string name="safety_verification">Xác minh an toàn</string>
+    <string name="please_set_the_password_first">Vui lòng đặt mật khẩu trước</string>
+    <string name="request_unsuccessful">Yêu cầu không thành công</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="password">Mật khẩu</string>
+    <string name="not_set">Chưa cài đặt</string>
+    <string name="Invisible_list">Danh sách ẩn</string>
+    <string name="notifications_settings">Thiết lập thông báo</string>
+    <string name="close">Đóng</string>
+    <string name="open">Khởi động</string>
+    <string name="open2">Mở ra</string>
+    <string name="inform">Thông báo</string>
+    <string name="system_notification_permission_sign">Ban đã bật thông báo của hệ thống,</string>
+    <string name="message_notifications_will_be_missed">Thông báo tin nhắn sẽ bị bỏ lỡ</string>
+    <string name="not_missing_any_notifications">giúp bạn không bỏ lỡ bất kỳ thông báo nào.</string>
+    <string name="to_set_up">Đi tới cài đặt</string>
+    <string name="Immediately_jump">Chuyển qua</string>
+    <string name="voice_and_video_call_invitation_reminder">Thông báo cuộc gọi thoại và video</string>
+    <string name="notification_displays_sender_information">Thông báo hiển thị thông tin của người gửi</string>
+    <string name="sound">Âm thanh</string>
+    <string name="shake">Chế độ rung</string>
+    <string name="self_starting">Tự khởi động</string>
+    <string name="open_the_notification">Bật thông báo</string>
+    <string name="do_the_same_configuration">Phát hiện bạn có nhiều luồng, vui lòng cài đặt cấu hình tất cả các luồng</string>
+    <string name="mipush">Xiaomi đẩy</string>
+    <string name="same_configuration">Phát hiện bạn có nhiều luồng, vui lòng cài đặt cấu hình tất cả các luồng</string>
+    <string name="add_my_way">Thêm theo cách của tôi</string>
+    <string name="group_chat">Nhóm trò chuyện</string>
+    <string name="qr_code">Mã QR</string>
+    <string name="business_card">Danh thiếp</string>
+    <string name="blacklist">Danh sách đen</string>
+    <string name="thanks_for_the_feedback">Cảm ơn vì bạn đã phản hồi</string>
+    <string name="privacy">Riêng tư</string>
+    <string name="when_you_add_me_as_a_friend_you_need_to_verify">Xác minh khi kết bạn</string>
+    <string name="inviting_me_to_join_a_group_chat_requires_verification">Xác minh khi vào nhóm</string>
+    <string name="show_your_phone_number_to_a_friend">Hiển thị số điện thoại cho bạn bè</string>
+    <string name="pending">Chờ xử lý</string>
+    <string name="a_recent_request">Yêu cầu gần đây</string>
+    <string name="add_validation">Thêm xác minh</string>
+    <string name="the_add_request_has_been_sent">Yêu cầu kết bạn đã được gửi</string>
+    <string name="complaints_reasons">Lý do khiếu nại</string>
+    <string name="chat_settings">Cài đặt trò chuyện</string>
+    <string name="setup_failed">Cài đặt thất bại:%s</string>
+    <string name="message_destruction_time">Thời gian hủy tin nhắn</string>
+    <string name="screenshots_to_inform">Thông báo ảnh chụp màn hình</string>
+    <string name="setup_failed_sign">Cài đặt thất bại:%s</string>
+    <string name="whether_to_clear_chat_record">Có xóa lịch sử trò chuyện hay không</string>
+    <string name="are_you_sure_empty_chat_logs">Bạn có chắc chắn muốn xóa lịch sử trò chuyện không</string>
+    <string name="complaint">Khiếu nại</string>
+    <string name="one_minute">1 phút</string>
+    <string name="add_to_blacklist">Thêm vào danh sách đen</string>
+    <string name="remove_from_blacklist">Xóa khỏi danh sách đen</string>
+    <string name="the_user_has_been_blocked">Người dùng đã bị chặn</string>
+    <string name="cell_phone_number">Số điện thoại</string>
+    <string name="scan_a_qr_code">Quét mã</string>
+    <string name="the_other_person_searches">Đối phương thêm bằng cách tìm kiếm %1s</string>
+    <string name="gender">Giới tính</string>
+    <string name="personalized_signature">Tiểu sử</string>
+    <string name="they_didn_t_write_anything">Đối phương chưa viết bất cứ điều gì</string>
+    <string name="rights_of_administrators">Quyền của quản trị viên</string>
+    <string name="modified_group_data">Sửa đổi thông tin nhóm</string>
+    <string name="receive_income_group_validation">Nhận xác minh gia nhập nhóm</string>
+    <string name="announce">Thông báo</string>
+    <string name="set_up_other_administrators">Thiết lập các quản trị viên khác</string>
+    <string name="edit_success">Chỉnh sửa thành công</string>
+    <string name="edit_failure">Chỉnh sửa không thành công</string>
+    <string name="successfully_added">Thêm thành công</string>
+    <string name="fail_to_add">Thêm thất bại</string>
+    <string name="group_entry_shall_be_reviewed">Xét duyệt trước khi vào nhóm</string>
+    <string name="can_not_mutual_friends">Cấm thành viên kết bạn với nhau</string>
+    <string name="total_silence">Cấm chat toàn bộ thành viên</string>
+    <string name="total_silence_failed">Tất cả các thành viên không thể chặn chat</string>
+    <string name="members_of_the_group_chat">Thành viên nhóm chat</string>
+    <string name="choose_the_person_to_remind">Chọn người cần nhắc</string>
+    <string name="transfer_of_the_group_manager">Chuyển chủ nhóm</string>
+    <string name="add_admin">Thêm quản trị viên</string>
+    <string name="whole_members">Toàn bộ thành viên</string>
+    <string name="transfer_group_failure">Chuyển nhóm thất bại</string>
+    <string name="transfer_group_failure_sign">Không chuyển được nhóm:%s</string>
+    <string name="transfer_group_chat_message_one">Sau khi nhóm được chuyển sẽ tự động trở thành thành viên bình thường, mất mọi quyền của chủ nhóm, [%s] sẽ trở thành chủ nhóm mới</string>
+    <string name="remove_element">Xóa thành viên</string>
+    <string name="group_member_deleted_successfully">Đã xóa thành viên nhóm thành công</string>
+    <string name="failed_to_delete_group_members">Không xóa được thành viên nhóm</string>
+    <string name="the_input_cannot_be_empty">Nội dung đầu vào không được để trống</string>
+    <string name="source">Nguồn</string>
+    <string name="the_group_of_reason">Lý do tham gia nhóm</string>
+    <string name="please_wait_patiently_for_group_manager_review">Hãy kiên nhẫn đợi chủ nhóm đánh giá</string>
+    <string name="join_group_successfully">Tham gia nhóm thành công</string>
+
+    <string name="make_sure_you_want_to_delete_the_selected">Bạn có chắc chắn muốn xóa %s thành viên đã chọn không?</string>
+    <string name="edit_group_name">Chỉnh sửa tên nhóm</string>
+    <string name="the_group_profile_was_modified_successfully">Đã sửa đổi thành công ảnh đại diện của nhóm</string>
+    <string name="failed_to_modify_group_profile">Sửa ảnh đại diện nhóm thất bại</string>
+    <string name="group_name_changed_successfully">Sửa đổi tên nhóm thành công</string>
+    <string name="failed_to_change_group_name">Sửa tên nhóm thất bại</string>
+    <string name="shift_out">Xóa</string>
+    <string name="failed_to_read_channel_information">Không đọc được thhoong tin kênh</string>
+    <string name="mobile_phone_contacts">Người liên hệ</string>
+    <string name="issue_new_announcements">Đưa ra thông báo mới</string>
+    <string name="determine_the_release">Việc phát thông báo này sẽ gửi đến cho tất cả các thành viên trong nhóm, điều này có thể gây phiền nhiễu cho các thành viên trong nhóm. Bạn có chắc chắn muốn phát không?</string>
+    <string name="abandon_the_editing">Bỏ bản chỉnh sửa này?</string>
+    <string name="release_success">Đăng tải thành công</string>
+    <string name="post_failure">Đăng bài thất bại</string>
+    <string name="group_of_notice">Thông báo nhóm</string>
+    <string name="think_change">Quét mã</string>
+    <string name="invite_to_group_chats">%s mời tham gia nhóm chat</string>
+    <string name="the_delete_group_request_failed">Yêu cầu xóa nhóm thất bại</string>
+    <string name="a_contact">%s địa chỉ liên hệ</string>
+    <string name="failed_to_get_group_chat_information">Tải tin nhắn nhóm thất bại :%s</string>
+    <string name="joining_a_group_chat_failed_sign">Không thể tham gia trò chuyện nhóm:%s</string>
+    <string name="get_address_book">Lấy từ danh bạ</string>
+    <string name="select_contact">Chọn người liên hệ</string>
+    <string name="failed_to_create_group_chat">Tạo nhóm thất bại</string>
+    <string name="group_creation_failed">Tạo nhóm thất bại</string>
+    <string name="adding_invisible_failed">Thêm ẩn danh thất bại</string>
+    <string name="adding_invisible_failed_sign">Thêm ẩn danh thất bại:</string>
+    <string name="failed_to_add_group_member">Thêm thành viên nhóm thất bại</string>
+    <string name="tip_message_one">Nhưng %1s chưa thêm bạn làm bạn bè, trước tiên hãy gửi yêu cầu thêm đối phương làm người liên hệ, sau khi thông qua mới có thể mời \n%2s đã bật xét duyệt thành viên nhóm và đối phương phải thông qua mới có thể vào nhóm</string>
+    <string name="tip_message_three">%1s đã bật chế độ gia nhập nhóm cần xét duyệt, đối phương phải đồng ý thì mới có thể vào nhóm</string>
+    <string name="tip_message_four">%1s chưa thêm bạn làm bạn bè, trước tiên hãy gửi yêu cầu thêm đối phương làm người liên hệ, sau khi thông qua mới có thể mời</string>
+    <string name="delete_contact">Xóa liên lạc</string>
+    <string name="add_to_blacklist_message">Sau khi thêm vào danh sách đen, bạn sẽ không còn nhận được bất kỳ tin nhắn nào từ người này</string>
+    <string name="remark_name">Tên ghi chú</string>
+    <string name="describe">Mô tả</string>
+    <string name="share_contacts">Chia sẻ liên hệ</string>
+    <string name="phone_number_two">Số điện thoại</string>
+    <string name="please_fill_in_the_feedback">Vui lòng điền vào nội dung phản hồi</string>
+    <string name="user_information_cannot_be_obtained">Không thể lấy thông tin người dùng</string>
+    <string name="failed_to_delete_friends">Xóa bạn thất bại</string>
+    <string name="failed_to_set_comment_name">Không đặt được tên nhận xét</string>
+    <string name="can_t_find">Không tìm thấy ~</string>
+    <string name="authorization_failed">Ủy quyền thất bại</string>
+    <string name="issue">Phát hành</string>
+    <string name="upload_picture_failed">Tải ảnh thất bại</string>
+    <string name="network_error">Lỗi mạng</string>
+    <string name="set_personal_attributes_successfully">Cài đặt mục cá nhân thành công</string>
+    <string name="photograph">Chụp ảnh</string>
+    <string name="select_from_camera">Chọn từ album điện thoại</string>
+    <string name="operation_failure_sign">Thao tác thất bại :%s</string>
+    <string name="added">Đã thêm</string>
+    <string name="search_result">Kết quả tìm kiếm</string>
+    <string name="request_to_add_a_friend_has_been_sent">Đã gửi lời mời kết bạn</string>
+    <string name="call_out">Gọi</string>
+    <string name="copy_number">Sao chép số</string>
+    <string name="making_a_call">Quay số</string>
+    <string name="group_of_nicknames">Tên nhóm</string>
+    <string name="rank">Chờ đợi</string>
+    <string name="request_sent">Đã gửi yêu cầu</string>
+    <string name="adding_password_for_user_admin">Đã tạo thành công</string>
+    <string name="cell_phone_numbers_must_be_numbers">Số điện thoại phải là  số !!</string>
+    <string name="burn_after_reading">Xóa sau khi đọc</string>
+    <string name="the_message_will_be_destroyed_at_the_specified_time">Sau khi mở tính năng hủy sau khi đọc, các tin nhắn đã đọc sẽ bị hủy trong thời gian quy định</string>
+    <string name="screenshots_will_be_notified_to_both_parties">Sau khi mở , màn hình sẽ được chụp trong suốt cuộc đối thoại, và cả hai bên sẽ nhận thông báo</string>
+    <string name="authenticate_and_set_a_new_password">Thông qua xác thực và đặt mật khẩu mới</string>
+    <string name="my_qr">Mã QR của tôi</string>
+    <string name="we_need_to_verify_our_identity">Để bảo mật tài khoản, chúng tôi cần xác minh danh tính</string>
+    <string name="next_step">Bước tiếp theo</string>
+    <string name="who_can_see_lastactive">Ai có thể xem thời gian online cuối cùng của tôi</string>
+    <string name="everyone">Tất cả mọi người</string>
+    <string name="contacts_only">Chỉ truy cập liên hệ trong danh bạ</string>
+    <string name="online_time_is_not_displayed">Không hiển thị thời gian online</string>
+    <string name="they_cant_see_your_last_online_time">Những người dùng trong danh sách này sẽ không bao giờ thấy thời gian online cuối cùng của bạn</string>
+    <string name="just_pwd_login">Sau khi mở, bạn sẽ chỉ có thể đăng nhập bằng mật khẩu</string>
+    <string name="consent">Đồng ý</string>
+
+    <string name="commit">Gửi đi</string>
+    <string name="submit_successfully">Đề xuất thành công</string>
+    <string name="we_will_deal_with_it_within_tf_hours">Cảm ơn bạn đã ủng hộ, chúng tôi sẽ giải quyết trong vòng 24 giờ</string>
+    <string name="find">Vâng</string>
+    <string name="group_manager_audit_is_required">Nhóm chat hiện tại đã bật chế độ gia nhập nhóm cần xét duyệt. Sau khi đối phương đồng ý tham gia, cần chủ nhóm phê duyệt thông qua mới có thể vào nhóm</string>
+    <string name="search_friends">Tìm bạn bè</string>
+    <string name="scan_qr_code">Quét mã</string>
+    <string name="invite_friends_to_join_app">Mời bạn bè tham gia Wey</string>
+    <string name="please_enter_the_announcement">Vui lòng nhập nội dung thông báo</string>
+    <string name="inform_all_members">Thông báo cho tất cả các thành viên</string>
+    <string name="turn_on_the_message_to_avoid_interruption">Đẩy để thông báo cho tất cả các thành viên trong nhóm, ngay cả khi bên kia bật thông báo không làm phiền</string>
+    <string name="confirm_the_release">Xác nhận đăng bài</string>
+    <string name="set_a_new_password">Thông qua xác thực và đặt mật khẩu mới</string>
+    <string name="bad_information">Xuất bản thông tin khiêu dâm, quảng cáo và các thông tin xấu khác</string>
+    <string name="attack_action">Có hành vi quấy rối, công kích tôi…</string>
+    <string name="illegal_behavior">Các hành vi vi phạm khác</string>
+    <string name="notification_toggle">Ứng dụng chưa mở</string>
+    <string name="systematic_notification">Thông báo hệ thống tin nhắn mới</string>
+    <string name="do_not_disturb_when_remind">Để đảm bảo hiển thị thuận lợi lời nhắc trên thanh thông báo, vui lòng cho phép “Hiển thị ở đầu màn hình” và “Nhắc nhở không bị làm phiền</string>
+    <string name="open_self_start">Bật tự khởi động</string>
+    <string name="achieved_accuracy">Cho phép ứng dụng tự khởi động, điều này có thể cải thiện độ chính xác của tin nhắn đến</string>
+    <string name="i_can_be_found_in_the_following_ways">Bạn có thể tìm thấy tôi theo những cách sau</string>
+    <string name="share_app">Chia sẻ APP Wey</string>
+    <string name="turn_down">Từ chối</string>
+    <string name="to_complete_the_binding">Nhập và xác minh số mới để hoàn thành việc ràng buộc</string>
+    <string name="binding">Cài đặt</string>
+    <string name="group_of_head">Ảnh đại diện nhóm</string>
+    <string name="the_name_of_the_group_chat">Tên nhóm chat</string>
+    <string name="accomplish">Hoàn tất</string>
+    <string name="feedback_type">Loại phản hồi</string>
+    <string name="suggest">Kiến nghị</string>
+    <string name="error">Lỗi</string>
+    <string name="other">Khác</string>
+    <string name="back_info">Nội dung phản hồi</string>
+    <string name="we_ll_get_it_for_you_as_soon_as_possible">Vui lòng mô tả chi tiết vấn đề bạn muốn phản hồi, để chúng tôi có thể giải quyết cho bạn trong thời gian sớm nhất</string>
+    <string name="submit">Gửi đi</string>
+    <string name="video_call">Cuộc gọi video</string>
+    <string name="no_announcement">Không có thông báo</string>
+    <string name="voice_communication">Cuộc gọi thoại</string>
+    <string name="set_to_star">Gắn dấu sao</string>
+    <string name="send_a_message">Gửi tin nhắn</string>
+    <string name="scan_the_code_to_add_me_as_a_friend">Mở APP Wey, quét mã để thêm tớ làm bạn</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="in_app_notification">Ứng dụng đang mở</string>
+
+    <!--message-->
+    <string name="slide_to_cancel">Vuốt sang trái để hủy</string>
+
+    <string name="cancel">Hủy bỏ</string>
+
+    <string name="pet_text_1086">Chỉ dẫn không khả dụng</string>
+    <string name="pet_text_1130">Chỉ dẫn nâng cao</string>
+    <string name="pet_text_884">Chỉ dẫn Baidu</string>
+    <string name="pet_text_642">Điều hướng Tencent</string>
+    <string name="google_navigation">Điều hướng của Google</string>
+    <string name="pet_text_414">Bạn chưa cài đặt phần mềm chỉ dẫn</string>
+    <string name="pet_text_632">[Vị trí không xác định]</string>
+    <string name="not_location_info">Vị trí của bạn chưa truy cập được, vui lòng kiểm tra cài đặt</string>
+    <string name="pet_text_324">Chưa định vị được vị trí của bạn , vui lòng đến nơi có tín hiệu tốt hơn để xác định vị trí đó</string>
+    <string name="not_access_location">Định vị đã tắt, vui lòng bật lại định vị trong cài đặt</string>
+    <string name="pet_text_508">Đã hiểu</string>
+    <string name="pet_text_195">Mở ra</string>
+    <string name="pet_text_802">Hủy bỏ</string>
+    <string name="pet_text_995">Bật GPS để giúp bạn định vị chính xác hơn</string>
+    <string name="pet_text_1254">Vui lòng thao tác thủ công   trong định vị GPS trong Cài đặt -> Vị trí!</string>
+    <string name="pet_text_444">Định vị không thành công</string>
+    <string name="pet_text_281">Vị trí</string>
+    <string name="pet_text_1172">Gửi</string>
+    <string name="pet_text_189">Không thể tìm được vị trí của bạn, chỉ dẫn thất bại</string>
+    <string name="pet_text_1030">Chỉ dẫn</string>
+    <string name="on_the_line">Đang gọi</string>
+    <string name="mute">Tắt tiếng</string>
+    <string name="hang_up">Tắt máy</string>
+    <string name="hands_free">Bật loa ngoài</string>
+    <string name="switching_camera">Chuyển đổi máy ảnh</string>
+    <string name="switch_to_voice">Chuyển sang ghi thoại</string>
+    <string name="a_message_that_cannot_be_parsed">Tin nhắn không thể phân tích</string>
+    <string name="invite_you_for_a_voice_call_sign">Mời bạn tham gia cuộc gọi thoại….</string>
+    <string name="take_in">Chấp nhận</string>
+    <string name="name">Tên</string>
+    <string name="face_sign">[biểu hiện]</string>
+    <string name="let_go_to_send">Giữ để nói, thả tay để gửi</string>
+    <string name="wait_for_an_answer">Đang kết nối...</string>
+    <string name="opening_file">mở tệp tin</string>
+    <string name="please_send_the_add_request_first">Chưa phải là bạn bè của nhau, vui lòng gửi yêu cầu kết bạn</string>
+    <string name="to_answer_the">Cuộc gọi chờ</string>
+    <string name="just_now">Gần đây</string>
+    <string name="same_one_at_me">Ai đó @tôi</string>
+    <string name="chose_sign">Đã chọn</string>
+    <string name="got_it">Đã hiểu</string>
+    <string name="the_whole_staff_was_silent">Tất cả các thành viên đang bị cấm chat</string>
+    <string name="invite_you_to_video">Mời bạn tham gia cuộc gọi video….</string>
+    <string name="the_voice_answered">Trả lời bằng cuộc gọi thoại</string>
+    <string name="encryption_hint">Đoạn tin nhắn và hội thoại này đã được bảo mật</string>
+    <string name="a_message_was_withdrawn">%s đã thu hồi một tin nhắn</string>
+    <string name="sign_message">Dòng tin nhắn</string>
+    <string name="hint">Gợi ý</string>
+    <string name="the_message_you_are_viewing_has_been_deleted">Tin nhắn tìm kiếm đã bị đối phương xóa</string>
+    <string name="forward">Chuyển tiếp</string>
+    <string name="save_the_image">Lưu hình ảnh</string>
+    <string name="recognition_qr_code">Xác định mã QR</string>
+    <string name="open_it_with_another_application">Mở bằng các ứng dụng khác</string>
+    <string name="downloading_sign">Đang tải xuống ...</string>
+    <string name="downloading_sign_mat">Đang tải xuống ...%s /%s</string>
+    <string name="pause_to_download">Tạm dừng tải xuống</string>
+    <string name="download_failed">Tải xuống không thành công</string>
+    <string name="re_download">Tải lại</string>
+    <string name="download_the_file">Tải tập tin</string>
+    <string name="uid_error">Lỗi uid</string>
+    <string name="save_the_video">Lưu video</string>
+    <string name="video_failed_to_load">Tải video thất bại</string>
+    <string name="you_took_a_screenshot">Bạn đã chụp ảnh màn hình cuộc trò chuyện</string>
+    <string name="some_one_took_a_screenshot">%s đã chụp ảnh màn hình cuộc trò chuyện</string>
+    <string name="the_receiver_play">Phát lại tai nghe</string>
+    <string name="multiple_choice">Chọn nhiều</string>
+    <string name="reply">Trả lời</string>
+    <string name="details">Thông tin chi tiết</string>
+    <string name="encryption_hint2">Thông tin và cuộc gọi trong danh sách phát này đã được mã hóa đầu cuối , chỉ bạn và đối tác trò chuyện của bạn mới có thể nghe và xem nội dung của cuộc trò chuyện</string>
+    <string name="read_fire_whether_to_continue_hint">Trong số  bạn đã chọn tin nhắn, giọng nói, danh thiếp, cuộc gọi, thông báo,không thể hủy sau khi đọc cho bạn bè. Bạn có muốn tiếp tục không?</string>
+    <string name="connecting_sign">Đang kết nối...</string>
+    <string name="ununited">Chưa kết nối</string>
+    <string name="in_the_input">Đang nhập</string>
+    <string name="add_ok">Thêm thành công</string>
+    <string name="video_conversion_has_an_exception">Đã xảy ra lỗi trong chuyển đổi video, gửi tin nhắn thất bại</string>
+    <string name="select_group_chat">Chọn nhóm chat</string>
+    <string name="send_to">Gửi đến</string>
+    <string name="choosing_friends">Chọn bạn</string>
+    <string name="recently">Gần đây</string>
+    <string name="choose_a_business_card">Chọn danh thiếp</string>
+    <string name="unstick">Bỏ ghim</string>
+
+    <string name="clear_all_msgs">Hộp tin nhắn rỗng</string>
+    <string name="clear_and_delete_chat">Chỉ xóa lịch sử đối thoại cục bộ</string>
+    <string name="clear_and_delete_pvt_chat">Xóa lịch sử hội thoại cục bộ và %s</string>
+    <string name="clear_and_delete_group_chat">Xóa lịch sử đối thoại cục bộ và tất cả các thành viên</string>
+    <string name="clear_and_delete_file_tran_chat">Xóa lịch sử hội thoại của các thiết bị cục bộ và máy tính</string>
+
+    <string name="clear_and_delete_msgs">Thu hồi với bạn</string>
+    <string name="clear_and_delete_pvt_msgs">Thu hồi với mọi người %s</string>
+    <string name="clear_and_delete_group_msgs">Xóa tất cả thiết bị cục bộ bao gồm các thành viên</string>
+    <string name="clear_and_delete_file_tran_msgs">Xóa khỏi các thiết bị cục bộ và máy tính</string>
+
+    <string name="clear_and_delete_msgs_local">Chỉ xóa lịch sử trò chuyện với bạn</string>
+    <string name="clear_and_delete_pvt_msgs_local">Xóa lịch sử trò chuyện với mọi người %s</string>
+    <string name="clear_and_delete_group_msgs_local">Xóa lịch sử trò chuyện của tất cả các thành viên và cục bộ</string>
+
+    <string name="clear_and_delete">Làm trống và xóa bỏ lịch sử </string>
+    <string name="also_clear_chat_records">Xóa trò chuyện ,đồng thời xóa lịch sử trò chuyện ?</string>
+    <string name="clear_chat_logs">Xóa lịch sử trò chuyện</string>
+
+    <string name="some_one_at_me_sign">[Có người tag @tôi]</string>
+    <string name="some_one_at_me_sign_mat">[Ai đó @我]%s</string>
+    <string name="there_is_a_new_announcement_sign">[Thông báo mới]</string>
+    <string name="there_is_a_new_announcement_sign_mat">[Thông báo mới] %s</string>
+    <string name="draft_sign">[Bản nháp]</string>
+    <string name="draft_sign_voice_sign">[Bản nháp] [Giọng nói]</string>
+    <string name="you_cannot_send_messages">Tất cả các thành viên đều bị cấm chat, bạn không thể gửi tin nhắn!</string>
+    <string name="identification_of_failure">Nhận dạng thất bại</string>
+    <string name="residue">Còn lại</string>
+    <string name="continue_to_download">Tiếp tục tải xuống</string>
+    <string name="file_download_failed">Tải xuống tệp thất bại</string>
+    <string name="download_to_save">Tải hoàn tất mới có thể lưu</string>
+    <string name="you">Bạn</string>
+    <string name="please_open_location_permissions">Định vị thất bại, vui lòng mở quyền định vị</string>
+    <string name="downloading">Đang tải xuống ...%s/%s</string>
+    <string name="on_the_cross">Đang tải lên ...%s/%s</string>
+    <string name="did_not_answer">Không bắt máy</string>
+    <string name="did_not_answer_mat">Đã bỏ lỡ [%s]</string>
+    <string name="no_answer">Đối phương không phản hồi</string>
+    <string name="call_duration">Thời gian gọi</string>
+    <string name="call_duration_mat">Thời lượng cuộc gọi %s</string>
+    <string name="the_other_party_has_refused">Đối phương đã từ chối</string>
+    <string name="canceled">Đã hủy</string>
+    <string name="counterparty_canceled">Đối phương đã hủy</string>
+    <string name="the_other_is_busy">Đối phương đang bận </string>
+    <string name="error_condition">Trạng thái lỗi</string>
+    <string name="geographic_position">[Vị trí địa lý]</string>
+    <string name="unknown_sign">[Không xác định]</string>
+    <string name="province">Tỉnh</string>
+    <string name="city">Thành phố</string>
+    <string name="you_withdrew_a_message">Bạn đã thu hồi một tin nhắn</string>
+    <string name="play_time">Thời gian phát chiếu</string>
+    <string name="see_the_time">Kiểm tra thời gian</string>
+    <string name="delivery_time">Thời gian giao hàng</string>
+    <string name="delivery">Giao đến gửi đến</string>
+    <string name="download_start">Bắt đầu tải về...</string>
+    <string name="play">Phát</string>
+    <string name="read">Đã đọc</string>
+    <string name="targetId_error">Lỗi targetId</string>
+    <string name="gid_error">Gid lỗi</string>
+    <string name="extern_nsstring_const">Đang kết nối...</string>
+    <string name="particulars">Thông tin chi tiết</string>
+    <string name="loudspeaker_playback">Mở loa</string>
+    <string name="encryption_hint_two">Thông tin và cuộc gọi trong danh sách phát này đã được mã hóa đầu cuối , chỉ bạn và đối tác trò chuyện của bạn mới có thể nghe và xem nội dung của cuộc trò chuyện</string>
+    <string name="forward_continue">Trong tin nhắn bạn đã chọn,  gọi thoại, danh thiếp và thông báo không thể gửi cho bạn bè. Bạn có muốn tiếp tục không?</string>
+    <string name="continue_str">Tiếp tục</string>
+    <string name="delete_for_all">Xóa cho mọi người</string>
+    <string name="message_for_details">Thông tin chi tiết</string>
+    <string name="the_file_is_empty">Tệp trống</string>
+    <string name="maximum_file_limit_50m">Giới hạn tệp tối đa là 150M</string>
+    <string name="no_call_recently">Không có cuộc gọi nào gần đây</string>
+    <string name="no_recent_conversation">Không có cuộc trò chuyện gần đây</string>
+    <string name="be_on_the_phone">Đang trong cuộc gọi</string>
+    <string name="uid_error_two">Uid không chính xác</string>
+    <string name="in_connection">Đang thiết lập kết nối ...</string>
+    <string name="second_mat">%s s</string>
+    <string name="please_log_in_and_share_again">Chưa đăng nhập, vui lòng đăng nhập trước khi chia sẻ</string>
+    <string name="decryption_failure">Giải mã không thành công</string>
+    <string name="in_connection_sign">Đang thiết lập kết nối ...</string>
+    <string name="the_new_phone">Cuộc gọi mới</string>
+    <string name="can_t_reach_server">Không thể kết nối với máy chủ, vui lòng đăng nhập lại</string>
+    <string name="no_nover_window_permissions">Bạn chưa cấp quyền sử dụng cửa sổ nổi</string>
+    <string name="strip">[%s Bài viết]%s</string>
+    <string name="the_message_has_been_deleted_by_the_other_party">Tin nhắn tìm kiếm đã bị đối phương xóa</string>
+    <string name="some_one_at_me">Có người @tôi</string>
+    <string name="check_the_recording_permissions">Vui lòng kiểm tra quyền ghi âm</string>
+    <string name="a_screenshot_of_the_chat_was_taken">%s đã chụp ảnh màn hình cuộc trò chuyện</string>
+    <string name="they_refused_to_talk">Cuộc gọi đã được thực hiện nhưng bên kia từ chối cuộc gọi</string>
+    <string name="you_not_target_linkman">Hiện tại người liên hệ chưa lưu bạn trong danh bạ</string>
+    <string name="error_close_call">Lỗi bất thường, hãy tắt cuộc gọi</string>
+    <string name="please_add_each_other_as_friends_first">Vui lòng thêm đối phương trước</string>
+    <string name="message_has_send_but_they_refused">Tin nhắn đã được gửi đi, nhưng đối phương từ chối nhận</string>
+    <string name="say_hello">Bạn đã trở thành bạn bè, hãy nói xin chào</string>
+    <string name="you_are_no_group_member_cant_send_message">Bạn không còn là thành viên của nhóm , không thể gửi tin nhắn</string>
+    <string name="you_turn_on_screenshot_notifications">Bạn đã bật thông báo chụp màn hình</string>
+    <string name="you_turned_off_screenshot_notifications">Bạn đã tắt thông báo ảnh chụp màn hình</string>
+    <string name="screenshot_notification_enabled">%s đã bật thông báo ảnh chụp màn hình</string>
+    <string name="turn_off_screenshot_notifications">%s đã tắt thông báo ảnh chụp màn hình</string>
+    <string name="you_set_the_message_to_read_mat">Bạn bật tính năng sẽ được xóa sau %s giây sau khi đọc</string>
+    <string name="message_read_is_set">%s cài đặt hủy tin nhắn sau khi đọc %s</string>
+    <string name="you_shut_it_down">Bạn đã tắt tính năng hủy sau khi đọc</string>
+    <string name="closed_after_reading_burn">%s Đã tắt tính năng hủy sau khi đọc</string>
+    <string name="group_manager_changed_to_mat">Chủ nhóm đã thay đổi thành %s</string>
+    <string name="you_ve_become_group_manager">Bạn đã trở thành chủ nhóm</string>
+    <string name="you_have_become_the_administrator_of_this_group">Bạn đã trở thành người quản lý nhóm này</string>
+    <string name="you_join_a_group_chat_by_scanning_the_qr_code">Bạn đã tham gia nhóm chat thông qua mã QR</string>
+    <string name="join_a_group_chat_by_scanning_the_qr_code">%s tham gia nhóm chat bằng cách quét mã QR</string>
+    <string name="you_are_invited">Bạn đã mời %s tham gia nhóm chat</string>
+    <string name="removed_you_from_the_group_chat">%s đã xóa bạn khỏi cuộc trò chuyện nhóm</string>
+    <string name="you_move_out_of_group_chat">Bạn đã xóa %s khỏi cuộc trò chuyện nhóm</string>
+    <string name="quit_the_group_chat">%s đã rời khỏi nhóm</string>
+    <string name="you_change_the_group_name">Bạn đã đổi tên nhóm thành %s</string>
+    <string name="modify_group_name">%s sửa đổi tên nhóm thành %s</string>
+    <string name="you_the_entire_staff_was_silenced">Bạn %s đã cấm chat toàn bộ thành viên</string>
+    <string name="admin_the_entire_staff_was_silenced">Quản trị viên %s đã cấm chat tất cả thành viên</string>
+    <string name="the_call_has_been_cancelled">Đối phương đã hủy yêu cầu cuộc gọi</string>
+    <string name="your_call_has_been_denied">Bên kia đã từ chối yêu cầu cuộc gọi của bạn</string>
+    <string name="the_line_is_engaged">Máy bận</string>
+    <string name="please_check_your_network_settings">Lỗi mạng, vui lòng kiểm tra cài đặt mạng</string>
+    <string name="i_am">Tôi là %s</string>
+
+    <!--需要在正确的地方使用-->
+    <string name="confirm_two">Chọn</string>
+
+    <string name="draft_sign_mat">[Bản nháp]%s</string>
+    <string name="received_a_new_message">Đã nhận một tin nhắn mới</string>
+    <string name="invite_you_for_a_video_call">%s mời bạn tham gia cuộc gọi video</string>
+    <string name="expression_sign">[biểu hiện]</string>
+    <string name="you_also_cannot_see_the_read_status_of_others">Nếu bạn chọn tắt xác nhận đã đọc, bạn sẽ không thể thấy trạng thái đã đọc của những người khác. Tùy chọn này sẽ không ảnh hưởng đến xác nhận đã đọc của các cuộc trò chuyện nhóm</string>
+    <string name="show_the_input_state">Hiển thị trạng thái đầu vào</string>
+    <string name="read_receipt">Đã đọc</string>
+    <string name="hide_sender_information">Ẩn thông tin người gửi</string>
+    <string name="has_new_msg">%d tin nhắn mới</string>
+    <string name="call_details">Chi tiết cuộc gọi</string>
+    <string name="missed_call">Cuộc gọi nhỡ</string>
+    <string name="media">Phương tiện</string>
+    <string name="files">Tài liệu</string>
+    <string name="all">Toàn bộ</string>
+    <string name="missed">Cuộc gọi nhỡ</string>
+    <string name="message_two">Thông tin</string>
+    <string name="done">Hoàn tất</string>
+    <string name="drag_the_slider_below">Kéo thanh trượt bên dưới để điều chỉnh cỡ chữ của giao diện chat</string>
+    <string name="tl_textsize_dimension">Đặt kích thước phông chữ</string>
+    <string name="will_change_font_size">Sau khi thiết lập, kích thước phông chữ trong giao diện trò chuyện sẽ được thay đổi</string>
+
+    <string name="group_name_must_not_null">Tên nhóm không được để trống</string>
+    <string name="group_member_count">Thành viên nhóm (%d)</string>
+    <string name="create">Tạo</string>
+
+    <string name="bus_get_sms_code">Nhận mã xác minh tin nhắn</string>
+    <string name="bus_had_sent_sms_code">Mã xác minh đã được gửi đến</string>
+    <string name="bus_counting_down">Có thể truy xuất lại sau %ss</string>
+    <string name="bus_retry_get_sms_code">Yêu cầu gửi lại mã xác minh</string>
+    <string name="bug_register_default_agree_agreement">Đăng ký đồng nghĩa với việc đồng ý thỏa thuận người dùng</string>
+
+    <string name="picture_dynamic_sign">[Biểu tượng cảm xúc ]</string>
+
+    <string name="bus_create_ground_chat">Nhóm chat mới</string>
+
+    <string name="sign_must_fill_in_sign">Bắt buộc điền</string>
+    <string name="set_a_new_password_2">Để bảo mật tài khoản, chúng tôi cần xác minh danh tính</string>
+    <string name="media_documents_etc">Phương tiện, tài liệu, v.v.</string>
+
+    <string name="desktop_68_confirms_login">Wey bản máy tính xác nhận đăng nhập</string>
+    <string name="mute_mobile_phone">Tắt tiếng điện thoại</string>
+    <string name="file_transfer">Chuyển tập tin</string>
+    <string name="exit_desktop">Thoát khỏi bản wed</string>
+    <string name="desktop_68_logged_in">Wey bản máy tính đã đăng nhập</string>
+
+    <string name="mobile_notification_is_off">Wey bản máy tính đã đăng nhập, đã tắt thông báo điện thoại</string>
+    <string name="transmission_assistant">Trợ lý chuyển tải</string>
+    <string name="i_can_be_add_in_the_following_ways">Bạn có thể thêm tôi theo cách này</string>
+
+    <string name="string_clear_account">Xóa tài khoản</string>
+    <string name="string_1_month">1 tháng</string>
+    <string name="string_3_month">3 tháng</string>
+    <string name="string_6_month">6 tháng</string>
+    <string name="string_12_month">12 tháng</string>
+    <string name="string_clear_account_tip">Nếu bạn không online trong thời gian quy định, tất cả thông tin trong tài khoản của bạn (chẳng hạn như lịch sử trò chuyện và danh bạ sẽ tự động bị xóa)</string>
+
+    <string name="contacts_do_not_display_phones">Người liên hệ không hiển thị điện thoại</string>
+    <string name="separate_sign">,</string>
+
+    <string name="string_forget_password">Quên mật khẩu</string>
+    <string name="string_reset_password">Đặt lại mật khẩu</string>
+    <string name="string_check_and_find_password">Xác minh danh tính và lấy lại mật khẩu</string>
+    <string name="string_reset_new_password">Đặt mật khẩu mới cho tài khoản</string>
+    <string name="mobile_notification_is_on">Wey bản máy tính đã đăng nhập</string>
+
+    <string name="remove_administrator">Xóa quản trị viên </string>
+    <string name="notification_of_disturb">Chế độ thông báo im lặng</string>
+    <string name="only_the_administrator_can_change_the_burn_time">Chỉ quản trị viên mới có thể thay đổi thời gian hủy sau khi đọc</string>
+    <string name="long_time_no_login">Vì bạn đã lâu không đăng nhập, vui lòng đăng nhập lại</string>
+    <string name="account_unregistration">Tài khoản của bạn đã bị hủy</string>
+
+    <string name="reset_password">Đặt lại mật khẩu</string>
+    <string name="reset_password_s">Đổi mật khẩu thành công</string>
+
+    <string name="other_account_unregistration">Tài khoản đã bị hủy</string>
+    <string name="other_account_unregistration1">Tài khoản đã bị hủy</string>
+    <string name="web_login_fail_by_code">Đăng nhập không thành công, vui lòng quét lại mã</string>
+    <string name="snapchatTime_msg">[Tin nhắn sau khi đọc sẽ bị hủy]</string>
+    <string name="stream_msg">[Cuộc gọi video âm thanh]</string>
+
+    <string name="string_go_back">Thoát</string>
+
+    <string name="logout_web">Có thoát Wey máy hình chính hay không</string>
+    <string name="logout_web_fail">Đăng xuất không thành công, vui lòng nhấp để đăng xuất lại</string>
+
+    <string name="group_report_1">Nhóm phát hành thông tin khiêu dâm/bất hợp pháp</string>
+    <string name="group_report_2">Nhóm lừa đảo tiền</string>
+    <string name="group_report_3">Nhóm phát quảng cáo gây nhiễu loạn tin tức</string>
+    <string name="group_report_4">Hành vi đánh bạc trong nhóm này</string>
+    <string name="group_ban_reason">Nhóm bị hạn chế sử dụng do vi phạm các quy định liên quan</string>
+
+    <string name="six_eight_number">Wey</string>
+
+    <string name="string_link">Liên kết</string>
+    <string name="string_my_link">Liên kết của tôi</string>
+    <string name="string_group_link">Sử dụng liên kết để mời vào nhóm</string>
+
+    <string name="string_share_link">Chia sẻ đường link</string>
+    <string name="string_copy_link">Sao chép đường dẫn</string>
+    <string name="string_update_link">Cập nhật liên kết</string>
+    <string name="string_my_link_tilte">Sao chép liên kết và gửi cho bạn bè hoặc chia sẻ lên nền tảng xã hội. Bạn bè có thể đăng ký tham gia trò chuyện nhóm bằng cách mở Wey thông qua liên kết</string>
+
+
+    <string name="delete_all">Xóa hết</string>
+    <string name="group_qr_update">Mã QR được chia sẻ sau khi cập nhật sẽ không hợp lệ. Bạn có chắc chắn muốn cập nhật mã QR không?</string>
+    <string name="string_ban_word">Cấm chat</string>
+
+    <string name="string_relieve_forbidden">Tắt cấm chat</string>
+    <string name="string_remove_contact_confirm">Xóa một liên hệ cũng sẽ xóa lịch sử trò chuyện với liên hệ đó</string>
+
+    <string name="string_report_picture">Ảnh chụp màn hình khác</string>
+
+    <string name="say_illegal_behavior">Vui lòng mô tả hành vi vi phạm của đối tượng bị khiếu nại 5 đến 200 từ (bắt buộc)</string>
+
+    <string name="string_sure_clear_call_history">Bạn có chắc chắn muốn xóa nhật ký cuộc gọi không?</string>
+    <string name="string_update_link_sure">Liên kết cũ sẽ trở nên không hợp lệ sau khi cập nhật. Bạn có chắc chắn muốn cập nhật liên kết không?</string>
+
+    <string name="string_complaint_description">Khiếu nại</string>
+    <string name="complaint_description">Mô tả vi phạm</string>
+    <string name="common_search_phone">Tìm kiếm id bạn bè trên Wey</string>
+
+    <string name="string_busy_tone">Yêu cầu đã bị hủy</string>
+
+    <string name="string_search_phone">Điện thoại: </string>
+    <string name="string_search_68">ID Wey:</string>
+    <string name="string_search_name">Biệt danh:</string>
+    <string name="string_clear_group_notification">Xóa thông báo nhóm</string>
+    <string name="string_setting_chat">Cài đặt trò chuyện</string>
+
+    <string name="string_center_send_msg">Gửi tin nhắn bằng Enter</string>
+    <string name="string_emoji_manage">Quản lý biểu tượng cảm xúc</string>
+    <string name="string_group_sender">Gửi tin nhắn đến nhiều người</string>
+    <string name="string_68_table">Wey bản máy tính</string>
+    <string name="string_user_instruction">Sử dụng trợ giúp</string>
+
+    <string name="string_notification_dialog_title">Mở thông báo tin nhắn\nKhông bỏ lỡ bất kỳ lời nhắc tin nhắn nào</string>
+    <string name="string_notification_dialog_msg">1. Vào điện thoại "Cài đặt" -  "Thông báo"tùy chọn\n2. Bật thông báo của Wey\n3. Đảm bảo rằng thông báo là mức độ ưu tiên cao nhất</string>
+
+    <string name="string_network_state">Mạng hiện tại không khả dụng, vui lòng kiểm tra cài đặt mạng của bạn</string>
+
+    <string name="string_welcome_title_1">Wey Messenger là phần mềm trò chuyện được mã hóa end-to-end tập trung vào bảo vệ quyền riêng tư. Phần mềm này sử dụng mã hóa đáng tin cậy để bảo vệ quyền riêng tư của bạn.</string>
+    <string name="string_welcome_title_2">Wey Messenger có thể sử dụng văn bản, giọng nói, hình ảnh, video, tệp và các phương thức khác để truyền thông tin đến bạn bè của bạn một cách dễ dàng và nhanh chóng, đồng thời duy trì liên lạc hiệu quả</string>
+    <string name="string_welcome_title_3">Wey Messenger có chế độ hủy sau khi đọc , tin nhắn sẽ tự động bị hủy sau khi xem theo quy định.</string>
+
+    <string name="string_now_sure">Bắt đầu ngay</string>
+    <string name="string_group_send">Gửi nhóm</string>
+
+    <string name="string_all_select">Chọn tất cả</string>
+    <string name="string_all_unselect">Không chọn</string>
+    <string name="string_group_send_title">Gửi tin nhắn nhóm</string>
+
+    <string name="string_group_send_uploading">Đang gửi...</string>
+    <string name="string_group_send_complete">Gửi hoàn tất</string>
+
+    <string name="string_group_send_location">Nhóm chat không hỗ trợ vị trí địa lý</string>
+    <string name="string_group_send_name">Nhóm không hỗ trợ gửi danh thiếp</string>
+
+    <string name="string_dynamic_face_manager_title">Tất cả các biểu tượng cảm xúc</string>
+    <string name="string_dynamic_face_manager_add">Thêm biểu tượng cảm xúc</string>
+    <string name="string_dynamic_face_upload_fail">Không tải lên được biểu tượng cảm xúc</string>
+    <string name="sign_face">Biểu tượng cảm xúc</string>
+
+    <string name="string_delete_dynamic_face_tip">Không thể khôi phục biểu tượng cảm xúc đã xóa</string>
+    <string name="string_group_send_user_size">Gửi cho %s người bạn</string>
+    <string name="string_group_send_reload">Thử lại</string>
+    <string name="string_group_send_fail">Gửi thất bại!</string>
+
+    <string name="string_group_send_upload_fail">Tải lên thất bại</string>
+
+    <string name="message_cannot_be_decrypted">Không giải mã được tin nhắn</string>
+
+    <string name="string_undecryte_tip">Việc cài đặt lại ứng dụng hoặc thay thế thiết bị khiến quá trình giải mã khóa cá nhân thất bại. Hệ thống sẽ tiến hành thiết lập lại khóa. Bạn nên liên hệ với đối phương để gửi lại thông báo giải mã thất bại.</string>
+
+    <string name="authorization_failed_fail">Sự cho phép này là để có quyền sử dụng ổ cứng để đảm bảo việc sử dụng bình thường của ứng dụng và sẽ không thu thập bất kỳ quyền riêng tư nào của bạn!</string>
+
+    <string name="string_group_dismiss">Giải tán nhóm</string>
+    <string name="string_group_tip">Lời khuyên</string>
+    <string name="string_group_message">Sau khi giải tán nhóm chat, tất cả các thành viên trong nhóm sẽ mất liên lạc bạn bè trong nhóm và tất cả nội dung trò chuyện của nhóm sẽ bị xóa</string>
+
+    <string name="string_group_dismiss_title">Nhóm chat này đã bị giải tán</string>
+    <string name="string_password_fail">Sai mật khẩu</string>
+    <string name="string_password_success">Xác minh mật khẩu thành công</string>
+
+    <string name="app_lock">Khóa bảo mật</string>
+    <string name="app_lock_fingerprint">Mở khóa bằng vân tay</string>
+
+    <string name="open_app_lock_tip">Sau khi bật khóa bảo mật, nếu bạn quên mật khẩu khi khởi động Wey, bạn cần xóa lịch sử trò chuyện của tài khoản mới có thể tiếp tục sử dụng, vui lòng ghi nhớ mật khẩu khóa bảo mật của bạn.</string>
+    <string name="app_lock_setting_success">Cài đặt mật khẩu thành công</string>
+    <string name="app_lock_time_value">Sau %s</string>
+
+    <string name="change_applock_password">Thay đổi mật khẩu cử chỉ</string>
+    <string name="forget_applock_password">Quên mật khẩu cử chỉ</string>
+    <string name="app_lock_setting_tip_1">Sau khi mở ứng dụng Wey, bạn phải mở khóa bảo mật trước khi sử dụng ứng dụng.</string>
+    <string name="app_lock_setting_tip_2">*Để bảo mật dữ liệu của bạn, nếu bạn quên mật khẩu khi mở ứng dụng Wey, bạn phải xóa dữ liệu trò chuyện trong tài khoản của bạn trước khi tiếp tục sử dụng.</string>
+    <string name="app_lock_time_title">Khóa tự động</string>
+    <string name="app_lock_clear_account_tip">Sau khi xác nhận lại, tất cả dữ liệu trò chuyện của tài khoản hiện tại sẽ bị xóa</string>
+
+    <string name="forget_appkock_pwd_clear_account_title">Quên mật khẩu cử chỉ?</string>
+    <string name="forget_appkock_pwd_clear_account_tip">Nếu quên mật khẩu khóa bảo mật, bạn cần xóa dữ liệu trò chuyện của tài khoản hiện tại và đăng nhập lại tài khoản của mình</string>
+    <string name="forget_appkock_pwd_clear_account">Xóa dữ liệu</string>
+
+    <string name="send_messge_so_fast_tip">Gửi tin nhắn quá thường xuyên, vui lòng thử lại sau</string>
+
+    <string name="system_crash_tip">Phát hiện Wey của bạn bị treo do hệ thống, bạn hãy khởi động lại hệ thống rồi mở Wey lên, nếu vẫn bị treo vui lòng cài đặt lại ứng dụng!</string>
+
+    <!-- v1.7.0  -->
+    <string name="string_save_to_album">Lưu vào album</string>
+    <string name="string_qr_result">Kết quả quét</string>
+    <string name="string_group_link_in">Chia sẻ liên kết nhóm</string>
+    <string name="string_qr_link">Liên kết</string>
+    <string name="string_qr_text">Form chữ</string>
+    <string name="string_qr_go_link">Truy cập liên kết</string>
+    <string name="string_qr_copy_text">Sao chép văn bản</string>
+    <string name="string_friend_word">Để lại tin nhắn cho bạn bè</string>
+
+    <string name="string_merge_msg">[Chuyển tiếp riêng lẻ] tin nhắn %1s</string>
+    <string name="string_image_tag">Nhãn dán</string>
+    <string name="string_sended">Đã gửi đi</string>
+
+
+    <string name="calling_audio_busy_tip">Đang trong cuộc gọi thoại, vui lòng thử lại sau</string>
+    <string name="calling_video_busy_tip">Video call đang diễn ra, vui lòng thử lại sau</string>
+    <string name="blur_screen">Bảo mật màn hình</string>
+    <string name="file_storage_location">Vị trí lưu trữ tệp</string>
+
+    <string name="set_all_unreaded">Đánh dấu là chưa đọc</string>
+    <string name="set_all_readed">Đánh dấu là đã đọc</string>
+    <string name="string_search_tool">Chức năng</string>
+
+    <string name="applock_pinlock_type">Mật khẩu bằng số</string>
+    <string name="applock_gesture_type">Mật khẩu cử chỉ</string>
+    <string name="calling_network_status_low">Chất lượng cuộc gọi hiện tại kém</string>
+
+
+    <!-- v1.8.0  -->
+    <string name="calling_network_status_low_my_network_is_bad">Chất lượng mạng của bạn cho cuộc gọi hiện tại kém</string>
+    <string name="calling_network_status_low_target_network_is_bad">Chất lượng mạng của người gọi hiện tại kém</string>
+
+    <string name="string_search_more_contact">Liên hệ khác</string>
+    <string name="string_search_more_group">Các cuộc trò chuyện nhóm khác</string>
+    <string name="string_search_more_chat">Thêm lịch sử trò chuyện</string>
+
+    <string name="string_search_chat">Lịch sử trò chuyện</string>
+
+    <string name="socket_is_error">Kết nối không khả dụng, vui lòng đợi trong giây lát và thử lại</string>
+    <string name="clear_storage_title">Làm sạch dữ liệu</string>
+
+    <string name="string_silent_play">Tắt tiếng ghi hình</string>
+
+    <string name="string_search_match1">Dòng và</string>
+
+    <string name="string_search_match2">Lịch sử liên quan</string>
+
+
+    <string name="set_do_not_disturb">Im lặng</string>
+    <string name="set_do_disturb">Tắt im lặng</string>
+    <string name="multi_checkable">Chọn</string>
+    <string name="chosed_sign">Đã chọn</string>
+    <string name="sign_call">Dòng</string>
+
+    <string name="multi_delete_chat_tip">Xóa %d cuộc trò chuyện, đồng thời xóa lịch sử trò chuyện?</string>
+    <string name="multi_delete_call_tip">Xóa lịch sử cuộc gọi %d ?</string>
+
+    <string name="storate_title">Bộ nhớ đệm</string>
+    <string name="clear_storage_button_title">Dọn dẹp</string>
+    <string name="clear_storage_dialog_tip">Có chắc chắn xóa dữ liệu đã lưu trong bộ nhớ đệm không?</string>
+    <string name="clear_account_cache_tip">Bộ nhớ đệm là dữ liệu tạm thời được tạo ra trong quá trình sử dụng Wey. Việc xóa bộ đệm sẽ không ảnh hưởng đến việc sử dụng Wey bình thường</string>
+
+    <string name="string_search_head_title">Đã tìm thấy %2d dòng lịch sử trò chuyện liên quan từ %1s</string>
+
+    <string name="string_search_no_data">Hỗ trợ tìm kiếm danh bạ, nhóm chat, lịch sử trò chuyện</string>
+
+    <!-- 2.0.0-->
+    <string name="string_open_qr_code">Quét mã</string>
+    <string name="confirm_open">Xác định bắt đầu</string>
+    <string name="disable_account_title">Đăng xuất</string>
+    <string name="disable_account_tip">Sau khi bật, nếu nhập sai mật khẩu khóa bảo mật 20 lần, tài khoản sẽ tự động bị khóa, bạn sẽ mất toàn bộ dữ liệu và thông tin, vui lòng cẩn thận khi bật</string>
+    <string name="disable_account_msg">Mật khẩu sai quá nhiều, tài khoản đã bị hủy, nếu cần tiếp tục sử dụng Wey, vui lòng đăng ký lại</string>
+    <string name="group_send_back_press_disable">Nút quay lại không khả dụng khi gửi hàng loạt</string>
+
+    <string name="brvah_load_end">Không còn dữ liệu</string>
+    <string name="brvah_load_failed">Lỗi tải, xin hãy nhắp vào tôi để thử lại lần nữa</string>
+    <string name="brvah_loading">Đang tải...</string>
+</resources>
+
+

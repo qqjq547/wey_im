@@ -81,7 +81,7 @@
                         android:layout_marginTop="8dp"
                         android:layout_toLeftOf="@+id/image_qr"
                         android:gravity="right"
-                        android:text="Bufa 号"
+                        android:text="Wey 号"
                         android:textColor="@color/a2a4a7"
                         android:textSize="14sp"
                         android:visibility="gone" />

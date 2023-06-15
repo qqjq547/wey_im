@@ -98,7 +98,8 @@
         <activity android:name=".ui.location.ShowLocationActivity"/>
         <activity android:name=".ui.face.DynamicFaceManagerActivity"/>
 
-        <activity android:name=".ui.share.ShareToChatsActivity">
+        <activity android:name=".ui.share.ShareToChatsActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
                 <action android:name="android.intent.action.SEND_MULTIPLE"/>

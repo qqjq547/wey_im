@@ -96,8 +96,8 @@ fun getClientInfo(): CommonProto.ClientInfo {
     val accountInfo = AccountManager.getLoginAccount(AccountInfo::class.java)
     return CommonProto.ClientInfo.newBuilder()
             .setPlat(CommonProto.Platform.ANDROID)
-            .setLanguage(7)
-            .setAppVer(VersionUtils.getVersionName(BaseApp.HTTP_VERSION_NAME))
+            .setLanguage(LocalManageUtil.getCurLanguaue())
+            .setAppVer(BaseApp.VERSION_CODE)
             .setPackageCode(BaseApp.app.getPackageChannel().channelCode)
             .setSessionId(accountInfo.getSessionId())
             .build()
@@ -106,33 +106,12 @@ fun getClientInfo(): CommonProto.ClientInfo {
 fun getClientInfoWithOutSessionId(): CommonProto.ClientInfo {
     return CommonProto.ClientInfo.newBuilder()
             .setPlat(CommonProto.Platform.ANDROID)
-            .setLanguage(7)
-            .setAppVer(VersionUtils.getVersionName(BaseApp.HTTP_VERSION_NAME))
+            .setLanguage(LocalManageUtil.getCurLanguaue())
+            .setAppVer(BaseApp.VERSION_CODE)
             .setPackageCode(BaseApp.app.getPackageChannel().channelCode)
             .build()
 }
 
-fun getAppLanguage(): Int {
-    var lang = 1
-    when (LocalManageUtil.getCurLanguaue()) {
-        LocalManageUtil.SIMPLIFIED_CHINESE -> {
-            lang = 2
-        }
-        LocalManageUtil.TRADITIONAL_CHINESE -> {
-            lang = 3
-        }
-        LocalManageUtil.ENGLISH -> {
-            lang = 1
-        }
-        LocalManageUtil.VI -> {
-            lang = 4
-        }
-        LocalManageUtil.THAI -> {
-            lang = 5
-        }
-    }
-    return lang
-}
 
 inline fun <reified T> Observable<T>.getResult(observable: Observable<ActivityEvent>?
                                                , noinline onNext: (t: T) -> Unit, noinline onError: (t: Throwable) -> Unit): Disposable {

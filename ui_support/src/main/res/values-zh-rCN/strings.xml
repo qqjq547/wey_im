@@ -1,0 +1,171 @@
+<resources>
+    <string name="album_name_all">全部</string>
+
+    <string name="button_preview">预览</string>
+    <string name="button_back">返回</string>
+    <string name="photo_grid_capture">拍一张</string>
+    <string name="empty_text">还没有图片或视频</string>
+    <string name="button_ok">我知道了</string>
+
+    <string name="error_over_count_default">你已经达到最大选择数量</string>
+    <string name="error_over_count">最多只能选择 %1$d 个文件</string>
+    <string name="error_file_type">不支持的文件类型</string>
+    <string name="error_type_conflict">不能同时选择图片和视频</string>
+    <string name="error_no_video_activity">没有支持视频预览的应用</string>
+    <string name="error_over_original_size">"该照片大于 %1$d M，无法上传将取消勾选原图"</string>
+    <string name="error_over_original_count">"有 %1$d 张照片大于 %2$d M\n无法上传，将取消勾选原图"</string>
+    <string name="button_original">原图</string>
+    <string name="button_sure_default">确定</string>
+    <string name="button_sure">确定(%1$d)</string>
+
+    <string name="share">Share Voice File</string>
+
+    <string name="emoji_category_recent">Recent</string>
+    <string name="emoji_backspace">Backspace</string>
+
+    <string name="emoji_ios_category_activities">Activities</string>
+    <string name="emoji_ios_category_flags">Flags</string>
+    <string name="emoji_ios_category_foodanddrink">Food</string>
+    <string name="emoji_ios_category_animalsandnature">Nature</string>
+    <string name="emoji_ios_category_objects">Objects</string>
+    <string name="emoji_ios_category_smileysandpeople">Faces</string>
+    <string name="emoji_ios_category_symbols">Symbols</string>
+    <string name="emoji_ios_category_travelandplaces">Places</string>
+
+    <string name="common_quit_app_tips">"再按一次退出程序"</string>
+
+    <string name="tips_not_wifi">你当前正在使用移动网络，继续播放将消耗流量</string>
+    <string name="tips_not_wifi_confirm">继续播放</string>
+    <string name="no_net">当前找不到网络</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="no_url">播放地址无效</string>
+    <string name="jump_ad">跳过</string>
+
+    <string name="ucrop_label_original">原始</string>
+    <string name="ucrop_label_edit_photo">编辑</string>
+
+    <string name="ucrop_menu_crop">裁剪</string>
+
+    <string name="ucrop_error_input_data_is_absent" translatable="false">必须同时指定输入和输出URI</string>
+    <string name="ucrop_mutate_exception_hint" translatable="false">因此，覆盖应用程序中的颜色资源（ucrop_color_toolbar_小部件），使其在pre-l设备上工作。</string>
+    <string name="ucrop_rotate">旋转</string>
+    <string name="ucrop_scale">收缩</string>
+    <string name="ucrop_crop">裁剪</string>
+
+    <!-- 白名单 -->
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+
+    <string name="file_picker_go_back">返回</string>
+    <string name="file_picker_selected_count">已选择·%1$d</string>
+    <string name="file_picker_request_permission_failed">未授予存储权限</string>
+    <string name="file_picker_tv_select_all">全选</string>
+    <string name="file_picker_tv_deselect_all">取消全选</string>
+    <string name="file_picker_tv_select_done">确认</string>
+    <string name="file_picker_tv_sd_card">SD 存储卡</string>
+    <string name="too_many_files_tips">当前文件过多\n正在载入中&#8230;</string>
+    <string name="max_select_count_tips">最多只能选择 %d 项</string>
+    <string name="empty_list_tips_file_picker">空空如也~</string>
+    <string name="picture">图片</string>
+    <string name="under_load_sign">正在加载中...</string>
+    <string name="sweep_the_qr_code">扫二维码</string>
+    <string name="loading">加载中</string>
+    <string name="shoot">拍摄</string>
+    <string name="business_card">名片</string>
+    <string name="photo_album">相册</string>
+    <string name="turn_on_the_flash_lights">打开闪关灯</string>
+    <string name="my_qr">我的二维码</string>
+    <string name="location">位置</string>
+    <string name="get_code">获取验证码</string>
+    <string name="file">文件</string>
+    <string name="all_photos">所有照片</string>
+    <string name="fail_to_load">加载失败</string>
+    <string name="let_me_retry">点我重试</string>
+    <string name="long_press_the_video">点击拍照 长按录像</string>
+    <string name="no_data">暂无数据</string>
+    <string name="test_video">测试视频</string>
+    <string name="no_permissions_were_obtained">没有获取相关权限</string>
+    <string name="maximum_file_limit_50m">文件最大限制150M</string>
+    <string name="choose_max_at_the_same_time">最多只能同时选择%s个视频文件</string>
+    <string name="open_links">打开链接</string>
+    <string name="copylink">复制链接</string>
+    <string name="copy_success">复制成功</string>
+    <string name="flash_off">关闭闪光灯</string>
+    <string name="flash_open">打开闪光灯</string>
+    <string name="qr_code_not_found">未找到二维码</string>
+    <string name="image_retrieval_failed">图片获取失败</string>
+    <string name="tautology">重试</string>
+    <string name="regain">重新获取</string>
+    <string name="start_up_is_not_supported">不支持开启自启动</string>
+    <string name="it_can_improve_the_accuracy_of_message_arrival">允许应用自启动，可以提高消息到达的准确率</string>
+    <string name="add_since_launching_the_whitelist">添加到 自启动白名单</string>
+    <string name="unmonitored_applications"><![CDATA[添加到 电池->未监视的应用程序]]></string>
+    <string name="string_icon_all">全部</string>
+    <string name="string_icon_recent">最近使用</string>
+    <string name="small">小</string>
+    <string name="big">大</string>
+    <string name="standard">标准</string>
+    <string name="the_drop_down_can_refresh">下拉可以刷新</string>
+    <string name="onr_refresh">正在刷新...</string>
+    <string name="loading2">正在加载...</string>
+    <string name="release_instant_refresh">释放立即刷新</string>
+    <string name="refresh_to_complete">刷新完成</string>
+    <string name="refresh_the_failure">刷新失败</string>
+    <string name="last_update">\'上次更新\' M-d HH:mm</string>
+    <string name="release_into_the_second_floor">释放进入二楼</string>
+
+
+    <string name="append">添加</string>
+
+
+    <!--解锁 v1.6.0新增-->
+    <string name="plugin_uexGestureUnlock_codeLengthErrorPrompt">请至少绘制%d个点</string>
+    <string name="plugin_uexGestureUnlock_checkErrorPrompt">与首次绘制不一致，请再次绘制</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorPrompt">密码错误，还可以输入%d次</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorMaxPrompt">错误次数过多，请%d分钟后重试</string>
+    <string name="plugin_uexGestureUnlock_codeCheckPrompt">再次绘制解锁图案</string>
+    <string name="plugin_uexGestureUnlock_creationBeginPrompt">绘制解锁图案</string>
+
+    <string name="plugin_uexGestureUnlock_verificationBeginPrompt">验证手势密码</string>
+    <string name="plugin_uexGestureUnlock_verificationSucceedPrompt">验证通过</string>
+    <string name="plugin_uexGestureUnlock_creationSucceedPrompt">手势密码设置成功</string>
+
+    <string name="plugin_uexGestureUnlock_restartCreationButtonTitle">重新设置</string>
+
+    <string name="plugin_uexGestureUnlock_errorCodeTooManyTry">尝试密码次数过多</string>
+    <string name="plugin_uexGestureUnlock_errorCodeUnknown">发生未知错误</string>
+
+    <string name="gesture_input_old_pwd">验证手势密码</string>
+    <string name="gesture_set_pwd">设置手势密码</string>
+    <string name="gesture_set_new_pwd">设置新的手势密码</string>
+    <string name="gesture_change_account">切换账号</string>
+    <string name="gesture_forget_pwd">忘记手势密码</string>
+
+
+    <string name="fingerprint_unsupport">您的设备不支持指纹</string>
+    <string name="fingerprint_system_no_data">请在系统录入指纹后再验证</string>
+    <string name="fingerprint_title">指纹验证</string>
+    <string name="fingerprint_pressdown">请按下指纹</string>
+    <string name="fingerprint_verify_success">指纹验证成功</string>
+    <string name="fingerprint_verify_fail">指纹验证失败</string>
+    <string name="fingerprint_verify_data_changed_1">指纹数据发生了变化，请重新在系统中录入指纹!</string>
+    <string name="fingerprint_verify_data_changed_2">您的指纹信息已发生变更，请使用手势密码完成验证!</string>
+
+
+    <!-- v1.7.0  -->
+    <string name="change_applock_pincode">修改数字密码</string>
+    <string name="forget_applock_pincode">忘记数字密码</string>
+    <string name="applock_pincode_title_verify">验证数字密码</string>
+    <string name="applock_pincode_title_input">输入数字密码</string>
+    <string name="applock_pincode_title_setting">设置数字密码</string>
+    <string name="applock_pincode_input_again">再次输入</string>
+    <string name="applock_pincode_input_error_again">与首次输入的不一致，请重新输入</string>
+    <string name="applock_pincode_other_type">其他密码类型</string>
+
+    <!-- v2.0.0  -->
+    <string name="verification_error_disable_account_warn">密码错误，再次错误账号将被注销</string>
+
+
+
+
+</resources>

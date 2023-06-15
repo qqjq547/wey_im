@@ -1,0 +1,950 @@
+<resources>
+
+    <!--common-->
+    <string name="common_cancel">取消</string>
+    <string name="common_search">搜索</string>
+
+    <string name="common_user_name_input_error_1">"用户名不能为空"</string>
+    <string name="common_user_name_input_error_2">"请填写1-10个字的用户名"</string>
+    <string name="common_save">保存</string>
+    <string name="common_fail">出错啦~</string>
+
+    <string name="common_contacts_make_friend">"添加朋友"</string>
+    <string name="common_contacts_create_ground_chat">"创建群聊"</string>
+    <string name="common_contacts_qr_code">"扫二维码"</string>
+
+    <string name="string_star">★</string>
+    <string name="string_star_sign">星标朋友</string>
+
+    <string name="string_sms_title">嗨，我正在使用 Wey 聊天，加进来跟我一起聊天吧！点击链接下载APP：%1$s</string>
+    <string name="picture_sign">[图片]</string>
+    <string name="voice_sign">[语音]</string>
+    <string name="video_sign">[视频]</string>
+    <string name="voice_communication_sign">[语音通话]</string>
+    <string name="video_call_sign">[视频通话]</string>
+    <string name="location_sign">[地理位置]</string>
+    <string name="file_sign">[文件]</string>
+    <string name="file_sign_mat">[文件]%s</string>
+    <string name="business_card_sign">[名片]</string>
+    <string name="group_of_announcement_sign">[群公告]</string>
+    <string name="unkown_message_sign">[未知消息]</string>
+    <string name="video">[视频]</string>
+    <string name="geographic_position_sign">[地理位置]</string>
+
+    <!--app-->
+    <string name="app_name">Wey</string>
+
+    <string name="notification_of_new_information">新消息通知</string>
+    <string name="send_a_massage_for_you">%s发来一条新消息</string>
+    <string name="invite_you_for_a_voice_call">%s邀请你语音通话</string>
+
+    <string name="group_of_announcement_sign2">群公告：%s</string>
+    <string name="received_a_new_add_request">收到一条新的添加请求</string>
+    <string name="message">消息</string>
+    <string name="contacts">通讯录</string>
+    <string name="call">通话</string>
+    <string name="me">我</string>
+
+    <!--business-->
+    <string name="bus_login_login">登录</string>
+    <string name="bus_login_login_success">登录成功</string>
+    <string name="bus_login_login_fail">登录失败</string>
+    <string name="bus_login_code_login">验证码登录</string>
+
+    <string name="count_down">倒计时:</string>
+    <string name="emulator_forbidden_get_SMS_verification_code">模拟器禁止获取短信验证码</string>
+
+    <string name="bus_login_password_login">密码登录</string>
+    <string name="bus_login_more">更多选项</string>
+    <string name="bus_login_password">密码</string>
+    <string name="bus_login_code">验证码</string>
+    <string name="bus_login_get_code">获取验证码</string>
+    <string name="bus_login_phone">手机号码</string>
+    <string name="bus_login_register">注册</string>
+    <string name="bus_login_change_account">切换账号</string>
+    <string name="bus_login_user_agreement">用户协议</string>
+    <string name="bus_login_upload_user">上传头像</string>
+    <string name="bus_login_upload_username">昵称(必填)</string>
+    <string name="bus_login_user_agreement_register">同意协议并注册</string>
+    <string name="bus_login_mobile_input_error_1">请填写手机号码</string>
+    <string name="bus_login_mobile_input_error_2">手机号码格式错误</string>
+    <string name="bus_login_sms_code_input_error_1">请填写验证码</string>
+    <string name="bus_login_sms_code_input_error_2">验证码错误</string>
+    <string name="bus_login_password_input_error_1">请填密码</string>
+    <string name="bus_login_password_input_error_2">请输入6-24位的密码</string>
+    <string name="bus_login_password_input_error_3">两次输入密码不一致</string>
+    <string name="bus_login_sms_code_send">"验证码已经发送"</string>
+    <string name="bus_login_register_success">注册成功</string>
+    <string name="bus_login_register_fail">注册失败</string>
+
+
+    <string name="bus_contacts_contacts">"通讯录"</string>
+    <string name="bus_contacts_start">"设为星标"</string>
+    <string name="bus_contacts_start_cancel">"取消星标"</string>
+    <string name="bus_contacts_remarks">"备注"</string>
+    <string name="bus_contacts_new_friend">"新的朋友"</string>
+    <string name="bus_contacts_ground_chat">"群聊"</string>
+    <string name="bus_contacts_search_friend">"搜索朋友"</string>
+
+
+    <string name="bus_me_sign_out">退出登录</string>
+    <string name="bus_me_message">通知设置</string>
+    <string name="bus_me_secret">隐私</string>
+    <string name="bus_me_safe">安全</string>
+    <string name="bus_me_common">通用</string>
+    <string name="bus_me_profile">我的资料</string>
+    <string name="bus_me_head">头像</string>
+    <string name="bus_me_camera">拍照</string>
+    <string name="bus_me_galley">从手机相册选择</string>
+    <string name="bus_me_nickname">昵称</string>
+    <string name="bus_me_phone">电话号码</string>
+    <string name="bus_me_signature">个性签名</string>
+    <string name="bus_me_sex">性别</string>
+    <string name="bus_me_male">男</string>
+    <string name="bus_me_female">女</string>
+    <string name="bus_me_secrecy">保密</string>
+    <string name="bus_me_my_qr_code">我的二维码</string>
+    <string name="bus_me_permission_req_error">没有获取相关权限</string>
+    <string name="bus_me_nickname_error">昵称不能为空</string>
+    <string name="bus_me_update_success">设置成功</string>
+    <string name="bus_me_update_change">修改成功</string>
+
+    <string name="bus_group_same_chat">共同的群聊</string>
+
+
+    <string name="language_follow_system">跟随系统</string>
+    <string name="re_login_and_token_past_due">请重新登录(token过期)</string>
+    <string name="please_re_login">请重新登录</string>
+    <string name="failed_to_parse_qr_code">解析二维码失败</string>
+    <string name="please_select_the_qr_code">请选择%s的二维码</string>
+    <string name="no_chat_record_was_found">没有找到相关的聊天记录</string>
+    <string name="open_68_add_me">打开Wey APP，扫码加我为好友</string>
+    <string name="my_qr_code">我的二维码</string>
+    <string name="save_to_local">保存到本地</string>
+    <string name="save_success">保存成功</string>
+    <string name="save_fail">保存失败</string>
+    <string name="no_permissions_were_obtained">没有获取相关权限</string>
+    <string name="no_new_version_available">暂无新版本</string>
+    <string name="update">更新</string>
+    <string name="downloading_installation_package">正在下载安装包</string>
+    <string name="version_updating">版本更新</string>
+    <string name="update_qr_code">更新二维码</string>
+    <string name="group_code">群二维码</string>
+    <string name="qr_code_on_not_valid_before">二维码在%s前有效</string>
+    <string name="change_password">修改密码</string>
+    <string name="input_old_password">输入旧密码</string>
+    <string name="enter_new_password">输入新密码</string>
+    <string name="retype_new_password">再次输入新密码</string>
+    <string name="confirm">确定</string>
+    <string name="confirm_match">确定(%s)</string>
+    <string name="forward_content_to">转发内容给</string>
+    <string name="share_content_to">分享内容给</string>
+    <string name="send_a_card">发送名片</string>
+    <string name="invite_to_join_68">嗨，我正在使用 Wey 聊天，加进来跟我一起聊天吧！点击链接 下载APP：</string>
+    <string name="verification_of_mobile_phone">手机验证</string>
+    <string name="password_authentification">密码验证</string>
+    <string name="change_to_mobile_phone">改绑手机</string>
+    <string name="binding_success">绑定成功</string>
+    <string name="recommend">推荐</string>
+    <string name="recommend_mat">推荐 %s 给 %s</string>
+    <string name="delete">删除</string>
+    <string name="deletion_not_visible_failed_sign">删除不可见失败:</string>
+    <string name="deletion_not_visible_failed">删除不可见失败</string>
+    <string name="copy">复制</string>
+    <string name="copy_success">复制成功</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="confidentiality">保密</string>
+    <string name="the_locale_information_failed_to_load">国家/地区信息加载失败</string>
+    <string name="failed_to_get_the_never_visible_list">获取永远不可见名单失败</string>
+    <string name="administrator">管理员</string>
+    <string name="admin_match">管理员(%s/%s)</string>
+    <string name="add">添加</string>
+    <string name="remove">移除</string>
+    <string name="edit">编辑</string>
+    <string name="administrator_removed_successfully">移除管理员成功</string>
+    <string name="failed_to_remove_administrator">移除管理员失败</string>
+    <string name="the_number_of_administrators_has_reached_the_limit">管理员人数已达上限</string>
+    <string name="contacts_man">联系人</string>
+    <string name="lastactive">最后上线时间</string>
+    <string name="invisible_list">不可见名单</string>
+    <string name="group_owner">群主</string>
+    <string name="failed_to_get_administrator_list">获取管理员列表失败</string>
+    <string name="transfer_the_group_to_you">%s 将群转让给你</string>
+    <string name="set_you_as_administrator">%s 将你设置为管理员</string>
+    <string name="your_administrator_status_has_been_removed">你的管理员身份已被移除</string>
+    <string name="apply_to_join">申请加入</string>
+    <string name="apply_to_join_mat2">%s 申请加入%s</string>
+    <string name="apply_to_join_mat">申请加入 %s</string>
+    <string name="processing_manager_sign">处理管理员:%s</string>
+    <string name="agreed">已同意</string>
+    <string name="denied">已拒绝</string>
+    <string name="invite_you_to_join_a_group_chat">%s 邀请你加入群聊</string>
+    <string name="invite_you_to_join_a_group_chat2">邀请你加入群聊</string>
+    <string name="invite">邀请</string>
+    <string name="join_the_group_chat">加入群聊</string>
+    <string name="join_the_group_chat_mat">%s 邀请 %s 加入群聊</string>
+    <string name="refused_to_join">拒绝了加入</string>
+    <string name="refused_to_join_mat">拒绝了加入 %s 邀请</string>
+    <string name="refused_to_join_mat2">%s 拒绝了加入 %s 邀请</string>
+    <string name="rejected_your_application_to_join_the_group">管理员 %s 拒绝了你的入群申请</string>
+    <string name="address_book">通讯录</string>
+    <string name="group_of_announcement">群公告</string>
+    <string name="empty">清空</string>
+    <string name="empty_the_failure">清空失败</string>
+    <string name="make_sure_to_empty_the_group_announcement">确定清空群公告?</string>
+    <string name="failed_to_get_group_announcement">获取群公告失败</string>
+    <string name="on_line">在线</string>
+    <string name="recently_crossed_the_line">近期上过线</string>
+    <string name="common">通用</string>
+    <string name="cluster_member">群成员</string>
+    <string name="general_mat">共%s人</string>
+    <string name="find_chat_content">查找聊天内容</string>
+    <string name="my_nickname_in_this_group">我在本群的昵称</string>
+    <string name="edit_group_nickname">编辑群昵称</string>
+    <string name="top_chat">置顶聊天</string>
+    <string name="message_do_not_disturb">消息免打扰</string>
+    <string name="save_to_address_book">保存到通讯录</string>
+    <string name="delete_chat_records_of_this_group_sign">删除此群的聊天记录后，将不可以恢复</string>
+    <string name="delete_and_exit">删除并退出</string>
+    <string name="transfer_the_possession_of">转让</string>
+    <string name="transfer_group_chat">转让群聊</string>
+    <string name="group_chat_needs_to_be_transferred_first">你是群主，退出群聊且删除此群的聊天记录前需要先转让群聊</string>
+    <string name="exit_the_group_chat">退出群聊</string>
+    <string name="the_chat_records_of_this_group_will_be_deleted">确认退出群聊，将删除此群的聊天记录</string>
+    <string name="encryption">加密</string>
+    <string name="encryption_message">此广播列表中的信息和通话已经进行端对端加密，对话内容只有你和你的对话对象才能听到看到</string>
+    <string name="fine">好的</string>
+    <string name="group_membership">群管理</string>
+    <string name="modified_group_nickname_successfully">修改群昵称成功</string>
+    <string name="failed_to_modify_group_nickname">修改群昵称失败</string>
+    <string name="group_of_qr_code">群二维码</string>
+    <string name="failed_to_get_blacklist">获取黑名单失败</string>
+    <string name="use_the_handset_to_play_voice_messages">使用听筒播放语音消息</string>
+    <string name="no_friends_added">未添加朋友</string>
+    <string name="friends_added">已添加朋友</string>
+    <string name="font_size">字体大小</string>
+    <string name="language">语言</string>
+    <string name="clear_chat_records">清除聊天记录</string>
+    <string name="please_operate_with_caution">将清除所有个人和群的聊天记录请谨慎操作</string>
+    <string name="feedback">意见反馈</string>
+    <string name="about">关于</string>
+    <string name="Share_68">分享Wey</string>
+    <string name="make_sure_to_log_out">退出登录后本设备将无法收到新消息提醒，确定退出登录？</string>
+    <string name="log_out">退出登录</string>
+    <string name="successfully_set">设置成功</string>
+    <string name="set_a_password">设置密码</string>
+    <string name="enter_password">输入密码</string>
+    <string name="confirm_password">再次输入密码</string>
+    <string name="safety">安全</string>
+    <string name="disable_captcha_login">禁止验证码登录</string>
+    <string name="verify_your_password_first">禁止验证码登录需先验证你的密码</string>
+    <string name="safety_verification">安全验证</string>
+    <string name="please_set_the_password_first">请先设置密码</string>
+    <string name="request_unsuccessful">请求失败</string>
+    <string name="phone_number">手机号码</string>
+    <string name="password">密码</string>
+    <string name="not_set">未设置</string>
+    <string name="Invisible_list">不可见名单</string>
+    <string name="notifications_settings">通知设置</string>
+    <string name="close">关闭</string>
+    <string name="open">开启</string>
+    <string name="open2">打开</string>
+    <string name="inform">通知</string>
+    <string name="system_notification_permission_sign">系统通知权限,</string>
+    <string name="message_notifications_will_be_missed">将会错过消息通知</string>
+    <string name="not_missing_any_notifications">不错过任何消息通知</string>
+    <string name="to_set_up">前往设置</string>
+    <string name="Immediately_jump">立即跳转</string>
+    <string name="voice_and_video_call_invitation_reminder">语音和视频通话邀请提醒</string>
+    <string name="notification_displays_sender_information">通知显示发送人信息</string>
+    <string name="sound">声音</string>
+    <string name="shake">震动</string>
+    <string name="self_starting">自启动</string>
+    <string name="open_the_notification">开启通知</string>
+    <string name="do_the_same_configuration">检测到你有多个推送通道,请将所有通道都做同样的配置</string>
+    <string name="mipush">小米推送</string>
+    <string name="same_configuration">检测到你有多个推送通道,请将所有通道都做同样的配置</string>
+    <string name="add_my_way">添加我的方式</string>
+    <string name="group_chat">群聊</string>
+    <string name="qr_code">二维码</string>
+    <string name="business_card">名片</string>
+    <string name="blacklist">黑名单</string>
+    <string name="thanks_for_the_feedback">感谢反馈</string>
+    <string name="privacy">隐私</string>
+    <string name="when_you_add_me_as_a_friend_you_need_to_verify">加我为朋友时需要验证</string>
+    <string name="inviting_me_to_join_a_group_chat_requires_verification">邀请我加入群聊需要验证</string>
+    <string name="show_your_phone_number_to_a_friend">对朋友展示手机号码</string>
+    <string name="pending">待处理</string>
+    <string name="a_recent_request">近期请求</string>
+    <string name="add_validation">添加验证</string>
+    <string name="the_add_request_has_been_sent">已经发送添加请求</string>
+    <string name="complaints_reasons">投诉原因</string>
+    <string name="chat_settings">聊天设置</string>
+    <string name="setup_failed">设置失败:%s</string>
+    <string name="message_destruction_time">消息销毁时间</string>
+    <string name="screenshots_to_inform">截屏通知</string>
+    <string name="setup_failed_sign">设置失败:%s</string>
+    <string name="whether_to_clear_chat_record">是否清空聊天记录</string>
+    <string name="are_you_sure_empty_chat_logs">确定要清空聊天记录吗</string>
+    <string name="complaint">投诉</string>
+    <string name="one_minute">1分钟</string>
+    <string name="add_to_blacklist">加入黑名单</string>
+    <string name="remove_from_blacklist">移出黑名单</string>
+    <string name="the_user_has_been_blocked">已拉黑该用户</string>
+    <string name="cell_phone_number">手机号码</string>
+    <string name="scan_a_qr_code">扫码</string>
+    <string name="the_other_person_searches">对方通过搜索%1s添加</string>
+    <string name="gender">性別</string>
+    <string name="personalized_signature">个性签名</string>
+    <string name="they_didn_t_write_anything">对方什么都没有写</string>
+    <string name="rights_of_administrators">管理员权限</string>
+    <string name="modified_group_data">修改群资料</string>
+    <string name="receive_income_group_validation">接收入群验证</string>
+    <string name="announce">发布公告</string>
+    <string name="set_up_other_administrators">设置其他管理员</string>
+    <string name="edit_success">编辑成功</string>
+    <string name="edit_failure">编辑失败</string>
+    <string name="successfully_added">添加成功</string>
+    <string name="fail_to_add">添加失败</string>
+    <string name="group_entry_shall_be_reviewed">进群需审核</string>
+    <string name="can_not_mutual_friends">禁止群成员互加好友</string>
+    <string name="total_silence">全员禁言</string>
+    <string name="total_silence_failed">全员禁言失败</string>
+    <string name="members_of_the_group_chat">群聊成员</string>
+    <string name="choose_the_person_to_remind">选择要提醒的人</string>
+    <string name="transfer_of_the_group_manager">转让群主</string>
+    <string name="add_admin">添加管理员</string>
+    <string name="whole_members">全体成员</string>
+    <string name="transfer_group_failure">转让群失败</string>
+    <string name="transfer_group_failure_sign">转让群失败:%s</string>
+    <string name="transfer_group_chat_message_one">转让群聊后将自动成为普通成员，失去所有的群主权利，[%s]成为新群主</string>
+    <string name="remove_element">删除成员</string>
+    <string name="group_member_deleted_successfully">删除群成员成功</string>
+    <string name="failed_to_delete_group_members">删除群成员失败</string>
+    <string name="the_input_cannot_be_empty">输入的内容不能为空</string>
+    <string name="source">来源</string>
+    <string name="the_group_of_reason">入群理由</string>
+    <string name="please_wait_patiently_for_group_manager_review">请耐心等待群主审核</string>
+    <string name="join_group_successfully">加入群成功</string>
+
+    <string name="make_sure_you_want_to_delete_the_selected">确定要删除选中的%s位成员吗?</string>
+    <string name="edit_group_name">编辑群名称</string>
+    <string name="the_group_profile_was_modified_successfully">修改群头像成功</string>
+    <string name="failed_to_modify_group_profile">修改群头像失败</string>
+    <string name="group_name_changed_successfully">修改群名称成功</string>
+    <string name="failed_to_change_group_name">修改群名称失败</string>
+    <string name="shift_out">移出</string>
+    <string name="failed_to_read_channel_information">读取渠道信息失败</string>
+    <string name="mobile_phone_contacts">手机联系人</string>
+    <string name="issue_new_announcements">发布新公告</string>
+    <string name="determine_the_release">发布该公告会通知全部群成员，可能会对群成员造成打扰，确定发布？</string>
+    <string name="abandon_the_editing">放弃此次编辑？</string>
+    <string name="release_success">发布成功</string>
+    <string name="post_failure">发布失败</string>
+    <string name="group_of_notice">群通知</string>
+    <string name="think_change">二维码扫描</string>
+    <string name="invite_to_group_chats">%s 邀请加入群聊</string>
+    <string name="the_delete_group_request_failed">删除群请求失败</string>
+    <string name="a_contact">%s位联系人</string>
+    <string name="failed_to_get_group_chat_information">获取群聊信息失败:%s</string>
+    <string name="joining_a_group_chat_failed_sign">加入群聊失败:%s</string>
+    <string name="get_address_book">获取通讯录</string>
+    <string name="select_contact">选择联系人</string>
+    <string name="failed_to_create_group_chat">创建群聊失败</string>
+    <string name="group_creation_failed">创建群失败</string>
+    <string name="adding_invisible_failed">添加不可见失败</string>
+    <string name="adding_invisible_failed_sign">添加不可见失败:</string>
+    <string name="failed_to_add_group_member">添加群成员失败</string>
+    <string name="tip_message_one">但%1s未添加你为好友，请先申请添加对方为联系人，通过后才能邀请\n%2s 开启了入群需审核，对方同意后才会进入群聊</string>
+    <string name="tip_message_three">%1s开启了入群需审核，对方同意后才会进入群聊</string>
+    <string name="tip_message_four">但%1s未添加你为好友，请先申请添加对方为联系人，通过后才能邀请</string>
+    <string name="delete_contact">删除联系人</string>
+    <string name="add_to_blacklist_message">加入黑名单后,你将不再接收到对方的任何消息</string>
+    <string name="remark_name">备注名</string>
+    <string name="describe">描述</string>
+    <string name="share_contacts">分享联系人</string>
+    <string name="phone_number_two">电话号码</string>
+    <string name="please_fill_in_the_feedback">请填写反馈内容</string>
+    <string name="user_information_cannot_be_obtained">无法获取用户信息</string>
+    <string name="failed_to_delete_friends">删除好友失败</string>
+    <string name="failed_to_set_comment_name">设置备注名失败</string>
+    <string name="can_t_find">找不到啦~</string>
+    <string name="authorization_failed">授权失败</string>
+    <string name="issue">发布</string>
+    <string name="upload_picture_failed">上传图片失败</string>
+    <string name="network_error">网络错误</string>
+    <string name="set_personal_attributes_successfully">设置个人属性成功</string>
+    <string name="photograph">拍照</string>
+    <string name="select_from_camera">从手机相册选择</string>
+    <string name="operation_failure_sign">操作失败:%s</string>
+    <string name="added">已添加</string>
+    <string name="search_result">搜索结果</string>
+    <string name="request_to_add_a_friend_has_been_sent">已发送添加好友的请求</string>
+    <string name="call_out">呼叫</string>
+    <string name="copy_number">复制号码</string>
+    <string name="making_a_call">拨打电话</string>
+    <string name="group_of_nicknames">群昵称</string>
+    <string name="rank">等</string>
+    <string name="request_sent">请求已发送</string>
+    <string name="adding_password_for_user_admin">创建成功</string>
+    <string name="cell_phone_numbers_must_be_numbers">手机号必须号是数字!!</string>
+    <string name="burn_after_reading">阅后即焚</string>
+    <string name="the_message_will_be_destroyed_at_the_specified_time">打开阅后即焚后，已读消息将在规定的时间销毁</string>
+    <string name="screenshots_will_be_notified_to_both_parties">开启后，在对话中截图双方均会收到通知</string>
+    <string name="authenticate_and_set_a_new_password">通过身份验证并设置新密码</string>
+    <string name="my_qr">我的二维码</string>
+    <string name="we_need_to_verify_our_identity">为了帐户安全，我们需要验证身份</string>
+    <string name="next_step">下一步</string>
+    <string name="who_can_see_lastactive">谁可以看到我的最后上线时间</string>
+    <string name="everyone">所有人</string>
+    <string name="contacts_only">仅通讯录联系人</string>
+    <string name="online_time_is_not_displayed">不显示在线时间</string>
+    <string name="they_cant_see_your_last_online_time">此名单中的用户，永远不可见你的最后在线时间</string>
+    <string name="just_pwd_login">开启后，你将只能使用密码方式进行登录</string>
+    <string name="consent">同意</string>
+
+    <string name="commit">提交</string>
+    <string name="submit_successfully">提交成功</string>
+    <string name="we_will_deal_with_it_within_tf_hours">感谢你的支持，我们会在24小时内进行处理</string>
+    <string name="find">好的</string>
+    <string name="group_manager_audit_is_required">当前群聊开启了入群需审核，对方同意入群后需群主审核通过才能入群</string>
+    <string name="search_friends">搜索朋友</string>
+    <string name="scan_qr_code">扫描二维码</string>
+    <string name="invite_friends_to_join_app">邀请好友加入Wey</string>
+    <string name="please_enter_the_announcement">请输入公告内容</string>
+    <string name="inform_all_members">通知所有成员</string>
+    <string name="turn_on_the_message_to_avoid_interruption">推送告知所有的群成员,即使对方开启消息免打扰</string>
+    <string name="confirm_the_release">确认发布</string>
+    <string name="set_a_new_password">通过身份验证并设置新密码</string>
+    <string name="bad_information">发布色情、广告等不良信息</string>
+    <string name="attack_action">对我进行骚扰、攻击等行为</string>
+    <string name="illegal_behavior">其他违规行为</string>
+    <string name="notification_toggle">应用未打开时</string>
+    <string name="systematic_notification">新消息系统通知</string>
+    <string name="do_not_disturb_when_remind">为保证顺利显示通知栏提醒,请允许\'屏幕顶部显示\',以及\'免打扰时提醒\'</string>
+    <string name="open_self_start">开启自启动</string>
+    <string name="achieved_accuracy">允许应用自启动,可以提高消息达到的准确率</string>
+    <string name="i_can_be_found_in_the_following_ways">可以通过以下方式找到我</string>
+    <string name="share_app">分享Wey APP</string>
+    <string name="turn_down">拒绝</string>
+    <string name="to_complete_the_binding">输入并验证新号码，完成绑定</string>
+    <string name="binding">绑定</string>
+    <string name="group_of_head">群头像</string>
+    <string name="the_name_of_the_group_chat">群聊名称</string>
+    <string name="accomplish">完成</string>
+    <string name="feedback_type">反馈类型</string>
+    <string name="suggest">建议</string>
+    <string name="error">错误</string>
+    <string name="other">其他</string>
+    <string name="back_info">反馈内容</string>
+    <string name="we_ll_get_it_for_you_as_soon_as_possible">请尽量详细描述你要反馈的问题，以便我们尽快为你解决</string>
+    <string name="submit">提交</string>
+    <string name="video_call">视频通话</string>
+    <string name="no_announcement">无公告</string>
+    <string name="voice_communication">语音通话</string>
+    <string name="set_to_star">设为星标</string>
+    <string name="send_a_message">发送消息</string>
+    <string name="scan_the_code_to_add_me_as_a_friend">打开Wey APP，扫码加我为好友</string>
+    <string name="search">搜索</string>
+    <string name="in_app_notification">应用打开时</string>
+
+    <!--message-->
+    <string name="slide_to_cancel">左滑取消</string>
+
+    <string name="cancel">取消</string>
+
+    <string name="pet_text_1086">"导航不可用"</string>
+    <string name="pet_text_1130">"高德导航"</string>
+    <string name="pet_text_884">"百度导航"</string>
+    <string name="pet_text_642">"腾讯导航"</string>
+    <string name="google_navigation">"谷歌导航"</string>
+    <string name="pet_text_414">"你没有安装导航软件哦"</string>
+    <string name="pet_text_632">"[未知位置]"</string>
+    <string name="not_location_info">"未获取到你的位置，请检查设置"</string>
+    <string name="pet_text_324">"未获取到你的位置，请到信号更好的地方定位吧"</string>
+    <string name="not_access_location">"定位权限被禁用了，请到设置中开启定位权限吧"</string>
+    <string name="pet_text_508">"知道了"</string>
+    <string name="pet_text_195">"去打开"</string>
+    <string name="pet_text_802">"取消"</string>
+    <string name="pet_text_995">"打开GPS可以更精确的帮你定位噢"</string>
+    <string name="pet_text_1254">"请手动打开设置->位置中的GPS定位开关!"</string>
+    <string name="pet_text_444">"定位失败"</string>
+    <string name="pet_text_281">"位置"</string>
+    <string name="pet_text_1172">"发送"</string>
+    <string name="pet_text_189">"获取不到你的位置,导航失败"</string>
+    <string name="pet_text_1030">"导航"</string>
+    <string name="on_the_line">通话中</string>
+    <string name="mute">静音</string>
+    <string name="hang_up">挂断</string>
+    <string name="hands_free">免提</string>
+    <string name="switching_camera">切换摄像头</string>
+    <string name="switch_to_voice">切换为语音</string>
+    <string name="a_message_that_cannot_be_parsed">无法解析的消息</string>
+    <string name="invite_you_for_a_voice_call_sign">邀请你语音通话...</string>
+    <string name="take_in">接受</string>
+    <string name="name">名字</string>
+    <string name="face_sign">[表情]</string>
+    <string name="let_go_to_send">按住说话，松手发送</string>
+    <string name="wait_for_an_answer">等待对方接听...</string>
+    <string name="opening_file">打开文件</string>
+    <string name="please_send_the_add_request_first">你还不是对方朋友，请先发送添加请求</string>
+    <string name="to_answer_the">待接听</string>
+    <string name="just_now">刚刚</string>
+    <string name="same_one_at_me">有人@我</string>
+    <string name="chose_sign">选择了</string>
+    <string name="got_it">知道了</string>
+    <string name="the_whole_staff_was_silent">全员禁言中</string>
+    <string name="invite_you_to_video">邀请你视频通话...</string>
+    <string name="the_voice_answered">语音接听</string>
+    <string name="encryption_hint">此对话中的信息和通话已经进行端对端加密</string>
+    <string name="a_message_was_withdrawn">%s撤回了一条消息</string>
+    <string name="sign_message">条消息</string>
+    <string name="hint">提示</string>
+    <string name="the_message_you_are_viewing_has_been_deleted">你查看的消息已经被对方删除</string>
+    <string name="forward">转发</string>
+    <string name="save_the_image">保存图片</string>
+    <string name="recognition_qr_code">识别二维码</string>
+    <string name="open_it_with_another_application">用其他应用打开</string>
+    <string name="downloading_sign">下载中...</string>
+    <string name="downloading_sign_mat">下载中... %s / %s</string>
+    <string name="pause_to_download">暂停下载</string>
+    <string name="download_failed">下载失败</string>
+    <string name="re_download">重新下载</string>
+    <string name="download_the_file">下载文件</string>
+    <string name="uid_error">Uid错误</string>
+    <string name="save_the_video">保存视频</string>
+    <string name="video_failed_to_load">视频加载失败</string>
+    <string name="you_took_a_screenshot">你对聊天内容进行了截屏</string>
+    <string name="some_one_took_a_screenshot">%s对聊天内容进行了截屏</string>
+    <string name="the_receiver_play">听筒播放</string>
+    <string name="multiple_choice">多选</string>
+    <string name="reply">回复</string>
+    <string name="details">详情</string>
+    <string name="encryption_hint2">此广播列表中的信息和通话已经进行端对端加密，对话内容只有你和你的对话对象才能听到看到</string>
+    <string name="read_fire_whether_to_continue_hint">你选择的消息中，语音、名片、通话、公告、阅后即焚不能转发给朋友，是否继续？</string>
+    <string name="connecting_sign">正在连接中...</string>
+    <string name="ununited">未连接</string>
+    <string name="in_the_input">正在输入...</string>
+    <string name="add_ok">添加成功</string>
+    <string name="video_conversion_has_an_exception">视频转换出现异常，消息发送失败</string>
+    <string name="select_group_chat">选择群聊</string>
+    <string name="send_to">发送给</string>
+    <string name="choosing_friends">选择朋友</string>
+    <string name="recently">最近</string>
+    <string name="choose_a_business_card">选择名片</string>
+    <string name="unstick">取消置顶</string>
+
+    <string name="clear_all_msgs">清空消息</string>
+    <string name="clear_and_delete_chat">仅删除本地会话记录</string>
+    <string name="clear_and_delete_pvt_chat">删除本地和 %s 的会话记录</string>
+    <string name="clear_and_delete_group_chat">删除本地和 所有成员 的会话记录</string>
+    <string name="clear_and_delete_file_tran_chat">删除本地和 电脑设备 的会话记录</string>
+
+    <string name="clear_and_delete_msgs">从本地删除</string>
+    <string name="clear_and_delete_pvt_msgs">从本地和 %s 删除</string>
+    <string name="clear_and_delete_group_msgs">从本地和 所有成员 删除</string>
+    <string name="clear_and_delete_file_tran_msgs">从本地和 电脑设备 删除</string>
+
+    <string name="clear_and_delete_msgs_local">仅清空本地聊天记录</string>
+    <string name="clear_and_delete_pvt_msgs_local">清空本地和 %s 的聊天记录</string>
+    <string name="clear_and_delete_group_msgs_local">清空本地和 所有成员 的聊天记录</string>
+
+    <string name="clear_and_delete">清空并删除记录</string>
+    <string name="also_clear_chat_records">删除该条对话，同时清除聊天记录?</string>
+    <string name="clear_chat_logs">清空聊天记录</string>
+
+    <string name="some_one_at_me_sign">[有人@我]</string>
+    <string name="some_one_at_me_sign_mat">[有人@我]%s</string>
+    <string name="there_is_a_new_announcement_sign">[有新公告]</string>
+    <string name="there_is_a_new_announcement_sign_mat">[有新公告]%s</string>
+    <string name="draft_sign">[草稿]</string>
+    <string name="draft_sign_voice_sign">[草稿][语音]</string>
+    <string name="you_cannot_send_messages">全员禁言，你无法发送消息！</string>
+    <string name="identification_of_failure">识别失败</string>
+    <string name="residue">剩余</string>
+    <string name="continue_to_download">继续下载</string>
+    <string name="file_download_failed">文件下载失败</string>
+    <string name="download_to_save">下载完才能保存</string>
+    <string name="you">你</string>
+    <string name="please_open_location_permissions">定位失败,请打开定位权限</string>
+    <string name="downloading">下载中... %s/%s</string>
+    <string name="on_the_cross">上传中... %s/%s</string>
+    <string name="did_not_answer">未接听</string>
+    <string name="did_not_answer_mat">未接听[%s]</string>
+    <string name="no_answer">对方无应答</string>
+    <string name="call_duration">通话时长</string>
+    <string name="call_duration_mat">通话时长 %s</string>
+    <string name="the_other_party_has_refused">对方已拒绝</string>
+    <string name="canceled">已取消</string>
+    <string name="counterparty_canceled">对方已取消</string>
+    <string name="the_other_is_busy">对方正忙</string>
+    <string name="error_condition">错误状态</string>
+    <string name="geographic_position">[地理位置]</string>
+    <string name="unknown_sign">[未知]</string>
+    <string name="province">省</string>
+    <string name="city">市</string>
+    <string name="you_withdrew_a_message">你撤回了一条消息</string>
+    <string name="play_time">播放时间</string>
+    <string name="see_the_time">查看时间</string>
+    <string name="delivery_time">送达时间</string>
+    <string name="delivery">送达</string>
+    <string name="download_start">开始下载...</string>
+    <string name="play">播放</string>
+    <string name="read">已读</string>
+    <string name="targetId_error">targetId错误</string>
+    <string name="gid_error">Gid错误</string>
+    <string name="extern_nsstring_const">正在连接中...</string>
+    <string name="particulars">详情</string>
+    <string name="loudspeaker_playback">扬声器播放</string>
+    <string name="encryption_hint_two">此广播列表中的信息和通话已经进行端对端加密，对话内容只有你和你的对话对象才能听到看到</string>
+    <string name="forward_continue">你选择的消息中，语音、名片、公告不能转发给朋友，是否继续？</string>
+    <string name="continue_str">继续</string>
+    <string name="delete_for_all">为所有人删除</string>
+    <string name="message_for_details">消息详情</string>
+    <string name="the_file_is_empty">文件为空</string>
+    <string name="maximum_file_limit_50m">文件最大限制150M</string>
+    <string name="no_call_recently">近期无通话</string>
+    <string name="no_recent_conversation">近期无会话</string>
+    <string name="be_on_the_phone">正在通话中</string>
+    <string name="uid_error_two">uid不正确</string>
+    <string name="in_connection">建立连接中...</string>
+    <string name="second_mat">%s秒</string>
+    <string name="please_log_in_and_share_again">尚未登录，请登陆后再分享</string>
+    <string name="decryption_failure">解密失败</string>
+    <string name="in_connection_sign">建立连接中...</string>
+    <string name="the_new_phone">新通话</string>
+    <string name="can_t_reach_server">无法连接服务器，请重新登录</string>
+    <string name="no_nover_window_permissions">你没有授予应用悬浮窗口的权限</string>
+    <string name="strip">[%s条]%s</string>
+    <string name="the_message_has_been_deleted_by_the_other_party">你查看的消息已经被对方删除</string>
+    <string name="some_one_at_me">有人＠我</string>
+    <string name="check_the_recording_permissions">请检查录音权限</string>
+    <string name="a_screenshot_of_the_chat_was_taken">%s对聊天内容进行了截屏</string>
+    <string name="they_refused_to_talk">呼叫已发出，但对方拒绝通话</string>
+    <string name="you_not_target_linkman">你不是对方通讯录联系人</string>
+    <string name="error_close_call">发生异常,关闭通话</string>
+    <string name="please_add_each_other_as_friends_first">请先添加对方为朋友</string>
+    <string name="message_has_send_but_they_refused">消息已发出，但对方拒收</string>
+    <string name="say_hello">你们已成为好友，打声招呼吧</string>
+    <string name="you_are_no_group_member_cant_send_message">你已不是群成员，无法发送消息</string>
+    <string name="you_turn_on_screenshot_notifications">你开启了截屏通知</string>
+    <string name="you_turned_off_screenshot_notifications">你关闭了截屏通知</string>
+    <string name="screenshot_notification_enabled">%s开启了截屏通知</string>
+    <string name="turn_off_screenshot_notifications">%s关闭了截屏通知</string>
+    <string name="you_set_the_message_to_read_mat">你设置了消息已读%s后销毁</string>
+    <string name="message_read_is_set">%s设置了消息已读%s后销毁</string>
+    <string name="you_shut_it_down">你关闭了阅后即焚</string>
+    <string name="closed_after_reading_burn">%s关闭了阅后即焚</string>
+    <string name="group_manager_changed_to_mat">群主变更为 %s</string>
+    <string name="you_ve_become_group_manager">你已成为群主</string>
+    <string name="you_have_become_the_administrator_of_this_group">你已成为本群管理员</string>
+    <string name="you_join_a_group_chat_by_scanning_the_qr_code">你通过扫描二维码加入群聊</string>
+    <string name="join_a_group_chat_by_scanning_the_qr_code">%s 通过扫描二维码加入群聊</string>
+    <string name="you_are_invited">你邀请 %s 加入群聊</string>
+    <string name="removed_you_from_the_group_chat">%s 将你移出了群聊</string>
+    <string name="you_move_out_of_group_chat">你将 %s 移出了群聊</string>
+    <string name="quit_the_group_chat">%s 退出了群聊</string>
+    <string name="you_change_the_group_name">你修改群名为 %s</string>
+    <string name="modify_group_name">%s 修改群名为 %s</string>
+    <string name="you_the_entire_staff_was_silenced">你%s了全员禁言</string>
+    <string name="admin_the_entire_staff_was_silenced">管理员%s了全员禁言</string>
+    <string name="the_call_has_been_cancelled">对方已取消通话请求</string>
+    <string name="your_call_has_been_denied">对方已拒绝你的通话请求</string>
+    <string name="the_line_is_engaged">对方正在通话中</string>
+    <string name="please_check_your_network_settings">当前网络异常，请检查网络设置</string>
+    <string name="i_am">我是%s</string>
+
+    <!--需要在正确的地方使用-->
+    <string name="confirm_two">确定</string>
+
+    <string name="draft_sign_mat">[草稿]%s</string>
+    <string name="received_a_new_message">收到一条新消息</string>
+    <string name="invite_you_for_a_video_call">%s邀请你视频通话</string>
+    <string name="expression_sign">[表情]</string>
+    <string name="you_also_cannot_see_the_read_status_of_others">如果您选择关闭已读回执，您也无法看到他人的读取状态，此选项不会影响群组对话的已读回执</string>
+    <string name="show_the_input_state">展示输入状态</string>
+    <string name="read_receipt">已读回执</string>
+    <string name="hide_sender_information">隐藏发送人信息</string>
+    <string name="has_new_msg">%d条新消息</string>
+    <string name="call_details">通话详情</string>
+    <string name="missed_call">未接电话</string>
+    <string name="media">媒体</string>
+    <string name="files">文件</string>
+    <string name="all">全部</string>
+    <string name="missed">未接</string>
+    <string name="message_two">消息</string>
+    <string name="done">完成</string>
+    <string name="drag_the_slider_below">拖动下方的滑块，可设置聊天界面的字体大小</string>
+    <string name="tl_textsize_dimension">设置字体大小</string>
+    <string name="will_change_font_size">设置后会改变聊天界面中的字体大小</string>
+
+
+    <string name="group_name_must_not_null">群名称不允许为空</string>
+    <string name="group_member_count">群成员（%d）</string>
+    <string name="create">创建</string>
+
+    <string name="bus_get_sms_code">获取短信验证码</string>
+    <string name="bus_had_sent_sms_code">验证码已发送至</string>
+    <string name="bus_counting_down">%ss 后可重新获取</string>
+    <string name="bus_retry_get_sms_code">重新获取验证码</string>
+    <string name="bug_register_default_agree_agreement">注册代表同意用户协议</string>
+
+    <string name="picture_dynamic_sign">[动画表情]</string>
+
+    <string name="bus_create_ground_chat">新建群聊</string>
+
+    <string name="sign_must_fill_in_sign">必填</string>
+    <string name="set_a_new_password_2">为了账户安全，我们需要验证身份</string>
+    <string name="media_documents_etc">媒体、文件等</string>
+
+    <string name="desktop_68_confirms_login">桌面端Wey确认登录</string>
+    <string name="mute_mobile_phone">手机静音</string>
+    <string name="file_transfer">文件传输</string>
+    <string name="exit_desktop">退出桌面端</string>
+    <string name="desktop_68_logged_in">桌面端Wey已登录</string>
+
+    <string name="mobile_notification_is_off">桌面端Wey已登录，手机通知已关闭</string>
+    <string name="transmission_assistant">传输助手</string>
+    <string name="i_can_be_add_in_the_following_ways">可以通过以下方式添加我</string>
+
+    <string name="string_clear_account">清除账号</string>
+    <string name="string_1_month">1个月</string>
+    <string name="string_3_month">3个月</string>
+    <string name="string_6_month">6个月</string>
+    <string name="string_12_month">12个月</string>
+    <string name="string_clear_account_tip">如您在规定的时间内未曾上线，您账号内的所有资料（如聊天记录、联系人都会被自动删除）</string>
+
+    <string name="contacts_do_not_display_phones">联系人不展示电话</string>
+    <string name="separate_sign">、</string>
+
+    <string name="string_forget_password">忘记密码</string>
+    <string name="string_reset_password">重置密码</string>
+    <string name="string_check_and_find_password">验证身份并找回密码</string>
+    <string name="string_reset_new_password">为帐户设置新的密码</string>
+    <string name="mobile_notification_is_on">桌面端Wey已登录</string>
+
+    <string name="remove_administrator">移除管理员</string>
+    <string name="notification_of_disturb">静默通知</string>
+    <string name="only_the_administrator_can_change_the_burn_time">只有管理员可以更改阅后即焚时间</string>
+    <string name="long_time_no_login">由于您长时间未登录，请重新登录</string>
+    <string name="account_unregistration">您的账号已注销</string>
+
+    <string name="reset_password">重置密码</string>
+    <string name="reset_password_s">修改密码成功</string>
+
+    <string name="other_account_unregistration">该账号已注销</string>
+    <string name="other_account_unregistration1">该账号已注销</string>
+    <string name="web_login_fail_by_code">登录失败，请重新扫码</string>
+    <string name="snapchatTime_msg">[阅后即焚消息]</string>
+    <string name="stream_msg">[音视频通话]</string>
+
+    <string name="string_go_back">退出</string>
+
+    <string name="logout_web">是否退出Wey桌面端</string>
+    <string name="logout_web_fail">退出登录失败，请重新点击退出</string>
+
+    <string name="group_report_1">该群发布色情/违法等不良信息</string>
+    <string name="group_report_2">该群存在欺诈骗钱行为</string>
+    <string name="group_report_3">该群发布广告骚扰信息</string>
+    <string name="group_report_4">该群存在赌博行为</string>
+    <string name="group_ban_reason">该群因违反相关规定，已被限制使用</string>
+
+    <string name="six_eight_number">Wey号</string>
+
+    <string name="string_link">链接</string>
+    <string name="string_my_link">我的链接</string>
+    <string name="string_group_link">使用链接邀请入群</string>
+
+    <string name="string_share_link">分享链接</string>
+    <string name="string_copy_link">复制链接</string>
+    <string name="string_update_link">更新链接</string>
+    <string name="string_my_link_tilte">复制链接发送给朋友或分享到社交平台，朋友通过链接打开Wey即可申请加入群聊</string>
+
+
+    <string name="delete_all">删除全部</string>
+    <string name="group_qr_update">更新后已分享的二维码将会失效,确定要更新二维码吗?</string>
+    <string name="string_ban_word">禁言</string>
+
+    <string name="string_relieve_forbidden">解除禁言</string>
+    <string name="string_remove_contact_confirm">删除改联系人,会同时删除与该联系人的聊天记录</string>
+
+    <string name="string_report_picture">相关截图</string>
+
+    <string name="say_illegal_behavior">请通过5到200个字描述被投诉对象的违规行为(必填)</string>
+
+    <string name="string_sure_clear_call_history">确定要清空通话记录吗?</string>
+    <string name="string_update_link_sure">更新后旧链接将会失效，确定要更新链接吗?</string>
+
+    <string name="string_complaint_description">投诉</string>
+    <string name="complaint_description">违规描述</string>
+    <string name="common_search_phone">手机号码/Wey号</string>
+
+    <string name="string_busy_tone">请求已取消</string>
+
+    <string name="string_search_phone">手机: </string>
+    <string name="string_search_68">Wey号: </string>
+    <string name="string_search_name">昵称: </string>
+    <string name="string_clear_group_notification">清空群通知</string>
+    <string name="string_setting_chat">聊天设置</string>
+
+    <string name="string_center_send_msg">回车键发送消息</string>
+    <string name="string_emoji_manage">表情包管理</string>
+    <string name="string_group_sender">群发助手</string>
+    <string name="string_68_table">Wey桌面端</string>
+    <string name="string_user_instruction">使用帮助</string>
+
+    <string name="string_notification_dialog_title">打开消息通知\n不错过任何消息提醒</string>
+    <string name="string_notification_dialog_msg">1. 进入手机“设置”-“通知”选项\n2. 打开Wey的通知开关\n3. 确保通知是最高优先级</string>
+
+    <string name="string_network_state">当前网络不可用，请检查你的网络设置</string>
+
+    <string name="string_welcome_title_1">Wey Messenger 是一款注重隐私保护的端对端加密聊天软件，使用可靠的加密方式保护你的隐私安全</string>
+    <string name="string_welcome_title_2">Wey Messenger 可使用文本、语音、图片、视频、文件等多种方式与你的朋友进行轻便快捷地传递信息，保持高效沟通</string>
+    <string name="string_welcome_title_3">Wey Messenger 还拥有强大的阅后既焚模式，消息查看后在规定内自动销毁。</string>
+
+    <string name="string_now_sure">马上开始</string>
+    <string name="string_group_send">群发</string>
+
+    <string name="string_all_select">全选</string>
+    <string name="string_all_unselect">不选</string>
+    <string name="string_group_send_title">群发消息</string>
+
+    <string name="string_group_send_uploading">发送中...</string>
+    <string name="string_group_send_complete">发送完成</string>
+
+    <string name="string_group_send_location">群发不支持地理位置</string>
+    <string name="string_group_send_name">群发不支持名片</string>
+
+    <string name="string_dynamic_face_manager_title">所有表情</string>
+    <string name="string_dynamic_face_manager_add">添加表情</string>
+    <string name="string_dynamic_face_upload_fail">上传表情失败</string>
+    <string name="sign_face">条表情</string>
+
+    <string name="string_delete_dynamic_face_tip">删除的表情无法恢复</string>
+    <string name="string_group_send_user_size">发送给以下%s位好友</string>
+    <string name="string_group_send_reload">重试</string>
+    <string name="string_group_send_fail">发送失败！</string>
+
+    <string name="string_group_send_upload_fail">上传失败</string>
+
+    <string name="message_cannot_be_decrypted">消息解密失败</string>
+
+    <string name="string_undecryte_tip">重新安装了App或更换了设备导致私钥解密失败，系统已重新进行密钥协商，建议联系对方重新发送解密失败的消息。</string>
+
+    <string name="authorization_failed_fail">此项授权是为了获取磁盘使用权，以保证应用正常使用，不会搜集您的任何隐私！</string>
+
+    <string name="string_group_dismiss">解散群聊</string>
+    <string name="string_group_tip">温馨提示</string>
+    <string name="string_group_message">解散群聊后，所有群成员将失去和群友的联系，同时该群的聊天内容将全部删除</string>
+
+    <string name="string_group_dismiss_title">该群聊已被解散</string>
+    <string name="string_password_fail">密码错误</string>
+    <string name="string_password_success">密码验证成功</string>
+
+
+    <string name="app_lock">安全锁</string>
+    <string name="app_lock_fingerprint">指纹解锁</string>
+
+
+    <string name="open_app_lock_tip">开启安全锁后，如果您在启动Wey时忘记了密码，需要清除帐户的聊天记录才能继续使用，请牢记您的安全锁密码。</string>
+    <string name="app_lock_setting_success">设置密码成功</string>
+    <string name="app_lock_time_value">后台%s后</string>
+
+
+    <string name="change_applock_password">修改手势密码</string>
+    <string name="forget_applock_password">忘记手势密码</string>
+    <string name="app_lock_setting_tip_1">开启后，当Wey在后台超过设定时间，打开时需要设置手势密码</string>
+    <string name="app_lock_setting_tip_2">* 为了您的数据隐私，如果您在启动Wey时忘记了密码，您可能需要清除帐户的聊天数据才能继续使用</string>
+    <string name="app_lock_time_title">自动锁定</string>
+    <string name="app_lock_clear_account_tip">再次确定后将会清除当前账户的所有聊天数据</string>
+
+    <string name="forget_appkock_pwd_clear_account_title">忘记手势密码?</string>
+    <string name="forget_appkock_pwd_clear_account_tip">如果您忘记安全锁密码，您需要清除当前账户的聊天数据，并重新登录您的账号</string>
+    <string name="forget_appkock_pwd_clear_account">清除数据</string>
+
+    <string name="send_messge_so_fast_tip">发送消息过于频繁，可稍后再试</string>
+
+    <string name="system_crash_tip">检测到你的Wey存在系统引发的崩溃，请重启系统再打开Wey，如果仍然崩溃请重装应用！</string>
+
+    <!-- v1.7.0  -->
+    <string name="string_save_to_album">保存到相册</string>
+    <string name="string_qr_result">扫描结果</string>
+    <string name="string_group_link_in">群链接分享</string>
+    <string name="string_qr_link">链接</string>
+    <string name="string_qr_text">文本</string>
+    <string name="string_qr_go_link">访问链接</string>
+    <string name="string_qr_copy_text">复制文本</string>
+    <string name="string_friend_word">给朋友留言</string>
+
+    <string name="string_merge_msg">[逐条转发] %1s条消息</string>
+    <string name="string_image_tag">表情标签</string>
+    <string name="string_sended">已发送</string>
+
+
+    <string name="calling_audio_busy_tip">正在语音通话，请稍后再试</string>
+    <string name="calling_video_busy_tip">正在视频通话，请稍后再试</string>
+    <string name="blur_screen">屏幕安全性</string>
+    <string name="file_storage_location">文件存储位置</string>
+
+    <string name="set_all_unreaded">标记未读</string>
+    <string name="set_all_readed">标记已读</string>
+    <string name="string_search_tool">功能</string>
+
+    <string name="applock_pinlock_type">数字密码</string>
+    <string name="applock_gesture_type">手势密码</string>
+    <string name="calling_network_status_low">当前通话质量不佳</string>
+
+
+    <!-- v1.8.0  -->
+    <string name="calling_network_status_low_my_network_is_bad">当前通话你的网络质量不佳</string>
+    <string name="calling_network_status_low_target_network_is_bad">当前通话对方网络质量不佳</string>
+
+    <string name="string_search_more_contact">更多联系人</string>
+    <string name="string_search_more_group">更多群聊</string>
+    <string name="string_search_more_chat">更多聊天记录</string>
+
+    <string name="string_search_chat">"聊天记录"</string>
+
+    <string name="socket_is_error">连接不可用,请稍等一会儿再试</string>
+    <string name="clear_storage_title">数据清理</string>
+
+    <string name="string_silent_play">静音播放</string>
+
+    <string name="string_search_match1">条与</string>
+
+    <string name="string_search_match2">相关的记录</string>
+
+
+    <string name="set_do_not_disturb">免打扰</string>
+    <string name="set_do_disturb">取消免打扰</string>
+    <string name="multi_checkable">批量编辑</string>
+    <string name="chosed_sign">已选择</string>
+    <string name="sign_call">条</string>
+
+    <string name="multi_delete_chat_tip">删除%d条对话，同时清除聊天记录？</string>
+    <string name="multi_delete_call_tip">删除%d条通话记录？</string>
+
+    <string name="storate_title">缓存</string>
+    <string name="clear_storage_button_title">清理</string>
+    <string name="clear_storage_dialog_tip">确定清理缓存数据？</string>
+    <string name="clear_account_cache_tip">缓存是Wey使用过程中产生的临时数据，清理缓存不会影响Wey的正常使用</string>
+
+    <string name="string_search_head_title">从%1s找到%2d条相关聊天记录</string>
+
+    <string name="string_search_no_data">支持搜索联系人、群聊、聊天记录</string>
+
+    <!-- 2.0.0-->
+    <string name="string_open_qr_code">扫一扫</string>
+    <string name="confirm_open">确定开启</string>
+    <string name="disable_account_title">注销账号</string>
+    <string name="disable_account_tip">开启后，安全锁密码输入错误达到20次，账号将被自动注销，您将丢失所有的数据和资料，请谨慎开启</string>
+    <string name="disable_account_msg">密码错误次数过多，账号已被注销，如需继续使用Wey，请重新注册</string>
+    <string name="group_send_back_press_disable">群发时返回键不可用</string>
+
+    <string name="brvah_load_end">没有更多数据</string>
+    <string name="brvah_load_failed">加载失败，请点我重试</string>
+    <string name="brvah_loading">正在加载中...</string>
+
+</resources>
+

@@ -69,7 +69,7 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
 
     private val registerType = 1
 
-    private var mCountyStr: String = "+55"
+    private var mCountyStr: String = "+44"
     private var mPasswordOK = false
 
     private val mDefaultPhone by lazy { intent.getStringExtra("phone") ?: "" }
@@ -101,7 +101,7 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
         custom_toolbar?.setBackIcon(R.drawable.common_icon_black_back) {
             finish()
         }
-        mCountyStr = if (mDefaultAreaCode == null) "+55" else mDefaultAreaCode
+        mCountyStr = if (mDefaultAreaCode == null) LocalManageUtil.getCurrentCountryCode() else mDefaultAreaCode
         setTextContent()
 
         custom_toolbar.setToolbarColor(R.color.white)
@@ -408,14 +408,14 @@ class RegisterActivity : BaseBusinessActivity<RegisterContract.Presenter>(), Reg
         tv_send_sms_code.isEnabled = false
         tv_send_sms_code.background =
             getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
-        tv_send_sms_code.text = "contagem regressiva:" + totalTimeSecond + "s"
+        tv_send_sms_code.text = "${totalTimeSecond}s"
 
 
         countDownTimer = object : CountDownTimer(totalTimeSecond * 1000L, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
 
-                tv_send_sms_code.text = "contagem regressiva:"+ millisUntilFinished / 1000 % 60 + "s"
+                tv_send_sms_code.text ="${millisUntilFinished / 1000 % 60}s"
             }
 
             override fun onFinish() {

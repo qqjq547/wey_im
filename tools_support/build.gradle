@@ -70,7 +70,7 @@ dependencies {
     // luban
     api 'top.zibin:Luban-turbo:1.0.0'
     // umeng
-    api 'com.umeng.umsdk:common:9.4.7'// 必选
+    api 'com.umeng.umsdk:common:9.5.4'// 必选
     api 'com.umeng.umsdk:asms:1.4.1'// 必选
     api 'com.umeng.umsdk:apm:1.5.2'
     // aliyun oss

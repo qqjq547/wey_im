@@ -9,8 +9,8 @@ ext {
             buildToolsVersion             : "31.0.0",
             compileVersion                : 31,
             minSdk                        : 19,
-            targetSdk                     : 27,
-            renderscriptTargetApi         : 27,
+            targetSdk                     : 31,
+            renderscriptTargetApi         : 31,
             renderscriptSupportModeEnabled: true,
             multiDexEnabled               : true
     ]

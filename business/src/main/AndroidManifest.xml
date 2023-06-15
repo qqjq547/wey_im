@@ -33,7 +33,8 @@
         <activity android:name=".ui.me.ForgetAppLockActivity" />
         <activity android:name=".ui.contacts.OperateContactActivity" />
         <activity android:name=".ui.group.OperateGroupMemberActivity" />
-        <activity android:name=".ui.qr.MyQrActivity">
+        <activity android:name=".ui.qr.MyQrActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="framework.telegram.business.ui.qr" />
 

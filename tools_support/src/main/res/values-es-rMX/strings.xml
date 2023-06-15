@@ -1,0 +1,61 @@
+<resources>
+
+    <string name="the_task_has_been_downloaded">La tarea ha sido descargada</string>
+    <string name="notification_of_new_information">Notificación de nueva información</string>
+    <string name="push_message_notification">Notificación de mensaje push</string>
+    <string name="just_online">Solo en línea</string>
+    <string name="min_online">En línea hace %s minutos</string>
+    <string name="hou_online">En línea hace %s horas</string>
+    <string name="day_online">En línea hace %s días</string>
+    <string name="week_online">En línea hace %s semanas</string>
+    <string name="online">en línea</string>
+    <string name="online_time">%s está en línea</string>
+    <string name="day">dia</string>
+    <string name="mon">mes</string>
+    <string name="sec_mat">%s segundos</string>
+    <string name="min_mat">%s minutos</string>
+    <string name="hou_mat">%s horas</string>
+    <string name="day_mat">%s días</string>
+    <string name="week_mat">%s semana</string>
+    <string name="am_mat">AM %s</string>
+    <string name="pm_mat">pm %s</string>
+    <string name="just_now">justo ahora</string>
+    <string name="yesterday">ayer</string>
+    <string name="the_day_before_yesterday">anteayer</string>
+    <string name="yesterday_mat">Ayer %s:%s</string>
+    <string name="the_day_before_yesterday_mat">Anteayer %s:%s</string>
+    <string name="sun">domingo</string>
+    <string name="monday">lunes</string>
+    <string name="tue">martes</string>
+    <string name="wed">miércoles</string>
+    <string name="thurs">jueves</string>
+    <string name="fri">viernes</string>
+    <string name="Sat">sábado</string>
+    <string name="confirm">OK</string>
+    <string name="cancel">cancelar</string>
+    <string name="seconds_5">5 segundos</string>
+    <string name="seconds_10">10 segundos</string>
+    <string name="seconds_30">30 segundos</string>
+    <string name="minute_1">1 minuto</string>
+    <string name="hour_1">1 hora</string>
+    <string name="hour_6">6 horas</string>
+    <string name="hour_12">12 horas</string>
+    <string name="day_1">1 día</string>
+    <string name="day_3">3 dias</string>
+    <string name="day_7">7 días</string>
+    <string name="forever">para siempre</string>
+    <string name="shut_up">apagar</string>
+    <!--2019-10-11-Añadido-->
+    <string name="start_activity_error">No se pudo abrir, puede que no sea compatible con el sistema actual</string>
+    <string name="close">cerrar</string>
+    <string name="forward">adelante</string>
+    <string name="all">seleccionar todo</string>
+    <string name="copy">copiar</string>
+
+    <!--2020-2-20-Agregado-->
+    <string name="minute_5">5 minutos</string>
+    <string name="minute_10">10 minutos</string>
+    <string name="minute_15">15 minutos</string>
+    <string name="hour_5">5 horas</string>
+
+</resources>

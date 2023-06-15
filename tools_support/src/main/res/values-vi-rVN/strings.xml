@@ -1,0 +1,61 @@
+<resources>
+    <string name="the_task_has_been_downloaded">Nhiệm vụ đã được tải xuống</string>
+    <string name="notification_of_new_information">Thông báo tin nhắn mới</string>
+    <string name="push_message_notification">Thông báo xem trước tin nhắn</string>
+    <string name="just_online">Vừa online gần đây</string>
+    <string name="min_online">Online %s phút trước</string>
+    <string name="hou_online">Online %s giờ trước</string>
+    <string name="day_online">%s ngày trước online</string>
+    <string name="week_online">Online %s tuần trước</string>
+    <string name="online">Online</string>
+    <string name="online_time">Online %s</string>
+    <string name="day">ngày</string>
+    <string name="mon">Tháng</string>
+    <string name="sec_mat">%s s</string>
+    <string name="min_mat">%s phút</string>
+    <string name="hou_mat">%s giờ</string>
+    <string name="day_mat">%s ngày</string>
+    <string name="week_mat">%s tuần</string>
+    <string name="am_mat">%s buổi sáng</string>
+    <string name="pm_mat">Vào buổi chiều %s </string>
+    <string name="just_now">Gần đây</string>
+    <string name="yesterday">Hôm qua</string>
+    <string name="the_day_before_yesterday">Ngày hôm trước</string>
+    <string name="yesterday_mat">Hôm qua %s:%s</string>
+    <string name="the_day_before_yesterday_mat">Ngày hôm trước %s:%s</string>
+    <string name="sun">chủ nhật</string>
+    <string name="monday">Thứ hai</string>
+    <string name="tue">Thứ ba</string>
+    <string name="wed">thứ Tư</string>
+    <string name="thurs">Thứ năm</string>
+    <string name="fri">Thứ sáu</string>
+    <string name="Sat">Thứ bảy</string>
+    <string name="confirm">Chọn</string>
+    <string name="cancel">Hủy bỏ</string>
+    <string name="seconds_5">5s</string>
+    <string name="seconds_10">10s</string>
+    <string name="seconds_30">30s</string>
+    <string name="minute_1">1 phút</string>
+    <string name="hour_1">1 giờ</string>
+    <string name="hour_6">6 tiếng</string>
+    <string name="hour_12">12 giờ</string>
+    <string name="day_1">1 ngày</string>
+    <string name="day_3">3 ngày</string>
+    <string name="day_7">7 ngày</string>
+    <string name="forever">Vĩnh viễn</string>
+    <string name="shut_up">Đang cấm chat</string>
+
+    <!--2019-10-11-新增-->
+    <string name="start_activity_error">Không mở được, có thể không tương thích với hệ thống hiện tại</string>
+    <string name="close">Đóng</string>
+    <string name="forward">Chuyển tiếp</string>
+    <string name="all">Chọn tất cả</string>
+    <string name="copy">Sao chép</string>
+
+    <!--2020-2-20-新增-->
+    <string name="minute_5">5 phút</string>
+    <string name="minute_10">10 phút</string>
+    <string name="minute_15">15 phút</string>
+    <string name="hour_5">5 giờ</string>
+</resources>
+

@@ -80,10 +80,6 @@ import framework.telegram.ui.emoji.EmojiManager
 import framework.telegram.ui.emoji.ios.IosEmojiProvider
 import io.reactivex.plugins.RxJavaPlugins
 import io.realm.Realm
-import okhttp3.Call
-import okhttp3.Callback
-import okhttp3.Request
-import okhttp3.Response
 import java.io.File
 import java.io.IOException
 import java.util.*
@@ -146,10 +142,10 @@ class App : BaseApp() {
             PinCodeUnlock.getInstance().init(applicationContext)
 
             //初始化多语言
-           /* MultiLanguage.init {
+            MultiLanguage.init {
                 return@init LocalManageUtil.getSetLanguageLocale()
             }
-            MultiLanguage.setApplicationLanguage(this)*/
+            MultiLanguage.setApplicationLanguage(this)
 
             //注册事件
             registerEvents()

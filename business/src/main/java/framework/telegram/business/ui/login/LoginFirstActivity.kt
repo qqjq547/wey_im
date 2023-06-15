@@ -32,6 +32,7 @@ import framework.telegram.support.tools.ActivitiesHelper
 import framework.telegram.support.tools.ExpandClass.getSimpleDrawable
 import framework.telegram.support.tools.ExpandClass.toast
 import framework.telegram.support.tools.JumpPermissionManagement
+import framework.telegram.support.tools.language.LocalManageUtil
 import framework.telegram.support.tools.permission.MPermission
 import framework.telegram.support.tools.permission.annotation.OnMPermissionDenied
 import framework.telegram.support.tools.permission.annotation.OnMPermissionGranted
@@ -57,7 +58,7 @@ class LoginFirstActivity : BaseBusinessActivity<LoginContract.Presenter>(), Logi
 
     //0:密码登录   1：验证码登录
     private var mType = 1
-    private var mCountyStr: String = "+55"
+    private var mCountyStr: String = LocalManageUtil.getCurrentCountryCode()
     private var mPasswordOK = false
     private var mContentOK = false
     private var mPasswordType = 0
@@ -413,13 +414,13 @@ class LoginFirstActivity : BaseBusinessActivity<LoginContract.Presenter>(), Logi
         text_view_login.isEnabled = false
         text_view_login.background = getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
 
-        text_view_login.text = "contagem regressiva:" + totalTimeSecond + "S"
+        text_view_login.text = "${totalTimeSecond}S"
 
 
         object : CountDownTimer(totalTimeSecond * 1000L,1000){
 
             override fun onTick(millisUntilFinished: Long) {
-                text_view_login.text = "contagem regressiva:" + millisUntilFinished/1000%60 + "S"
+                text_view_login.text =  "${millisUntilFinished/1000%60}S"
             }
 
             override fun onFinish() {

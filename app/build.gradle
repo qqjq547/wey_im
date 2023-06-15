@@ -23,7 +23,7 @@ android {
         vectorDrawables.useSupportLibrary = true
 
         ndk {
-            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a","arm64-v8a"
         }
 
         javaCompileOptions {
@@ -129,11 +129,7 @@ buildscript {
 }
 
 def getAppName() {
-    if (getAppID().endsWith(".international")) {
-        return "@string/app_name_international"
-    } else {
-        return "@string/app_name"
-    }
+    return "@string/app_name"
 }
 
 def getAmapValue() {

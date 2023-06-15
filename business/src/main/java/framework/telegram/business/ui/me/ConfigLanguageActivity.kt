@@ -47,13 +47,9 @@ class ConfigLanguageActivity : BaseBusinessActivity<InfoContract.Presenter>() {
         iv_zh.setImageResource(0)
         iv_zh_t.setImageResource(0)
         iv_en.setImageResource(0)
-        iv_thai.setImageResource(0)
         iv_vi.setImageResource(0)
-
         iv_mx.setImageResource(0)
-        iv_in.setImageResource(0)
         iv_br.setImageResource(0)
-        iv_tr.setImageResource(0)
 
         when(LocalManageUtil.getSelectLanguage()){
             LocalManageUtil.FOLLOW_SYSTEM->{
@@ -68,28 +64,17 @@ class ConfigLanguageActivity : BaseBusinessActivity<InfoContract.Presenter>() {
             LocalManageUtil.ENGLISH->{
                 iv_en.setImageResource(R.drawable.common_contacts_icon_check_selected)
             }
-            LocalManageUtil.THAI->{
-                iv_thai.setImageResource(R.drawable.common_contacts_icon_check_selected)
-            }
+
             LocalManageUtil.VI->{
                 iv_vi.setImageResource(R.drawable.common_contacts_icon_check_selected)
             }
 
-            LocalManageUtil.ES_MX->{
+            LocalManageUtil.MX->{
                 iv_mx.setImageResource(R.drawable.common_contacts_icon_check_selected)
             }
 
-            LocalManageUtil.HI_IN->{
-                iv_in.setImageResource(R.drawable.common_contacts_icon_check_selected)
-            }
-
-
-            LocalManageUtil.PT_BR->{
+            LocalManageUtil.BR->{
                 iv_br.setImageResource(R.drawable.common_contacts_icon_check_selected)
-            }
-
-            LocalManageUtil.TR_TR->{
-                iv_tr.setImageResource(R.drawable.common_contacts_icon_check_selected)
             }
         }
     }
@@ -107,27 +92,17 @@ class ConfigLanguageActivity : BaseBusinessActivity<InfoContract.Presenter>() {
         fl_en.setOnClickListener {
             switchLanguage(LocalManageUtil.ENGLISH)
         }
-        fl_thai.setOnClickListener {
-            switchLanguage(LocalManageUtil.THAI)
-        }
+
         fl_vi.setOnClickListener {
             switchLanguage(LocalManageUtil.VI)
         }
 
         fl_mx.setOnClickListener {
-            switchLanguage(LocalManageUtil.ES_MX)
-        }
-
-        fl_in.setOnClickListener {
-            switchLanguage(LocalManageUtil.HI_IN)
+            switchLanguage(LocalManageUtil.MX)
         }
 
         fl_br.setOnClickListener {
-            switchLanguage(LocalManageUtil.PT_BR)
-        }
-
-        fl_tr.setOnClickListener {
-            switchLanguage(LocalManageUtil.TR_TR)
+            switchLanguage(LocalManageUtil.BR)
         }
     }
 

@@ -1,0 +1,60 @@
+<resources>
+    <string name="the_task_has_been_downloaded">任务已经下载完毕</string>
+    <string name="notification_of_new_information">新消息通知</string>
+    <string name="push_message_notification">推送消息通知</string>
+    <string name="just_online">刚刚在线</string>
+    <string name="min_online">%s分钟前在线</string>
+    <string name="hou_online">%s小时前在线</string>
+    <string name="day_online">%s天前在线</string>
+    <string name="week_online">%s周前在线</string>
+    <string name="online">在线</string>
+    <string name="online_time">%s 在线</string>
+    <string name="day">天</string>
+    <string name="mon">月</string>
+    <string name="sec_mat">%s秒</string>
+    <string name="min_mat">%s分钟</string>
+    <string name="hou_mat">%s小时</string>
+    <string name="day_mat">%s天</string>
+    <string name="week_mat">%s周</string>
+    <string name="am_mat">上午%s</string>
+    <string name="pm_mat">下午%s</string>
+    <string name="just_now">刚刚</string>
+    <string name="yesterday">昨天</string>
+    <string name="the_day_before_yesterday">前天</string>
+    <string name="yesterday_mat">昨天 %s:%s</string>
+    <string name="the_day_before_yesterday_mat">前天 %s:%s</string>
+    <string name="sun">星期日</string>
+    <string name="monday">星期一</string>
+    <string name="tue">星期二</string>
+    <string name="wed">星期三</string>
+    <string name="thurs">星期四</string>
+    <string name="fri">星期五</string>
+    <string name="Sat">星期六</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="seconds_5">5秒</string>
+    <string name="seconds_10">10秒</string>
+    <string name="seconds_30">30秒</string>
+    <string name="minute_1">1分钟</string>
+    <string name="hour_1">1小时</string>
+    <string name="hour_6">6小时</string>
+    <string name="hour_12">12小时</string>
+    <string name="day_1">1天</string>
+    <string name="day_3">3天</string>
+    <string name="day_7">7天</string>
+    <string name="forever">永远</string>
+    <string name="shut_up">禁言中</string>
+
+    <!--2019-10-11-新增-->
+    <string name="start_activity_error">打开失败,可能不兼容当前系统</string>
+    <string name="close">关闭</string>
+    <string name="forward">转发</string>
+    <string name="all">全选</string>
+    <string name="copy">复制</string>
+
+    <!--2020-2-20-新增-->
+    <string name="minute_5">5分钟</string>
+    <string name="minute_10">10分钟</string>
+    <string name="minute_15">15分钟</string>
+    <string name="hour_5">5小时</string>
+</resources>

@@ -1,0 +1,150 @@
+<resources>
+    <!--已翻譯-->
+    <string name="album_name_all">全部</string>
+    <string name="button_preview">預覽</string>
+    <string name="button_back">返回</string>
+    <string name="button_ok">我知道了</string>
+    <string name="error_type_conflict">不能同時選擇圖片和視訊</string>
+    <string name="button_sure_default">確定</string>
+    <string name="ucrop_label_edit_photo">編輯</string>
+    <string name="ok">確定</string>
+    <string name="cancel">取消</string>
+    <string name="file_picker_go_back">返回</string>
+    <string name="file_picker_tv_select_all">全選</string>
+    <string name="file_picker_tv_select_done">確定</string>
+    <string name="picture">圖片</string>
+    <string name="shoot">拍攝</string>
+    <string name="business_card">名片</string>
+    <string name="photo_album">相簿</string>
+    <string name="my_qr">我的二維碼</string>
+    <string name="location">位置</string>
+    <string name="get_code">獲取驗證碼</string>
+    <string name="file">檔案</string>
+    <string name="no_data">暫無數據</string>
+    <string name="open_links">打開連結</string>
+    <string name="copy_success">複製成功</string>
+    <string name="qr_code_not_found">未找到二維碼</string>
+    <string name="regain">重新獲取</string>
+    <string name="string_icon_all">全部</string>
+    <string name="string_icon_recent">最近使用</string>
+    <string name="small">小</string>
+    <string name="big">大</string>
+    <string name="standard">標準</string>
+    <!--未翻譯-->
+    <string name="photo_grid_capture">拍一張</string>
+    <string name="empty_text">還沒有圖片或視頻</string>
+    <string name="error_over_count_default">你已經達到最大選擇數量</string>
+    <string name="error_over_count">最多只能選擇 %1$d 個檔</string>
+    <string name="error_file_type">不支持的檔案類型</string>
+    <string name="error_no_video_activity">沒有支援視頻預覽的應用</string>
+    <string name="error_over_original_size">"該照片大於 %1$d M，無法上傳將取消勾選原圖"</string>
+    <string name="error_over_original_count">"有 %1$d 張照片大於 %2$d M\n無法上傳，將取消勾選原圖"</string>
+    <string name="button_original">原圖</string>
+    <string name="button_sure">確定(%1$d)</string>
+    <string name="share">Share Voice File</string>
+    <string name="emoji_category_recent">Recent</string>
+    <string name="emoji_backspace">Backspace</string>
+    <string name="emoji_ios_category_activities">Activities</string>
+    <string name="emoji_ios_category_flags">Flags</string>
+    <string name="emoji_ios_category_foodanddrink">Food</string>
+    <string name="emoji_ios_category_animalsandnature">Nature</string>
+    <string name="emoji_ios_category_objects">Objects</string>
+    <string name="emoji_ios_category_smileysandpeople">Faces</string>
+    <string name="emoji_ios_category_symbols">Symbols</string>
+    <string name="emoji_ios_category_travelandplaces">Places</string>
+    <string name="common_quit_app_tips">"再按一次退出程式"</string>
+    <string name="tips_not_wifi">你當前正在使用移動網路，繼續播放將消耗流量</string>
+    <string name="tips_not_wifi_confirm">繼續播放</string>
+    <string name="no_net">當前找不到網路</string>
+    <string name="tips_not_wifi_cancel">停止播放</string>
+    <string name="no_url">播放地址無效</string>
+    <string name="jump_ad">跳過</string>
+    <string name="ucrop_label_original">原始</string>
+    <string name="ucrop_menu_crop">裁剪</string>
+    <string name="ucrop_error_input_data_is_absent" translatable="false">必須同時指定輸入和輸出URI</string>
+    <string name="ucrop_mutate_exception_hint" translatable="false">因此，覆蓋應用程式中的顏色資源（ucrop_color_toolbar_小部件），使其在pre-l設備上工作。</string>
+    <string name="ucrop_rotate">旋轉</string>
+    <string name="ucrop_scale">收縮</string>
+    <string name="ucrop_crop">裁剪</string>
+    <string name="file_picker_selected_count">已選擇·%1$d</string>
+    <string name="file_picker_request_permission_failed">未授予存儲許可權</string>
+    <string name="file_picker_tv_deselect_all">取消全選</string>
+    <string name="file_picker_tv_sd_card">SD 存儲卡</string>
+    <string name="too_many_files_tips">當前文件過多\n正在載入中&#8230;</string>
+    <string name="max_select_count_tips">最多只能選擇 %d 項</string>
+    <string name="empty_list_tips_file_picker">空空如也~</string>
+    <string name="under_load_sign">正在載入中...</string>
+    <string name="sweep_the_qr_code">掃二維碼</string>
+    <string name="loading">載入中</string>
+    <string name="turn_on_the_flash_lights">打開閃關燈</string>
+    <string name="all_photos">所有照片</string>
+    <string name="fail_to_load">載入失敗</string>
+    <string name="let_me_retry">點我重試</string>
+    <string name="long_press_the_video">點擊拍照 長按錄影</string>
+    <string name="test_video">測試視頻</string>
+    <string name="no_permissions_were_obtained">沒有獲取相關許可權</string>
+    <string name="maximum_file_limit_50m">檔最大限制150M</string>
+    <string name="choose_max_at_the_same_time">最多只能同時選擇%s個視頻檔</string>
+    <string name="copylink">複製連結</string>
+    <string name="flash_off">關閉閃光燈</string>
+    <string name="flash_open">打開閃光燈</string>
+    <string name="image_retrieval_failed">圖片獲取失敗</string>
+    <string name="tautology">重試</string>
+    <string name="start_up_is_not_supported">不支援開啟自啟動</string>
+    <string name="it_can_improve_the_accuracy_of_message_arrival">允許應用自啟動，可以提高消息到達的準確率</string>
+    <string name="add_since_launching_the_whitelist">添加到 自啟動白名單</string>
+    <string name="unmonitored_applications"><![CDATA[添加到 電池->未監視的應用程式]]></string>
+    <string name="the_drop_down_can_refresh">下拉可以刷新</string>
+    <string name="onr_refresh">正在刷新...</string>
+    <string name="loading2">正在載入...</string>
+    <string name="release_instant_refresh">釋放立即刷新</string>
+    <string name="refresh_to_complete">刷新完成</string>
+    <string name="refresh_the_failure">刷新失敗</string>
+    <string name="last_update">\'上次更新\' M-d HH:mm</string>
+    <string name="release_into_the_second_floor">釋放進入二樓</string>
+
+    <string name="append">添加</string>
+
+    <string name="plugin_uexGestureUnlock_codeLengthErrorPrompt">請至少繪製%d個點</string>
+    <string name="plugin_uexGestureUnlock_checkErrorPrompt">與首次繪製不一致，請再次繪製</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorPrompt">密碼錯誤，還可以輸入%d次</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorMaxPrompt">錯誤次數過多，請%d分鐘後重試</string>
+    <string name="plugin_uexGestureUnlock_codeCheckPrompt">再次繪製解鎖圖案</string>
+    <string name="plugin_uexGestureUnlock_creationBeginPrompt">繪製解鎖圖案</string>
+
+    <string name="plugin_uexGestureUnlock_verificationBeginPrompt">驗證手勢密碼</string>
+    <string name="plugin_uexGestureUnlock_verificationSucceedPrompt">驗證通過</string>
+    <string name="plugin_uexGestureUnlock_creationSucceedPrompt">手勢密碼設置成功</string>
+
+    <string name="plugin_uexGestureUnlock_restartCreationButtonTitle">重新設定</string>
+
+    <string name="plugin_uexGestureUnlock_errorCodeTooManyTry">嘗試密碼次數過多</string>
+    <string name="plugin_uexGestureUnlock_errorCodeUnknown">發生未知錯誤</string>
+
+    <string name="gesture_input_old_pwd">驗證手勢密碼</string>
+    <string name="gesture_set_pwd">設定手勢密碼</string>
+    <string name="gesture_set_new_pwd">設置新的手勢密碼</string>
+    <string name="gesture_change_account">切換帳號</string>
+    <string name="gesture_forget_pwd">忘記手勢密碼</string>
+
+
+    <string name="fingerprint_unsupport">您的設備不支持指紋</string>
+    <string name="fingerprint_system_no_data">請在系統錄入指紋後再驗證</string>
+    <string name="fingerprint_title">指紋驗證</string>
+    <string name="fingerprint_pressdown">請按下指紋</string>
+    <string name="fingerprint_verify_success">指紋驗證成功</string>
+    <string name="fingerprint_verify_fail">指紋驗證失敗</string>
+    <string name="fingerprint_verify_data_changed_1">指紋數據發生了變化，請重新在系統中錄入指紋!</string>
+    <string name="fingerprint_verify_data_changed_2">您的指紋信息已發生變更，請使用手勢密碼完成驗證!</string>
+
+    <string name="change_applock_pincode">修改數字密碼</string>
+    <string name="forget_applock_pincode">忘記數字密碼</string>
+    <string name="applock_pincode_title_verify">驗證數字密碼</string>
+    <string name="applock_pincode_title_input">輸入數字密碼</string>
+    <string name="applock_pincode_title_setting">設置數字密碼</string>
+    <string name="applock_pincode_input_again">再次輸入</string>
+    <string name="applock_pincode_input_error_again">與首次輸入不一致,請重新輸入</string>
+    <string name="applock_pincode_other_type">其他密碼類型</string>
+
+    <string name="verification_error_disable_account_warn">密碼錯誤，再次錯誤賬號將被註銷</string>
+</resources>

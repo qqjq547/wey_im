@@ -2,6 +2,7 @@ package framework.telegram.support.tools.language;
 
 import android.content.Context;
 import android.content.res.Configuration;
+import android.util.Log;
 
 import java.util.Locale;
 
@@ -10,16 +11,12 @@ import framework.telegram.support.system.storage.sp.SharePreferencesStorage;
 public class LocalManageUtil {
 
     public static final int FOLLOW_SYSTEM = 0;
-    public static final int SIMPLIFIED_CHINESE = 1;
-    public static final int TRADITIONAL_CHINESE = 2;
-    public static final int ENGLISH = 3;
+    public static final int ENGLISH = 1;
+    public static final int SIMPLIFIED_CHINESE = 2;
+    public static final int TRADITIONAL_CHINESE = 3;
     public static final int VI = 4;
-    public static final int THAI = 9;
-
-    public static final int ES_MX = 5; // 墨西哥西班牙语
-    public static final int HI_IN = 6; // 印度
-    public static final int PT_BR = 7; // 巴西葡萄牙语
-    public static final int TR_TR = 8; // 土耳其语
+    public static final int MX = 5; // 墨西哥西班牙语
+    public static final int BR = 7; // 巴西葡萄牙语
 
     private static int mSelectLanguage = -1;
 
@@ -32,27 +29,27 @@ public class LocalManageUtil {
         switch (getSetLanguageLocale().getLanguage()) {
             case "zh":
                 if (getSetLanguageLocale().getCountry().equals("CN")) {
+                    Log.e("dsjfsdhfkj", "SIMPLIFIED_CHINESE");
                     return SIMPLIFIED_CHINESE;
                 } else {
+                    Log.e("dsjfsdhfkj", "TRADITIONAL_CHINESE");
                     return TRADITIONAL_CHINESE;
                 }
-            case "th":
-                return THAI;
+
             case "vi":
+                Log.e("dsjfsdhfkj", "VI");
                 return VI;
 
             case "mx":
-                return ES_MX;
-
-                case "in":
-                return HI_IN;
+                Log.e("dsjfsdhfkj", "MX");
+                return MX;
 
             case "br":
-                return PT_BR;
+                Log.e("dsjfsdhfkj", "BR");
+                return BR;
 
-            case "tr":
-                return TR_TR;
             default:
+                Log.e("dsjfsdhfkj", "ENGLISH");
                 return ENGLISH;
         }
     }
@@ -77,34 +74,15 @@ public class LocalManageUtil {
                 return Locale.CHINA;
             case TRADITIONAL_CHINESE:
                 return Locale.TAIWAN;
-            case THAI:
-                return new Locale("th");
+
             case VI:
                 return new Locale("vi");
 
-            case ES_MX:
-                return new Locale("mx");
+            case MX:
+                return new Locale("es");
 
-            case HI_IN:
-                return new Locale("in");
-
-            case PT_BR:
-                return new Locale("br");
-
-            case TR_TR:
-                return new Locale("tr");
-
-           /* case ES_MX:
-
-
-            case HI_IN:
-
-
-            case PT_BR:
-
-
-            case TR_TR:
-                return Locale.CHINA;*/
+            case BR:
+                return new Locale("pt");
 
             default:
                 return Locale.ENGLISH;
@@ -134,13 +112,38 @@ public class LocalManageUtil {
         systemCurrentLocal = MultiLanguage.getSystemLocal(context);
     }
 
-    /**
-     * 保存系统语言
-     *
-     * @param context
-     * @param newConfig
-     */
-    public static void saveSystemCurrentLanguage(Context context, Configuration newConfig) {
-        systemCurrentLocal = MultiLanguage.getSystemLocal(newConfig);
+
+
+
+    public static String getCurrentCountryCode(){
+
+        switch (getCurLanguaue()){
+
+            case  SIMPLIFIED_CHINESE:
+
+                return "+86";
+
+            case  TRADITIONAL_CHINESE:
+
+                return "+886";
+
+            case VI:
+
+                return "+84";
+
+            case BR:
+
+                return "+55";
+
+            case MX:
+
+                return "52";
+
+            default:
+
+                return "+44";
+
+        }
     }
+
 }

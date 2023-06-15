@@ -1,0 +1,172 @@
+<resources>
+    <string name="album_name_all">Toàn bộ</string>
+
+    <string name="button_preview">Xem trước</string>
+    <string name="button_back">Quay lại</string>
+    <string name="photo_grid_capture">Chụp ảnh</string>
+    <string name="empty_text">Chưa có hình ảnh hoặc video nào</string>
+    <string name="button_ok">Tôi hiểu rồi</string>
+
+    <string name="error_over_count_default">Bạn đã đạt đến số lượng lựa chọn tối đa</string>
+    <string name="error_over_count">Bạn chỉ có thể chọn tối đa %1$d tệp</string>
+    <string name="error_file_type">Loại tập tin không được hỗ trợ</string>
+    <string name="error_type_conflict">Không thể chọn hình ảnh và video cùng lúc</string>
+    <string name="error_no_video_activity">Không có ứng dụng hỗ trợ xem trước video</string>
+    <string name="error_over_original_size">Không thể tải lên ảnh lớn hơn %1$d M, ảnh gốc sẽ bị bỏ chọn</string>
+    <string name="error_over_original_count">Phát hiện %1$d ảnh lớn hơn %2$d M\n không thể tải lên, hủy thao tác chọn ảnh gốc</string>
+    <string name="button_original">Ảnh gốc</string>
+    <string name="button_sure_default">Chọn</string>
+    <string name="button_sure">xác nhận (%1$d)</string>
+
+    <string name="share">Chia sẻ tệp thoại</string>
+
+    <string name="emoji_category_recent">Gần đây</string>
+    <string name="emoji_backspace">Backspace</string>
+
+    <string name="emoji_ios_category_activities">Các hoạt động</string>
+    <string name="emoji_ios_category_flags">Đánh dấu cờ</string>GroupChatActivity
+    <string name="emoji_ios_category_foodanddrink">Đồ ăn</string>
+    <string name="emoji_ios_category_animalsandnature">Thiên nhiên</string>
+    <string name="emoji_ios_category_objects">Các đối tượng</string>
+    <string name="emoji_ios_category_smileysandpeople">Khuôn mặt</string>
+    <string name="emoji_ios_category_symbols">Ký hiệu</string>
+    <string name="emoji_ios_category_travelandplaces">Nơi</string>
+
+    <string name="common_quit_app_tips">Nhấn lại để thoát khỏi trình duyệt</string>
+
+    <string name="tips_not_wifi">Bạn hiện đang sử dụng mạng di động, tiếp tục phát sẽ tốn dữ liệu</string>
+    <string name="tips_not_wifi_confirm">Tiếp tục phát</string>
+    <string name="no_net">Hiện không tìm thấy mạng</string>
+    <string name="tips_not_wifi_cancel">Ngừng phát chiếu</string>
+    <string name="no_url">Địa chỉ phát không hợp lệ</string>
+    <string name="jump_ad">bỏ qua</string>
+
+    <string name="ucrop_label_original">bản gốc</string>
+    <string name="ucrop_label_edit_photo">Chỉnh sửa</string>
+
+    <string name="ucrop_menu_crop">cắt</string>
+
+    <string name="ucrop_error_input_data_is_absent" translatable="false">Phải chỉ định cả URI đầu vào và đầu ra</string>
+    <string name="ucrop_mutate_exception_hint" translatable="false">Do đó, Ghi đè các nguồn màu t (ucrop_color_toolbar_ widget) trong ứng dụng để làm cho nó hoạt động trên các thiết bị pre-l.</string>
+    <string name="ucrop_rotate">Xoay</string>
+    <string name="ucrop_scale">Thu hồi</string>
+    <string name="ucrop_crop">cắt</string>
+
+    <!-- 白名单 -->
+    <string name="ok">Chọn</string>
+    <string name="cancel">Hủy bỏ</string>
+
+    <string name="file_picker_go_back">Quay lại</string>
+    <string name="file_picker_selected_count">Chọn(%1$d)</string>
+    <string name="file_picker_request_permission_failed">Không cấp quyền lưu trữ</string>
+    <string name="file_picker_tv_select_all">Chọn tất cả</string>
+    <string name="file_picker_tv_deselect_all">Bỏ chọn tất cả</string>
+    <string name="file_picker_tv_select_done">Chọn</string>
+    <string name="file_picker_tv_sd_card">Thẻ nhớ SD</string>
+    <string name="too_many_files_tips">Quá nhiều tệp hiện tại\n Đang tải &#8230;</string>
+    <string name="max_select_count_tips">Bạn chỉ có thể chọn nhiều nhất %d mục</string>
+    <string name="empty_list_tips_file_picker">trống rỗng~</string>
+    <string name="picture">Hình ảnh</string>
+    <string name="under_load_sign">Đang tải...</string>
+    <string name="sweep_the_qr_code">Quét mã</string>
+    <string name="loading">Đang tải</string>
+    <string name="shoot">Quay phim</string>
+    <string name="business_card">danh thiếp</string>
+    <string name="photo_album">Ảnh</string>
+    <string name="turn_on_the_flash_lights">Bật đèn nhấp nháy</string>
+    <string name="my_qr">Mã QR của tôi</string>
+    <string name="location">Vị trí</string>
+    <string name="get_code">Nhận mã xác minh</string>
+    <string name="file">Tài liệu</string>
+    <string name="all_photos">Tất cả ảnh</string>
+    <string name="fail_to_load">Tải thất bại</string>
+    <string name="let_me_retry">Nhấp vào tôi để thử lại</string>
+    <string name="long_press_the_video">Nhấn để chụp ảnh, nhấn và giữ để quay</string>
+    <string name="no_data">Không có dữ liệu</string>
+    <string name="test_video">Video thử nghiệm</string>
+    <string name="no_permissions_were_obtained">Không nhận được các quyền liên quan</string>
+    <string name="maximum_file_limit_50m">Giới hạn tệp tối đa là 150M</string>
+    <string name="choose_max_at_the_same_time">Chỉ có thể chọn %s tệp video cùng một lúc</string>
+    <string name="open_links">Mở liên kết</string>
+    <string name="copylink">Sao chép đường dẫn</string>
+    <string name="copy_success">Sao chép thành công</string>
+    <string name="flash_off">Tắt đèn Flash</string>
+    <string name="flash_open">Bật đèn Flash</string>
+    <string name="qr_code_not_found">Không tìm thấy mã QR</string>
+    <string name="image_retrieval_failed">Thu thập hình ảnh thất bại</string>
+    <string name="tautology">Thử lại</string>
+    <string name="regain">Gửi lại</string>
+    <string name="start_up_is_not_supported">Không hỗ trợ tự khởi động</string>
+    <string name="it_can_improve_the_accuracy_of_message_arrival">Cho phép ứng dụng tự động khởi động, điều này có thể cải thiện độ chính xác của tin nhắn đến</string>
+    <string name="add_since_launching_the_whitelist">Thêm vào  danh sách tự khởi động</string>
+    <string name="unmonitored_applications"><![CDATA[Thêm vào pin-> Ứng dụng không được quản lý]]></string>
+    <string name="string_icon_all">Toàn bộ</string>
+    <string name="string_icon_recent">Sử dụng gần đây</string>
+    <string name="small">Nhỏ</string>
+    <string name="big">To lớn</string>
+    <string name="standard">Tiêu chuẩn</string>
+    <string name="the_drop_down_can_refresh">Kéo xuống để làm mới</string>
+    <string name="onr_refresh">Đang làm mới ...</string>
+    <string name="loading2">Đang tải...</string>
+    <string name="release_instant_refresh">Làm mới ngay sau khi phát hành</string>
+    <string name="refresh_to_complete">Làm mới hoàn tất</string>
+    <string name="refresh_the_failure">Làm mới không thành công</string>
+    <string name="last_update">\'Cập nhật lần cuối\' M-d HH: mm</string>
+    <string name="release_into_the_second_floor">mời lên lầu hai</string>
+
+
+    <string name="append">Thêm</string>
+
+
+    <!--解锁 v1.6.0新增-->
+    <string name="plugin_uexGestureUnlock_codeLengthErrorPrompt">Phải vẽ ít nhất %d điểm</string>
+    <string name="plugin_uexGestureUnlock_checkErrorPrompt">Không phù hợp với bản vẽ đầu tiên, vui lòng vẽ lại</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorPrompt">Mật khẩu sai, bạn có thể nhập %d lần</string>
+    <string name="plugin_uexGestureUnlock_verificationErrorMaxPrompt">Số lần sai vượt giới hạn, vui lòng thử lại sau %d phút</string>
+    <string name="plugin_uexGestureUnlock_codeCheckPrompt">Vẽ lại hình mở khóa</string>
+    <string name="plugin_uexGestureUnlock_creationBeginPrompt">Cài mở khóa hình vẽ</string>
+
+    <string name="plugin_uexGestureUnlock_verificationBeginPrompt">Xác nhận mật khẩu cử chỉ</string>
+    <string name="plugin_uexGestureUnlock_verificationSucceedPrompt">Đã xác minh</string>
+    <string name="plugin_uexGestureUnlock_creationSucceedPrompt">Mật khẩu cử chỉ cài đặt thành công</string>
+
+    <string name="plugin_uexGestureUnlock_restartCreationButtonTitle">Cài đặt lại</string>
+
+    <string name="plugin_uexGestureUnlock_errorCodeTooManyTry">Số lần thử mật khẩu quá thường xuyên</string>
+    <string name="plugin_uexGestureUnlock_errorCodeUnknown">Đã xảy ra lỗi không xác định</string>
+
+    <string name="gesture_input_old_pwd">Xác nhận mật khẩu cử chỉ</string>
+    <string name="gesture_set_pwd">Đặt mật khẩu cử chỉ</string>
+    <string name="gesture_set_new_pwd">Đặt mật khẩu cử chỉ mới</string>
+    <string name="gesture_change_account">Chuyển tài khoản</string>
+    <string name="gesture_forget_pwd">Quên mật khẩu cử chỉ</string>
+
+
+    <string name="fingerprint_unsupport">Thiết bị của bạn không hỗ trợ dấu vân tay</string>
+    <string name="fingerprint_system_no_data">Vui lòng nhập vân tay vào hệ thống trước khi xác minh</string>
+    <string name="fingerprint_title">Xác minh vân tay</string>
+    <string name="fingerprint_pressdown">Vui lòng ấn vân tay</string>
+    <string name="fingerprint_verify_success">Xác minh vân tay thành công</string>
+    <string name="fingerprint_verify_fail">Xác minh vân tay không thành công</string>
+    <string name="fingerprint_verify_data_changed_1">Dữ liệu vân tay đã thay đổi, vui lòng nhập lại vân tay vào hệ thống!</string>
+    <string name="fingerprint_verify_data_changed_2">Thông tin vân tay của bạn đã được thay đổi, vui lòng sử dụng mật khẩu cử chỉ để hoàn tất xác minh!</string>
+
+
+    <!-- v1.7.0  -->
+    <string name="change_applock_pincode">Sửa mật khẩu chữ số</string>
+    <string name="forget_applock_pincode">Quên mật khẩu</string>
+    <string name="applock_pincode_title_verify">Xác minh mật khẩu</string>
+    <string name="applock_pincode_title_input">Nhập mật khẩu số</string>
+    <string name="applock_pincode_title_setting">Đặt mật khẩu chữ số</string>
+    <string name="applock_pincode_input_again">Nhập lại</string>
+    <string name="applock_pincode_input_error_again">Không đồng nhất với lần nhập đầu, vui lòng nhập lại</string>
+    <string name="applock_pincode_other_type">Các loại mật khẩu khác</string>
+
+    <!-- v2.0.0  -->
+    <string name="verification_error_disable_account_warn"> sai mật khẩu, tài khoản sẽ bị hủy nếu sai lại lần nữa.</string>
+
+
+
+
+</resources>
+

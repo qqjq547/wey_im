@@ -338,7 +338,7 @@ class LoginSecondActivity : BaseBusinessActivity<LoginContract.Presenter>(), Log
         text_view_login.isEnabled = false
         text_view_login.background = getSimpleDrawable(R.drawable.common_corners_trans_d4d6d9_6_0)
 
-        countDownText = "contagem regressiva:" + totalTimeSecond + "S"
+        countDownText = "${totalTimeSecond}S"
 
         text_view_login.text = countDownText
 
@@ -347,7 +347,7 @@ class LoginSecondActivity : BaseBusinessActivity<LoginContract.Presenter>(), Log
 
             override fun onTick(millisUntilFinished: Long) {
 
-                countDownText = "contagem regressiva:" + millisUntilFinished/1000%60 + "S"
+                countDownText ="${millisUntilFinished/1000%60}S"
 
                 if(mType == 1){
                     text_view_login.text = countDownText
