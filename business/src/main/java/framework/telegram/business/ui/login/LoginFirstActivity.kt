@@ -107,8 +107,8 @@ class LoginFirstActivity : BaseBusinessActivity<LoginContract.Presenter>(), Logi
         setTextContent()
 
         if (!mIsCanCancel) {
-            mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
-            mUpdatePresenterImpl?.start(showCanUpDialog = true, showNotUpdateDialog = false)
+//            mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
+//            mUpdatePresenterImpl?.start(showCanUpDialog = true, showNotUpdateDialog = false)
         }
 
         requestBasicPermission()

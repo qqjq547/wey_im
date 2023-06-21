@@ -104,11 +104,11 @@ class MainActivity : BaseActivity(), IMultiCheckable {
 
         OpenInstall.getInstall(installAdapter)
 
-        mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
-        mUpdatePresenterImpl?.start(
-            showCanUpDialog = mUpdatePresenterImpl?.needCheckVersion() == true,
-            showNotUpdateDialog = false
-        )
+//        mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
+//        mUpdatePresenterImpl?.start(
+//            showCanUpDialog = mUpdatePresenterImpl?.needCheckVersion() == true,
+//            showNotUpdateDialog = false
+//        )
 
         mMainImpl = MainImpl(this, lifecycle())
 

@@ -73,7 +73,7 @@ class AboutActivity : BaseBusinessActivity<BasePresenter>() {
 
 
         me_item_view_4.setData(getString(R.string.version_updating), "") {
-            UpdatePresenterImpl(this, this, lifecycle()).start(showCanUpDialog = true, showNotUpdateDialog = true)
+//            UpdatePresenterImpl(this, this, lifecycle()).start(showCanUpDialog = true, showNotUpdateDialog = true)
         }
 
         me_item_view_7.setData(getString(R.string.Share_68), "") {

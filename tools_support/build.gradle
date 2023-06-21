@@ -84,9 +84,6 @@ dependencies {
     // TinyPinyin
     api 'com.github.promeg:tinypinyin:2.0.3'
     api 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
-    // x5内核
-    api files('libs/tbs_sdk_thirdapp_v3.6.0.1310_43612_sharewithdownload_withoutGame_obfs_20180706_163319.jar')
-
     //高德地图
     api files('libs/AMap3DMap_4.1.3_AMapSearch_3.6.1_AMapLocation_3.2.1_20161228.jar')
 

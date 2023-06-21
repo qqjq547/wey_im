@@ -69,8 +69,8 @@ class LoginSecondActivity : BaseBusinessActivity<LoginContract.Presenter>(), Log
 
         custom_toolbar.setToolbarColor(R.color.white)
 
-        mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
-        mUpdatePresenterImpl?.start(showCanUpDialog = true, showNotUpdateDialog = false)
+//        mUpdatePresenterImpl = UpdatePresenterImpl(this, this, lifecycle())
+//        mUpdatePresenterImpl?.start(showCanUpDialog = true, showNotUpdateDialog = false)
 
         requestBasicPermission()
     }
