@@ -23,6 +23,10 @@ import com.facebook.drawee.backends.pipeline.Fresco
 import com.fm.openinstall.OpenInstall
 import com.fm.openinstall.listener.AppInstallAdapter
 import com.fm.openinstall.model.AppData
+import com.google.android.play.core.appupdate.AppUpdateManager
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.UpdateAvailability
 import com.trello.rxlifecycle3.android.lifecycle.kotlin.bindToLifecycle
 import framework.telegram.app.Constant.ARouter.ROUNTE_APP_MAIN
 import framework.telegram.app.R
@@ -136,6 +140,42 @@ class MainActivity : BaseActivity(), IMultiCheckable {
         }
 
         requestBasicPermission()
+
+        requestUpdate()
+    }
+
+
+    lateinit var  appUpdateManager: AppUpdateManager
+    val UPDATE_REQUEST_CODE = 10086
+
+    private fun requestUpdate(){
+
+        appUpdateManager = AppUpdateManagerFactory.create(this)
+
+// Returns an intent object that you use to check for an update.
+        val appUpdateInfoTask = appUpdateManager.appUpdateInfo
+
+// Checks that the platform will allow the specified type of update.
+        appUpdateInfoTask.addOnSuccessListener { appUpdateInfo ->
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                // This example applies an immediate update. To apply a flexible update
+                // instead, pass in AppUpdateType.FLEXIBLE
+                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+            ) {
+                // Request the update.
+
+                appUpdateManager.startUpdateFlowForResult(
+                    // Pass the intent that is returned by 'getAppUpdateInfo()'.
+                    appUpdateInfo,
+                    // Or 'AppUpdateType.FLEXIBLE' for flexible updates.
+                    AppUpdateType.IMMEDIATE,
+                    // The current activity making the update request.
+                    this,
+                    // Include a request code to later monitor this update request.
+                    UPDATE_REQUEST_CODE)
+            }
+        }
+
     }
 
     override fun onResume() {
@@ -162,6 +202,23 @@ class MainActivity : BaseActivity(), IMultiCheckable {
         }
 
         Glide.get(applicationContext).clearMemory()
+
+        appUpdateManager
+            .appUpdateInfo
+            .addOnSuccessListener { appUpdateInfo ->
+
+                if (appUpdateInfo.updateAvailability()
+                    == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS
+                ) {
+                    // If an in-app update is already running, resume the update.
+                    appUpdateManager.startUpdateFlowForResult(
+                        appUpdateInfo,
+                        AppUpdateType.IMMEDIATE,
+                        this,
+                        UPDATE_REQUEST_CODE
+                    )
+                }
+            }
     }
 
     private fun initView() {

@@ -19,7 +19,6 @@ import framework.telegram.business.http.creator.SysHttpReqCreator
 import framework.telegram.business.http.getResult
 import framework.telegram.business.http.protocol.LoginHttpProtocol
 import framework.telegram.business.sp.CommonPref
-import framework.telegram.business.utils.CpuUtils
 import framework.telegram.support.BaseApp
 import framework.telegram.support.account.AccountManager
 import framework.telegram.support.system.network.http.HttpReq

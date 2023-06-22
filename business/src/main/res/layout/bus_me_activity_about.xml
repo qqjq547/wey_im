@@ -59,7 +59,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:foreground="?android:attr/selectableItemBackground" />
+            android:foreground="?android:attr/selectableItemBackground"
+            android:visibility="gone"
+            />
 
         <framework.telegram.business.ui.widget.SettingItemView
             android:id="@+id/me_item_view_7"
