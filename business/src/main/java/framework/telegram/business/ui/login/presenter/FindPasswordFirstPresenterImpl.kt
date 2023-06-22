@@ -10,6 +10,7 @@ import framework.telegram.business.http.creator.SysHttpReqCreator
 import framework.telegram.business.http.getResult
 import framework.telegram.business.http.protocol.LoginHttpProtocol
 import framework.telegram.support.system.network.http.HttpReq
+import framework.telegram.support.tools.DeviceUtils
 import io.reactivex.Observable
 
 class FindPasswordFirstPresenterImpl : FindPasswordFirstContract.Presenter {
@@ -32,13 +33,10 @@ class FindPasswordFirstPresenterImpl : FindPasswordFirstContract.Presenter {
 
     override fun sendCode(phone: String, countryCode: String) {
 
-        /*if(EmulatorDetectUtil.isEmulator(mContext)){
-
-
-        }*/
-
-
-        HttpManager.getStore(LoginHttpProtocol::class.java)
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send))
+        }else{
+            HttpManager.getStore(LoginHttpProtocol::class.java)
                 .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
                     override fun getData(): SysProto.GetSmsCodeReq {
                         return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.FIND_PASSWORD, countryCode,mSendSmsIndex)
@@ -52,6 +50,7 @@ class FindPasswordFirstPresenterImpl : FindPasswordFirstContract.Presenter {
                     //请求失败
                     mView.showErrMsg(it.message)
                 })
+        }
     }
 
     override fun checkCode(phone: String, countryCode: String, smsCod: String) {

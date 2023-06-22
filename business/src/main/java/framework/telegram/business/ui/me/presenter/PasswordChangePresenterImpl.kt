@@ -19,6 +19,7 @@ import framework.telegram.business.http.protocol.UserHttpProtocol
 import framework.telegram.support.BaseApp
 import framework.telegram.support.account.AccountManager
 import framework.telegram.support.system.network.http.HttpReq
+import framework.telegram.support.tools.DeviceUtils
 import framework.telegram.support.tools.MD5
 import io.reactivex.Observable
 import yourpet.client.android.sign.NativeLibUtil
@@ -42,7 +43,11 @@ class PasswordChangePresenterImpl : PasswordChangeContract.Presenter {
     }
 
     override fun sendCode(phone: String, countryCode: String) {
-        HttpManager.getStore(LoginHttpProtocol::class.java)
+
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send))
+        }else{
+            HttpManager.getStore(LoginHttpProtocol::class.java)
                 .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
                     override fun getData(): SysProto.GetSmsCodeReq {
                         return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.UPDATE_PASSWORD, countryCode,mSendSmsIndex)
@@ -56,6 +61,7 @@ class PasswordChangePresenterImpl : PasswordChangeContract.Presenter {
                     //请求失败
                     mView.showErrMsg(it.message)
                 })
+        }
     }
 
     override fun updataPasswordByPassword(oldPassword: String, password: String) {

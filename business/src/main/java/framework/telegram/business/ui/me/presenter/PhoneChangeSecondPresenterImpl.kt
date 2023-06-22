@@ -14,6 +14,7 @@ import framework.telegram.business.http.protocol.LoginHttpProtocol
 import framework.telegram.business.http.protocol.SystemHttpProtocol
 import framework.telegram.business.http.protocol.UserHttpProtocol
 import framework.telegram.support.system.network.http.HttpReq
+import framework.telegram.support.tools.DeviceUtils
 import io.reactivex.Observable
 
 class PhoneChangeSecondPresenterImpl : PhoneChangeSecondContract.Presenter {
@@ -35,7 +36,11 @@ class PhoneChangeSecondPresenterImpl : PhoneChangeSecondContract.Presenter {
     }
 
     override fun sendCode(phone: String, countryCode: String) {
-        HttpManager.getStore(LoginHttpProtocol::class.java)
+
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send))
+        }else{
+            HttpManager.getStore(LoginHttpProtocol::class.java)
                 .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
                     override fun getData(): SysProto.GetSmsCodeReq {
                         return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.UPDATE_PHONE, countryCode,mSendSmsIndex)
@@ -49,6 +54,7 @@ class PhoneChangeSecondPresenterImpl : PhoneChangeSecondContract.Presenter {
                     //请求失败
                     mView.showErrMsg(it.message)
                 })
+        }
     }
 
     override fun bindPhone(phone: String, countryCode: String, smsCod: String) {

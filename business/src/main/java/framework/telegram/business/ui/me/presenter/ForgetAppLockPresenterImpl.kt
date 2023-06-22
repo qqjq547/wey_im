@@ -10,6 +10,7 @@ import framework.telegram.business.http.creator.SysHttpReqCreator
 import framework.telegram.business.http.getResult
 import framework.telegram.business.http.protocol.LoginHttpProtocol
 import framework.telegram.support.system.network.http.HttpReq
+import framework.telegram.support.tools.DeviceUtils
 import io.reactivex.Observable
 
 class ForgetAppLockPresenterImpl : ForgetAppLockContract.Presenter {
@@ -31,7 +32,11 @@ class ForgetAppLockPresenterImpl : ForgetAppLockContract.Presenter {
     }
 
     override fun sendCode(phone: String, countryCode: String) {
-        HttpManager.getStore(LoginHttpProtocol::class.java)
+
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send))
+        }else{
+            HttpManager.getStore(LoginHttpProtocol::class.java)
                 .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
                     override fun getData(): SysProto.GetSmsCodeReq {
                         return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.VALIDATE_PHONE, countryCode,mSendSmsIndex)
@@ -45,6 +50,7 @@ class ForgetAppLockPresenterImpl : ForgetAppLockContract.Presenter {
                     //请求失败
                     mView.showErrMsg(it.message)
                 })
+        }
     }
 
     override fun checkCode(phone: String, countryCode: String, smsCod: String) {

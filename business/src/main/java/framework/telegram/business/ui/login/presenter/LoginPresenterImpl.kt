@@ -24,6 +24,7 @@ import framework.telegram.support.BaseApp
 import framework.telegram.support.account.AccountManager
 import framework.telegram.support.system.network.http.HttpReq
 import framework.telegram.support.system.storage.sp.SharePreferencesStorage
+import framework.telegram.support.tools.DeviceUtils
 import framework.telegram.support.tools.HexString
 import framework.telegram.support.tools.MD5
 import io.reactivex.Observable
@@ -116,27 +117,31 @@ class LoginPresenterImpl : LoginContract.Presenter {
 
     override fun sendCode(phone: String, countryCode: String) {
 
-        val curTime =  System.currentTimeMillis()
-        if (phone == mLastPhone && countryCode ==mLastCountryCode && curTime- mCodeCountTime  <60*1000){
-            mView.sendCodeSuccess("",60- ((curTime- mCodeCountTime)/1000).toInt())
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send),60)
         }else{
-            HttpManager.getStore(LoginHttpProtocol::class.java)
-                .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
-                    override fun getData(): SysProto.GetSmsCodeReq {
-                        return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.LOGIN, countryCode, mSendSmsIndex)
-                    }
-                })
-                .getResult(mViewObservalbe, {
-                    //请求成功
-                    mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send),60)
-                    mSendSmsIndex++
-                }, {
-                    //请求失败
-                    mView.showErrMsg(it.message, false)
-                })
+            val curTime =  System.currentTimeMillis()
+            if (phone == mLastPhone && countryCode ==mLastCountryCode && curTime- mCodeCountTime  <60*1000){
+                mView.sendCodeSuccess("",60- ((curTime- mCodeCountTime)/1000).toInt())
+            }else{
+                HttpManager.getStore(LoginHttpProtocol::class.java)
+                    .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
+                        override fun getData(): SysProto.GetSmsCodeReq {
+                            return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.LOGIN, countryCode, mSendSmsIndex)
+                        }
+                    })
+                    .getResult(mViewObservalbe, {
+                        //请求成功
+                        mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send),60)
+                        mSendSmsIndex++
+                    }, {
+                        //请求失败
+                        mView.showErrMsg(it.message, false)
+                    })
+            }
+            mLastPhone = phone
+            mLastCountryCode = countryCode
         }
-        mLastPhone = phone
-        mLastCountryCode = countryCode
     }
 
     override fun register(phone: String, smsCode: String, countryCode: String) {

@@ -13,6 +13,8 @@ import android.os.SystemClock;
 import android.os.Build.VERSION;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
+import android.util.Log;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -50,46 +52,6 @@ public class DeviceUtils {
         return SystemClock.elapsedRealtime() > 0L ? System.currentTimeMillis() - SystemClock.elapsedRealtime() : 0L;
     }
 
-    public static boolean isEmulator(Context context) throws Exception {
-        try {
-            if (!Build.PRODUCT.equals("sdk") && !Build.PRODUCT.equals("google_sdk") && !Build.PRODUCT.equals("sdk_x86") && !Build.PRODUCT.equals("vbox86p")) {
-                if (Build.MANUFACTURER.equals("Genymotion")) {
-                    throw new RuntimeException(new Exception("isEmulator!!! Build.MANUFACTURER is:" + Build.MANUFACTURER));
-                } else if (!Build.BRAND.equals("generic") && !Build.BRAND.equals("generic_x86")) {
-                    if (!Build.DEVICE.equals("generic") && !Build.DEVICE.equals("generic_x86") && !Build.DEVICE.equals("vbox86p")) {
-                        if (!Build.MODEL.equals("sdk") && !Build.MODEL.equals("google_sdk") && !Build.MODEL.contains("Emulator") && !Build.MODEL.equals("Android SDK built for x86")) {
-                            if (!Build.HARDWARE.equals("goldfish") && !Build.HARDWARE.equals("vbox86")) {
-                                if (!Build.FINGERPRINT.contains("generic/sdk/generic") && !Build.FINGERPRINT.contains("generic_x86/sdk_x86/generic_x86") && !Build.FINGERPRINT.contains("generic/google_sdk/generic") && !Build.FINGERPRINT.contains("generic/vbox86p/vbox86p") && !Build.FINGERPRINT.contains("Genymotion")) {
-                                    TelephonyManager localTelephonyManager = (TelephonyManager)context.getSystemService("phone");
-                                    if (localTelephonyManager.getSimOperatorName().equals("Android")) {
-                                        throw new RuntimeException(new Exception("isEmulator!!! getSimOperatorName is:" + localTelephonyManager.getSimOperatorName()));
-                                    } else if (localTelephonyManager.getNetworkOperatorName().equals("Android")) {
-                                        throw new RuntimeException(new Exception("isEmulator!!! getNetworkOperatorName is:" + localTelephonyManager.getNetworkOperatorName()));
-                                    } else {
-                                        return false;
-                                    }
-                                } else {
-                                    throw new RuntimeException(new ClientException("isEmulator!!! Build.FINGERPRINT is:" + Build.FINGERPRINT));
-                                }
-                            } else {
-                                throw new RuntimeException(new Exception("isEmulator!!! Build.HARDWARE is:" + Build.HARDWARE));
-                            }
-                        } else {
-                            throw new RuntimeException(new Exception("isEmulator!!! Build.MODEL is:" + Build.MODEL));
-                        }
-                    } else {
-                        throw new RuntimeException(new Exception("isEmulator!!! Build.DEVICE is:" + Build.DEVICE));
-                    }
-                } else {
-                    throw new RuntimeException(new Exception("isEmulator!!! Build.BRAND is:" + Build.BRAND));
-                }
-            } else {
-                throw new RuntimeException(new Exception("isEmulator!!! Build.PRODUCT is:" + Build.PRODUCT));
-            }
-        } catch (Throwable var2) {
-            return false;
-        }
-    }
 
     public static String getDeviceName() {
         String manufacturer = getManufacturer();
@@ -382,5 +344,32 @@ public class DeviceUtils {
 
     public static boolean isNeedNotice(Context context) {
         return isHuaweiBrand() || isLenovoBrand() || isVivoBrand() || isXiaomiBrand() || isMeizuBrand() || isOppoBrand() || isCoolpadBrand() || isSamsungBrand() || isSmartisanBrand(context);
+    }
+
+
+    public static boolean isEmulator() {
+        //1. Check CPU architecture: arm or x86
+        if (getSystemProperty("ro.product.cpu.abi", "arm").contains("x86")) {
+            //The CPU is x86
+            return false;
+        } else {
+            return false;
+        }
+    }
+
+
+    private static String getSystemProperty(String key, String defaultValue) {
+        String value = defaultValue;
+        try {
+            Class<?> clazz= Class.forName("android.os.SystemProperties");
+            Method get = clazz.getMethod("get", String.class, String.class);
+            value = (String)(get.invoke(clazz, key, ""));
+        } catch (Exception e) {
+            Log.d("getSystemProperty", "key = " + key + ", error = " + e.getMessage());
+        }
+
+        Log.d("getSystemProperty",  key + " = " + value);
+
+        return value;
     }
 }

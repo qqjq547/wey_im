@@ -22,6 +22,7 @@ import framework.telegram.support.BaseApp
 import framework.telegram.support.account.AccountManager
 import framework.telegram.support.system.network.http.HttpReq
 import framework.telegram.support.system.storage.sp.SharePreferencesStorage
+import framework.telegram.support.tools.DeviceUtils
 import framework.telegram.support.tools.HexString
 import io.reactivex.Observable
 
@@ -67,7 +68,11 @@ class SmsCodePresenterImpl : SmsCodeContract.Presenter {
     }
 
     override fun sendRegisterCode(phone: String, countryCode: String) {
-        HttpManager.getStore(LoginHttpProtocol::class.java)
+
+        if(DeviceUtils.isEmulator()){
+            mView.sendCodeSuccess(mContext.getString(R.string.bus_login_sms_code_send))
+        }else{
+            HttpManager.getStore(LoginHttpProtocol::class.java)
                 .getSmsCode(object : HttpReq<SysProto.GetSmsCodeReq>() {
                     override fun getData(): SysProto.GetSmsCodeReq {
                         return SysHttpReqCreator.createGetSmsCodeReq(phone, CommonProto.GetSmsCodeType.REG, countryCode, mSendSmsIndex)
@@ -81,6 +86,7 @@ class SmsCodePresenterImpl : SmsCodeContract.Presenter {
                     //请求失败
                     mView.showErrMsg(it.message)
                 })
+        }
     }
 
     override fun loginBySmsCode(phone: String, smsCode: String, countryCode: String) {
