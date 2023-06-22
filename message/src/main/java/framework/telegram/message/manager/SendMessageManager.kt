@@ -27,6 +27,7 @@ import framework.telegram.support.tools.ThreadUtils
 import framework.telegram.support.tools.file.DirManager
 import framework.telegram.support.tools.wordfilter.WordFilter
 import framework.telegram.ui.utils.BitmapUtils
+import framework.telegram.ui.utils.FileUtils
 import framework.telegram.ui.utils.ScreenUtils
 import io.reactivex.Flowable
 import io.reactivex.Observable
@@ -440,7 +441,7 @@ object SendMessageManager {
             val msgLocalId = savedMsgModel.id
             compressImage(imageFilePath, { resizeImageFile ->
                 val maxThumbSize = ScreenUtils.dp2px(BaseApp.app, 240.0f)
-                val thumbFileName = resizeImageFile.absolutePath + "___thumb"
+                val thumbFileName = FileUtils.getAPPInternalStorageFilePath(resizeImageFile + "___thumb")
                 val resizeImageThumbPath = BitmapUtils.revitionImageSize(
                     resizeImageFile.absolutePath,
                     thumbFileName,

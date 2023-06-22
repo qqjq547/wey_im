@@ -139,10 +139,10 @@ class GroupSendChatPresenterImpl : GroupSendChatContract.Presenter {
             val chatType = ChatModel.CHAT_TYPE_PVT
             val attachmentKey = SendMessageManager.generateAttachmentKey(chatType, 0, true)
             val maxThumbSize = ScreenUtils.dp2px(BaseApp.app, 240.0f)
-            val thumbFileName = resizeImageFile.absolutePath + "___thumb"
+            val thumbFileName = FileUtils.getAPPInternalStorageFilePath(resizeImageFile  + "___thumb")
             val resizeImageThumbPath = BitmapUtils.revitionImageSize(
                 resizeImageFile.absolutePath,
-                thumbFileName,
+                thumbFileName?:"",
                 maxThumbSize,
                 maxThumbSize
             )
