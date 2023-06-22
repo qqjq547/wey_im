@@ -31,7 +31,7 @@ object UserInfoCheckUtil {
     }
 
 
-    fun checkMobile2(context: Context, mobile: String, countyCode: String): Boolean {
+    fun checkMobile2(mobile: String, countyCode: String): Boolean {
         if (ValidationUtils.isEmpty(mobile)) {
             return false
         }

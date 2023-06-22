@@ -66,7 +66,6 @@
 
         </LinearLayout>
 
-
         <TextView
             android:id="@+id/tv_send_sms_code"
             android:layout_width="match_parent"
@@ -157,9 +156,7 @@
             android:text="@string/bus_login_user_agreement"
             android:textSize="12sp"
             android:textColor="@color/c178aff"
-            android:textStyle="bold"
-            android:visibility="gone"
-            />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
