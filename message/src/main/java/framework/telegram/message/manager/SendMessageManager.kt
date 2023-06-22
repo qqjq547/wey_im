@@ -441,7 +441,7 @@ object SendMessageManager {
             val msgLocalId = savedMsgModel.id
             compressImage(imageFilePath, { resizeImageFile ->
                 val maxThumbSize = ScreenUtils.dp2px(BaseApp.app, 240.0f)
-                val thumbFileName = FileUtils.getAPPInternalStorageFilePath(resizeImageFile + "___thumb")
+                val thumbFileName = FileUtils.getAPPInternalStorageFilePath(resizeImageFile)+ "___thumb"
                 val resizeImageThumbPath = BitmapUtils.revitionImageSize(
                     resizeImageFile.absolutePath,
                     thumbFileName,
