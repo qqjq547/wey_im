@@ -4,6 +4,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'com.alibaba.arouter'
 apply plugin: 'com.aliyun.ams.emas-services'
+apply plugin: 'android-junk-code'
 
 def cfg = rootProject.ext.configuration // 配置
 
@@ -148,4 +149,25 @@ def getAmapValue() {
 
 def getAppID() {
     return rootProject.ext.configuration.package
+}
+if (PLUGIN_ENABLE.toBoolean()) {
+    androidJunkCode {
+        debug true
+        def config = {
+            packageBase = "com.wey.app"  //生成java类根包名
+            packageCount = 50 //生成包数量
+            activityCountPerPackage = 5 //每个包下生成Activity类数量
+            excludeActivityJavaFile = false
+            //是否排除生成Activity的Java文件,默认false(layout和写入AndroidManifest.xml还会执行)，主要用于处理类似神策全埋点编译过慢问题
+            otherCountPerPackage = 50  //每个包下生成其它类的数量
+            methodCountPerClass = 20  //每个类下生成方法数量
+            resPrefix = "wey_"  //生成的layout、drawable、string等资源名前缀
+            drawableCount = 500  //生成drawable资源数量
+            stringCount = 500  //生成string数量
+        }
+        variantConfig {
+            debug config
+            release config
+        }
+    }
 }

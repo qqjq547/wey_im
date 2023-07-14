@@ -17,6 +17,7 @@ ext {
 }
 
 buildscript {
+    ext.kotlin_version = '1.6.10'
     repositories {
         google()
         jcenter()
@@ -29,13 +30,16 @@ buildscript {
         maven {  url 'https://maven.aliyun.com/nexus/content/repositories/releases/' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath 'com.android.tools.build:gradle:7.2.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
         classpath "io.realm:realm-gradle-plugin:6.0.0"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
         // 添加emas-services插件
         classpath 'com.aliyun.ams:emas-services:1.0.4'
+        if (PLUGIN_ENABLE.toBoolean()) {
+            classpath "com.github.qq549631030:android-junk-code:1.2.6"
+        }
     }
 }
 

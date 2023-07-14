@@ -35,3 +35,5 @@
 -keep public class framework.ideas.R$*{
 public static final int *;
 }
+#cn.hx.plugin.ui为前面配置的packageBase
+-keep class cn.hx.plugin.ui.** {*;}
